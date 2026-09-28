@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+revision/cache/**/*.pkl
+revision/domain_shift_work/
+revision/oov_mechanism_work/
+revision/*_parts/
+revision/logs/
+paper/*.aux
+paper/*.log
+paper/*.out

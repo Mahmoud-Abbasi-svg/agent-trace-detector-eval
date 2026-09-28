@@ -1,0 +1,582 @@
+{
+ "setting": "WUT_F",
+ "B": 2000,
+ "seed": 20260940,
+ "n_pool_E": 2686,
+ "n_pos": 2294,
+ "n_neg": 392,
+ "n_failed": 4987,
+ "metrics": {
+  "LR-A": {
+   "AUROC": [
+    0.7902,
+    0.7628,
+    0.8171
+   ],
+   "AUPRC": [
+    0.9493,
+    0.9389,
+    0.9591
+   ],
+   "recall@t_r80": [
+    0.7221,
+    0.6944,
+    0.7568
+   ],
+   "FPR@t_r80": [
+    0.2837,
+    0.2321,
+    0.3418
+   ],
+   "recall@t05": [
+    0.7164,
+    0.6783,
+    0.7546
+   ],
+   "FPR@t05": [
+    0.2699,
+    0.2168,
+    0.3367
+   ],
+   "failed_flag_rate@t_r80": [
+    0.2546,
+    0.2198,
+    0.2996
+   ],
+   "failed_flag_rate@t05": [
+    0.2458,
+    0.2166,
+    0.2966
+   ],
+   "AUROC_all_rows": 0.8149
+  },
+  "LR-B": {
+   "AUROC": [
+    0.7196,
+    0.6873,
+    0.7518
+   ],
+   "AUPRC": [
+    0.9261,
+    0.9139,
+    0.9378
+   ],
+   "recall@t_r80": [
+    0.7862,
+    0.7655,
+    0.8047
+   ],
+   "FPR@t_r80": [
+    0.5398,
+    0.477,
+    0.6071
+   ],
+   "recall@t05": [
+    0.6524,
+    0.626,
+    0.6761
+   ],
+   "FPR@t05": [
+    0.298,
+    0.2474,
+    0.347
+   ],
+   "failed_flag_rate@t_r80": [
+    0.4647,
+    0.4053,
+    0.5069
+   ],
+   "failed_flag_rate@t05": [
+    0.2736,
+    0.2515,
+    0.2954
+   ],
+   "AUROC_all_rows": 0.7335
+  },
+  "LR-C": {
+   "AUROC": [
+    0.7938,
+    0.7635,
+    0.8281
+   ],
+   "AUPRC": [
+    0.9502,
+    0.9381,
+    0.9607
+   ],
+   "recall@t_r80": [
+    0.7351,
+    0.7097,
+    0.762
+   ],
+   "FPR@t_r80": [
+    0.2694,
+    0.2092,
+    0.347
+   ],
+   "recall@t05": [
+    0.7452,
+    0.7193,
+    0.772
+   ],
+   "FPR@t05": [
+    0.2821,
+    0.2194,
+    0.3673
+   ],
+   "failed_flag_rate@t_r80": [
+    0.2265,
+    0.1959,
+    0.2619
+   ],
+   "failed_flag_rate@t05": [
+    0.2379,
+    0.2079,
+    0.2663
+   ],
+   "AUROC_all_rows": 0.8185
+  },
+  "LR-B-noobs": {
+   "AUROC": [
+    0.7265,
+    0.6962,
+    0.7553
+   ],
+   "AUPRC": [
+    0.928,
+    0.917,
+    0.939
+   ],
+   "recall@t_r80": [
+    0.7956,
+    0.7724,
+    0.8173
+   ],
+   "FPR@t_r80": [
+    0.5515,
+    0.4974,
+    0.6097
+   ],
+   "recall@t05": [
+    0.6562,
+    0.6356,
+    0.6765
+   ],
+   "FPR@t05": [
+    0.2765,
+    0.227,
+    0.3316
+   ],
+   "failed_flag_rate@t_r80": [
+    0.4923,
+    0.4516,
+    0.5238
+   ],
+   "failed_flag_rate@t05": [
+    0.2659,
+    0.2456,
+    0.2877
+   ],
+   "AUROC_all_rows": 0.7387
+  },
+  "LR-C-noobs": {
+   "AUROC": [
+    0.7995,
+    0.771,
+    0.8281
+   ],
+   "AUPRC": [
+    0.9523,
+    0.9419,
+    0.9617
+   ],
+   "recall@t_r80": [
+    0.7347,
+    0.7057,
+    0.7611
+   ],
+   "FPR@t_r80": [
+    0.2699,
+    0.2015,
+    0.3368
+   ],
+   "recall@t05": [
+    0.7407,
+    0.7071,
+    0.7685
+   ],
+   "FPR@t05": [
+    0.276,
+    0.2117,
+    0.3469
+   ],
+   "failed_flag_rate@t_r80": [
+    0.2389,
+    0.2067,
+    0.2761
+   ],
+   "failed_flag_rate@t05": [
+    0.2457,
+    0.2122,
+    0.2789
+   ],
+   "AUROC_all_rows": 0.8165
+  },
+  "LR-B-minus": {
+   "AUROC": [
+    0.6825,
+    0.6436,
+    0.7178
+   ],
+   "AUPRC": [
+    0.9147,
+    0.9003,
+    0.928
+   ],
+   "recall@t_r80": [
+    0.7785,
+    0.7476,
+    0.8082
+   ],
+   "FPR@t_r80": [
+    0.5087,
+    0.4515,
+    0.5612
+   ],
+   "recall@t05": [
+    0.5799,
+    0.5401,
+    0.6229
+   ],
+   "FPR@t05": [
+    0.3296,
+    0.2755,
+    0.3853
+   ],
+   "failed_flag_rate@t_r80": [
+    0.5873,
+    0.5627,
+    0.612
+   ],
+   "failed_flag_rate@t05": [
+    0.4039,
+    0.3724,
+    0.4291
+   ],
+   "AUROC_all_rows": 0.6423
+  },
+  "LR-C-drop": {
+   "AUROC": [
+    0.7836,
+    0.7573,
+    0.8114
+   ],
+   "AUPRC": [
+    0.948,
+    0.9376,
+    0.958
+   ],
+   "recall@t_r80": [
+    0.7312,
+    0.6927,
+    0.7568
+   ],
+   "FPR@t_r80": [
+    0.3153,
+    0.2526,
+    0.4031
+   ],
+   "recall@t05": [
+    0.747,
+    0.7149,
+    0.7711
+   ],
+   "FPR@t05": [
+    0.35,
+    0.2704,
+    0.4515
+   ],
+   "failed_flag_rate@t_r80": [
+    0.2566,
+    0.2288,
+    0.2871
+   ],
+   "failed_flag_rate@t05": [
+    0.2816,
+    0.247,
+    0.3222
+   ],
+   "AUROC_all_rows": 0.8173
+  },
+  "Markov": {
+   "AUROC": [
+    0.5751,
+    0.5316,
+    0.6188
+   ],
+   "AUPRC": [
+    0.8581,
+    0.8408,
+    0.8783
+   ],
+   "recall@t_r80": [
+    0.8573,
+    0.8348,
+    0.8766
+   ],
+   "FPR@t_r80": [
+    0.7209,
+    0.6556,
+    0.7857
+   ],
+   "recall@t05": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "FPR@t05": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "failed_flag_rate@t_r80": [
+    0.7701,
+    0.7355,
+    0.8304
+   ],
+   "failed_flag_rate@t05": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "AUROC_all_rows": 0.5456
+  },
+  "IForest": {
+   "AUROC": [
+    0.6919,
+    0.6625,
+    0.7221
+   ],
+   "AUPRC": [
+    0.918,
+    0.9052,
+    0.9307
+   ],
+   "recall@t_r80": [
+    0.7787,
+    0.7406,
+    0.8086
+   ],
+   "FPR@t_r80": [
+    0.4903,
+    0.4337,
+    0.5485
+   ],
+   "recall@t05": [
+    0.0104,
+    0.0039,
+    0.0183
+   ],
+   "FPR@t05": [
+    0.0061,
+    0.0,
+    0.0153
+   ],
+   "failed_flag_rate@t_r80": [
+    0.5728,
+    0.5494,
+    0.6146
+   ],
+   "failed_flag_rate@t05": [
+    0.0141,
+    0.0102,
+    0.0178
+   ],
+   "AUROC_all_rows": 0.6326
+  },
+  "TFIDF": {
+   "AUROC": [
+    0.9414,
+    0.9274,
+    0.9551
+   ],
+   "AUPRC": [
+    0.9868,
+    0.9823,
+    0.9905
+   ],
+   "recall@t_r80": [
+    0.7546,
+    0.7188,
+    0.7903
+   ],
+   "FPR@t_r80": [
+    0.049,
+    0.028,
+    0.074
+   ],
+   "recall@t05": [
+    0.8817,
+    0.8588,
+    0.9028
+   ],
+   "FPR@t05": [
+    0.1138,
+    0.0714,
+    0.1582
+   ],
+   "failed_flag_rate@t_r80": [
+    0.055,
+    0.0409,
+    0.0696
+   ],
+   "failed_flag_rate@t05": [
+    0.1434,
+    0.1203,
+    0.1737
+   ],
+   "AUROC_all_rows": 0.9418
+  },
+  "TFIDF-nodigit": {
+   "AUROC": [
+    0.9419,
+    0.9278,
+    0.9554
+   ],
+   "AUPRC": [
+    0.9876,
+    0.9839,
+    0.9909
+   ],
+   "recall@t_r80": [
+    0.7552,
+    0.7153,
+    0.7921
+   ],
+   "FPR@t_r80": [
+    0.0515,
+    0.0255,
+    0.0816
+   ],
+   "recall@t05": [
+    0.8748,
+    0.8509,
+    0.8967
+   ],
+   "FPR@t05": [
+    0.1036,
+    0.0612,
+    0.148
+   ],
+   "failed_flag_rate@t_r80": [
+    0.0591,
+    0.0461,
+    0.074
+   ],
+   "failed_flag_rate@t05": [
+    0.1461,
+    0.1233,
+    0.1743
+   ],
+   "AUROC_all_rows": 0.9389
+  }
+ },
+ "sizes": {
+  "n_train": 6138.4,
+  "n_train_pos": 1835.2,
+  "n_test": 7673,
+  "n_test_by_category": {
+   "benign": 392,
+   "attacked": 2294,
+   "attack_failed": 4987
+  },
+  "vocab_size": [
+   57,
+   64
+  ],
+  "kappa": 0.9756,
+  "kappa_all_rows": 0.9722,
+  "scheme": "UT",
+  "detectors": [
+   "LR-A",
+   "LR-B",
+   "LR-C",
+   "LR-B-noobs",
+   "LR-C-noobs",
+   "LR-B-minus",
+   "LR-C-drop",
+   "Markov",
+   "IForest",
+   "TFIDF",
+   "TFIDF-nodigit"
+  ]
+ },
+ "format_checks": {
+  "meta_keys_complete": true,
+  "y_matches_meta": true,
+  "poolE_matches_meta": true,
+  "failed_rows_not_in_poolE": true,
+  "y1_only_attacked": true,
+  "ids_unique": true,
+  "score_and_pred_shapes": true,
+  "scores_finite": true,
+  "pred_equals_score_vs_training_threshold": true,
+  "t05_is_0.5": true,
+  "row_order_equals_gru_cache": "no GRU pickle for this setting"
+ },
+ "reproduction_checks": {
+  "n": 5,
+  "n_pass": 5,
+  "max_abs_score_diff": 0.0,
+  "auroc_differs_from_v03_code_path": []
+ },
+ "fold_assignment": [
+  {
+   "n_groups_P0": 117,
+   "n_extra_groups": 1,
+   "n_failed_rows_in_extra_groups": 1
+  },
+  {
+   "n_groups_P0": 117,
+   "n_extra_groups": 1,
+   "n_failed_rows_in_extra_groups": 1
+  },
+  {
+   "n_groups_P0": 117,
+   "n_extra_groups": 1,
+   "n_failed_rows_in_extra_groups": 1
+  },
+  {
+   "n_groups_P0": 117,
+   "n_extra_groups": 1,
+   "n_failed_rows_in_extra_groups": 1
+  },
+  {
+   "n_groups_P0": 117,
+   "n_extra_groups": 1,
+   "n_failed_rows_in_extra_groups": 1
+  }
+ ],
+ "failed_as_train_negatives": true,
+ "lr_converged_all": {
+  "LR-A": true,
+  "LR-B": true,
+  "LR-C": true,
+  "LR-B-noobs": true,
+  "LR-C-noobs": true,
+  "LR-B-minus": true,
+  "LR-C-drop": true,
+  "TFIDF": true,
+  "TFIDF-nodigit": true
+ },
+ "provenance": {
+  "script": "<repo>\\revision\\build_linear_cache.py",
+  "script_sha256": "a4a4997543387841e271af9002baa9649b3311939c2870029c5ac371086d473f",
+  "python": "3.10.4",
+  "sklearn": "1.7.2",
+  "numpy": "2.2.6",
+  "built": "2026-09-26T21:41:24+0200",
+  "agentdojo_traces_sha256": "2c81a895c1f8be7ffdd88e790e3f75b83442c75e9c58cdf388d17df3df92296d",
+  "agentdojo_failed_sha256": "12292b33dcf83ffb8ae1d5156d2a44a54ee6b10fb16943160af0fec6134901f7"
+ }
+}

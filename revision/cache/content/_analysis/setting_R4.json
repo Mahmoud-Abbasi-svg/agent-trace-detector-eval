@@ -1,0 +1,1202 @@
+{
+ "setting": "R4",
+ "n_pool_E": 2686,
+ "n_pos": 2294,
+ "n_neg": 392,
+ "n_reps": 1,
+ "detectors": {
+  "TFIDF": {
+   "AUROC": [
+    0.52007,
+    0.471157,
+    0.563792
+   ],
+   "AP_w02": [
+    0.022532,
+    0.018965,
+    0.032252
+   ],
+   "AP_w10": [
+    0.100311,
+    0.088916,
+    0.118595
+   ],
+   "AP_native": [
+    0.84428,
+    0.807516,
+    0.874942
+   ],
+   "recall_t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "FPR_t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "prec02_t_r80": [
+    null,
+    null,
+    null
+   ],
+   "prec10_t_r80": [
+    null,
+    null,
+    null
+   ],
+   "FPR_at_testTPR80": [
+    0.721939,
+    0.651713,
+    0.80798
+   ],
+   "recall_t05": [
+    0.174804,
+    0.114572,
+    0.235993
+   ],
+   "FPR_t05": [
+    0.216837,
+    0.147938,
+    0.296875
+   ]
+  },
+  "TFIDF-nodigit": {
+   "AUROC": [
+    0.470043,
+    0.413009,
+    0.523724
+   ],
+   "AP_w02": [
+    0.027821,
+    0.021251,
+    0.0399
+   ],
+   "AP_w10": [
+    0.102816,
+    0.088796,
+    0.125104
+   ],
+   "AP_native": [
+    0.845182,
+    0.811162,
+    0.873796
+   ],
+   "recall_t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "FPR_t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "prec02_t_r80": [
+    null,
+    null,
+    null
+   ],
+   "prec10_t_r80": [
+    null,
+    null,
+    null
+   ],
+   "FPR_at_testTPR80": [
+    0.859694,
+    0.782826,
+    0.930179
+   ],
+   "recall_t05": [
+    0.083697,
+    0.045914,
+    0.124152
+   ],
+   "FPR_t05": [
+    0.104592,
+    0.047162,
+    0.16928
+   ]
+  },
+  "LR-C": {
+   "AUROC": [
+    0.473318,
+    0.427604,
+    0.513304
+   ],
+   "AP_w02": [
+    0.01764,
+    0.016009,
+    0.019756
+   ],
+   "AP_w10": [
+    0.088659,
+    0.080972,
+    0.097835
+   ],
+   "AP_native": [
+    0.821327,
+    0.791239,
+    0.845545
+   ],
+   "recall_t_r80": [
+    0.225371,
+    0.137161,
+    0.314289
+   ],
+   "FPR_t_r80": [
+    0.22449,
+    0.144356,
+    0.309416
+   ],
+   "prec02_t_r80": [
+    0.020077,
+    0.014496,
+    0.026618
+   ],
+   "prec10_t_r80": [
+    0.100353,
+    0.074146,
+    0.12959
+   ],
+   "FPR_at_testTPR80": [
+    0.821429,
+    0.753512,
+    0.873709
+   ],
+   "recall_t05": [
+    0.226242,
+    0.137473,
+    0.315288
+   ],
+   "FPR_t05": [
+    0.22449,
+    0.144356,
+    0.309416
+   ]
+  },
+  "LR-B": {
+   "AUROC": [
+    0.481615,
+    0.436146,
+    0.521375
+   ],
+   "AP_w02": [
+    0.018375,
+    0.016522,
+    0.020725
+   ],
+   "AP_w10": [
+    0.090477,
+    0.082659,
+    0.100145
+   ],
+   "AP_native": [
+    0.824561,
+    0.794312,
+    0.849449
+   ],
+   "recall_t_r80": [
+    0.190933,
+    0.111164,
+    0.272521
+   ],
+   "FPR_t_r80": [
+    0.22449,
+    0.144356,
+    0.309416
+   ],
+   "prec02_t_r80": [
+    0.017061,
+    0.011974,
+    0.022815
+   ],
+   "prec10_t_r80": [
+    0.086343,
+    0.061899,
+    0.11278
+   ],
+   "FPR_at_testTPR80": [
+    0.829082,
+    0.737861,
+    0.870633
+   ],
+   "recall_t05": [
+    0.178291,
+    0.103169,
+    0.255687
+   ],
+   "FPR_t05": [
+    0.22449,
+    0.144356,
+    0.309416
+   ]
+  },
+  "TFIDF-toolname": {
+   "AUROC": [
+    0.699581,
+    0.656037,
+    0.739223
+   ],
+   "AP_w02": [
+    0.088847,
+    0.072523,
+    0.131931
+   ],
+   "AP_w10": [
+    0.246143,
+    0.208924,
+    0.319484
+   ],
+   "AP_native": [
+    0.926805,
+    0.908205,
+    0.942337
+   ],
+   "recall_t_r80": [
+    0.718832,
+    0.6502,
+    0.782442
+   ],
+   "FPR_t_r80": [
+    0.44898,
+    0.349627,
+    0.546798
+   ],
+   "prec02_t_r80": [
+    0.03164,
+    0.026581,
+    0.03873
+   ],
+   "prec10_t_r80": [
+    0.151026,
+    0.129429,
+    0.179897
+   ],
+   "FPR_at_testTPR80": [
+    0.566327,
+    0.485254,
+    0.647788
+   ],
+   "recall_t05": [
+    0.68265,
+    0.616642,
+    0.745989
+   ],
+   "FPR_t05": [
+    0.387755,
+    0.29551,
+    0.480686
+   ]
+  }
+ },
+ "paired": {
+  "TFIDF - LR-C": {
+   "AUROC": {
+    "delta": 0.046752,
+    "lo": -0.00183,
+    "hi": 0.096433,
+    "p": 0.057,
+    "detected": false,
+    "n_valid_replicates": 2000
+   },
+   "AP_w02": {
+    "delta": 0.004892,
+    "lo": 0.001348,
+    "hi": 0.014113,
+    "p": 0.007,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "AP_w10": {
+    "delta": 0.011652,
+    "lo": 0.001342,
+    "hi": 0.027347,
+    "p": 0.027,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "recall_t_r80": {
+    "delta": -0.225371,
+    "lo": -0.314289,
+    "hi": -0.137161,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "FPR_t_r80": {
+    "delta": -0.22449,
+    "lo": -0.309416,
+    "hi": -0.144356,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   }
+  },
+  "TFIDF-nodigit - LR-C": {
+   "AUROC": {
+    "delta": -0.003275,
+    "lo": -0.054828,
+    "hi": 0.050298,
+    "p": 0.908,
+    "detected": false,
+    "n_valid_replicates": 2000
+   },
+   "AP_w02": {
+    "delta": 0.010181,
+    "lo": 0.003971,
+    "hi": 0.021655,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "AP_w10": {
+    "delta": 0.014157,
+    "lo": 0.001633,
+    "hi": 0.032715,
+    "p": 0.018,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "recall_t_r80": {
+    "delta": -0.225371,
+    "lo": -0.314289,
+    "hi": -0.137161,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "FPR_t_r80": {
+    "delta": -0.22449,
+    "lo": -0.309416,
+    "hi": -0.144356,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   }
+  },
+  "TFIDF - LR-B": {
+   "AUROC": {
+    "delta": 0.038455,
+    "lo": -0.008534,
+    "hi": 0.086858,
+    "p": 0.116,
+    "detected": false,
+    "n_valid_replicates": 2000
+   },
+   "AP_w02": {
+    "delta": 0.004157,
+    "lo": 0.000465,
+    "hi": 0.013481,
+    "p": 0.023,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "AP_w10": {
+    "delta": 0.009834,
+    "lo": -0.000443,
+    "hi": 0.025114,
+    "p": 0.066,
+    "detected": false,
+    "n_valid_replicates": 2000
+   },
+   "recall_t_r80": {
+    "delta": -0.190933,
+    "lo": -0.272521,
+    "hi": -0.111164,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "FPR_t_r80": {
+    "delta": -0.22449,
+    "lo": -0.309416,
+    "hi": -0.144356,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   }
+  },
+  "TFIDF-nodigit - TFIDF": {
+   "AUROC": {
+    "delta": -0.050027,
+    "lo": -0.100742,
+    "hi": 0.00109,
+    "p": 0.057,
+    "detected": false,
+    "n_valid_replicates": 2000
+   },
+   "AP_w02": {
+    "delta": 0.005289,
+    "lo": -0.001276,
+    "hi": 0.01303,
+    "p": 0.135,
+    "detected": false,
+    "n_valid_replicates": 2000
+   },
+   "AP_w10": {
+    "delta": 0.002505,
+    "lo": -0.01103,
+    "hi": 0.016589,
+    "p": 0.731,
+    "detected": false,
+    "n_valid_replicates": 2000
+   },
+   "recall_t_r80": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0,
+    "detected": false,
+    "n_valid_replicates": 2000
+   },
+   "FPR_t_r80": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0,
+    "detected": false,
+    "n_valid_replicates": 2000
+   }
+  },
+  "TFIDF-toolname - LR-B": {
+   "AUROC": {
+    "delta": 0.217966,
+    "lo": 0.157696,
+    "hi": 0.282353,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "AP_w02": {
+    "delta": 0.070472,
+    "lo": 0.054536,
+    "hi": 0.113975,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "AP_w10": {
+    "delta": 0.155666,
+    "lo": 0.117763,
+    "hi": 0.229151,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "recall_t_r80": {
+    "delta": 0.527899,
+    "lo": 0.437558,
+    "hi": 0.61393,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "FPR_t_r80": {
+    "delta": 0.22449,
+    "lo": 0.126788,
+    "hi": 0.333355,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   }
+  },
+  "TFIDF-toolname - LR-C": {
+   "AUROC": {
+    "delta": 0.226263,
+    "lo": 0.165185,
+    "hi": 0.290937,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "AP_w02": {
+    "delta": 0.071207,
+    "lo": 0.055027,
+    "hi": 0.11494,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "AP_w10": {
+    "delta": 0.157484,
+    "lo": 0.119441,
+    "hi": 0.231434,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "recall_t_r80": {
+    "delta": 0.493461,
+    "lo": 0.399578,
+    "hi": 0.587394,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "FPR_t_r80": {
+    "delta": 0.22449,
+    "lo": 0.126788,
+    "hi": 0.333355,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   }
+  },
+  "TFIDF-toolname - TFIDF": {
+   "AUROC": {
+    "delta": 0.179511,
+    "lo": 0.119003,
+    "hi": 0.23802,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "AP_w02": {
+    "delta": 0.066315,
+    "lo": 0.047363,
+    "hi": 0.109907,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "AP_w10": {
+    "delta": 0.145832,
+    "lo": 0.101651,
+    "hi": 0.219991,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "recall_t_r80": {
+    "delta": 0.718832,
+    "lo": 0.6502,
+    "hi": 0.782442,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   },
+   "FPR_t_r80": {
+    "delta": 0.44898,
+    "lo": 0.349627,
+    "hi": 0.546798,
+    "p": 0.0,
+    "detected": true,
+    "n_valid_replicates": 2000
+   }
+  }
+ },
+ "bootstrap": {
+  "n_clusters": 117,
+  "scheme": "ut_cluster",
+  "B": 2000,
+  "seed": 1278575218
+ },
+ "sensitivity": {
+  "trajectory_stratified": {
+   "bootstrap": {
+    "n_pos": 2294,
+    "n_neg": 392,
+    "scheme": "trajectory_stratified",
+    "B": 2000,
+    "seed": 1844886205
+   },
+   "detectors": {
+    "TFIDF": {
+     "AUROC": [
+      0.52007,
+      0.485601,
+      0.554092
+     ],
+     "AP_w02": [
+      0.022532,
+      0.020089,
+      0.027165
+     ],
+     "AP_w10": [
+      0.100311,
+      0.09302,
+      0.110922
+     ],
+     "recall_t_r80": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "FPR_t_r80": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "TFIDF-nodigit": {
+     "AUROC": [
+      0.470043,
+      0.43941,
+      0.499333
+     ],
+     "AP_w02": [
+      0.027821,
+      0.023788,
+      0.032691
+     ],
+     "AP_w10": [
+      0.102816,
+      0.094675,
+      0.113554
+     ],
+     "recall_t_r80": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "FPR_t_r80": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "LR-C": {
+     "AUROC": [
+      0.473318,
+      0.439461,
+      0.5054
+     ],
+     "AP_w02": [
+      0.01764,
+      0.016379,
+      0.019411
+     ],
+     "AP_w10": [
+      0.088659,
+      0.082704,
+      0.095945
+     ],
+     "recall_t_r80": [
+      0.225371,
+      0.209231,
+      0.242382
+     ],
+     "FPR_t_r80": [
+      0.22449,
+      0.186224,
+      0.267857
+     ]
+    },
+    "LR-B": {
+     "AUROC": [
+      0.481615,
+      0.447926,
+      0.51355
+     ],
+     "AP_w02": [
+      0.018375,
+      0.016842,
+      0.020261
+     ],
+     "AP_w10": [
+      0.090477,
+      0.084217,
+      0.098214
+     ],
+     "recall_t_r80": [
+      0.190933,
+      0.176101,
+      0.206637
+     ],
+     "FPR_t_r80": [
+      0.22449,
+      0.186224,
+      0.267857
+     ]
+    },
+    "TFIDF-toolname": {
+     "AUROC": [
+      0.699581,
+      0.671516,
+      0.725614
+     ],
+     "AP_w02": [
+      0.088847,
+      0.076789,
+      0.118767
+     ],
+     "AP_w10": [
+      0.246143,
+      0.215829,
+      0.292382
+     ],
+     "recall_t_r80": [
+      0.718832,
+      0.700087,
+      0.736704
+     ],
+     "FPR_t_r80": [
+      0.44898,
+      0.403061,
+      0.497449
+     ]
+    }
+   },
+   "paired": {
+    "TFIDF - LR-C": {
+     "AUROC": {
+      "delta": 0.046752,
+      "lo": 0.018962,
+      "hi": 0.074585,
+      "p": 0.002,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "AP_w02": {
+      "delta": 0.004892,
+      "lo": 0.002439,
+      "hi": 0.009201,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "AP_w10": {
+      "delta": 0.011652,
+      "lo": 0.005254,
+      "hi": 0.019656,
+      "p": 0.001,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "recall_t_r80": {
+      "delta": -0.225371,
+      "lo": -0.242382,
+      "hi": -0.209231,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "FPR_t_r80": {
+      "delta": -0.22449,
+      "lo": -0.267857,
+      "hi": -0.186224,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     }
+    },
+    "TFIDF-nodigit - LR-C": {
+     "AUROC": {
+      "delta": -0.003275,
+      "lo": -0.034289,
+      "hi": 0.026632,
+      "p": 0.839,
+      "detected": false,
+      "n_valid_replicates": 2000
+     },
+     "AP_w02": {
+      "delta": 0.010181,
+      "lo": 0.006201,
+      "hi": 0.014577,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "AP_w10": {
+      "delta": 0.014157,
+      "lo": 0.006902,
+      "hi": 0.022651,
+      "p": 0.001,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "recall_t_r80": {
+      "delta": -0.225371,
+      "lo": -0.242382,
+      "hi": -0.209231,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "FPR_t_r80": {
+      "delta": -0.22449,
+      "lo": -0.267857,
+      "hi": -0.186224,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     }
+    },
+    "TFIDF - LR-B": {
+     "AUROC": {
+      "delta": 0.038455,
+      "lo": 0.011059,
+      "hi": 0.066582,
+      "p": 0.007,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "AP_w02": {
+      "delta": 0.004157,
+      "lo": 0.001731,
+      "hi": 0.008548,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "AP_w10": {
+      "delta": 0.009834,
+      "lo": 0.00346,
+      "hi": 0.01806,
+      "p": 0.002,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "recall_t_r80": {
+      "delta": -0.190933,
+      "lo": -0.206637,
+      "hi": -0.176101,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "FPR_t_r80": {
+      "delta": -0.22449,
+      "lo": -0.267857,
+      "hi": -0.186224,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     }
+    },
+    "TFIDF-nodigit - TFIDF": {
+     "AUROC": {
+      "delta": -0.050027,
+      "lo": -0.071738,
+      "hi": -0.027534,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "AP_w02": {
+      "delta": 0.005289,
+      "lo": 0.000966,
+      "hi": 0.008535,
+      "p": 0.004,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "AP_w10": {
+      "delta": 0.002505,
+      "lo": -0.003941,
+      "hi": 0.00847,
+      "p": 0.499,
+      "detected": false,
+      "n_valid_replicates": 2000
+     },
+     "recall_t_r80": {
+      "delta": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "p": 1.0,
+      "detected": false,
+      "n_valid_replicates": 2000
+     },
+     "FPR_t_r80": {
+      "delta": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "p": 1.0,
+      "detected": false,
+      "n_valid_replicates": 2000
+     }
+    },
+    "TFIDF-toolname - LR-B": {
+     "AUROC": {
+      "delta": 0.217966,
+      "lo": 0.176275,
+      "hi": 0.258936,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "AP_w02": {
+      "delta": 0.070472,
+      "lo": 0.058768,
+      "hi": 0.100389,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "AP_w10": {
+      "delta": 0.155666,
+      "lo": 0.124798,
+      "hi": 0.201507,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "recall_t_r80": {
+      "delta": 0.527899,
+      "lo": 0.504359,
+      "hi": 0.550567,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "FPR_t_r80": {
+      "delta": 0.22449,
+      "lo": 0.170918,
+      "hi": 0.280612,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     }
+    },
+    "TFIDF-toolname - LR-C": {
+     "AUROC": {
+      "delta": 0.226263,
+      "lo": 0.184513,
+      "hi": 0.267186,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "AP_w02": {
+      "delta": 0.071207,
+      "lo": 0.059445,
+      "hi": 0.101097,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "AP_w10": {
+      "delta": 0.157484,
+      "lo": 0.126612,
+      "hi": 0.203077,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "recall_t_r80": {
+      "delta": 0.493461,
+      "lo": 0.469922,
+      "hi": 0.515704,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "FPR_t_r80": {
+      "delta": 0.22449,
+      "lo": 0.170918,
+      "hi": 0.280612,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     }
+    },
+    "TFIDF-toolname - TFIDF": {
+     "AUROC": {
+      "delta": 0.179511,
+      "lo": 0.146199,
+      "hi": 0.213365,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "AP_w02": {
+      "delta": 0.066315,
+      "lo": 0.053427,
+      "hi": 0.096345,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "AP_w10": {
+      "delta": 0.145832,
+      "lo": 0.114468,
+      "hi": 0.19155,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "recall_t_r80": {
+      "delta": 0.718832,
+      "lo": 0.700087,
+      "hi": 0.736704,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     },
+     "FPR_t_r80": {
+      "delta": 0.44898,
+      "lo": 0.403061,
+      "hi": 0.497449,
+      "p": 0.0,
+      "detected": true,
+      "n_valid_replicates": 2000
+     }
+    }
+   }
+  }
+ },
+ "thresholds_t_r80": {
+  "TFIDF": 0.786488,
+  "TFIDF-nodigit": 0.751566,
+  "LR-C": 0.513756,
+  "LR-B": 0.464271,
+  "TFIDF-toolname": 0.474575
+ },
+ "sources": {
+  "TFIDF": "cache/linear",
+  "TFIDF-nodigit": "cache/linear",
+  "LR-C": "cache/linear",
+  "LR-B": "cache/linear",
+  "TFIDF-toolname": "cache/content"
+ },
+ "per_class_t_r80": {
+  "TFIDF": {
+   "flag_failed_attack": {
+    "rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n": 4987,
+    "bootstrap": "cluster (94)"
+   },
+   "recall_dos": {
+    "rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n": 101,
+    "bootstrap": "trajectory"
+   },
+   "recall_non_dos": {
+    "rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n": 2193,
+    "bootstrap": "trajectory"
+   }
+  },
+  "TFIDF-nodigit": {
+   "flag_failed_attack": {
+    "rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n": 4987,
+    "bootstrap": "cluster (94)"
+   },
+   "recall_dos": {
+    "rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n": 101,
+    "bootstrap": "trajectory"
+   },
+   "recall_non_dos": {
+    "rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n": 2193,
+    "bootstrap": "trajectory"
+   }
+  },
+  "LR-C": {
+   "flag_failed_attack": {
+    "rate": [
+     0.055745,
+     0.032803,
+     0.085589
+    ],
+    "n": 4987,
+    "bootstrap": "cluster (94)"
+   },
+   "recall_dos": {
+    "rate": [
+     0.118812,
+     0.059406,
+     0.188119
+    ],
+    "n": 101,
+    "bootstrap": "trajectory"
+   },
+   "recall_non_dos": {
+    "rate": [
+     0.230278,
+     0.212494,
+     0.248062
+    ],
+    "n": 2193,
+    "bootstrap": "trajectory"
+   }
+  },
+  "LR-B": {
+   "flag_failed_attack": {
+    "rate": [
+     0.047323,
+     0.02762,
+     0.07178
+    ],
+    "n": 4987,
+    "bootstrap": "cluster (94)"
+   },
+   "recall_dos": {
+    "rate": [
+     0.069307,
+     0.029703,
+     0.118812
+    ],
+    "n": 101,
+    "bootstrap": "trajectory"
+   },
+   "recall_non_dos": {
+    "rate": [
+     0.196534,
+     0.181031,
+     0.212506
+    ],
+    "n": 2193,
+    "bootstrap": "trajectory"
+   }
+  },
+  "TFIDF-toolname": {
+   "flag_failed_attack": {
+    "rate": [
+     0.299378,
+     0.205451,
+     0.400365
+    ],
+    "n": 4987,
+    "bootstrap": "cluster (94)"
+   },
+   "recall_dos": {
+    "rate": [
+     0.316832,
+     0.227723,
+     0.405941
+    ],
+    "n": 101,
+    "bootstrap": "trajectory"
+   },
+   "recall_non_dos": {
+    "rate": [
+     0.737346,
+     0.720007,
+     0.75513
+    ],
+    "n": 2193,
+    "bootstrap": "trajectory"
+   }
+  }
+ },
+ "pattern_composition_poolE_pos": null
+}

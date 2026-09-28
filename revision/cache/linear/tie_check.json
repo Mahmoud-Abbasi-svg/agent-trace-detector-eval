@@ -1,0 +1,277 @@
+{
+ "note": "AUROC on pool E. raw = v0.3 code path (float noise can break mathematically tied scores); cache = tie-exact scores stored in cache/linear/<setting>.pkl.",
+ "settings": {
+  "R1": {
+   "Markov": {
+    "AUROC_raw_v03_path": 0.7238,
+    "AUROC_cache": 0.7238,
+    "n_distinct_raw": 1528,
+    "n_distinct_cache": 1528,
+    "diff": 0.0
+   },
+   "LR-A": {
+    "AUROC_raw_v03_path": 0.7774,
+    "AUROC_cache": 0.7774,
+    "n_distinct_raw": 1489,
+    "n_distinct_cache": 1489,
+    "diff": 0.0
+   }
+  },
+  "R1wd_s0": {
+   "Markov": {
+    "AUROC_raw_v03_path": 0.7618,
+    "AUROC_cache": 0.7618,
+    "n_distinct_raw": 1450,
+    "n_distinct_cache": 1450,
+    "diff": 0.0
+   },
+   "LR-A": {
+    "AUROC_raw_v03_path": 0.8207,
+    "AUROC_cache": 0.8207,
+    "n_distinct_raw": 1406,
+    "n_distinct_cache": 1406,
+    "diff": 0.0
+   }
+  },
+  "R1wd_s1": {
+   "Markov": {
+    "AUROC_raw_v03_path": 0.7561,
+    "AUROC_cache": 0.7561,
+    "n_distinct_raw": 1455,
+    "n_distinct_cache": 1455,
+    "diff": 0.0
+   },
+   "LR-A": {
+    "AUROC_raw_v03_path": 0.8217,
+    "AUROC_cache": 0.8217,
+    "n_distinct_raw": 1422,
+    "n_distinct_cache": 1422,
+    "diff": 0.0
+   }
+  },
+  "R1wd_s2": {
+   "Markov": {
+    "AUROC_raw_v03_path": 0.7692,
+    "AUROC_cache": 0.7692,
+    "n_distinct_raw": 1466,
+    "n_distinct_cache": 1464,
+    "diff": 0.0
+   },
+   "LR-A": {
+    "AUROC_raw_v03_path": 0.8229,
+    "AUROC_cache": 0.8229,
+    "n_distinct_raw": 1424,
+    "n_distinct_cache": 1424,
+    "diff": 0.0
+   }
+  },
+  "R1wd_s3": {
+   "Markov": {
+    "AUROC_raw_v03_path": 0.7524,
+    "AUROC_cache": 0.7524,
+    "n_distinct_raw": 1443,
+    "n_distinct_cache": 1443,
+    "diff": 0.0
+   },
+   "LR-A": {
+    "AUROC_raw_v03_path": 0.8215,
+    "AUROC_cache": 0.8215,
+    "n_distinct_raw": 1409,
+    "n_distinct_cache": 1409,
+    "diff": 0.0
+   }
+  },
+  "R1wd_s4": {
+   "Markov": {
+    "AUROC_raw_v03_path": 0.7424,
+    "AUROC_cache": 0.7424,
+    "n_distinct_raw": 1443,
+    "n_distinct_cache": 1443,
+    "diff": 0.0
+   },
+   "LR-A": {
+    "AUROC_raw_v03_path": 0.8165,
+    "AUROC_cache": 0.8165,
+    "n_distinct_raw": 1417,
+    "n_distinct_cache": 1417,
+    "diff": 0.0
+   }
+  },
+  "R2": {
+   "Markov": {
+    "AUROC_raw_v03_path": 0.6518,
+    "AUROC_cache": 0.6518,
+    "n_distinct_raw": 1203,
+    "n_distinct_cache": 1203,
+    "diff": 0.0
+   },
+   "LR-A": {
+    "AUROC_raw_v03_path": 0.7878,
+    "AUROC_cache": 0.7878,
+    "n_distinct_raw": 1155,
+    "n_distinct_cache": 1155,
+    "diff": 0.0
+   }
+  },
+  "R3_medical": {
+   "Markov": {
+    "AUROC_raw_v03_path": 0.5,
+    "AUROC_cache": 0.5,
+    "n_distinct_raw": 1,
+    "n_distinct_cache": 1,
+    "diff": 0.0
+   },
+   "LR-A": {
+    "AUROC_raw_v03_path": 0.5,
+    "AUROC_cache": 0.5,
+    "n_distinct_raw": 1,
+    "n_distinct_cache": 1,
+    "diff": 0.0
+   }
+  },
+  "R3_banking": {
+   "Markov": {
+    "AUROC_raw_v03_path": 0.5,
+    "AUROC_cache": 0.5,
+    "n_distinct_raw": 1,
+    "n_distinct_cache": 1,
+    "diff": 0.0
+   },
+   "LR-A": {
+    "AUROC_raw_v03_path": 0.5,
+    "AUROC_cache": 0.5,
+    "n_distinct_raw": 1,
+    "n_distinct_cache": 1,
+    "diff": 0.0
+   }
+  },
+  "R3_web": {
+   "Markov": {
+    "AUROC_raw_v03_path": 0.5,
+    "AUROC_cache": 0.5,
+    "n_distinct_raw": 1,
+    "n_distinct_cache": 1,
+    "diff": 0.0
+   },
+   "LR-A": {
+    "AUROC_raw_v03_path": 0.499,
+    "AUROC_cache": 0.5,
+    "n_distinct_raw": 2,
+    "n_distinct_cache": 1,
+    "diff": -0.001
+   }
+  },
+  "R3_email": {
+   "Markov": {
+    "AUROC_raw_v03_path": 0.5,
+    "AUROC_cache": 0.5,
+    "n_distinct_raw": 1,
+    "n_distinct_cache": 1,
+    "diff": 0.0
+   },
+   "LR-A": {
+    "AUROC_raw_v03_path": 0.4995,
+    "AUROC_cache": 0.5,
+    "n_distinct_raw": 2,
+    "n_distinct_cache": 1,
+    "diff": -0.0005
+   }
+  },
+  "R3_coding": {
+   "Markov": {
+    "AUROC_raw_v03_path": 0.4995,
+    "AUROC_cache": 0.5,
+    "n_distinct_raw": 2,
+    "n_distinct_cache": 1,
+    "diff": -0.0005
+   },
+   "LR-A": {
+    "AUROC_raw_v03_path": 0.499,
+    "AUROC_cache": 0.5,
+    "n_distinct_raw": 2,
+    "n_distinct_cache": 1,
+    "diff": -0.001
+   }
+  },
+  "R4": {
+   "Markov": {
+    "AUROC_raw_v03_path": 0.5082,
+    "AUROC_cache": 0.5902,
+    "n_distinct_raw": 75,
+    "n_distinct_cache": 71,
+    "diff": -0.082
+   },
+   "LR-A": {
+    "AUROC_raw_v03_path": 0.5655,
+    "AUROC_cache": 0.5655,
+    "n_distinct_raw": 33,
+    "n_distinct_cache": 33,
+    "diff": 0.0
+   }
+  },
+  "LOSO_banking": {
+   "Markov": {
+    "AUROC_raw_v03_path": 0.5291,
+    "AUROC_cache": 0.5,
+    "n_distinct_raw": 3,
+    "n_distinct_cache": 1,
+    "diff": 0.0291
+   },
+   "LR-A": {
+    "AUROC_raw_v03_path": 0.5,
+    "AUROC_cache": 0.5,
+    "n_distinct_raw": 1,
+    "n_distinct_cache": 1,
+    "diff": 0.0
+   }
+  },
+  "LOSO_slack": {
+   "Markov": {
+    "AUROC_raw_v03_path": 0.6636,
+    "AUROC_cache": 0.5,
+    "n_distinct_raw": 4,
+    "n_distinct_cache": 1,
+    "diff": 0.1636
+   },
+   "LR-A": {
+    "AUROC_raw_v03_path": 0.5,
+    "AUROC_cache": 0.5,
+    "n_distinct_raw": 1,
+    "n_distinct_cache": 1,
+    "diff": 0.0
+   }
+  },
+  "LOSO_travel": {
+   "Markov": {
+    "AUROC_raw_v03_path": 0.4237,
+    "AUROC_cache": 0.5498,
+    "n_distinct_raw": 11,
+    "n_distinct_cache": 8,
+    "diff": -0.1261
+   },
+   "LR-A": {
+    "AUROC_raw_v03_path": 0.6529,
+    "AUROC_cache": 0.6529,
+    "n_distinct_raw": 6,
+    "n_distinct_cache": 6,
+    "diff": 0.0
+   }
+  },
+  "LOSO_workspace": {
+   "Markov": {
+    "AUROC_raw_v03_path": 0.5138,
+    "AUROC_cache": 0.4976,
+    "n_distinct_raw": 16,
+    "n_distinct_cache": 12,
+    "diff": 0.0162
+   },
+   "LR-A": {
+    "AUROC_raw_v03_path": 0.7029,
+    "AUROC_cache": 0.7029,
+    "n_distinct_raw": 20,
+    "n_distinct_cache": 20,
+    "diff": 0.0
+   }
+  }
+ }
+}

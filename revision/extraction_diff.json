@@ -1,0 +1,15 @@
+{
+ "changed_content": {
+  "gpt-4o-2024-05-13": 37,
+  "gemini-1.5-pro-002": 185,
+  "gpt-4-turbo-2024-04-09": 3,
+  "gemini-2.0-flash-001": 188
+ },
+ "changed_length": {
+  "gpt-4o-2024-05-13": 36,
+  "gemini-1.5-pro-002": 183,
+  "gpt-4-turbo-2024-04-09": 3,
+  "gemini-2.0-flash-001": 186
+ },
+ "truncation_only": 249
+}

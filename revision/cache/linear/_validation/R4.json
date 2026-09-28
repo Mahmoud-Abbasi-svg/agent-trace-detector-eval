@@ -1,0 +1,557 @@
+{
+ "setting": "R4",
+ "B": 2000,
+ "seed": 20260938,
+ "n_pool_E": 2686,
+ "n_pos": 2294,
+ "n_neg": 392,
+ "n_failed": 4987,
+ "metrics": {
+  "LR-A": {
+   "AUROC": [
+    0.5655,
+    0.5432,
+    0.5875
+   ],
+   "AUPRC": [
+    0.8753,
+    0.8686,
+    0.882
+   ],
+   "recall@t_r80": [
+    0.0785,
+    0.0676,
+    0.0898
+   ],
+   "FPR@t_r80": [
+    0.0434,
+    0.023,
+    0.0638
+   ],
+   "recall@t05": [
+    0.0671,
+    0.0571,
+    0.078
+   ],
+   "FPR@t05": [
+    0.0077,
+    0.0,
+    0.0179
+   ],
+   "failed_flag_rate@t_r80": [
+    0.0311,
+    0.0263,
+    0.0359
+   ],
+   "failed_flag_rate@t05": [
+    0.0062,
+    0.0042,
+    0.0086
+   ],
+   "AUROC_all_rows": 0.5854
+  },
+  "LR-B": {
+   "AUROC": [
+    0.4816,
+    0.449,
+    0.515
+   ],
+   "AUPRC": [
+    0.8246,
+    0.8113,
+    0.8391
+   ],
+   "recall@t_r80": [
+    0.1909,
+    0.1748,
+    0.2066
+   ],
+   "FPR@t_r80": [
+    0.2245,
+    0.1837,
+    0.2653
+   ],
+   "recall@t05": [
+    0.1783,
+    0.163,
+    0.1935
+   ],
+   "FPR@t05": [
+    0.2245,
+    0.1837,
+    0.2653
+   ],
+   "failed_flag_rate@t_r80": [
+    0.0473,
+    0.0415,
+    0.0533
+   ],
+   "failed_flag_rate@t05": [
+    0.0451,
+    0.0393,
+    0.0511
+   ],
+   "AUROC_all_rows": 0.6264
+  },
+  "LR-C": {
+   "AUROC": [
+    0.4733,
+    0.4409,
+    0.5065
+   ],
+   "AUPRC": [
+    0.8213,
+    0.8081,
+    0.8359
+   ],
+   "recall@t_r80": [
+    0.2254,
+    0.2088,
+    0.2424
+   ],
+   "FPR@t_r80": [
+    0.2245,
+    0.1837,
+    0.2653
+   ],
+   "recall@t05": [
+    0.2262,
+    0.2097,
+    0.2437
+   ],
+   "FPR@t05": [
+    0.2245,
+    0.1837,
+    0.2653
+   ],
+   "failed_flag_rate@t_r80": [
+    0.0557,
+    0.0493,
+    0.0624
+   ],
+   "failed_flag_rate@t05": [
+    0.0569,
+    0.0505,
+    0.0634
+   ],
+   "AUROC_all_rows": 0.6264
+  },
+  "LR-B-noobs": {
+   "AUROC": [
+    0.6302,
+    0.5973,
+    0.6633
+   ],
+   "AUPRC": [
+    0.8864,
+    0.8729,
+    0.9006
+   ],
+   "recall@t_r80": [
+    0.5907,
+    0.5715,
+    0.6112
+   ],
+   "FPR@t_r80": [
+    0.398,
+    0.3495,
+    0.449
+   ],
+   "recall@t05": [
+    0.5497,
+    0.5305,
+    0.5706
+   ],
+   "FPR@t05": [
+    0.3367,
+    0.2908,
+    0.3852
+   ],
+   "failed_flag_rate@t_r80": [
+    0.4648,
+    0.4514,
+    0.478
+   ],
+   "failed_flag_rate@t05": [
+    0.3651,
+    0.3507,
+    0.3792
+   ],
+   "AUROC_all_rows": 0.6134
+  },
+  "LR-C-noobs": {
+   "AUROC": [
+    0.6566,
+    0.6248,
+    0.6882
+   ],
+   "AUPRC": [
+    0.9032,
+    0.891,
+    0.9155
+   ],
+   "recall@t_r80": [
+    0.8017,
+    0.7855,
+    0.8182
+   ],
+   "FPR@t_r80": [
+    0.523,
+    0.4745,
+    0.5714
+   ],
+   "recall@t05": [
+    0.7467,
+    0.7293,
+    0.765
+   ],
+   "FPR@t05": [
+    0.4949,
+    0.4464,
+    0.5434
+   ],
+   "failed_flag_rate@t_r80": [
+    0.6076,
+    0.5937,
+    0.6218
+   ],
+   "failed_flag_rate@t05": [
+    0.5737,
+    0.5593,
+    0.5873
+   ],
+   "AUROC_all_rows": 0.6296
+  },
+  "LR-B-minus": {
+   "AUROC": [
+    0.4779,
+    0.4451,
+    0.5116
+   ],
+   "AUPRC": [
+    0.82,
+    0.8068,
+    0.8347
+   ],
+   "recall@t_r80": [
+    0.1665,
+    0.1517,
+    0.1818
+   ],
+   "FPR@t_r80": [
+    0.2296,
+    0.1913,
+    0.2704
+   ],
+   "recall@t05": [
+    0.15,
+    0.1356,
+    0.1648
+   ],
+   "FPR@t05": [
+    0.2296,
+    0.1913,
+    0.2704
+   ],
+   "failed_flag_rate@t_r80": [
+    0.0465,
+    0.0409,
+    0.0523
+   ],
+   "failed_flag_rate@t05": [
+    0.0439,
+    0.0381,
+    0.0495
+   ],
+   "AUROC_all_rows": 0.6254
+  },
+  "LR-C-drop": {
+   "AUROC": [
+    0.4754,
+    0.4425,
+    0.5093
+   ],
+   "AUPRC": [
+    0.8195,
+    0.8065,
+    0.8344
+   ],
+   "recall@t_r80": [
+    0.1203,
+    0.1072,
+    0.1343
+   ],
+   "FPR@t_r80": [
+    0.2219,
+    0.1837,
+    0.2628
+   ],
+   "recall@t05": [
+    0.1242,
+    0.1111,
+    0.1382
+   ],
+   "FPR@t05": [
+    0.2219,
+    0.1837,
+    0.2628
+   ],
+   "failed_flag_rate@t_r80": [
+    0.0393,
+    0.0341,
+    0.0451
+   ],
+   "failed_flag_rate@t05": [
+    0.0401,
+    0.0349,
+    0.0457
+   ],
+   "AUROC_all_rows": 0.629
+  },
+  "Markov": {
+   "AUROC": [
+    0.5902,
+    0.5723,
+    0.6075
+   ],
+   "AUPRC": [
+    0.8711,
+    0.8634,
+    0.8799
+   ],
+   "recall@t_r80": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "FPR@t_r80": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "recall@t05": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "FPR@t05": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "failed_flag_rate@t_r80": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "failed_flag_rate@t05": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "AUROC_all_rows": 0.5988
+  },
+  "IForest": {
+   "AUROC": [
+    0.6473,
+    0.6138,
+    0.6802
+   ],
+   "AUPRC": [
+    0.8971,
+    0.8851,
+    0.9091
+   ],
+   "recall@t_r80": [
+    0.3936,
+    0.3727,
+    0.4133
+   ],
+   "FPR@t_r80": [
+    0.2832,
+    0.2398,
+    0.3316
+   ],
+   "recall@t05": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "FPR@t05": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "failed_flag_rate@t_r80": [
+    0.3423,
+    0.3297,
+    0.3557
+   ],
+   "failed_flag_rate@t05": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "AUROC_all_rows": 0.5567
+  },
+  "TFIDF": {
+   "AUROC": [
+    0.5201,
+    0.4866,
+    0.5522
+   ],
+   "AUPRC": [
+    0.8443,
+    0.8306,
+    0.8583
+   ],
+   "recall@t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "FPR@t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "recall@t05": [
+    0.1748,
+    0.1595,
+    0.1909
+   ],
+   "FPR@t05": [
+    0.2168,
+    0.1786,
+    0.2577
+   ],
+   "failed_flag_rate@t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "failed_flag_rate@t05": [
+    0.1011,
+    0.0932,
+    0.1099
+   ],
+   "AUROC_all_rows": 0.6259
+  },
+  "TFIDF-nodigit": {
+   "AUROC": [
+    0.47,
+    0.4421,
+    0.4985
+   ],
+   "AUPRC": [
+    0.8452,
+    0.833,
+    0.8578
+   ],
+   "recall@t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "FPR@t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "recall@t05": [
+    0.0837,
+    0.0728,
+    0.0959
+   ],
+   "FPR@t05": [
+    0.1046,
+    0.0765,
+    0.1352
+   ],
+   "failed_flag_rate@t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "failed_flag_rate@t05": [
+    0.0549,
+    0.0489,
+    0.0614
+   ],
+   "AUROC_all_rows": 0.5552
+  }
+ },
+ "sizes": {
+  "n_train": 10656,
+  "n_train_pos": 4706,
+  "n_test": 7673,
+  "n_test_by_category": {
+   "benign": 392,
+   "attacked": 2294,
+   "attack_failed": 4987
+  },
+  "vocab_size": 103,
+  "kappa": 0.0751,
+  "kappa_all_rows": 0.055,
+  "scheme": "single",
+  "detectors": [
+   "LR-A",
+   "LR-B",
+   "LR-C",
+   "LR-B-noobs",
+   "LR-C-noobs",
+   "LR-B-minus",
+   "LR-C-drop",
+   "Markov",
+   "IForest",
+   "TFIDF",
+   "TFIDF-nodigit"
+  ]
+ },
+ "format_checks": {
+  "meta_keys_complete": true,
+  "y_matches_meta": true,
+  "poolE_matches_meta": true,
+  "failed_rows_not_in_poolE": true,
+  "y1_only_attacked": true,
+  "ids_unique": true,
+  "score_and_pred_shapes": true,
+  "scores_finite": true,
+  "pred_equals_score_vs_training_threshold": true,
+  "t05_is_0.5": true,
+  "lrc_parts_reproduce_scores": true,
+  "coefs_present_LR-B_LR-C": true,
+  "row_order_equals_gru_cache": true
+ },
+ "reproduction_checks": {
+  "n": 6,
+  "n_pass": 6,
+  "max_abs_score_diff": 1.604794075404925e-11,
+  "auroc_differs_from_v03_code_path": []
+ },
+ "lr_converged": {
+  "LR-A": true,
+  "LR-B": true,
+  "LR-C": true,
+  "LR-B-noobs": true,
+  "LR-C-noobs": true,
+  "LR-B-minus": true,
+  "LR-C-drop": true,
+  "TFIDF": true,
+  "TFIDF-nodigit": true
+ },
+ "tfidf_n_features": {
+  "TFIDF": 50000,
+  "TFIDF-nodigit": 50000
+ },
+ "provenance": {
+  "script": "<repo>\\revision\\build_linear_cache.py",
+  "script_sha256": "a4a4997543387841e271af9002baa9649b3311939c2870029c5ac371086d473f",
+  "python": "3.10.4",
+  "sklearn": "1.7.2",
+  "numpy": "2.2.6",
+  "built": "2026-09-26T21:33:22+0200",
+  "agentdojo_traces_sha256": "2c81a895c1f8be7ffdd88e790e3f75b83442c75e9c58cdf388d17df3df92296d",
+  "agentdojo_failed_sha256": "12292b33dcf83ffb8ae1d5156d2a44a54ee6b10fb16943160af0fec6134901f7"
+ }
+}

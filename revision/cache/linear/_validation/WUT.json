@@ -1,0 +1,582 @@
+{
+ "setting": "WUT",
+ "B": 2000,
+ "seed": 20260939,
+ "n_pool_E": 2686,
+ "n_pos": 2294,
+ "n_neg": 392,
+ "n_failed": 4987,
+ "metrics": {
+  "LR-A": {
+   "AUROC": [
+    0.788,
+    0.7586,
+    0.8151
+   ],
+   "AUPRC": [
+    0.9475,
+    0.9361,
+    0.9585
+   ],
+   "recall@t_r80": [
+    0.7091,
+    0.6778,
+    0.7358
+   ],
+   "FPR@t_r80": [
+    0.2617,
+    0.2117,
+    0.3112
+   ],
+   "recall@t05": [
+    0.7049,
+    0.6722,
+    0.7302
+   ],
+   "FPR@t05": [
+    0.2582,
+    0.2117,
+    0.3087
+   ],
+   "failed_flag_rate@t_r80": [
+    0.2621,
+    0.23,
+    0.2867
+   ],
+   "failed_flag_rate@t05": [
+    0.2621,
+    0.2346,
+    0.2859
+   ],
+   "AUROC_all_rows": 0.7808
+  },
+  "LR-B": {
+   "AUROC": [
+    0.7409,
+    0.709,
+    0.7707
+   ],
+   "AUPRC": [
+    0.9312,
+    0.918,
+    0.943
+   ],
+   "recall@t_r80": [
+    0.7765,
+    0.7563,
+    0.7982
+   ],
+   "FPR@t_r80": [
+    0.4281,
+    0.3776,
+    0.4796
+   ],
+   "recall@t05": [
+    0.6616,
+    0.6408,
+    0.6835
+   ],
+   "FPR@t05": [
+    0.2622,
+    0.2041,
+    0.3189
+   ],
+   "failed_flag_rate@t_r80": [
+    0.4602,
+    0.4327,
+    0.4819
+   ],
+   "failed_flag_rate@t05": [
+    0.3069,
+    0.2811,
+    0.3329
+   ],
+   "AUROC_all_rows": 0.7176
+  },
+  "LR-C": {
+   "AUROC": [
+    0.797,
+    0.765,
+    0.831
+   ],
+   "AUPRC": [
+    0.9466,
+    0.9331,
+    0.9597
+   ],
+   "recall@t_r80": [
+    0.7202,
+    0.6866,
+    0.7454
+   ],
+   "FPR@t_r80": [
+    0.2158,
+    0.1378,
+    0.2832
+   ],
+   "recall@t05": [
+    0.7436,
+    0.7162,
+    0.7694
+   ],
+   "FPR@t05": [
+    0.2526,
+    0.1913,
+    0.3138
+   ],
+   "failed_flag_rate@t_r80": [
+    0.2792,
+    0.2527,
+    0.3054
+   ],
+   "failed_flag_rate@t05": [
+    0.3048,
+    0.2807,
+    0.3253
+   ],
+   "AUROC_all_rows": 0.7762
+  },
+  "LR-B-noobs": {
+   "AUROC": [
+    0.7398,
+    0.712,
+    0.7687
+   ],
+   "AUPRC": [
+    0.93,
+    0.9187,
+    0.9409
+   ],
+   "recall@t_r80": [
+    0.7774,
+    0.7498,
+    0.8069
+   ],
+   "FPR@t_r80": [
+    0.427,
+    0.3673,
+    0.4872
+   ],
+   "recall@t05": [
+    0.6574,
+    0.6364,
+    0.6796
+   ],
+   "FPR@t05": [
+    0.2607,
+    0.2117,
+    0.3138
+   ],
+   "failed_flag_rate@t_r80": [
+    0.4395,
+    0.3972,
+    0.4616
+   ],
+   "failed_flag_rate@t05": [
+    0.2899,
+    0.2619,
+    0.3305
+   ],
+   "AUROC_all_rows": 0.7247
+  },
+  "LR-C-noobs": {
+   "AUROC": [
+    0.7947,
+    0.7605,
+    0.8272
+   ],
+   "AUPRC": [
+    0.9496,
+    0.9384,
+    0.9615
+   ],
+   "recall@t_r80": [
+    0.7221,
+    0.6997,
+    0.745
+   ],
+   "FPR@t_r80": [
+    0.248,
+    0.1837,
+    0.3189
+   ],
+   "recall@t05": [
+    0.7337,
+    0.7001,
+    0.7607
+   ],
+   "FPR@t05": [
+    0.2668,
+    0.2015,
+    0.3445
+   ],
+   "failed_flag_rate@t_r80": [
+    0.2808,
+    0.2525,
+    0.3108
+   ],
+   "failed_flag_rate@t05": [
+    0.3003,
+    0.2763,
+    0.3369
+   ],
+   "AUROC_all_rows": 0.7822
+  },
+  "LR-B-minus": {
+   "AUROC": [
+    0.7011,
+    0.6714,
+    0.7304
+   ],
+   "AUPRC": [
+    0.9189,
+    0.906,
+    0.9308
+   ],
+   "recall@t_r80": [
+    0.7907,
+    0.7703,
+    0.8126
+   ],
+   "FPR@t_r80": [
+    0.4612,
+    0.4081,
+    0.5128
+   ],
+   "recall@t05": [
+    0.6663,
+    0.6369,
+    0.6909
+   ],
+   "FPR@t05": [
+    0.3551,
+    0.3036,
+    0.4031
+   ],
+   "failed_flag_rate@t_r80": [
+    0.577,
+    0.5472,
+    0.6042
+   ],
+   "failed_flag_rate@t05": [
+    0.4376,
+    0.4203,
+    0.4596
+   ],
+   "AUROC_all_rows": 0.6363
+  },
+  "LR-C-drop": {
+   "AUROC": [
+    0.7814,
+    0.7506,
+    0.8138
+   ],
+   "AUPRC": [
+    0.946,
+    0.9347,
+    0.9572
+   ],
+   "recall@t_r80": [
+    0.7199,
+    0.687,
+    0.748
+   ],
+   "FPR@t_r80": [
+    0.2684,
+    0.2168,
+    0.3291
+   ],
+   "recall@t05": [
+    0.7454,
+    0.7119,
+    0.772
+   ],
+   "FPR@t05": [
+    0.3148,
+    0.25,
+    0.3776
+   ],
+   "failed_flag_rate@t_r80": [
+    0.2884,
+    0.2705,
+    0.3086
+   ],
+   "failed_flag_rate@t05": [
+    0.3317,
+    0.3104,
+    0.3601
+   ],
+   "AUROC_all_rows": 0.7707
+  },
+  "Markov": {
+   "AUROC": [
+    0.5751,
+    0.5316,
+    0.6178
+   ],
+   "AUPRC": [
+    0.8581,
+    0.8399,
+    0.8772
+   ],
+   "recall@t_r80": [
+    0.8573,
+    0.8357,
+    0.8762
+   ],
+   "FPR@t_r80": [
+    0.7209,
+    0.6582,
+    0.7857
+   ],
+   "recall@t05": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "FPR@t05": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "failed_flag_rate@t_r80": [
+    0.7701,
+    0.7353,
+    0.8308
+   ],
+   "failed_flag_rate@t05": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "AUROC_all_rows": 0.5456
+  },
+  "IForest": {
+   "AUROC": [
+    0.6919,
+    0.6608,
+    0.7214
+   ],
+   "AUPRC": [
+    0.918,
+    0.9049,
+    0.9298
+   ],
+   "recall@t_r80": [
+    0.7787,
+    0.7398,
+    0.8078
+   ],
+   "FPR@t_r80": [
+    0.4903,
+    0.4311,
+    0.5459
+   ],
+   "recall@t05": [
+    0.0104,
+    0.0039,
+    0.0183
+   ],
+   "FPR@t05": [
+    0.0061,
+    0.0,
+    0.0153
+   ],
+   "failed_flag_rate@t_r80": [
+    0.5728,
+    0.5484,
+    0.6156
+   ],
+   "failed_flag_rate@t05": [
+    0.0141,
+    0.0106,
+    0.018
+   ],
+   "AUROC_all_rows": 0.6326
+  },
+  "TFIDF": {
+   "AUROC": [
+    0.9957,
+    0.9934,
+    0.9976
+   ],
+   "AUPRC": [
+    0.9993,
+    0.9989,
+    0.9996
+   ],
+   "recall@t_r80": [
+    0.7803,
+    0.7589,
+    0.8017
+   ],
+   "FPR@t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "recall@t05": [
+    0.9575,
+    0.9459,
+    0.9669
+   ],
+   "FPR@t05": [
+    0.0112,
+    0.0026,
+    0.023
+   ],
+   "failed_flag_rate@t_r80": [
+    0.3082,
+    0.2867,
+    0.3301
+   ],
+   "failed_flag_rate@t05": [
+    0.6877,
+    0.6617,
+    0.7058
+   ],
+   "AUROC_all_rows": 0.8214
+  },
+  "TFIDF-nodigit": {
+   "AUROC": [
+    0.996,
+    0.9938,
+    0.9978
+   ],
+   "AUPRC": [
+    0.9993,
+    0.999,
+    0.9996
+   ],
+   "recall@t_r80": [
+    0.7835,
+    0.7642,
+    0.8051
+   ],
+   "FPR@t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "recall@t05": [
+    0.9581,
+    0.9451,
+    0.9677
+   ],
+   "FPR@t05": [
+    0.0102,
+    0.0026,
+    0.0204
+   ],
+   "failed_flag_rate@t_r80": [
+    0.3337,
+    0.3104,
+    0.3573
+   ],
+   "failed_flag_rate@t05": [
+    0.6905,
+    0.6591,
+    0.7092
+   ],
+   "AUROC_all_rows": 0.8123
+  }
+ },
+ "sizes": {
+  "n_train": 2148.8,
+  "n_train_pos": 1835.2,
+  "n_test": 7673,
+  "n_test_by_category": {
+   "benign": 392,
+   "attacked": 2294,
+   "attack_failed": 4987
+  },
+  "vocab_size": [
+   57,
+   64
+  ],
+  "kappa": 0.9756,
+  "kappa_all_rows": 0.9722,
+  "scheme": "UT",
+  "detectors": [
+   "LR-A",
+   "LR-B",
+   "LR-C",
+   "LR-B-noobs",
+   "LR-C-noobs",
+   "LR-B-minus",
+   "LR-C-drop",
+   "Markov",
+   "IForest",
+   "TFIDF",
+   "TFIDF-nodigit"
+  ]
+ },
+ "format_checks": {
+  "meta_keys_complete": true,
+  "y_matches_meta": true,
+  "poolE_matches_meta": true,
+  "failed_rows_not_in_poolE": true,
+  "y1_only_attacked": true,
+  "ids_unique": true,
+  "score_and_pred_shapes": true,
+  "scores_finite": true,
+  "pred_equals_score_vs_training_threshold": true,
+  "t05_is_0.5": true,
+  "row_order_equals_gru_cache": true
+ },
+ "reproduction_checks": {
+  "n": 15,
+  "n_pass": 15,
+  "max_abs_score_diff": 3.937797798947429e-08,
+  "auroc_differs_from_v03_code_path": []
+ },
+ "fold_assignment": [
+  {
+   "n_groups_P0": 117,
+   "n_extra_groups": 1,
+   "n_failed_rows_in_extra_groups": 1
+  },
+  {
+   "n_groups_P0": 117,
+   "n_extra_groups": 1,
+   "n_failed_rows_in_extra_groups": 1
+  },
+  {
+   "n_groups_P0": 117,
+   "n_extra_groups": 1,
+   "n_failed_rows_in_extra_groups": 1
+  },
+  {
+   "n_groups_P0": 117,
+   "n_extra_groups": 1,
+   "n_failed_rows_in_extra_groups": 1
+  },
+  {
+   "n_groups_P0": 117,
+   "n_extra_groups": 1,
+   "n_failed_rows_in_extra_groups": 1
+  }
+ ],
+ "failed_as_train_negatives": false,
+ "lr_converged_all": {
+  "LR-A": true,
+  "LR-B": true,
+  "LR-C": true,
+  "LR-B-noobs": true,
+  "LR-C-noobs": true,
+  "LR-B-minus": true,
+  "LR-C-drop": true,
+  "TFIDF": true,
+  "TFIDF-nodigit": true
+ },
+ "provenance": {
+  "script": "<repo>\\revision\\build_linear_cache.py",
+  "script_sha256": "a4a4997543387841e271af9002baa9649b3311939c2870029c5ac371086d473f",
+  "python": "3.10.4",
+  "sklearn": "1.7.2",
+  "numpy": "2.2.6",
+  "built": "2026-09-26T21:35:39+0200",
+  "agentdojo_traces_sha256": "2c81a895c1f8be7ffdd88e790e3f75b83442c75e9c58cdf388d17df3df92296d",
+  "agentdojo_failed_sha256": "12292b33dcf83ffb8ae1d5156d2a44a54ee6b10fb16943160af0fec6134901f7"
+ }
+}

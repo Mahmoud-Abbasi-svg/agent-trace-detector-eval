@@ -1,0 +1,3864 @@
+{
+ "generated": "2026-09-27T02:21:14+0200",
+ "script": "<repo>\\revision\\repro_checks.py",
+ "env": {
+  "AGENTDRIFT": "$AGENTDRIFT",
+  "AGENTDOJO": "$AGENTDOJO"
+ },
+ "requirements_lock": {
+  "direct": {
+   "numpy": "2.2.6",
+   "scipy": "1.15.3",
+   "scikit-learn": "1.7.2",
+   "torch": "2.11.0+cpu",
+   "matplotlib": "3.10.8"
+  },
+  "dependencies": {
+   "joblib": "1.5.3",
+   "threadpoolctl": "3.6.0",
+   "filelock": "3.32.6",
+   "typing_extensions": "4.16.0",
+   "setuptools": "81.0.0",
+   "sympy": "1.14.0",
+   "mpmath": "1.3.0",
+   "networkx": "3.4.2",
+   "Jinja2": "3.1.2",
+   "MarkupSafe": "2.1.2",
+   "fsspec": "2026.7.0",
+   "contourpy": "1.3.2",
+   "cycler": "0.12.1",
+   "fonttools": "4.61.1",
+   "kiwisolver": "1.4.9",
+   "packaging": "21.3",
+   "pyparsing": "3.0.9",
+   "pillow": "12.1.1",
+   "python-dateutil": "2.9.0.post0",
+   "six": "1.17.0"
+  },
+  "optional": {
+   "pytest": "9.1.0"
+  },
+  "python": "3.10.4"
+ },
+ "requirements_lock_file": "<repo>\\revision\\requirements-lock.txt",
+ "alignment_test": {
+  "script": {
+   "command": "python -B tests\\test_agentdojo_alignment.py",
+   "exit_code": 0,
+   "seconds": 6.1,
+   "stdout_tail": [
+    "known Gemini run: OK",
+    "positional == id pairing on 8151 runs with usable ids: OK",
+    "extracted file uses positional pairing: OK"
+   ],
+   "stderr_tail": [],
+   "n_runs_with_usable_ids_checked": 8151
+  },
+  "pytest": {
+   "command": "python -B -m pytest -q -p no:cacheprovider tests\\test_agentdojo_alignment.py",
+   "exit_code": 0,
+   "seconds": 4.8,
+   "stdout_tail": [
+    "  Did you mean to use `assert` instead of `return`?",
+    "  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.",
+    "    warnings.warn(",
+    "",
+    "-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html",
+    "3 passed, 1 warning in 2.63s"
+   ],
+   "stderr_tail": [
+    "C:\\Python310\\lib\\site-packages\\web3\\__init__.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.",
+    "  import pkg_resources"
+   ]
+  }
+ },
+ "scripts": {
+  "ablation.py": {
+   "sha256": "2e2c291f8cfabffb72f5ead42d8d6c5bfc9d6fa71b34c2c33640e4f2175a7f50",
+   "bytes": 9181,
+   "n_lines": 158,
+   "parses": true,
+   "docstring_head": [
+    "Pre-registered core feature ablation (PRE_ABLATION_DESIGN.md, Decision B).",
+    "Representations A (tool-only), B (behavioural), C (combined). Same LogReg, same corrected",
+    "framework as rerun_r1r3.py (R1,R3) and r4_control.py (R4). Coverage reported next to every A.",
+    "Run: AGENTDRIFT=<clone> python ablation.py"
+   ],
+   "env_vars": [
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [
+    {
+     "line": 61,
+     "text": "def eval_rung(train, test, B, prevs, seed):"
+    },
+    {
+     "line": 72,
+     "text": "bt = ek.bootstrap(y, methods, n_pos=npos, B=B, seed=seed)"
+    },
+    {
+     "line": 108,
+     "text": "groups = sorted(set(keys)); rng = np.random.default_rng(sd); rng.shuffle(groups)"
+    },
+    {
+     "line": 120,
+     "text": "bt = ek.bootstrap(y, methods, n_pos=npos, B=B4, seed=12345)"
+    },
+    {
+     "line": 139,
+     "text": "groups = sorted(set(keys)); rng = np.random.default_rng(sd); rng.shuffle(groups)"
+    },
+    {
+     "line": 148,
+     "text": "bt = ek.bootstrap(y, methods, n_pos=int(round(0.10 / 0.90 * nneg)), B=B4, seed=999, pool=poolm, pos_weights=w)"
+    }
+   ],
+   "seed_lines_total": 6,
+   "bootstrap_lines": [
+    {
+     "line": 13,
+     "text": "REPS = [\"A\", \"B\", \"C\"]; B13 = 1000; B4 = 2000; K = 5; SEEDS = [0, 1, 2, 3, 4]"
+    },
+    {
+     "line": 72,
+     "text": "bt = ek.bootstrap(y, methods, n_pos=npos, B=B, seed=seed)"
+    },
+    {
+     "line": 120,
+     "text": "bt = ek.bootstrap(y, methods, n_pos=npos, B=B4, seed=12345)"
+    },
+    {
+     "line": 148,
+     "text": "bt = ek.bootstrap(y, methods, n_pos=int(round(0.10 / 0.90 * nneg)), B=B4, seed=999, pool=poolm, pos_weights=w)"
+    }
+   ],
+   "bootstrap_lines_total": 4,
+   "estimator_lines": [
+    {
+     "line": 31,
+     "text": "lr = LogisticRegression(max_iter=1000, class_weight=\"balanced\").fit(sc.transform(X), y)"
+    }
+   ],
+   "estimator_lines_total": 1,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "agentdojo_extract.py": {
+   "sha256": "4a8342b148a7e2365f9cac6bba38702ed3c40b786674c21e2c726b100287cc8a",
+   "bytes": 6351,
+   "n_lines": 118,
+   "parses": true,
+   "docstring_head": [
+    "Extract AgentDojo recorded runs into featurise-compatible trajectory records.",
+    "",
+    "Label semantics (verified against AgentDojo's own analysis notebook, where ASR = mean(security)):",
+    "security == True means the injection task was executed, so the run is COMPROMISED.",
+    "  benign        : attack_type is None                      (agent doing the legitimate user task)",
+    "  attacked      : attack_type not None AND security == True  (injection realised, positive class)",
+    "  attack_failed : attack_type not None AND security == False (written to agentdojo_failed.jsonl)",
+    "For denial-of-service attack variants AgentDojo defines security as \"not utility\"; these runs are",
+    "flagged with is_dos = True so that analyses can report results with and without them.",
+    "",
+    "Steps come from assistant tool_calls (function, args). Each call is paired with the tool messages",
+    "that follow its assistant message, IN ORDER (positional pairing). Tool-call ids are not used,"
+   ],
+   "env_vars": [
+    "AGENTDOJO"
+   ],
+   "seed_lines": [],
+   "seed_lines_total": 0,
+   "bootstrap_lines": [],
+   "bootstrap_lines_total": 0,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "baseline_drift.py": {
+   "sha256": "cd8bf4b9078a045403c80beeda22b2971199169f75eb19ca30559f900bc2ad12",
+   "bytes": 6690,
+   "n_lines": 142,
+   "parses": true,
+   "docstring_head": [
+    "First detection results on the drift ladder, rungs 1-2 (+ rung 3 leave-one-domain-out).",
+    "",
+    "Detectors (all CPU-friendly honest baselines):",
+    "  - MARKOV : first-order tool-transition model trained on BENIGN traces only; anomaly score =",
+    "             mean negative log-prob of a trajectory's transitions (unsupervised, one-class).",
+    "  - LOGREG : supervised logistic regression on [agnostic + bag-of-tools] features.",
+    "  - IFOREST: Isolation Forest on the same features, trained on benign only (one-class).",
+    "",
+    "Evaluation protocol (IDS-grade):",
+    "  Positive class = 'attacked'. We report AUPRC (primary under imbalance) and AUROC.",
+    "  We SUBSAMPLE attacked traces in the TEST set to a realistic prevalence (default 2%) and report",
+    "  precision@recall and alerts-per-1000-traces. Hard-negative false-positive rate reported separately."
+   ],
+   "env_vars": [
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [
+    {
+     "line": 27,
+     "text": "RNG = np.random.default_rng(42)"
+    },
+    {
+     "line": 65,
+     "text": "def subsample_prevalence(y, grp, prev=0.02, seed=0):"
+    },
+    {
+     "line": 68,
+     "text": "rng = np.random.default_rng(seed)"
+    },
+    {
+     "line": 113,
+     "text": "ifo = IsolationForest(n_estimators=200, random_state=0).fit(Xtr_s[gtr == \"benign\"])"
+    }
+   ],
+   "seed_lines_total": 4,
+   "bootstrap_lines": [],
+   "bootstrap_lines_total": 0,
+   "estimator_lines": [
+    {
+     "line": 109,
+     "text": "lr = LogisticRegression(max_iter=1000, class_weight=\"balanced\").fit(Xtr_s, ytr)"
+    },
+    {
+     "line": 113,
+     "text": "ifo = IsolationForest(n_estimators=200, random_state=0).fit(Xtr_s[gtr == \"benign\"])"
+    }
+   ],
+   "estimator_lines_total": 2,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "cross_benchmark.py": {
+   "sha256": "cc7e29630591253da0b095ffa9e10f4088e31300e7c5c375b09bae9b42781af7",
+   "bytes": 4114,
+   "n_lines": 82,
+   "parses": true,
+   "docstring_head": [
+    "Rung 4: cross-benchmark transfer. Train on AgentDrift, test on AgentDojo (10% tool overlap).",
+    "",
+    "Tests the hypothesis from earlier rungs: vocabulary-AGNOSTIC behavioural features transfer",
+    "across benchmarks; tool-IDENTITY (bag-of-tools) features do not. Detectors:",
+    "  LOGREG-agnostic : logistic regression on the 10 vocabulary-agnostic features only.",
+    "  LOGREG-full     : logistic regression on agnostic + bag-of-tools (AgentDrift vocab).",
+    "  MARKOV          : benign tool-transition model from AgentDrift (mostly unseen tools on AgentDojo).",
+    "Report AUPRC (mean [95% CI] over 20 seeds) at realistic attack prevalence 1/2/5/10%, with",
+    "AgentDojo benign fixed (392) and attacked subsampled. AUROC reported once (prevalence-invariant)."
+   ],
+   "env_vars": [
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [
+    {
+     "line": 8,
+     "text": "Report AUPRC (mean [95% CI] over 20 seeds) at realistic attack prevalence 1/2/5/10%, with"
+    },
+    {
+     "line": 69,
+     "text": "for seed in range(N_SEED):"
+    },
+    {
+     "line": 70,
+     "text": "rng = np.random.default_rng(seed)"
+    }
+   ],
+   "seed_lines_total": 3,
+   "bootstrap_lines": [
+    {
+     "line": 19,
+     "text": "PREVS = [0.01, 0.02, 0.05, 0.10]; N_SEED = 20"
+    }
+   ],
+   "bootstrap_lines_total": 1,
+   "estimator_lines": [
+    {
+     "line": 51,
+     "text": "lr_a = LogisticRegression(max_iter=1000, class_weight=\"balanced\").fit(sc_a.transform(ag_tr), y_tr)"
+    },
+    {
+     "line": 52,
+     "text": "lr_f = LogisticRegression(max_iter=1000, class_weight=\"balanced\").fit(sc_f.transform(full_tr), y_tr)"
+    }
+   ],
+   "estimator_lines_total": 2,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "evalkit.py": {
+   "sha256": "92afd4cc0c3faeaae5510ba627e6bfbbb4aee6ccf200feda5c5ac82cb0f81bac",
+   "bytes": 4321,
+   "n_lines": 108,
+   "parses": true,
+   "docstring_head": [
+    "Shared evaluation utilities (corrected protocol; see R4_CONTROL.md Part 1).",
+    "",
+    "A \"method\" is a list of one or more *repetitions*; each repetition is a dict:",
+    "    {\"score\": float array (higher = more anomalous), \"pred\": {op_name: bool array}}",
+    "aligned with a single label vector y (1 = attacked, 0 = benign/negative).",
+    "",
+    "Stratified bootstrap over final test predictions:",
+    "  each replicate draws n_neg negatives and n_pos positives WITH replacement (optionally",
+    "  weighted positives), picks one repetition per method uniformly at random, and computes",
+    "  AUROC, AUPRC and, per operating point, precision/recall/FPR/FNR/alerts-per-1000.",
+    "All methods share the resampled indices of a replicate, so method differences are PAIRED."
+   ],
+   "env_vars": [],
+   "seed_lines": [
+    {
+     "line": 58,
+     "text": "def bootstrap(y, methods, n_pos=None, n_neg=None, B=2000, seed=12345, pos_weights=None, pool=None):"
+    },
+    {
+     "line": 60,
+     "text": "rng = np.random.default_rng(seed)"
+    }
+   ],
+   "seed_lines_total": 2,
+   "bootstrap_lines": [
+    {
+     "line": 58,
+     "text": "def bootstrap(y, methods, n_pos=None, n_neg=None, B=2000, seed=12345, pos_weights=None, pool=None):"
+    }
+   ],
+   "bootstrap_lines_total": 1,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "featurise.py": {
+   "sha256": "419bf0706d2e83b5bf8c0cccf5eb0500fffcd9002aa78280222b1ff3b5b11cc1",
+   "bytes": 3213,
+   "n_lines": 74,
+   "parses": true,
+   "docstring_head": [
+    "Trace featureriser for the agent-trace IDS study.",
+    "",
+    "Each trajectory -> (a) an ordered list of tool tokens (for sequence models / n-gram), and",
+    "(b) a fixed-length feature vector (for classical detectors: one-class SVM, isolation forest,",
+    "logistic regression). Trajectory-level label: attacked (category==\"attacked\") = positive class",
+    "(the thing an IDS must catch); benign / hard_negative / failed_attack = negative for the",
+    "detection task, but tracked separately so we can report false positives on hard negatives.",
+    "",
+    "Read-only over the cloned AgentDrift; no attack generation."
+   ],
+   "env_vars": [
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [],
+   "seed_lines_total": 0,
+   "bootstrap_lines": [],
+   "bootstrap_lines_total": 0,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "gru_detector.py": {
+   "sha256": "c5c7f7960f25e3dec278291db17d2be189f5d41e3be8c93163c1ce26a202f427",
+   "bytes": 4637,
+   "n_lines": 107,
+   "parses": true,
+   "docstring_head": [
+    "GRU detector exactly per GRU_PREREGISTRATION.md. No tuning; all constants fixed here.",
+    "tool-name embedding(32) + <PAD>=0/<UNK>=1, 1-layer GRU(hidden 64), final hidden state concat",
+    "10 behavioural features (standardised) -> Linear(74->1) -> sigmoid. Weighted BCE, Adam 1e-3 wd 1e-4,",
+    "batch 64, <=30 epochs, early stop on val AUPRC patience 5. CPU, deterministic. Tool-only variant optional."
+   ],
+   "env_vars": [],
+   "seed_lines": [
+    {
+     "line": 62,
+     "text": "def train_gru(train, val, seed, tool_only=False):"
+    },
+    {
+     "line": 63,
+     "text": "torch.manual_seed(seed); np.random.seed(seed)"
+    }
+   ],
+   "seed_lines_total": 2,
+   "bootstrap_lines": [],
+   "bootstrap_lines_total": 0,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "gru_ladder.py": {
+   "sha256": "64172105d8af9a97c8970f581f4ee1a202a2539adc5f33a13bbabeceaee79582",
+   "bytes": 12176,
+   "n_lines": 187,
+   "parses": true,
+   "docstring_head": [
+    "Run the GRU through the full ladder per GRU_PREREGISTRATION.md, plus a pre-run split audit.",
+    "Primary comparator = combined LogReg (C). Uses evalkit for bootstrap/paired deltas.",
+    "Run: AGENTDRIFT=<clone> python gru_ladder.py [audit|full]"
+   ],
+   "env_vars": [
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [
+    {
+     "line": 17,
+     "text": "def stratified_val(train, seed=0, frac=VAL_FRAC):"
+    },
+    {
+     "line": 18,
+     "text": "rng = np.random.default_rng(1000 + seed); y = ylab(train)"
+    },
+    {
+     "line": 72,
+     "text": "A[\"seeds\"] = {\"train_seeds\": TRAIN_SEEDS, \"val_frac\": VAL_FRAC, \"val_seed_base\": 1000, \"K\": K}"
+    },
+    {
+     "line": 79,
+     "text": "print(\"seeds:\", A[\"seeds\"]); print(\"wrote gru_audit.json\")"
+    },
+    {
+     "line": 83,
+     "text": "def eval_pool(train, test, B, prevs, seed, extra_C=True):"
+    },
+    {
+     "line": 93,
+     "text": "bt = ek.bootstrap(y, methods, n_pos=npos, B=B, seed=seed)"
+    },
+    {
+     "line": 106,
+     "text": "R = {\"meta\": {\"train_seeds\": TRAIN_SEEDS}}"
+    },
+    {
+     "line": 115,
+     "text": "# R1 world-disjoint (reuse split from world_disjoint_r1); seed 0 only, 3 train seeds"
+    },
+    {
+     "line": 126,
+     "text": "# transfer models trained once per seed on full AgentDrift"
+    },
+    {
+     "line": 127,
+     "text": "tr_reps = gru_reps(pool, dojo)  # scores over full dojo, per seed"
+    },
+    {
+     "line": 133,
+     "text": "# within-AgentDojo UT, GRU, 5 folds x 3 seeds -> 15 reps; C within 5 folds"
+    },
+    {
+     "line": 137,
+     "text": "groups = sorted(set(keys)); rng = np.random.default_rng(sd); rng.shuffle(groups)"
+    },
+    {
+     "line": 145,
+     "text": "# GRU within: for this fold-assignment, train 1 seed (sd) -> keeps ~5 reps"
+    },
+    {
+     "line": 159,
+     "text": "bt = ek.bootstrap(y, methods, n_pos=npos, B=B4, seed=12345)"
+    },
+    {
+     "line": 175,
+     "text": "bt = ek.bootstrap(y, methods, n_pos=int(round(0.10 / 0.90 * nneg)), B=B4, seed=999, pool=poolm, pos_weights=w)"
+    }
+   ],
+   "seed_lines_total": 15,
+   "bootstrap_lines": [
+    {
+     "line": 13,
+     "text": "TRAIN_SEEDS = [0, 1, 2]; VAL_FRAC = 0.10; B13 = 1000; B4 = 2000; K = 5"
+    },
+    {
+     "line": 93,
+     "text": "bt = ek.bootstrap(y, methods, n_pos=npos, B=B, seed=seed)"
+    },
+    {
+     "line": 159,
+     "text": "bt = ek.bootstrap(y, methods, n_pos=npos, B=B4, seed=12345)"
+    },
+    {
+     "line": 175,
+     "text": "bt = ek.bootstrap(y, methods, n_pos=int(round(0.10 / 0.90 * nneg)), B=B4, seed=999, pool=poolm, pos_weights=w)"
+    }
+   ],
+   "bootstrap_lines_total": 4,
+   "estimator_lines": [
+    {
+     "line": 41,
+     "text": "lr = LogisticRegression(max_iter=1000, class_weight=\"balanced\").fit(sc.transform(X(train)), y)"
+    }
+   ],
+   "estimator_lines_total": 1,
+   "cli_lines": [
+    {
+     "line": 14,
+     "text": "MODE = sys.argv[1] if len(sys.argv) > 1 else \"full\""
+    }
+   ],
+   "cli_lines_total": 1
+  },
+  "gru_r3_diagnostic.py": {
+   "sha256": "58eff6b87f307d65f812a7d69e12717576df0bc2fec8dcb37567a0cacf5547e7",
+   "bytes": 8160,
+   "n_lines": 157,
+   "parses": true,
+   "docstring_head": [
+    "Narrow diagnostic: WHY is the GRU worse than C under R3? (does not modify gru_detector.py,",
+    "GRU_PREREGISTRATION.md, GRU_RESULTS.md, or the primary A/B/C ablation).",
+    "",
+    "Three GRU input variants, R3 only (5 held-out domains), same seeds/protocol as the primary run:",
+    "  GRU-A tool-sequence only:   embedding(<PAD>/<UNK>+tools) -> GRU(64) -> Linear(64,1)",
+    "                               (identical architecture to the primary model's tool_only=True path)",
+    "  GRU-B behavioural only:     NO embedding/GRU (there is no sequence to feed); the 10 standardised",
+    "                               behavioural features -> Linear(10,1). This is the natural",
+    "                               \"same architecture where applicable\" reading when there is no",
+    "                               sequence component at all.",
+    "  GRU-C combined (primary):   embedding -> GRU(64) concat 10 behavioural feats -> Linear(74,1)",
+    "                               (refit here, same recipe, as an internal consistency check against"
+   ],
+   "env_vars": [
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [
+    {
+     "line": 4,
+     "text": "Three GRU input variants, R3 only (5 held-out domains), same seeds/protocol as the primary run:"
+    },
+    {
+     "line": 15,
+     "text": "Same 3 training seeds {0,1,2}, same stratified 10%-of-train validation construction, same"
+    },
+    {
+     "line": 17,
+     "text": "and R3 fold construction/seeds as gru_ladder.py. No tuning. R1/R2/R4 not rerun."
+    },
+    {
+     "line": 62,
+     "text": "def train_variant(train, val, seed, mode):"
+    },
+    {
+     "line": 63,
+     "text": "torch.manual_seed(seed); np.random.seed(seed)"
+    },
+    {
+     "line": 82,
+     "text": "raise FloatingPointError(f\"nan_loss mode={mode} seed={seed}\")"
+    },
+    {
+     "line": 120,
+     "text": "R = {\"meta\": {\"train_seeds\": TRAIN_SEEDS, \"note\": \"R3 only; refits its own C for a same-run paired comparison\"}}"
+    },
+    {
+     "line": 134,
+     "text": "bt = ek.bootstrap(y, methods, n_pos=npos, B=B13, seed=5200 + ri)"
+    }
+   ],
+   "seed_lines_total": 8,
+   "bootstrap_lines": [
+    {
+     "line": 31,
+     "text": "B13 = 1000; PREVS = [None, 0.01, 0.02, 0.05, 0.10]"
+    },
+    {
+     "line": 134,
+     "text": "bt = ek.bootstrap(y, methods, n_pos=npos, B=B13, seed=5200 + ri)"
+    }
+   ],
+   "bootstrap_lines_total": 2,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "inspect_agentdrift.py": {
+   "sha256": "cf0bd44c90c5f6d4365327dbbcb0015fabc05ca4f4782447a9f3a12f4058eaae",
+   "bytes": 3332,
+   "n_lines": 79,
+   "parses": true,
+   "docstring_head": [
+    "Descriptive inspection of AgentDrift for the agent-trace IDS evaluation study.",
+    "Read-only. Computes tool vocabularies, train/task-disjoint overlap (covariate-drift risk),",
+    "trajectory-length and step-label distributions. Writes a summary to summary.json."
+   ],
+   "env_vars": [
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [],
+   "seed_lines_total": 0,
+   "bootstrap_lines": [],
+   "bootstrap_lines_total": 0,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "pre_ablation_audit.py": {
+   "sha256": "6fdf98de37e9ff416a2e0c1e34bcbbaa6cda5841b5c10be79f9a2ea03f4d9238",
+   "bytes": 55102,
+   "n_lines": 897,
+   "parses": true,
+   "docstring_head": [
+    "Read-only data audit: world, domain and label diagnostics for AgentDrift (no detector experiments).",
+    "",
+    "Restored for the revision (review comments m5, m13, m14, m15; REVISION_ANALYSIS_PLAN.md Sec. 4, \"Diagnostics\").",
+    "The v0.3 file ended mid-line at line 44 and did not parse; a byte copy of it is kept in",
+    "revision/pre_ablation_audit_v03_truncated.py.txt. This rewrite keeps its purpose:",
+    "",
+    "Part A  tool-vocabulary coverage (R1, R2, R3 per held-out domain, R4; overall and by class), the share of attacked",
+    "        training traces that contain tools absent from the benign vocabulary, and the structure of the AgentDrift",
+    "        `world` field versus the binary label (attacked vs not): world count, majority-label purity, largest worlds,",
+    "        worlds with >= 30 trajectories, world reuse between R1 train and test and how well the training-world attack",
+    "        rate predicts the test label, attack prevalence by domain.",
+    "Part B  probes: can representation A (bag of tools), B (10 behavioural features) or B-minus (B without the two"
+   ],
+   "env_vars": [
+    "AGENTDOJO",
+    "AGENTDRIFT",
+    "AUDIT_NJOBS"
+   ],
+   "seed_lines": [
+    {
+     "line": 25,
+     "text": "Statistics: 95% percentile bootstrap intervals, B = 2000, fixed seeds (SEED_BASE + offset, listed in the results"
+    },
+    {
+     "line": 55,
+     "text": "SEED_BASE = 20260926               # bootstrap seeds are SEED_BASE + a fixed offset per quantity (see SEEDS)"
+    },
+    {
+     "line": 100,
+     "text": "def boot_mean(x, seed, B=B):"
+    },
+    {
+     "line": 102,
+     "text": "x = np.asarray(x, float); rng = np.random.default_rng(seed); n = len(x)"
+    },
+    {
+     "line": 186,
+     "text": "def purity_cluster_ci(g, seed):"
+    },
+    {
+     "line": 189,
+     "text": "rng = np.random.default_rng(seed); k = len(n_i)"
+    },
+    {
+     "line": 196,
+     "text": "def loo_world_majority(recs, seed):"
+    },
+    {
+     "line": 209,
+     "text": "groups = list(g.values()); rng = np.random.default_rng(seed); k = len(groups)"
+    },
+    {
+     "line": 217,
+     "text": "def world_block(recs, seed_off=0):"
+    },
+    {
+     "line": 226,
+     "text": "\"purity_binary\": purity_cluster_ci(g, SEED_BASE + SEEDS[\"purity_cluster\"] + seed_off),"
+    },
+    {
+     "line": 228,
+     "text": "\"loo_world_majority_accuracy\": loo_world_majority(recs, SEED_BASE + SEEDS[\"loo_cluster\"] + seed_off),"
+    },
+    {
+     "line": 256,
+     "text": "wd[f\"seed{sd}\"] = {\"n_train\": len(tr_i), \"n_test\": len(te_i), \"n_worlds_train\": len(wtr), \"n_worlds_test\": len(wte),"
+    },
+    {
+     "line": 327,
+     "text": "# seed-0 world-disjoint test partition (world_disjoint_r1_results.json, seed0_bootstrap.n_neg)"
+    },
+    {
+     "line": 330,
+     "text": "out[\"coincidence_world_disjoint_seed0_n_neg\"] = wdres[\"seed0_bootstrap\"][\"n_neg\"]"
+    },
+    {
+     "line": 332,
+     "text": "out[\"coincidence_world_disjoint_seed0_n_neg\"] = f\"unavailable: {e}\""
+    },
+    {
+     "line": 337,
+     "text": "def overlap_block(train, test, seed_off):"
+    },
+    {
+     "line": 346,
+     "text": "\"share_world_in_train\": boot_mean(inn.astype(float), SEED_BASE + SEEDS[\"overlap_share\"] + seed_off)}"
+    },
+    {
+     "line": 350,
+     "text": "bt = ek.bootstrap(yy, {\"rate\": [{\"score\": rate}]}, B=B, seed=SEED_BASE + SEEDS[\"overlap_auroc\"] + seed_off)"
+    },
+    {
+     "line": 354,
+     "text": "rng = np.random.default_rng(SEED_BASE + SEEDS[\"overlap_cluster\"] + seed_off); cb = []"
+    },
+    {
+     "line": 364,
+     "text": "\"world_lookup_accuracy\": boot_mean(corr, SEED_BASE + SEEDS[\"lookup_acc\"] + seed_off),"
+    },
+    {
+     "line": 372,
+     "text": "\"world_lookup_accuracy\": boot_mean(corr[m], SEED_BASE + SEEDS[\"lookup_acc\"] + seed_off + 10 + di)}"
+    },
+    {
+     "line": 512,
+     "text": "outer = StratifiedKFold(OUTER_K, shuffle=True, random_state=rs)"
+    },
+    {
+     "line": 522,
+     "text": "cv=StratifiedKFold(INNER_K, shuffle=True, random_state=100 + 10 * rs + f),"
+    },
+    {
+     "line": 618,
+     "text": "skf = StratifiedKFold(k, shuffle=sh, random_state=rs); row = {}"
+    },
+    {
+     "line": 629,
+     "text": "if which == \"world\":   # spread over fold assignments (3-fold, shuffled, random_state 0..9)"
+    },
+    {
+     "line": 632,
+     "text": "skf = StratifiedKFold(3, shuffle=True, random_state=rs)"
+    },
+    {
+     "line": 642,
+     "text": "blk[\"fold_seed_spread_3fold_shuffle_rs0_to_9\"] = {un: {\"min\": min(v), \"max\": max(v), \"mean\": r4(np.mean(v)), \"values\": v}"
+    },
+    {
+     "line": 776,
+     "text": "rng = np.random.default_rng(SEED_BASE + SEEDS[f\"probe_{which}\"])"
+    },
+    {
+     "line": 819,
+     "text": "\"AGENTDRIFT\": MP, \"AGENTDOJO\": ADJ, \"B\": B, \"seed_base\": SEED_BASE, \"seed_offsets\": SEEDS,"
+    },
+    {
+     "line": 821,
+     "text": "\"C_grid\": C_GRID, \"outer\": f\"StratifiedKFold({OUTER_K}, shuffle=True, random_state in {OUTER_REPS})\","
+    },
+    {
+     "line": 822,
+     "text": "\"inner\": f\"StratifiedKFold({INNER_K}, shuffle=True, random_state=100+10*rep+fold), GridSearchCV scoring='accuracy'\","
+    }
+   ],
+   "seed_lines_total": 31,
+   "bootstrap_lines": [
+    {
+     "line": 25,
+     "text": "Statistics: 95% percentile bootstrap intervals, B = 2000, fixed seeds (SEED_BASE + offset, listed in the results"
+    },
+    {
+     "line": 54,
+     "text": "B = 2000                           # bootstrap replicates"
+    },
+    {
+     "line": 350,
+     "text": "bt = ek.bootstrap(yy, {\"rate\": [{\"score\": rate}]}, B=B, seed=SEED_BASE + SEEDS[\"overlap_auroc\"] + seed_off)"
+    }
+   ],
+   "bootstrap_lines_total": 3,
+   "estimator_lines": [
+    {
+     "line": 506,
+     "text": "C chosen by inner StratifiedKFold(3) grid search on accuracy; kind 'majority': training-fold majority class."
+    },
+    {
+     "line": 512,
+     "text": "outer = StratifiedKFold(OUTER_K, shuffle=True, random_state=rs)"
+    },
+    {
+     "line": 520,
+     "text": "gs = GridSearchCV(make_pipeline(StandardScaler(), LogisticRegression(max_iter=5000)),"
+    },
+    {
+     "line": 522,
+     "text": "cv=StratifiedKFold(INNER_K, shuffle=True, random_state=100 + 10 * rs + f),"
+    },
+    {
+     "line": 605,
+     "text": "LogisticRegression(max_iter=1000) at the default C = 1 (no tuning), stratified K-fold, vocabulary from the training"
+    },
+    {
+     "line": 618,
+     "text": "skf = StratifiedKFold(k, shuffle=sh, random_state=rs); row = {}"
+    },
+    {
+     "line": 625,
+     "text": "m = make_pipeline(StandardScaler(), LogisticRegression(max_iter=1000)).fit(X[tr][:, cols], y[tr])"
+    },
+    {
+     "line": 632,
+     "text": "skf = StratifiedKFold(3, shuffle=True, random_state=rs)"
+    },
+    {
+     "line": 639,
+     "text": "m = make_pipeline(StandardScaler(), LogisticRegression(max_iter=1000)).fit(X[tr][:, cols], y[tr])"
+    },
+    {
+     "line": 820,
+     "text": "\"probe_design\": {\"model\": \"StandardScaler + LogisticRegression(penalty='l2', solver='lbfgs', multinomial, max_iter=5000)\","
+    },
+    {
+     "line": 821,
+     "text": "\"C_grid\": C_GRID, \"outer\": f\"StratifiedKFold({OUTER_K}, shuffle=True, random_state in {OUTER_REPS})\","
+    },
+    {
+     "line": 822,
+     "text": "\"inner\": f\"StratifiedKFold({INNER_K}, shuffle=True, random_state=100+10*rep+fold), GridSearchCV scoring='accuracy'\","
+    }
+   ],
+   "estimator_lines_total": 12,
+   "cli_lines": [
+    {
+     "line": 871,
+     "text": "ap.add_argument(\"--section\", action=\"append\", default=[])"
+    },
+    {
+     "line": 872,
+     "text": "ap.add_argument(\"--force\", action=\"store_true\")"
+    },
+    {
+     "line": 873,
+     "text": "ap.add_argument(\"--budget\", type=float, default=300.0)"
+    },
+    {
+     "line": 874,
+     "text": "ap.add_argument(\"--status\", action=\"store_true\")"
+    }
+   ],
+   "cli_lines_total": 4
+  },
+  "r4_control.py": {
+   "sha256": "290c8b55e155dd784feb2718ab6f376fec4905a85007143213f6081c55cd99d7",
+   "bytes": 10749,
+   "n_lines": 201,
+   "parses": true,
+   "docstring_head": [
+    "R4 control: AgentDojo->AgentDojo (within) vs AgentDrift->AgentDojo (transfer), same features,",
+    "same LogReg, paired stratified bootstrap. Implements R4_CONTROL.md Part 1 exactly.",
+    "Run: AGENTDRIFT=<clone> python r4_control.py"
+   ],
+   "env_vars": [
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [
+    {
+     "line": 53,
+     "text": "def within_oof(recs, scheme, seed, agnostic):"
+    },
+    {
+     "line": 55,
+     "text": "groups = sorted(set(keys)); rng = np.random.default_rng(seed); rng.shuffle(groups)"
+    },
+    {
+     "line": 90,
+     "text": "res = {\"meta\": {\"B\": B, \"seeds\": SEEDS, \"K\": K}}"
+    },
+    {
+     "line": 181,
+     "text": "rng = np.random.default_rng(0); order = rng.permutation(len(ben)); folds = np.empty(len(ben), int)"
+    }
+   ],
+   "seed_lines_total": 4,
+   "bootstrap_lines": [
+    {
+     "line": 13,
+     "text": "B = 2000; SEEDS = [0, 1, 2, 3, 4]; K = 5"
+    },
+    {
+     "line": 70,
+     "text": "bt = ek.bootstrap(y, methods, n_pos=npos, n_neg=nneg, B=B, pos_weights=pos_weights, pool=pool)"
+    },
+    {
+     "line": 120,
+     "text": "bt = ek.bootstrap(y, methods, n_pos=npos, n_neg=None, B=B)"
+    },
+    {
+     "line": 142,
+     "text": "bt = ek.bootstrap(y, sub, B=B, pool=pool)"
+    },
+    {
+     "line": 158,
+     "text": "bt = ek.bootstrap(y, sub, n_pos=npos, B=B, pool=pool, pos_weights=w)"
+    },
+    {
+     "line": 191,
+     "text": "bt = ek.bootstrap(yb, {\"probe\": [{\"score\": s}]}, B=B)"
+    }
+   ],
+   "bootstrap_lines_total": 6,
+   "estimator_lines": [
+    {
+     "line": 29,
+     "text": "lr = LogisticRegression(max_iter=1000, class_weight=\"balanced\").fit(sc.transform(X), y)"
+    },
+    {
+     "line": 189,
+     "text": "lr = LogisticRegression(max_iter=1000, class_weight=\"balanced\").fit(sc.transform(X), yb[folds != f])"
+    }
+   ],
+   "estimator_lines_total": 2,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "rerun_r1r3.py": {
+   "sha256": "9d3c69822b2b8c7dfe590e284d4682441e9ca32a32bee8def8fb1d4f2c0b04ca",
+   "bytes": 5162,
+   "n_lines": 87,
+   "parses": true,
+   "docstring_head": [
+    "Experiment 2: corrected evaluation of R1-R3 (protocol in R4_CONTROL.md Part 1, section 8).",
+    "",
+    "Changes vs sweep.py (trained detectors are identical):",
+    "  - AUROC and AUPRC computed on the SAME evaluation pool E = benign + hard_negative + attacked",
+    "    (failed_attack excluded); previously AUROC used the full test set incl. failed_attack.",
+    "  - Stratified bootstrap (B=1000) over test predictions at native prevalence and at p in {1,2,5,10}%,",
+    "    resampling negatives AND positives; previously only positives were subsampled (no replacement).",
+    "  - Operating thresholds from TRAINING data (t_r80 = training recall 0.80; LOGREG also t=0.5);",
+    "    previously the 80%-recall threshold was chosen on the test set.",
+    "  - Paired bootstrap deltas between detectors within a rung; independent-bootstrap deltas across rungs.",
+    "Run: AGENTDRIFT=<clone> python rerun_r1r3.py"
+   ],
+   "env_vars": [
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [
+    {
+     "line": 38,
+     "text": "ifo = IsolationForest(n_estimators=200, random_state=0).fit(Xtr_s[gtr == \"benign\"])"
+    },
+    {
+     "line": 60,
+     "text": "bt = ek.bootstrap(y, meth, n_pos=npos, B=B, seed=5000 + 17 * ri)"
+    }
+   ],
+   "seed_lines_total": 2,
+   "bootstrap_lines": [
+    {
+     "line": 6,
+     "text": "- Stratified bootstrap (B=1000) over test predictions at native prevalence and at p in {1,2,5,10}%,"
+    },
+    {
+     "line": 22,
+     "text": "B = 1000; PREVS = [None, 0.01, 0.02, 0.05, 0.10]"
+    },
+    {
+     "line": 60,
+     "text": "bt = ek.bootstrap(y, meth, n_pos=npos, B=B, seed=5000 + 17 * ri)"
+    }
+   ],
+   "bootstrap_lines_total": 3,
+   "estimator_lines": [
+    {
+     "line": 34,
+     "text": "lr = LogisticRegression(max_iter=1000, class_weight=\"balanced\").fit(Xtr_s, ytr)"
+    },
+    {
+     "line": 38,
+     "text": "ifo = IsolationForest(n_estimators=200, random_state=0).fit(Xtr_s[gtr == \"benign\"])"
+    }
+   ],
+   "estimator_lines_total": 2,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "sweep.py": {
+   "sha256": "c621513694c59245e2850b58097c36b5df310ee21f2cec2b3eb634eb1710396b",
+   "bytes": 5752,
+   "n_lines": 114,
+   "parses": true,
+   "docstring_head": [
+    "Multi-seed x prevalence sweep with bootstrap CIs for the agent-trace IDS baselines.",
+    "",
+    "For each drift rung and detector, sweep test-attack prevalence in {1,2,5,10}% and repeat the",
+    "subsampling over N_SEED seeds; report mean AUPRC / prec@rec80 / alerts-per-1000 with 95% CIs",
+    "across seeds. Detectors are trained ONCE per rung (deterministic); only the test subsampling",
+    "varies across seeds, so the CIs quantify sampling variability of the operating metrics under",
+    "realistic prevalence. AUROC is prevalence-invariant so reported once.",
+    "Runs on CPU. Data: AgentDrift (CC BY 4.0)."
+   ],
+   "env_vars": [
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [
+    {
+     "line": 1,
+     "text": "\"\"\"Multi-seed x prevalence sweep with bootstrap CIs for the agent-trace IDS baselines."
+    },
+    {
+     "line": 4,
+     "text": "subsampling over N_SEED seeds; report mean AUPRC / prec@rec80 / alerts-per-1000 with 95% CIs"
+    },
+    {
+     "line": 5,
+     "text": "across seeds. Detectors are trained ONCE per rung (deterministic); only the test subsampling"
+    },
+    {
+     "line": 6,
+     "text": "varies across seeds, so the CIs quantify sampling variability of the operating metrics under"
+    },
+    {
+     "line": 54,
+     "text": "ifo = IsolationForest(n_estimators=200, random_state=0).fit(Xtr_s[gtr == \"benign\"])"
+    },
+    {
+     "line": 67,
+     "text": "for seed in range(N_SEED):"
+    },
+    {
+     "line": 68,
+     "text": "rng = np.random.default_rng(1000 + seed)"
+    }
+   ],
+   "seed_lines_total": 7,
+   "bootstrap_lines": [
+    {
+     "line": 20,
+     "text": "N_SEED = 20"
+    }
+   ],
+   "bootstrap_lines_total": 1,
+   "estimator_lines": [
+    {
+     "line": 52,
+     "text": "lr = LogisticRegression(max_iter=1000, class_weight=\"balanced\").fit(Xtr_s, ytr)"
+    },
+    {
+     "line": 54,
+     "text": "ifo = IsolationForest(n_estimators=200, random_state=0).fit(Xtr_s[gtr == \"benign\"])"
+    }
+   ],
+   "estimator_lines_total": 2,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "world_disjoint_r1.py": {
+   "sha256": "0abaa9cc06ef6f9aa0a586c52e7055a6656db9a503d38cd650293af7a72c33d4",
+   "bytes": 6374,
+   "n_lines": 128,
+   "parses": true,
+   "docstring_head": [
+    "Experiment 1b: world-disjoint R1. Does reusing `world`s between train and test inflate R1?",
+    "",
+    "Same detector, same A/B/C features, same evalkit framework. We pool the R1 corpus",
+    "(data/train + data/test), then split by WHOLE worlds so no world appears in both sides,",
+    "while (a) keeping all 5 domains in both sides -> tool coverage stays ~100% (isolates world",
+    "reuse from tool-vocabulary loss, unlike R3), and (b) matching the standard R1 test fraction",
+    "and class balance as closely as world-disjointness allows.",
+    "",
+    "We run 5 world-assignment seeds (split variability) and, on seed 0, a full stratified bootstrap",
+    "(test-resampling CI). Thresholds are training-derived. Compare to standard R1 (A .777/B .830/C .879).",
+    "Run: AGENTDRIFT=<clone> python world_disjoint_r1.py"
+   ],
+   "env_vars": [
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [
+    {
+     "line": 9,
+     "text": "We run 5 world-assignment seeds (split variability) and, on seed 0, a full stratified bootstrap"
+    },
+    {
+     "line": 50,
+     "text": "def world_disjoint_split(pool, seed):"
+    },
+    {
+     "line": 54,
+     "text": "rng = np.random.default_rng(seed)"
+    },
+    {
+     "line": 91,
+     "text": "per_seed = {r: [] for r in REPS}"
+    },
+    {
+     "line": 103,
+     "text": "for r in REPS: per_seed[r].append(round(pt[r][\"AUROC\"], 4))"
+    },
+    {
+     "line": 104,
+     "text": "info = {\"seed\": sd, \"n_train\": len(tr), \"n_test\": len(te),"
+    },
+    {
+     "line": 112,
+     "text": "bt = ek.bootstrap(yte, methods, B=B, seed=777)"
+    },
+    {
+     "line": 115,
+     "text": "res[\"seed0_bootstrap\"] = {\"n_test\": len(te), \"n_pos\": int(yte.sum()), \"n_neg\": int((yte == 0).sum()),"
+    },
+    {
+     "line": 117,
+     "text": "print(f\"seed {sd}: overlap={overlap} cov={info['tool_occ_coverage']} \""
+    },
+    {
+     "line": 119,
+     "text": "res[\"across_seed_AUROC\"] = {r: {\"mean\": round(float(np.mean(per_seed[r])), 4),"
+    },
+    {
+     "line": 120,
+     "text": "\"min\": min(per_seed[r]), \"max\": max(per_seed[r]),"
+    },
+    {
+     "line": 121,
+     "text": "\"values\": per_seed[r]} for r in REPS}"
+    },
+    {
+     "line": 123,
+     "text": "print(\"\\nacross-seed AUROC:\", {r: res[\"across_seed_AUROC\"][r][\"mean\"] for r in REPS})"
+    }
+   ],
+   "seed_lines_total": 13,
+   "bootstrap_lines": [
+    {
+     "line": 21,
+     "text": "SPLIT_SEEDS = [0, 1, 2, 3, 4]; B = 1000"
+    },
+    {
+     "line": 112,
+     "text": "bt = ek.bootstrap(yte, methods, B=B, seed=777)"
+    }
+   ],
+   "bootstrap_lines_total": 2,
+   "estimator_lines": [
+    {
+     "line": 39,
+     "text": "lr = LogisticRegression(max_iter=1000, class_weight=\"balanced\").fit(sc.transform(X), y)"
+    }
+   ],
+   "estimator_lines_total": 1,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "paper/build_manuscript.py": {
+   "sha256": "f1690eea7482bbcb4bfc4a051d2318c79120e0d4acb7c2787c3f200e3c3cf9f1",
+   "bytes": 3666,
+   "n_lines": 91,
+   "parses": true,
+   "docstring_head": [
+    "Resolve citation keys and build the numbered Markdown manuscript and supplement.",
+    "",
+    "Sources (edited by hand):   ../MANUSCRIPT_SOURCE.md, ../SUPPLEMENT_SOURCE.md",
+    "References database:        ../revision/references_v04.json  {key: {\"ieee\": \"...\", ...}}",
+    "Outputs (generated):        ../MANUSCRIPT_DRAFT.md, ../SUPPLEMENT.md",
+    "",
+    "Citation syntax in the sources: [@key] or [@key1; @key2; @key3].",
+    "Numbers follow IEEE practice: order of first appearance in the main manuscript (the supplement",
+    "reuses the main numbering and appends keys that only it cites). Groups print as \"[4], [6], [8]\",",
+    "and runs of three or more consecutive numbers print as \"[2]\u2013[12]\".",
+    "The line \"<!-- REFERENCES -->\" in a source is replaced by its numbered reference list.",
+    "Run from agent-ids/paper after sync_tables.py has filled the table markers of the sources:"
+   ],
+   "env_vars": [],
+   "seed_lines": [],
+   "seed_lines_total": 0,
+   "bootstrap_lines": [],
+   "bootstrap_lines_total": 0,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "paper/gen_tables.py": {
+   "sha256": "81709730dc138109fa07314f35ecb34599bcf64ad075bf832f0c05b12e141da5",
+   "bytes": 11401,
+   "n_lines": 176,
+   "parses": true,
+   "docstring_head": [
+    "Emit the results tables (Tables IV-VIII) directly from the verified result files.",
+    "Every number in these tables is read from JSON; nothing is hand-typed.",
+    "Writes tables/<name>.tex (booktabs rows for IEEEtran) and tables/<name>.md (Markdown) into this folder.",
+    "Run from agent-ids/paper:  python gen_tables.py"
+   ],
+   "env_vars": [],
+   "seed_lines": [
+    {
+     "line": 88,
+     "text": "rows = [mainrow(\"R1\", \"R1\", gr[\"R1\"], r\"100\\%\"), mainrow(\"R1-wd (seed 0)\", \"R1-wd (seed 0)\", gr[\"R1_wd\"], r\"100\\%\"),"
+    },
+    {
+     "line": 106,
+     "text": "acr = wd[\"across_seed_AUROC\"]"
+    }
+   ],
+   "seed_lines_total": 2,
+   "bootstrap_lines": [],
+   "bootstrap_lines_total": 0,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "paper/make_figures.py": {
+   "sha256": "904cc3c400a92d96f6b0c2c94cfcdebe528e90ce4f795a73f7b9686b69dae06a",
+   "bytes": 6707,
+   "n_lines": 105,
+   "parses": true,
+   "docstring_head": [
+    "Generate the paper figures directly from the verified result files (no hand-typed values).",
+    "Each figure is written as PDF (for LaTeX) and PNG (for the Markdown manuscript).",
+    "  Fig. 1  fig_prevalence    R1: AUPRC and precision at tau_r80 vs attack prevalence (95% bootstrap CIs)",
+    "  Fig. 3  fig_r3_reversal   R1 vs R3 AUROC per held-out domain for LR-B, LR-C and GRU",
+    "  Fig. 2  fig_fpr_shift     FPR at the training-derived threshold tau_r80, R1 vs each R3 fold",
+    "  Fig. 4  fig_r4_transfer   R4 transfer vs within-AgentDojo AUROC (P0, native prevalence)",
+    "Run from agent-ids/paper:  python make_figures.py"
+   ],
+   "env_vars": [],
+   "seed_lines": [],
+   "seed_lines_total": 0,
+   "bootstrap_lines": [],
+   "bootstrap_lines_total": 0,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "paper/md2tex.py": {
+   "sha256": "22eff92318e7c63d81e87aacd1f4c3598e698706d726c5b8e1cca330aba64edb",
+   "bytes": 11996,
+   "n_lines": 226,
+   "parses": true,
+   "docstring_head": [
+    "Render ../MANUSCRIPT_DRAFT.md as an IEEEtran journal paper (main.tex).",
+    "MANUSCRIPT_DRAFT.md is the single source of text; Tables IV-VIII are \\input from tables/*.tex (gen_tables.py)",
+    "and figures use the PDF versions written by make_figures.py.",
+    "Run from agent-ids/paper:  python md2tex.py   then   pdflatex main && pdflatex main"
+   ],
+   "env_vars": [],
+   "seed_lines": [],
+   "seed_lines_total": 0,
+   "bootstrap_lines": [],
+   "bootstrap_lines_total": 0,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "paper/sync_tables.py": {
+   "sha256": "32bd0dddd23759a569083155ace476b4a6180698f91ba59e268938794958c8ae",
+   "bytes": 1292,
+   "n_lines": 22,
+   "parses": true,
+   "docstring_head": [
+    "Insert the generated Markdown tables (tables/*.md, from gen_tables.py) into the manuscript sources.",
+    "Content between <!-- BEGIN name --> and <!-- END name --> is replaced by tables/name.md.",
+    "Targets: ../MANUSCRIPT_SOURCE.md and ../SUPPLEMENT_SOURCE.md when they exist (v0.4 and later),",
+    "otherwise ../MANUSCRIPT_DRAFT.md (v0.3 layout).",
+    "Run from agent-ids/paper after gen_tables.py:  python sync_tables.py"
+   ],
+   "env_vars": [],
+   "seed_lines": [],
+   "seed_lines_total": 0,
+   "bootstrap_lines": [],
+   "bootstrap_lines_total": 0,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "tests/test_agentdojo_alignment.py": {
+   "sha256": "a31423b6731e5757f7a669f6c74347ef48ee10d5f9a672c2471c26dcd01e1537",
+   "bytes": 2976,
+   "n_lines": 56,
+   "parses": true,
+   "docstring_head": [
+    "Unit tests for the AgentDojo observation pairing (review comment M7).",
+    "",
+    "Run:  AGENTDOJO=<path to agentdojo clone> python tests/test_agentdojo_alignment.py",
+    "1. A known Gemini run whose tool-call ids are empty must get its three distinct observations",
+    "   (lengths 636, 712, 67), not the last observation three times.",
+    "2. For every run of the five models whose tool-call ids are non-empty and unique, positional pairing",
+    "   must agree with id-based pairing (the tool message's tool_call_id equals the call's id).",
+    "3. The extracted traces file must agree with a fresh positional extraction of the same runs."
+   ],
+   "env_vars": [
+    "AGENTDOJO"
+   ],
+   "seed_lines": [],
+   "seed_lines_total": 0,
+   "bootstrap_lines": [],
+   "bootstrap_lines_total": 0,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "revision/build_gru_cache.py": {
+   "sha256": "daad6316cb3f4b189bd5c0012f5e332fef5c70c515a465d28de19d591d12f053",
+   "bytes": 26784,
+   "n_lines": 476,
+   "parses": true,
+   "docstring_head": [
+    "Build the GRU prediction cache (family \"gru\") for the revision (REVISION_ANALYSIS_PLAN.md Sec. 2).",
+    "",
+    "Resumable: one setting and one detector per call. Work is split into units (one training seed for",
+    "single-fit settings; one (repetition, fold) for WUT); every finished unit is saved to its own file",
+    "under cache/gru/_parts/<setting>/<detector>/ and skipped on the next call. A call stops starting new",
+    "units when its time budget is used up; call it again until it prints COMPLETE. When all units of a",
+    "(setting, detector) exist they are assembled and merged into cache/gru/<setting>.pkl.",
+    "",
+    "Usage (always with AGENTDRIFT and AGENTDOJO set):",
+    "  python build_gru_cache.py run <setting> <detector> [--budget SECONDS]",
+    "  python build_gru_cache.py verify            # p = 0 copy reproduces gru_detector.train_gru (R1 seed 0)",
+    "  python build_gru_cache.py status            # what is done / missing"
+   ],
+   "env_vars": [
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [
+    {
+     "line": 3,
+     "text": "Resumable: one setting and one detector per call. Work is split into units (one training seed for"
+    },
+    {
+     "line": 11,
+     "text": "python build_gru_cache.py verify            # p = 0 copy reproduces gru_detector.train_gru (R1 seed 0)"
+    },
+    {
+     "line": 17,
+     "text": "Everything else (architecture, constants, validation split, seeds, thresholds, WUT folds) is copied"
+    },
+    {
+     "line": 42,
+     "text": "SEEDS = [0, 1, 2]              # training seeds, single-fit settings (gru_ladder.TRAIN_SEEDS)"
+    },
+    {
+     "line": 43,
+     "text": "WUT_REPS = [0, 1, 2, 3, 4]     # fold-assignment seed = training seed (gru_ladder within-AgentDojo)"
+    },
+    {
+     "line": 132,
+     "text": "that occur only among failed attacks (not in P0) are assigned by a separate rng (seed 10000+rep).\"\"\""
+    },
+    {
+     "line": 134,
+     "text": "groups = sorted(set(keys)); rng = np.random.default_rng(rep); rng.shuffle(groups)"
+    },
+    {
+     "line": 137,
+     "text": "rng2 = np.random.default_rng(10000 + rep); rng2.shuffle(extra)"
+    },
+    {
+     "line": 156,
+     "text": "\"notes\": f\"world_disjoint_r1.world_disjoint_split(pool=train+test, seed={k})\"}"
+    },
+    {
+     "line": 171,
+     "text": "\"fold seed = training seed = rep (0..4); training on P0 rows of the other folds only; \""
+    },
+    {
+     "line": 177,
+     "text": "return [f\"seed{s}\" for s in SEEDS] if name != \"WUT\" else [f\"rep{r}_fold{f}\" for r in WUT_REPS for f in range(K)]"
+    },
+    {
+     "line": 196,
+     "text": "seed = int(unit[4:])"
+    },
+    {
+     "line": 197,
+     "text": "tr, va = stratified_val(S[\"train\"], seed)"
+    },
+    {
+     "line": 202,
+     "text": "seed = rep"
+    },
+    {
+     "line": 205,
+     "text": "tr, va = stratified_val([S[\"P0\"][i] for i in tri], seed)"
+    },
+    {
+     "line": 210,
+     "text": "model, vocab, scaler, thr, aux = train_gru_drop(tr, va, seed, p)"
+    },
+    {
+     "line": 227,
+     "text": "out = {\"setting\": name, \"detector\": det, \"unit\": unit, \"seed\": seed, \"p\": p, \"rows\": rows,"
+    },
+    {
+     "line": 303,
+     "text": "blk = {\"diag\": [dict(unit=p[\"unit\"], seed=p[\"seed\"], **p[\"diag\"]) for p in parts]}"
+    },
+    {
+     "line": 310,
+     "text": "blk[\"thr\"] = {\"t_r80\": thr80, \"t05\": 0.5, \"t_val80\": thrv, \"seeds\": np.array(SEEDS)}"
+    },
+    {
+     "line": 341,
+     "text": "blk[\"thr\"] = {\"t_r80\": thr80, \"t05\": 0.5, \"t_val80\": thrv, \"layout\": \"(rep, fold); rep = fold seed = training seed\"}"
+    },
+    {
+     "line": 371,
+     "text": "info[\"score_shape\"] = \"(n_seeds=3, n_test) single-fit; (n_reps=5, n_test) out-of-fold for WUT\""
+    },
+    {
+     "line": 404,
+     "text": "log(f\"  COMPLETE {name} {det}: pool-E AUROC per seed/rep {np.round(au, 4).tolist()} mean {np.mean(au):.4f}; \""
+    },
+    {
+     "line": 419,
+     "text": "res = {\"setting\": \"R1\", \"seed\": 0, \"n_test_poolE\": len(keep), \"scores_identical\": bool(np.array_equal(a, b)),"
+    }
+   ],
+   "seed_lines_total": 23,
+   "bootstrap_lines": [],
+   "bootstrap_lines_total": 0,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [
+    {
+     "line": 462,
+     "text": "ap.add_argument(\"cmd\"); ap.add_argument(\"setting\", nargs=\"?\"); ap.add_argument(\"detector\", nargs=\"?\")"
+    },
+    {
+     "line": 463,
+     "text": "ap.add_argument(\"--budget\", type=float, default=520.0)"
+    }
+   ],
+   "cli_lines_total": 2
+  },
+  "revision/build_linear_cache.py": {
+   "sha256": "a4a4997543387841e271af9002baa9649b3311939c2870029c5ac371086d473f",
+   "bytes": 37314,
+   "n_lines": 682,
+   "parses": true,
+   "docstring_head": [
+    "Build the LINEAR prediction cache for the revision (REVISION_ANALYSIS_PLAN.md, Section 2).",
+    "",
+    "One pickle per setting: revision/cache/linear/<setting>.pkl  (format: see CACHE_README.md).",
+    "Resumable: `--setting R1` builds one setting (skips it if its pickle exists AND was written by the current",
+    "version of this script, identified by its SHA-256; --force rebuilds regardless);",
+    "`--all` loops over every setting, skipping finished ones, and stops starting new work once the",
+    "time budget (--budget seconds, default 420) is used, so that it can be called repeatedly.",
+    "Cross-validated settings (WUT, WUT_F, WIT) save one part file per repetition in",
+    "cache/linear/_parts/ and are assembled when all five repetitions exist.",
+    "`--status` prints which settings are done / stale / missing without fitting anything.",
+    "",
+    "Detectors (fitted exactly like ablation.py / rerun_r1r3.py; no tuning; thresholds from training data):"
+   ],
+   "env_vars": [
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [
+    {
+     "line": 355,
+     "text": "ifo = IsolationForest(n_estimators=200, random_state=0).fit(sc.transform(Xtr)[ben])"
+    },
+    {
+     "line": 489,
+     "text": "def assign_folds(P0, FAILED, scheme, seed):"
+    },
+    {
+     "line": 491,
+     "text": "rows, shuffled with default_rng(seed), fold = position % K. Unsuccessful attacks use their suite|user_task"
+    },
+    {
+     "line": 492,
+     "text": "group; a group that no P0 row has is assigned by the same rule with default_rng(10000 + seed) (logged).\"\"\""
+    },
+    {
+     "line": 494,
+     "text": "groups = sorted(set(keys)); rng = np.random.default_rng(seed); rng.shuffle(groups)"
+    },
+    {
+     "line": 498,
+     "text": "rng2 = np.random.default_rng(10000 + seed); rng2.shuffle(extra)"
+    },
+    {
+     "line": 509,
+     "text": "seed = CV_SEEDS[rep]"
+    },
+    {
+     "line": 510,
+     "text": "folds, finfo = assign_folds(P0, FAILED, scheme, seed)"
+    },
+    {
+     "line": 538,
+     "text": "ref, rfolds = r4_control.within_oof(P0, scheme, seed, agn)"
+    },
+    {
+     "line": 543,
+     "text": "return {\"rep\": rep, \"seed\": seed, \"scores\": S, \"pred\": P, \"thr\": T, \"cov\": cov, \"folds\": folds,"
+    },
+    {
+     "line": 559,
+     "text": "notes = [f\"within-AgentDojo {K}-fold CV, scheme {scheme} (grouping of r4_control.group_key), fold seeds {CV_SEEDS}; \""
+    },
+    {
+     "line": 562,
+     "text": "\"unsuccessful attacks are grouped by suite|user_task; groups absent from P0 assigned with default_rng(10000+seed)\","
+    }
+   ],
+   "seed_lines_total": 12,
+   "bootstrap_lines": [],
+   "bootstrap_lines_total": 0,
+   "estimator_lines": [
+    {
+     "line": 13,
+     "text": "LR-A, LR-B, LR-C                 as ablation.py (StandardScaler on training, LogisticRegression(max_iter=1000,"
+    },
+    {
+     "line": 20,
+     "text": "TFIDF, TFIDF-nodigit             TfidfVectorizer(lowercase, (1,2), min_df=2, max_features=50000, sublinear_tf)"
+    },
+    {
+     "line": 21,
+     "text": "+ LogisticRegression(max_iter=2000, class_weight=\"balanced\", C=1.0)"
+    },
+    {
+     "line": 305,
+     "text": "lr = LogisticRegression(max_iter=1000, class_weight=\"balanced\").fit(sc.transform(Xfit), yfit)"
+    },
+    {
+     "line": 355,
+     "text": "ifo = IsolationForest(n_estimators=200, random_state=0).fit(sc.transform(Xtr)[ben])"
+    },
+    {
+     "line": 363,
+     "text": "vec = TfidfVectorizer(lowercase=True, ngram_range=(1, 2), min_df=2, max_features=50000, sublinear_tf=True)"
+    },
+    {
+     "line": 367,
+     "text": "lr = LogisticRegression(max_iter=2000, class_weight=\"balanced\", C=1.0).fit(Mtr, ytr)"
+    }
+   ],
+   "estimator_lines_total": 7,
+   "cli_lines": [
+    {
+     "line": 655,
+     "text": "ap.add_argument(\"--setting\", action=\"append\", default=[])"
+    },
+    {
+     "line": 656,
+     "text": "ap.add_argument(\"--all\", action=\"store_true\")"
+    },
+    {
+     "line": 657,
+     "text": "ap.add_argument(\"--force\", action=\"store_true\")"
+    },
+    {
+     "line": 658,
+     "text": "ap.add_argument(\"--budget\", type=float, default=420.0)"
+    },
+    {
+     "line": 659,
+     "text": "ap.add_argument(\"--status\", action=\"store_true\")"
+    }
+   ],
+   "cli_lines_total": 5
+  },
+  "revision/content_detector.py": {
+   "sha256": "d41313b2dc01cf5083150f168218b3847d42ac094bddc2a8fbce0d3f61b25e82",
+   "bytes": 121104,
+   "n_lines": 1858,
+   "parses": true,
+   "docstring_head": [
+    "Content-aware detector through the full ladder (review comments M2 and m13).",
+    "",
+    "Reads the shared LINEAR prediction cache (revision/cache/linear/<setting>.pkl) for TFIDF, TFIDF-nodigit,",
+    "TFIDF-worldmask (R1), LR-C and LR-B, and fits only what the cache does not hold:",
+    "  TFIDF-toolname      TF-IDF over tool names split on underscores (task item 4): R1, R3 x5; extras R4, LOSO x4",
+    "  TFIDF-anon          README-style anonymisation (AgentDrift README lines 151-153): person and company names",
+    "                      -> placeholders, every e-mail address -> in-domain / external placeholder, world date",
+    "                      -> placeholder. R1 only (sensitivity; extends TFIDF-worldmask, see DEVIATIONS C3)",
+    "  TFIDF-anon-nodigit  TFIDF-anon plus all digits removed (README lines 157-158: \"mask target domains and",
+    "                      amounts\"). R1 and R3 x5 (sensitivity)",
+    "  TFIDF@refit, TFIDF-nodigit@refit  R1 refits of the cached detectors, used only to read coefficients; their",
+    "                      test scores are checked against the cache"
+   ],
+   "env_vars": [
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [
+    {
+     "line": 134,
+     "text": "def seed_of(*parts):"
+    },
+    {
+     "line": 605,
+     "text": "def run_boot(yE, detsE, index_fn, seed, metrics=METRICS):"
+    },
+    {
+     "line": 606,
+     "text": "rng = np.random.default_rng(seed)"
+    },
+    {
+     "line": 618,
+     "text": "def group_rate_boot(P80, idx, seed, keys=None):"
+    },
+    {
+     "line": 625,
+     "text": "rng = np.random.default_rng(seed); bs = np.empty(B)"
+    },
+    {
+     "line": 683,
+     "text": "seed = seed_of(S, scheme)"
+    },
+    {
+     "line": 684,
+     "text": "arr = run_boot(yE, detsE, fn, seed)"
+    },
+    {
+     "line": 685,
+     "text": "binfo.update({\"scheme\": scheme, \"B\": B, \"seed\": seed})"
+    },
+    {
+     "line": 703,
+     "text": "e[lab] = group_rate_boot(P80, np.flatnonzero(cats == c), seed_of(S, d, c))"
+    },
+    {
+     "line": 706,
+     "text": "e[f\"recall_{p}\"] = group_rate_boot(P80, np.flatnonzero(pats == p), seed_of(S, d, p))"
+    },
+    {
+     "line": 708,
+     "text": "e[\"flag_failed_attack\"] = group_rate_boot(P80, F, seed_of(S, d, \"failed\"), keys=[tm[i][\"task\"] for i in F])"
+    },
+    {
+     "line": 710,
+     "text": "e[\"recall_dos\"] = group_rate_boot(P80, np.flatnonzero((y == 1) & dos), seed_of(S, d, \"dos\"))"
+    },
+    {
+     "line": 711,
+     "text": "e[\"recall_non_dos\"] = group_rate_boot(P80, np.flatnonzero((y == 1) & ~dos), seed_of(S, d, \"nondos\"))"
+    },
+    {
+     "line": 732,
+     "text": "arr = run_boot(yd, detsE, fn, seed_of(\"R1dm\", dom))"
+    },
+    {
+     "line": 805,
+     "text": "arr = run_boot(yE, detsE, fn, seed_of(\"within_vs_transfer\", W), metrics=DELTA_METRICS)"
+    },
+    {
+     "line": 821,
+     "text": "\"\"\"Holm across R3 folds, LOSO suites and R1-wd seeds for the paired contrasts of the setting parts.\"\"\""
+    },
+    {
+     "line": 823,
+     "text": "for name, members in ((\"R3_folds\", R3S), (\"LOSO_suites\", LOSOS), (\"R1wd_seeds\", R1WD)):"
+    },
+    {
+     "line": 848,
+     "text": "out[d][m] = {\"mean_over_seeds\": float(np.mean(v)), \"min\": float(np.min(v)), \"max\": float(np.max(v))}"
+    },
+    {
+     "line": 1329,
+     "text": "f\"On the world-disjoint splits, TFIDF has a mean AUROC of {wds['mean_over_seeds']:.4f} \""
+    }
+   ],
+   "seed_lines_total": 19,
+   "bootstrap_lines": [
+    {
+     "line": 24,
+     "text": "interval = 2.5 / 97.5 percentiles of B = 2000 bootstrap replicates."
+    },
+    {
+     "line": 69,
+     "text": "B = 2000"
+    },
+    {
+     "line": 723,
+     "text": "\"bootstraps (trajectory-level stratified, B=2000); threshold failure (plan 3.3) = detected change \""
+    },
+    {
+     "line": 1248,
+     "text": "\"the mean of 5 repetitions. The interval is a percentile bootstrap with B = 2,000, resampling the plan 3.5 unit: \""
+    }
+   ],
+   "bootstrap_lines_total": 4,
+   "estimator_lines": [
+    {
+     "line": 14,
+     "text": "Every fit uses the plan / cache configuration: TfidfVectorizer(lowercase, (1,2)-grams, min_df=2,"
+    },
+    {
+     "line": 15,
+     "text": "max_features=50000, sublinear_tf) + LogisticRegression(max_iter=2000, class_weight='balanced', C=1);"
+    },
+    {
+     "line": 316,
+     "text": "vec = TfidfVectorizer(**TFCFG)"
+    },
+    {
+     "line": 320,
+     "text": "lr = LogisticRegression(**LRCFG).fit(Mtr, ytr)"
+    }
+   ],
+   "estimator_lines_total": 4,
+   "cli_lines": [
+    {
+     "line": 1848,
+     "text": "f = sub.add_parser(\"fit\"); f.add_argument(\"--all\", action=\"store_true\"); f.add_argument(\"--unit\", action=\"append\", default=[])"
+    },
+    {
+     "line": 1849,
+     "text": "f.add_argument(\"--force\", action=\"store_true\"); f.add_argument(\"--budget\", type=float, default=540)"
+    },
+    {
+     "line": 1850,
+     "text": "a = sub.add_parser(\"analyze\"); a.add_argument(\"--all\", action=\"store_true\"); a.add_argument(\"--part\", action=\"append\", default=[])"
+    },
+    {
+     "line": 1851,
+     "text": "a.add_argument(\"--force\", action=\"store_true\"); a.add_argument(\"--budget\", type=float, default=540)"
+    }
+   ],
+   "cli_lines_total": 4
+  },
+  "revision/domain_shift.py": {
+   "sha256": "3137874cd7fdd947eaf5709943468aa291cae75a3ec01250735cc15bcf49fb16",
+   "bytes": 145652,
+   "n_lines": 2249,
+   "parses": true,
+   "docstring_head": [
+    "Domain shift, thresholds and the world-disjoint control (revision stream `domain_shift`).",
+    "",
+    "Addresses review comments M3, M4, m2 (R2 part), m3 (R3 families and test-set overlap), m5, m12 and m13",
+    "(REVIEW_REPORT.md). Binding plan: REVISION_ANALYSIS_PLAN.md, Sec. 3.1-3.6 and Sec. 4 (\"Shift size\").",
+    "",
+    "Inputs: the shared prediction caches revision/cache/linear/<setting>.pkl and revision/cache/gru/<setting>.pkl.",
+    "No detector is fitted here; every score, prediction and threshold is read from the caches (thresholds were",
+    "set on training data by the cache builders). The only models fitted in this script are the classifier",
+    "two-sample tests of m12 (logistic regression on representation B predicting train-versus-test membership),",
+    "which read the raw AgentDrift / AgentDojo records.",
+    "",
+    "Usage (resumable; every section writes revision/domain_shift_work/parts/<section>.json and skips work done):"
+   ],
+   "env_vars": [
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [
+    {
+     "line": 22,
+     "text": "* Bootstrap: trajectory-level, stratified by class (n_pos and n_neg fixed), B = 2000, one RNG seed per"
+    },
+    {
+     "line": 24,
+     "text": "population shares the resampled rows (paired). Multi-seed detectors (GRU*: 3 training seeds) draw one seed"
+    },
+    {
+     "line": 25,
+     "text": "per replicate, as evalkit.bootstrap does; their point estimate is the mean over seeds (evalkit.point)."
+    },
+    {
+     "line": 60,
+     "text": "DET_SEEDS = [f\"{g}#seed{r}\" for g in (\"GRU\", \"GRU-drop0.2\", \"GRU-drop0.1\") for r in range(3)]"
+    },
+    {
+     "line": 73,
+     "text": "def seed_of(name):"
+    },
+    {
+     "line": 126,
+     "text": "if S.shape[0] > 1:                      # single-seed views of multi-seed detectors (GRU*)"
+    },
+    {
+     "line": 128,
+     "text": "dets[f\"{d}#seed{r}\"] = (S[r:r + 1], {op: v[r:r + 1] for op, v in P.items()})"
+    },
+    {
+     "line": 228,
+     "text": "point[det][metric], point_by_rep[det][metric] (multi-seed detectors), boot[det][metric] (B,), sizes.\"\"\""
+    },
+    {
+     "line": 249,
+     "text": "rng = np.random.default_rng(seed_of(name))"
+    },
+    {
+     "line": 260,
+     "text": "rr = np.random.default_rng([seed_of(name), seed_of(d)]).integers(0, R, B)"
+    },
+    {
+     "line": 269,
+     "text": "info = {\"name\": name, \"setting\": s, \"domain\": domain, \"dets\": list(dets), \"B\": B, \"seed\": seed_of(name),"
+    },
+    {
+     "line": 377,
+     "text": "out[\"GRU_per_seed_points\"] = {"
+    },
+    {
+     "line": 452,
+     "text": "rng = np.random.default_rng(seed_of(name))"
+    },
+    {
+     "line": 453,
+     "text": "rrs = {d: np.random.default_rng([seed_of(name), seed_of(d)]).integers(0, st[\"dets\"][d][0].shape[0], B) for d in dets}"
+    },
+    {
+     "line": 549,
+     "text": "out = {\"seeds\": {}, \"R1\": {det: {m: est(R1P, det, m) for m in mets} for det in DET_M5}}"
+    },
+    {
+     "line": 591,
+     "text": "out[\"seeds\"][k] = so"
+    },
+    {
+     "line": 592,
+     "text": "# Holm over the five split seeds per detector for the pooled-pool-E delta (secondary)"
+    },
+    {
+     "line": 597,
+     "text": "out[\"seeds\"][k][\"minus_R1\"][det][\"AUROC\"][\"p_holm_over_seeds\"] = fam[k][\"p_holm\"]"
+    },
+    {
+     "line": 598,
+     "text": "out[\"seeds\"][k][\"minus_R1\"][det][\"AUROC\"][\"detected_holm_over_seeds\"] = fam[k][\"detected_holm\"]"
+    },
+    {
+     "line": 603,
+     "text": "out[\"across_seeds_AUROC\"] = {det: {\"values\": [out[\"seeds\"][k][\"metrics\"][det][\"AUROC\"][\"point\"] for k in range(5)]}"
+    },
+    {
+     "line": 606,
+     "text": "v = out[\"across_seeds_AUROC\"][det][\"values\"]"
+    },
+    {
+     "line": 607,
+     "text": "out[\"across_seeds_AUROC\"][det].update({\"mean\": r4(np.mean(v)), \"min\": r4(min(v)), \"max\": r4(max(v))})"
+    },
+    {
+     "line": 609,
+     "text": "if out[\"seeds\"][k][\"minus_R1\"][det][\"AUROC\"][\"detected\"] and out[\"seeds\"][k][\"minus_R1\"][det][\"AUROC\"][\"point\"] > 0]"
+    },
+    {
+     "line": 610,
+     "text": "out[\"detected_losses\"] = {\"pooled_AUROC_unadjusted\": loss_pooled, \"pooled_AUROC_holm_over_seeds\": loss_pooled_h,"
+    },
+    {
+     "line": 614,
+     "text": "if out[\"seeds\"][k][\"minus_R1\"][det][\"AUPRC_p10\"][\"detected\"]"
+    },
+    {
+     "line": 615,
+     "text": "and out[\"seeds\"][k][\"minus_R1\"][det][\"AUPRC_p10\"][\"point\"] < 0],"
+    },
+    {
+     "line": 617,
+     "text": "if out[\"seeds\"][k][\"macro_AUROC\"][det][\"delta_vs_R1_macro\"][\"detected\"]"
+    },
+    {
+     "line": 618,
+     "text": "and out[\"seeds\"][k][\"macro_AUROC\"][det][\"delta_vs_R1_macro\"][\"point\"] < 0]}"
+    },
+    {
+     "line": 634,
+     "text": "rng = np.random.default_rng(seed_of(name))"
+    },
+    {
+     "line": 636,
+     "text": "rrs = {d: np.random.default_rng([seed_of(name), seed_of(d)]).integers(0, st[\"dets\"][d][0].shape[0], B_) for d in dets}"
+    },
+    {
+     "line": 661,
+     "text": "\"n_pos_resampled_min\": int(npos_b.min()), \"n_pos_resampled_max\": int(npos_b.max()), \"seed\": seed_of(name)}"
+    },
+    {
+     "line": 723,
+     "text": "def c2st(Xtr, Xte, seed=0):"
+    },
+    {
+     "line": 734,
+     "text": "for tr, te in StratifiedKFold(5, shuffle=True, random_state=seed).split(X, z):"
+    },
+    {
+     "line": 744,
+     "text": "rng = np.random.default_rng(seed_of(\"m12\") + len(z))"
+    },
+    {
+     "line": 781,
+     "text": "\"membership; StratifiedKFold(5, shuffle=True, random_state=0); AUROC of the pooled \""
+    },
+    {
+     "line": 886,
+     "text": "rng = np.random.default_rng(seed_of(f\"m3_joint_{d}\"))"
+    },
+    {
+     "line": 914,
+     "text": "# fold-assignment seeds. Nothing computed by the sections above is changed."
+    },
+    {
+     "line": 944,
+     "text": "(seed = crc32(name + '|B10000')); all detectors of the population share the resampled rows (paired)."
+    },
+    {
+     "line": 957,
+     "text": "rng = np.random.default_rng(seed_of(name + \"|B10000\"))"
+    },
+    {
+     "line": 962,
+     "text": "rr = np.random.default_rng([seed_of(name + \"|B10000\"), seed_of(det)]).integers(0, S2.shape[0], B_HI)"
+    },
+    {
+     "line": 1006,
+     "text": "st_ = {str(k): dict(m5[\"seeds\"][str(k)][\"minus_R1\"][det][\"AUROC\"]) for k in range(5)}"
+    },
+    {
+     "line": 1008,
+     "text": "v[\"p_holm\"] = v.get(\"p_holm_over_seeds\")"
+    },
+    {
+     "line": 1013,
+     "text": "{str(k): m5[\"seeds\"][str(k)][\"minus_R1\"][det][\"AUPRC_p10\"] for k in range(5)}))"
+    },
+    {
+     "line": 1017,
+     "text": "{d: m5[\"seeds\"][str(k)][\"domain_matched\"][det][d][\"delta\"] for d in DOMAINS}))"
+    },
+    {
+     "line": 1119,
+     "text": "def overlap_boot(sA, sB, domain, dets, B_, seed, with_ap=False):"
+    },
+    {
+     "line": 1122,
+     "text": "resampled rows that belong to it (with multiplicity), scored by its own model. Multi-seed detectors draw"
+    },
+    {
+     "line": 1123,
+     "text": "one training seed per replicate for each pool independently.\"\"\""
+    },
+    {
+     "line": 1135,
+     "text": "rng = np.random.default_rng(seed)"
+    },
+    {
+     "line": 1136,
+     "text": "rA = {d: np.random.default_rng([seed, seed_of(d), 1]).integers(0, stA[\"dets\"][d][0].shape[0], B_) for d in dets}"
+    },
+    {
+     "line": 1137,
+     "text": "rB = {d: np.random.default_rng([seed, seed_of(d), 2]).integers(0, stB[\"dets\"][d][0].shape[0], B_) for d in dets}"
+    },
+    {
+     "line": 1157,
+     "text": "\"n_shared_pos\": int(yU[both].sum()), \"seed\": int(seed)}"
+    },
+    {
+     "line": 1161,
+     "text": "def _indep_auc_boot(s, domain, det, B_, seed):"
+    },
+    {
+     "line": 1167,
+     "text": "rng = np.random.default_rng(seed)"
+    },
+    {
+     "line": 1182,
+     "text": "for the borderline LR-B seed-1 comparison.\"\"\""
+    },
+    {
+     "line": 1196,
+     "text": "ob, info = overlap_boot(s, \"R1\", None, DET_M5, B, seed_of(f\"m5ov_{s}\"), with_ap=True)"
+    },
+    {
+     "line": 1206,
+     "text": "obd, infod = overlap_boot(s, \"R1\", d, DET_M5, B, seed_of(f\"m5ov_{s}_{d}\"))"
+    },
+    {
+     "line": 1225,
+     "text": "a = _indep_auc_boot(s, None, \"LR-B\", B, seed_of(f\"m5rerun_ind_{s}_{r}\"))"
+    },
+    {
+     "line": 1226,
+     "text": "b_ = _indep_auc_boot(\"R1\", None, \"LR-B\", B, seed_of(f\"m5rerun_ind_R1_{s}_{r}\"))"
+    },
+    {
+     "line": 1229,
+     "text": "o, _ = overlap_boot(s, \"R1\", None, [\"LR-B\"], B, seed_of(f\"m5rerun_ov_{s}_{r}\"))"
+    },
+    {
+     "line": 1232,
+     "text": "o, _ = overlap_boot(s, \"R1\", None, [\"LR-B\"], B_HI, seed_of(f\"m5ov_B10000_{s}\"))"
+    }
+   ],
+   "seed_lines_total": 143,
+   "bootstrap_lines": [
+    {
+     "line": 22,
+     "text": "* Bootstrap: trajectory-level, stratified by class (n_pos and n_neg fixed), B = 2000, one RNG seed per"
+    },
+    {
+     "line": 46,
+     "text": "BOOTDIR = os.path.join(WORK, \"boot\")"
+    },
+    {
+     "line": 53,
+     "text": "B = 2000"
+    },
+    {
+     "line": 474,
+     "text": "\"replacement, B = 2000), sensitivity analysis for plan 3.5; the primary M3 analysis uses \""
+    },
+    {
+     "line": 782,
+     "text": "\"out-of-fold scores with a stratified bootstrap interval (B=2000) over those scores. \""
+    },
+    {
+     "line": 912,
+     "text": "# (the R1 and R1-wd test pools share ~300 trajectories), a Monte Carlo stability check at B = 10,000 for every"
+    },
+    {
+     "line": 917,
+     "text": "BOOTHI = os.path.join(WORK, \"boot_hi\")"
+    },
+    {
+     "line": 943,
+     "text": "\"\"\"Stratified bootstrap of a named population with B = 10,000 and a fresh RNG stream"
+    },
+    {
+     "line": 980,
+     "text": "member = (kind, popA, popB, detA, detB, metric); stored = the B = 2,000 dstat dict from the part file.\"\"\""
+    },
+    {
+     "line": 1034,
+     "text": "[0.03, 0.07] at B = 2,000 is recomputed at B = 10,000 with fresh RNG streams (all members, Holm redone).\"\"\""
+    },
+    {
+     "line": 1055,
+     "text": "out = {\"definition\": (f\"families with any member p or p_holm in [{MC_WINDOW[0]}, {MC_WINDOW[1]}] at B = 2,000 are \""
+    },
+    {
+     "line": 1251,
+     "text": "\"evaluated on the resampled rows that belong to it, scored by its own model; B = 2,000; one \""
+    },
+    {
+     "line": 1647,
+     "text": "\"bootstrap\": (\"trajectory-level stratified bootstrap (n_pos, n_neg fixed), B=2000, one RNG seed per population \""
+    },
+    {
+     "line": 1710,
+     "text": "\"Intervals are 95% percentile intervals of a trajectory-level stratified bootstrap (B = 2,000), independent across \""
+    },
+    {
+     "line": 2234,
+     "text": "\"DS8. The plan names B = 2,000 for the AUPRC bootstrap; B = 2,000 is used for every metric here. Intervals therefore differ \""
+    },
+    {
+     "line": 2235,
+     "text": "\"slightly from the cache summaries (B = 1,000 for AgentDrift in validation.json).\","
+    }
+   ],
+   "bootstrap_lines_total": 16,
+   "estimator_lines": [
+    {
+     "line": 734,
+     "text": "for tr, te in StratifiedKFold(5, shuffle=True, random_state=seed).split(X, z):"
+    },
+    {
+     "line": 735,
+     "text": "mdl = make_pipeline(StandardScaler(), LogisticRegression(max_iter=5000, class_weight=\"balanced\"))"
+    },
+    {
+     "line": 753,
+     "text": "lr_full = make_pipeline(StandardScaler(), LogisticRegression(max_iter=5000, class_weight=\"balanced\")).fit(X, z)"
+    },
+    {
+     "line": 779,
+     "text": "out = {\"definition\": (\"classifier two-sample test: StandardScaler + LogisticRegression(max_iter=5000, \""
+    },
+    {
+     "line": 781,
+     "text": "\"membership; StratifiedKFold(5, shuffle=True, random_state=0); AUROC of the pooled \""
+    },
+    {
+     "line": 1306,
+     "text": "for tr, te in StratifiedKFold(5, shuffle=True, random_state=seed).split(X, z):"
+    },
+    {
+     "line": 1307,
+     "text": "mdl = make_pipeline(StandardScaler(), LogisticRegression(max_iter=5000, class_weight=\"balanced\"))"
+    },
+    {
+     "line": 1334,
+     "text": "\"StratifiedKFold(5, shuffle)). 'full' entries add the m12 bootstrap interval; 'fold_seed_spread' \""
+    },
+    {
+     "line": 2226,
+     "text": "\"DS6. m12. Classifier two-sample test: StandardScaler + LogisticRegression(class_weight='balanced', max_iter=5000) on \""
+    },
+    {
+     "line": 2227,
+     "text": "\"representation B, StratifiedKFold(5, shuffle, seed 0) on train-versus-test membership. The interval is a stratified \""
+    }
+   ],
+   "estimator_lines_total": 10,
+   "cli_lines": [
+    {
+     "line": 2240,
+     "text": "cmd = sys.argv[1] if len(sys.argv) > 1 else \"status\""
+    },
+    {
+     "line": 2242,
+     "text": "run(sys.argv[2:] or list(SECTIONS))"
+    }
+   ],
+   "cli_lines_total": 2
+  },
+  "revision/features_obslen.py": {
+   "sha256": "8772e94eeef41b72a775d7202656dc8c2e6231d8c12a6d08a3774d3dbb812a18",
+   "bytes": 113941,
+   "n_lines": 1709,
+   "parses": true,
+   "docstring_head": [
+    "features_obslen.py -- review comments M5 (observation-length cue, padding, truncation) and m8 (keyword",
+    "state-changing flag). Follows REVISION_ANALYSIS_PLAN.md Sec. 4 (\"Observation length\", \"Keyword feature\").",
+    "",
+    "Usage (environment variables AGENTDRIFT and AGENTDOJO must be set):",
+    "    python features_obslen.py status",
+    "    python features_obslen.py <part>         one part (resumable; parts already written are skipped by `all`)",
+    "    python features_obslen.py all            every missing part, in order, within a time budget",
+    "    python features_obslen.py assemble       writes features_obslen_results.json",
+    "    python features_obslen.py summary        writes features_obslen_summary.md from the results JSON",
+    "Parts: annotation coefs univariate noobs pad_r1_linear pad_r1_gru pad_wut truncation annot_lrb",
+    "",
+    "Inputs are read only. Scores of the cached detectors come from revision/cache/{linear,gru}; new fits (coefficient"
+   ],
+   "env_vars": [
+    "AGENTDOJO",
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [
+    {
+     "line": 13,
+     "text": "bootstraps, the WUT fold models used for padding, LR-obsonly, LR-B-annot and the three R1 GRU seeds for padding) reuse"
+    },
+    {
+     "line": 225,
+     "text": "def gen_idx(y, pool, nb, seed, clusters=None):"
+    },
+    {
+     "line": 226,
+     "text": "rng = np.random.default_rng(seed)"
+    },
+    {
+     "line": 245,
+     "text": "u = rng.random(nb)          # repetition / seed selector, shared by every method in a replicate (paired)"
+    },
+    {
+     "line": 257,
+     "text": "def evaluate(methods, y, pool, metrics, seed, clusters=None, contrasts=(), nb=B, label=\"\"):"
+    },
+    {
+     "line": 263,
+     "text": "idx, u, ncl = gen_idx(y, pool, nb, seed, clusters)"
+    },
+    {
+     "line": 283,
+     "text": "\"B\": nb, \"seed\": seed, \"metrics\": {}, \"contrasts\": {}}"
+    },
+    {
+     "line": 310,
+     "text": "def ratio_boot(num, den, nb, seed, clusters=None):"
+    },
+    {
+     "line": 313,
+     "text": "rng = np.random.default_rng(seed)"
+    },
+    {
+     "line": 540,
+     "text": "rng = np.random.default_rng(8101); pos = np.where(y == 1)[0]; neg = np.where(y == 0)[0]"
+    },
+    {
+     "line": 582,
+     "text": "keys = sorted(set(cl)); mem = [np.where(cl == k)[0] for k in keys]; rng = np.random.default_rng(8102)"
+    },
+    {
+     "line": 619,
+     "text": "for name, recs, clu, seed in pops:"
+    },
+    {
+     "line": 623,
+     "text": "res = evaluate(methods, y, np.arange(len(y)), [\"AUROC\"], seed, clusters=cl, label=name)"
+    },
+    {
+     "line": 810,
+     "text": "\"\"\"M5 item 3, GRU: retrain the three pre-registered R1 GRU seeds (gru_detector.train_gru on"
+    },
+    {
+     "line": 818,
+     "text": "f = os.path.join(PARTS, f\"pad_r1_gru_seed{sd}.npz\")"
+    },
+    {
+     "line": 826,
+     "text": "log(f\"GRU R1 seed {sd} trained and scored in {time.time() - t0:.1f} s\")"
+    },
+    {
+     "line": 829,
+     "text": "z = np.load(os.path.join(PARTS, f\"pad_r1_gru_seed{sd}.npz\")); S.append(z[\"S\"]); thr.append(float(z[\"thr\"]))"
+    },
+    {
+     "line": 831,
+     "text": "chk[f\"seed{sd}\"] = {\"max_abs_diff_vs_cache\": float(np.max(np.abs(z[\"S\"][0] - cs))),"
+    },
+    {
+     "line": 839,
+     "text": "S = np.array(S)       # (seed, pad, n)"
+    },
+    {
+     "line": 845,
+     "text": "label=\"R1 pool E (padded attacked, unpadded negatives); 3 seeds\")"
+    },
+    {
+     "line": 1129,
+     "text": "\"F6. The three R1 GRU seeds were retrained for the padding test with gru_detector.train_gru and \""
+    },
+    {
+     "line": 1131,
+     "text": "\"is identical, but 1-2 of 1,881 scores per seed differ from the cache by at most 6e-8 (float32 rounding; not \""
+    },
+    {
+     "line": 1140,
+     "text": "\"F9. Bootstrap seeds aligned across parts (second run of this script, 2026-09-27). In the first run each part drew its \""
+    },
+    {
+     "line": 1143,
+     "text": "\"the resampling seed of the matching setting in the ablation part (9200 + setting index; 9300 + index for the \""
+    },
+    {
+     "line": 1177,
+     "text": "\"point\": \"metric on the full population; mean over repetitions/seeds for CV settings and the GRU\","
+    },
+    {
+     "line": 1180,
+     "text": "\"paired\": \"all methods of one table share the resampled rows and the drawn repetition/seed\","
+    },
+    {
+     "line": 1456,
+     "text": "\"`M5_3_padding/R1_GRU/eval/metrics/GRU|pad<n>/<metric>`; GRU = mean over seeds 0-2]:\")"
+    },
+    {
+     "line": 1472,
+     "text": "w(f\"GRU refit check [`{gk}/seed<k>`]: the three seeds were retrained with gru_detector.train_gru on gru_ladder.stratified_val; \""
+    },
+    {
+     "line": 1474,
+     "text": "f\"{sum(G(gk + f'/seed{k}/n_rows_not_bitwise_equal') for k in range(3))} of the 5,643 scores (3 seeds x 1,881 rows) differ from the cache by at most \""
+    },
+    {
+     "line": 1475,
+     "text": "f\"{max(G(gk + f'/seed{k}/max_abs_diff_vs_cache') for k in range(3)):.1e} (float32 rounding). Linear scores rebuilt from the \""
+    },
+    {
+     "line": 1678,
+     "text": "rng = np.random.default_rng(0)"
+    }
+   ],
+   "seed_lines_total": 31,
+   "bootstrap_lines": [
+    {
+     "line": 44,
+     "text": "B = 2000"
+    },
+    {
+     "line": 486,
+     "text": "\"ci_note\": \"bootstrap over attacked trajectories (B = 2000)\"}"
+    },
+    {
+     "line": 520,
+     "text": "\"ci_note\": \"cluster bootstrap over suite|user_task (B = 2000)\"}"
+    },
+    {
+     "line": 969,
+     "text": "\"intervals: cluster bootstrap over suite|user_task, B = 2000; \""
+    },
+    {
+     "line": 1114,
+     "text": "\"(1 + #{d >= 0})/(B + 1))), so the smallest attainable value with B = 2000 is 0.001. Holm is applied across the five \""
+    },
+    {
+     "line": 1176,
+     "text": "\"conventions\": {\"interval\": \"point estimate [2.5th, 97.5th bootstrap percentile], B = 2000 unless stated\","
+    },
+    {
+     "line": 1265,
+     "text": "w(\"Conventions. Point estimate [95% bootstrap interval], B = 2000. AgentDrift (R1, R3): stratified trajectory bootstrap. \""
+    }
+   ],
+   "bootstrap_lines_total": 7,
+   "estimator_lines": [
+    {
+     "line": 158,
+     "text": "\"\"\"ablation.fit / build_linear_cache.lr_fit recipe: StandardScaler + LogisticRegression(max_iter=1000,"
+    },
+    {
+     "line": 163,
+     "text": "lr = LogisticRegression(max_iter=1000, class_weight=\"balanced\").fit(sc.transform(X), y)"
+    }
+   ],
+   "estimator_lines_total": 2,
+   "cli_lines": [
+    {
+     "line": 1688,
+     "text": "cmd = sys.argv[1] if len(sys.argv) > 1 else \"status\""
+    }
+   ],
+   "cli_lines_total": 1
+  },
+  "revision/gru_variants.py": {
+   "sha256": "8623d0edc090220e16f55b86ca402fadb3c1098cde24b1dda0e4522cb698f397",
+   "bytes": 7147,
+   "n_lines": 130,
+   "parses": true,
+   "docstring_head": [
+    "Token-dropout GRU variant for the revision (REVISION_ANALYSIS_PLAN.md Sec. 2, \"GRU-drop\").",
+    "",
+    "`train_gru_drop(train, val, seed, p)` is a line-by-line copy of `gru_detector.train_gru` with ONE",
+    "addition: when p > 0, during training only, every non-padding token of every training mini-batch is",
+    "replaced by the <UNK> index (1) independently with probability p. The Bernoulli draws come from a",
+    "separate `torch.Generator` seeded with (seed + 10007), so the global torch random stream (weight",
+    "initialisation, `torch.randperm` batch order) is exactly the one `train_gru` uses. Validation inputs",
+    "(early stopping), the in-sample training scores used for the recall-0.80 threshold, and all test",
+    "inputs are never dropped. With p = 0 no draw is made and the function is numerically identical to",
+    "`gru_detector.train_gru` (checked by `build_gru_cache.py verify`: bit-identical R1 seed-0 scores).",
+    "",
+    "The architecture, constants, vocabulary, tensors, loss, optimiser, early stopping and threshold are"
+   ],
+   "env_vars": [],
+   "seed_lines": [
+    {
+     "line": 3,
+     "text": "`train_gru_drop(train, val, seed, p)` is a line-by-line copy of `gru_detector.train_gru` with ONE"
+    },
+    {
+     "line": 6,
+     "text": "separate `torch.Generator` seeded with (seed + 10007), so the global torch random stream (weight"
+    },
+    {
+     "line": 10,
+     "text": "`gru_detector.train_gru` (checked by `build_gru_cache.py verify`: bit-identical R1 seed-0 scores)."
+    },
+    {
+     "line": 34,
+     "text": "def train_gru_drop(train, val, seed, p=0.0, tool_only=False):"
+    },
+    {
+     "line": 37,
+     "text": "torch.manual_seed(seed); np.random.seed(seed)"
+    },
+    {
+     "line": 51,
+     "text": "gen = torch.Generator(); gen.manual_seed(seed + DROP_SEED_OFFSET)"
+    }
+   ],
+   "seed_lines_total": 6,
+   "bootstrap_lines": [],
+   "bootstrap_lines_total": 0,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "revision/linear_r4_truncation_check.py": {
+   "sha256": "717cd17c5644f78dcf848b0a4cdd8b2cff4ea8b08f3137ce0e8792b7dbf3783b",
+   "bytes": 3861,
+   "n_lines": 68,
+   "parses": true,
+   "docstring_head": [
+    "Diagnostic for the linear cache README (not part of the cache): why do the corrected R4 values differ from the",
+    "review's corrected estimates (transfer LR-C 0.476, LR-B 0.483; within-UT LR-C 0.846, LR-B 0.773)?",
+    "",
+    "The corrected extraction (agentdojo_traces.jsonl) changes two things relative to v0.3: positional pairing of tool",
+    "messages AND no truncation of observations (v0.3 cut them at 2,000 characters). The review's numbers were computed",
+    "with positional pairing. This script re-applies the v0.3 truncation (str(obs)[:2000]) to the corrected P0 records and",
+    "re-runs the unmodified v0.3 code paths (r4_control.fit_lr / score / within_oof, 5 fold seeds), so that the two effects",
+    "can be told apart. AUROC point estimates as in r4_control.py (mean over the 5 CV repetitions); 95% intervals from",
+    "evalkit.bootstrap (stratified, B = 2000, seed 12345). Output: cache/linear/r4_truncation_check.json",
+    "",
+    "Run: AGENTDRIFT=<clone> C:/Python310/python.exe revision/linear_r4_truncation_check.py"
+   ],
+   "env_vars": [
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [
+    {
+     "line": 7,
+     "text": "re-runs the unmodified v0.3 code paths (r4_control.fit_lr / score / within_oof, 5 fold seeds), so that the two effects"
+    },
+    {
+     "line": 9,
+     "text": "evalkit.bootstrap (stratified, B = 2000, seed 12345). Output: cache/linear/r4_truncation_check.json"
+    },
+    {
+     "line": 44,
+     "text": "\"B\": 2000, \"seed\": 12345, \"cv_seeds\": r4_control.SEEDS,"
+    },
+    {
+     "line": 55,
+     "text": "bt = ek.bootstrap(y, methods, B=2000, seed=12345)"
+    }
+   ],
+   "seed_lines_total": 4,
+   "bootstrap_lines": [
+    {
+     "line": 9,
+     "text": "evalkit.bootstrap (stratified, B = 2000, seed 12345). Output: cache/linear/r4_truncation_check.json"
+    },
+    {
+     "line": 55,
+     "text": "bt = ek.bootstrap(y, methods, B=2000, seed=12345)"
+    }
+   ],
+   "bootstrap_lines_total": 2,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "revision/linear_tie_check.py": {
+   "sha256": "01bafecd14b06a14cb6fcf36a6846ae8d698bdffcb36c34d097bcb805a1f30b8",
+   "bytes": 2776,
+   "n_lines": 52,
+   "parses": true,
+   "docstring_head": [
+    "Diagnostic for the linear cache README (not part of the cache): how much do exact ties matter?",
+    "",
+    "The cache makes mathematically tied scores bitwise tied (build_linear_cache.by_unique_rows, MARKOV_DECIMALS). The v0.3",
+    "code paths did not, so float noise broke such ties. This script recomputes, for every single-fit setting, the v0.3-style",
+    "raw scores of Markov (rerun_r1r3.py recipe, no rounding) and LR-A (ablation.fit / ablation.sco) and reports their AUROC",
+    "on pool E next to the AUROC of the cached (tie-exact) scores. Output: cache/linear/tie_check.json",
+    "",
+    "Run: AGENTDRIFT=<clone> C:/Python310/python.exe revision/linear_tie_check.py"
+   ],
+   "env_vars": [],
+   "seed_lines": [],
+   "seed_lines_total": 0,
+   "bootstrap_lines": [],
+   "bootstrap_lines_total": 0,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "revision/offline_driver.sh": {
+   "sha256": "39d83470330d91e2744f63a16246243fa04623e1ed8073862055427b98a75125",
+   "bytes": 1622,
+   "n_lines": 23,
+   "env_vars": [
+    "AGENTDOJO",
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [],
+   "seed_lines_total": 0,
+   "bootstrap_lines": [],
+   "bootstrap_lines_total": 0,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "revision/oov_mechanism.py": {
+   "sha256": "02460c7104c222a96bee68b5617c1c0b1bdfd0b36513ffea3fc9545db1559484",
+   "bytes": 111141,
+   "n_lines": 1545,
+   "parses": true,
+   "docstring_head": [
+    "Out-of-vocabulary mechanism of the R3 reversals (review M1 actions 1-5, Q1, m6 <UNK>-norm part).",
+    "",
+    "Reads the shared prediction caches (revision/cache/linear, revision/cache/gru). The only new fits are the six R1",
+    "GRU models (GRU and GRU-drop0.2, training seeds 0-2) that the cache did not save; they are refitted with the",
+    "cache's own training function (gru_variants.train_gru_drop, called exactly as build_gru_cache.run_unit does) and",
+    "checked to reproduce the cached scores. Nothing is tuned on test data: every threshold is the cached training",
+    "threshold (theta_r80).",
+    "",
+    "Sections (keys of oov_mechanism_results.json):",
+    "  s1_lrc_offset   LR-C / LR-C-drop tool-block offset w_A^T c per R3 fold (from lrc_parts) + share of training rows",
+    "  s2_graded       graded tool coverage inside R1 (tool columns zeroed / tokens mapped to <UNK> for a random fraction",
+    "                  of tool names; 5 draws per level)"
+   ],
+   "env_vars": [
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [
+    {
+     "line": 4,
+     "text": "GRU models (GRU and GRU-drop0.2, training seeds 0-2) that the cache did not save; they are refitted with the"
+    },
+    {
+     "line": 14,
+     "text": "s4_gru_offset   GRU tool-pathway logit offset over all folds and seeds; <UNK> embedding norm (init reproduced by"
+    },
+    {
+     "line": 15,
+     "text": "re-seeding; trained norm reproduced by simulating Adam's coupled weight decay alone)"
+    },
+    {
+     "line": 19,
+     "text": "s7_q1           per-seed GRU R3 AUROC, GRU - LR-C per seed, two-level (seeds, then trajectories) bootstrap"
+    },
+    {
+     "line": 57,
+     "text": "B = 2000                       # bootstrap replicates everywhere (fixed seeds below)"
+    },
+    {
+     "line": 60,
+     "text": "GRADED_SEED = 7100             # mask draw d of level index li uses default_rng(GRADED_SEED + 100*li + d)"
+    },
+    {
+     "line": 179,
+     "text": "rng = np.random.default_rng(POOL_SEEDS[name])"
+    },
+    {
+     "line": 189,
+     "text": "return np.random.default_rng(REP_SEEDS[name]).integers(5, size=B)"
+    },
+    {
+     "line": 308,
+     "text": "def model_path(det, seed):"
+    },
+    {
+     "line": 309,
+     "text": "return os.path.join(WORK, \"models\", f\"R1_{det}_seed{seed}.pkl\")"
+    },
+    {
+     "line": 319,
+     "text": "for seed in SEEDS:"
+    },
+    {
+     "line": 320,
+     "text": "path = model_path(det, seed)"
+    },
+    {
+     "line": 326,
+     "text": "tr, va = stratified_val(st_tr, seed)                      # exactly build_gru_cache.run_unit"
+    },
+    {
+     "line": 327,
+     "text": "model, vocab, scaler, thr, aux = train_gru_drop(tr, va, seed, p)"
+    },
+    {
+     "line": 330,
+     "text": "ref = g[\"scores\"][det][seed][pE]"
+    },
+    {
+     "line": 332,
+     "text": "\"thr_r80_diff_vs_cache\": float(abs(thr - float(g[\"thr\"][det][\"t_r80\"][seed]))),"
+    },
+    {
+     "line": 333,
+     "text": "\"thr_val80_diff_vs_cache\": float(abs(aux[\"thr_val80\"] - float(g[\"thr\"][det][\"t_val80\"][seed])))}"
+    },
+    {
+     "line": 336,
+     "text": "chk[\"max_abs_diff_tool_contrib_vs_cache\"] = float(np.max(np.abs(tc - g[\"tool_contrib\"][det][seed][pE])))"
+    },
+    {
+     "line": 337,
+     "text": "obj = {\"det\": det, \"seed\": seed, \"p\": p, \"vocab\": vocab, \"scaler\": scaler, \"thr\": thr, \"aux\": aux,"
+    },
+    {
+     "line": 341,
+     "text": "log(f\"train R1 {det} seed{seed}: {time.time() - t0:.1f}s check {chk}\")"
+    },
+    {
+     "line": 345,
+     "text": "def load_model(det, seed):"
+    },
+    {
+     "line": 346,
+     "text": "obj = pload(model_path(det, seed))"
+    },
+    {
+     "line": 366,
+     "text": "rng = np.random.default_rng(GRADED_SEED + 100 * li + dr)"
+    },
+    {
+     "line": 423,
+     "text": "for seed in SEEDS:"
+    },
+    {
+     "line": 424,
+     "text": "model, obj = load_model(det, seed)"
+    },
+    {
+     "line": 426,
+     "text": "out[\"checks\"][f\"{det}_seed{seed}_vocab_equals_linear_vocab\"] = sorted(voc) == sorted(vocab)"
+    },
+    {
+     "line": 433,
+     "text": "out[\"gru\"][(det, seed, key)] = {\"score\": sc, \"tool\": tc}"
+    },
+    {
+     "line": 434,
+     "text": "out[\"checks\"][f\"{det}_seed{seed}_level1_max_abs_diff_vs_cache\"] = float(np.max(np.abs("
+    },
+    {
+     "line": 435,
+     "text": "out[\"gru\"][(det, seed, \"1.0|0\")][\"score\"].astype(np.float64) - g[\"scores\"][det][seed][pE])))"
+    },
+    {
+     "line": 558,
+     "text": "\"mask_seed\": f\"default_rng({GRADED_SEED} + 100*level_index + draw)\","
+    },
+    {
+     "line": 559,
+     "text": "\"estimand\": (\"mean over draws (and over the 3 training seeds for the GRUs) of AUROC / FPR / recall at \""
+    },
+    {
+     "line": 561,
+     "text": "\"of that draw- and seed-averaged metric, conditional on the drawn masks; draw_min / draw_max \""
+    },
+    {
+     "line": 622,
+     "text": "def r1r3_pools(mode, seed_base):"
+    },
+    {
+     "line": 632,
+     "text": "rng = np.random.default_rng(seed_base + i)            # repetition (seed) selection only"
+    },
+    {
+     "line": 639,
+     "text": "rng = np.random.default_rng(seed_base + 50 + j)       # repetition (seed) selection only"
+    },
+    {
+     "line": 687,
+     "text": "\"detectors share the resampled rows (paired). GRU arms: one training seed drawn per \""
+    },
+    {
+     "line": 688,
+     "text": "\"replicate (pre-registered evalkit convention), point = mean over the 3 seeds; see s7 for \""
+    },
+    {
+     "line": 689,
+     "text": "\"the two-level and seed-averaged alternatives\"),"
+    },
+    {
+     "line": 699,
+     "text": "res[\"populations\"][name][\"detectors\"][det][\"AUROC_per_seed\"] = [r4(v) for v in m[det][\"per_rep_AUROC\"]]"
+    },
+    {
+     "line": 752,
+     "text": "def init_embedding(seed, V):"
+    },
+    {
+     "line": 753,
+     "text": "torch.manual_seed(seed); np.random.seed(seed)       # exactly as train_gru before GRUDet(...)"
+    },
+    {
+     "line": 775,
+     "text": "rng = np.random.default_rng(40400)"
+    },
+    {
+     "line": 789,
+     "text": "e = {\"seed\": sd, \"train_neg_mean\": float(tn.mean()), \"train_pos_mean\": float(tp.mean()),"
+    },
+    {
+     "line": 803,
+     "text": "mean_rows = {kk: float(np.mean([r[kk] for r in rows])) for kk in rows[0] if kk not in (\"seed\", \"heldout_failed_mean\")}"
+    },
+    {
+     "line": 804,
+     "text": "neg_cells = [r[\"seed\"] for r in rows if r[\"heldout_neg_mean\"] <= r[\"train_neg_mean\"]]"
+    },
+    {
+     "line": 805,
+     "text": "res[\"settings\"][s][det] = {\"per_seed\": [{kk: (r4(v) if isinstance(v, float) else v) for kk, v in r.items()} for r in rows],"
+    },
+    {
+     "line": 806,
+     "text": "\"mean_over_seeds\": {kk: r4(v) for kk, v in mean_rows.items()},"
+    },
+    {
+     "line": 807,
+     "text": "\"offset_neg_seedmean_ci\": pctl(off_b),"
+    },
+    {
+     "line": 808,
+     "text": "\"seeds_with_heldout_neg_not_above_train_neg\": neg_cells}"
+    },
+    {
+     "line": 810,
+     "text": "cells = [(d, r) for d in DOMAINS for r in res[\"settings\"][f\"R3_{d}\"][det][\"per_seed\"]]"
+    },
+    {
+     "line": 818,
+     "text": "agg[\"cells_not_above\"] = [{\"fold\": d, \"seed\": r[\"seed\"], \"offset_neg\": r[\"offset_neg\"], \"heldout_FPR_t_r80\": r[\"heldout_FPR_t_r80\"],"
+    },
+    {
+     "line": 821,
+     "text": "# <UNK> norms: cache values, re-seeded initialisation, and Adam-with-weight-decay-only simulation (p = 0 only)"
+    },
+    {
+     "line": 831,
+     "text": "e = {\"seed\": sd, \"unk_init_norm_cache\": r4(g[\"unk_init_norm\"][det][k]),"
+    },
+    {
+     "line": 1052,
+     "text": "res = {\"design\": {\"per_seed\": \"AUROC of each training seed on the full fold; GRU - LR-C per seed with a stratified trajectory bootstrap (B = 2000)\","
+    },
+    {
+     "line": 1053,
+     "text": "\"two_level\": \"each replicate draws 3 seeds with replacement, then resamples trajectories (stratified); statistic = mean over drawn seeds of AUROC_GRU(seed) - AUROC_LR-C\","
+    },
+    {
+     "line": 1054,
+     "text": "\"mixture\": \"pre-registered evalkit convention: one seed per replicate (the interval is a mixture of single-seed sampling distributions)\","
+    },
+    {
+     "line": 1055,
+     "text": "\"seed_averaged\": \"statistic = mean over the 3 seeds within each trajectory replicate (conditional on the 3 trained seeds)\","
+    },
+    {
+     "line": 1056,
+     "text": "\"note\": \"with only 3 seeds the seed level of the two-level bootstrap is coarse (10 distinct seed multisets)\"},"
+    },
+    {
+     "line": 1057,
+     "text": "\"folds\": {}, \"reversal_two_level\": {}, \"reversal_seed_averaged\": {}}"
+    },
+    {
+     "line": 1060,
+     "text": "Mm = Mm if Mm is not None else r1r3_pools(\"mixture\", 30300)   # the s3 result: same resamples and seed choices"
+    }
+   ],
+   "seed_lines_total": 109,
+   "bootstrap_lines": [
+    {
+     "line": 57,
+     "text": "B = 2000                       # bootstrap replicates everywhere (fixed seeds below)"
+    },
+    {
+     "line": 560,
+     "text": "\"the cached theta_r80; 95% interval = stratified trajectory bootstrap (B = 2000, rng 20201) \""
+    },
+    {
+     "line": 685,
+     "text": "res = {\"design\": {\"bootstrap\": (\"stratified trajectory bootstrap, B = 2000, one pool per population (R1 pool E; R1 pool E \""
+    },
+    {
+     "line": 888,
+     "text": "\"bootstrap_primary\": \"cluster bootstrap over suite|user_task (plan 3.5), B = 2000\","
+    },
+    {
+     "line": 889,
+     "text": "\"bootstrap_sensitivity\": \"stratified trajectory bootstrap, B = 2000\","
+    },
+    {
+     "line": 979,
+     "text": "\"variant: stratified trajectory bootstrap (evalkit design). B = 2000. WUT: one repetition \""
+    },
+    {
+     "line": 1052,
+     "text": "res = {\"design\": {\"per_seed\": \"AUROC of each training seed on the full fold; GRU - LR-C per seed with a stratified trajectory bootstrap (B = 2000)\","
+    },
+    {
+     "line": 1129,
+     "text": "\"O1. Bootstrap size: B = 2000 in every analysis here (the v0.3 AgentDrift tables used B = 1000); fixed rng seeds are listed per analysis in the code.\","
+    }
+   ],
+   "bootstrap_lines_total": 8,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [
+    {
+     "line": 1530,
+     "text": "cmd = sys.argv[1] if len(sys.argv) > 1 else \"all\""
+    }
+   ],
+   "cli_lines_total": 1
+  },
+  "revision/prevalence_ops.py": {
+   "sha256": "ce6e0dc6a7845becdf11e82d0b20a34df1c3567833355350daeead09c7badc8c",
+   "bytes": 125489,
+   "n_lines": 1914,
+   "parses": true,
+   "docstring_head": [
+    "Operating points and prevalence (revision stream `prevalence_ops`).",
+    "",
+    "Addresses review comments M8, M9, m3 (prevalence family), m4, m9, m10, m11 and m17 item 5, following",
+    "REVISION_ANALYSIS_PLAN.md Sections 3.1, 3.5, 3.6(e), 3.7, 3.8 and the \"negative-class and hijack-pattern breakdown\"",
+    "item of Section 4. All test scores and thresholded predictions are read from the shared caches",
+    "(revision/cache/linear/<setting>.pkl, revision/cache/gru/<setting>.pkl). No threshold is set on test data, except",
+    "the descriptive matched-recall quantity \"FPR at a fixed test TPR of 0.8\" (plan 3.8, review m4), which is labelled as",
+    "such and is not an operating point.",
+    "",
+    "The only new model fits: the R1 linear detectors (LR-A, LR-B, LR-C, Markov, IForest, TFIDF) are refitted with the",
+    "unmodified cache code (build_linear_cache.py, imported) to recover their in-sample TRAINING scores, which the cache does",
+    "not store and which the FPR-budget thresholds of m10 need. The refit is verified against the cached test scores and"
+   ],
+   "env_vars": [],
+   "seed_lines": [
+    {
+     "line": 43,
+     "text": "BASE = 20260926               # seed base; every block below adds a fixed offset"
+    },
+    {
+     "line": 290,
+     "text": "ifo = IsolationForest(n_estimators=200, random_state=0).fit(sc.transform(Xtr)[ben])"
+    },
+    {
+     "line": 405,
+     "text": "\"bootstrap\": f\"stratified by class on pool E, B={B}, seed {BASE + 1}; repetition (GRU seed) drawn per replicate\","
+    },
+    {
+     "line": 407,
+     "text": "rng = np.random.default_rng(BASE + 1)"
+    },
+    {
+     "line": 409,
+     "text": "rng_rep = np.random.default_rng(BASE + 1001)"
+    },
+    {
+     "line": 432,
+     "text": "rng = np.random.default_rng(BASE + 10 + j)"
+    },
+    {
+     "line": 434,
+     "text": "ch = {d: reps_choice(D[\"dets\"][d][\"R\"], np.random.default_rng(BASE + 1010 + j * 50 + i)) for i, d in enumerate(dets)}"
+    },
+    {
+     "line": 454,
+     "text": "entry[\"bootstrap\"] = f\"v0.3 evalkit-style subsampling: {np_k} positives and {nneg} negatives with replacement, B={B}, seed {BASE + 10 + j}\""
+    },
+    {
+     "line": 462,
+     "text": "Wc, nclu = w_cluster(worlds, B, np.random.default_rng(BASE + 2))"
+    },
+    {
+     "line": 463,
+     "text": "wc = {\"n_clusters\": nclu, \"bootstrap\": f\"world clusters of pool E resampled with replacement, B={B}, seed {BASE + 2}; \""
+    },
+    {
+     "line": 477,
+     "text": "rng = np.random.default_rng(BASE + 3)"
+    },
+    {
+     "line": 487,
+     "text": "res[\"chance_note\"] = \"2,000 uniformly random scorers on the R1 pool E (seed %d); weighted estimator as above\" % (BASE + 3)"
+    },
+    {
+     "line": 497,
+     "text": "out = {\"population\": \"pool E\", \"bootstrap\": \"same replicates as M8_R1 (seed %d)\" % (BASE + 1),"
+    },
+    {
+     "line": 499,
+     "text": "\"point_note\": \"point = plug-in on the full pool E, mean over repetitions (GRU seeds) of the per-repetition value\","
+    },
+    {
+     "line": 594,
+     "text": "W = w_strata(np.where(yE == 1, \"pos\", \"neg\"), B, np.random.default_rng(BASE + 20)); nclu = None"
+    },
+    {
+     "line": 595,
+     "text": "desc = f\"stratified by class on P0, B={B}, seed {BASE + 20} (plan 3.1)\""
+    },
+    {
+     "line": 597,
+     "text": "W, nclu = w_cluster(keys, B, np.random.default_rng(BASE + 21))"
+    },
+    {
+     "line": 598,
+     "text": "desc = f\"{nclu} suite|user_task clusters resampled, B={B}, seed {BASE + 21}; positive weight recomputed per replicate (plan 3.5)\""
+    },
+    {
+     "line": 599,
+     "text": "rng_rep = np.random.default_rng(BASE + 1020 + (scheme != \"traj_strat\"))"
+    },
+    {
+     "line": 628,
+     "text": "Ws = w_subsample(yE, np_k, nneg, B, np.random.default_rng(BASE + 30 + j))"
+    },
+    {
+     "line": 629,
+     "text": "rng_rep = np.random.default_rng(BASE + 1030 + j)"
+    },
+    {
+     "line": 697,
+     "text": "W = w_strata(strata, B, np.random.default_rng(BASE + 100 + si)); nclu = None"
+    },
+    {
+     "line": 698,
+     "text": "desc = f\"stratified by category x hijack pattern over all test rows (incl. failed attacks), B={B}, seed {BASE + 100 + si}\""
+    },
+    {
+     "line": 700,
+     "text": "W, nclu = w_cluster([m[ckey] for m in D[\"meta\"]], B, np.random.default_rng(BASE + 200 + si))"
+    },
+    {
+     "line": 701,
+     "text": "desc = f\"{nclu} {'suite|user_task' if D['bench'] == 'agentdojo' else 'task'} clusters over all test rows, B={B}, seed {BASE + 200 + si} (plan 3.5)\""
+    },
+    {
+     "line": 702,
+     "text": "rng_rep = np.random.default_rng(BASE + 300 + si)"
+    },
+    {
+     "line": 762,
+     "text": "f\"{N_DRAWS} draws with default_rng({BASE + 500} + draw), shared by all detectors of a fold; \""
+    },
+    {
+     "line": 763,
+     "text": "\"GRU: each seed uses its own R1 alert rate\"),"
+    },
+    {
+     "line": 767,
+     "text": "f\"{N_UNLAB - int(round(0.02 * N_UNLAB))} negative held-out pool-E traces (default_rng({BASE + 600} + draw)); \""
+    },
+    {
+     "line": 791,
+     "text": "draws = [np.random.default_rng(BASE + 500 + k).choice(pool, N_UNLAB, replace=False) for k in range(N_DRAWS)]"
+    },
+    {
+     "line": 795,
+     "text": "g = np.random.default_rng(BASE + 600 + k)"
+    },
+    {
+     "line": 872,
+     "text": "rng = np.random.default_rng(1)"
+    },
+    {
+     "line": 974,
+     "text": "\"numpy\": np.__version__, \"B\": B, \"round_decimals\": ROUND, \"seed_base\": BASE,"
+    },
+    {
+     "line": 983,
+     "text": "\"GRU_reconstructed_t_r80_abs_diff_by_seed\": [float(x) for x in gru_thr_check]}}}"
+    },
+    {
+     "line": 995,
+     "text": "rng = np.random.default_rng(BASE + 40)"
+    },
+    {
+     "line": 1003,
+     "text": "\"monte_carlo\": f\"20,000 random rankings each, seed {BASE + 40}\", \"values\": ca}"
+    },
+    {
+     "line": 1060,
+     "text": "\"(GRU: per seed). The unlabeled draws come from the held-out pool E; a sensitivity uses all rows (incl. failed \""
+    },
+    {
+     "line": 1064,
+     "text": "\"P6 (point estimates). Point estimates are plug-in values on the full pool (mean over GRU seeds or CV repetitions); \""
+    },
+    {
+     "line": 1096,
+     "text": "rng = np.random.default_rng(BASE + 4)"
+    },
+    {
+     "line": 1105,
+     "text": "DJ[\"chance_note\"] = f\"2,000 uniformly random scorers on {npos} positives / {nneg} negatives (seed {BASE + 4})\""
+    },
+    {
+     "line": 1198,
+     "text": "(\"m4\", \"GRU t_val80 precision 2%, seed 0\", 0.188, \"m4_gru_t_val80|table|R1|GRU|t_val80|precision_pi02_poolE_mix|point_by_rep|0\"),"
+    },
+    {
+     "line": 1199,
+     "text": "(\"m4\", \"GRU FPR at test TPR 0.8, seed 1\", 0.087, \"M8_R1|detectors|GRU|FPR_at_test_TPR80|FPR_at_TPR80|point_by_rep|1\"),"
+    },
+    {
+     "line": 1279,
+     "text": "\"the GRU it is the mean over its three seeds, and for within-AgentDojo detectors the mean over the five CV repetitions. \""
+    },
+    {
+     "line": 1280,
+     "text": "\"Each bootstrap replicate draws one GRU seed or CV repetition. Scores are rounded to 12 decimals before ranking (m9); \""
+    },
+    {
+     "line": 1549,
+     "text": "A(\"R1 GRU on pool E [`m4_gru_t_val80.table.R1.GRU.<op>`; per-seed values are in `point_by_rep`]:\")"
+    },
+    {
+     "line": 1551,
+     "text": "A(\"| Threshold | Recall (per seed) | FPR (per seed) | Precision 2%, pool-E mix (per seed) | Precision 10% |\")"
+    },
+    {
+     "line": 1561,
+     "text": "f\". For the GRU the per-seed values are {', '.join(f'{v:.3f}' for v in M['detectors']['GRU']['FPR_at_test_TPR80']['FPR_at_TPR80']['point_by_rep'])}.\")"
+    },
+    {
+     "line": 1624,
+     "text": "A(\"Values are mean [min, max] over 5 draws; for the GRU, over 3 seeds x 5 draws \""
+    },
+    {
+     "line": 1704,
+     "text": "f\"{', '.join(f'{x:.1e}' for x in v['GRU_reconstructed_t_r80_abs_diff_by_seed'])}. The self-tests of the estimator \""
+    },
+    {
+     "line": 1748,
+     "text": "\"share. The intervals cover test-set sampling and seed or repetition choice, not retraining.\")"
+    }
+   ],
+   "seed_lines_total": 50,
+   "bootstrap_lines": [
+    {
+     "line": 41,
+     "text": "B = 2000                      # bootstrap replicates everywhere (plan 3.1)"
+    }
+   ],
+   "bootstrap_lines_total": 1,
+   "estimator_lines": [
+    {
+     "line": 290,
+     "text": "ifo = IsolationForest(n_estimators=200, random_state=0).fit(sc.transform(Xtr)[ben])"
+    },
+    {
+     "line": 294,
+     "text": "vec = TfidfVectorizer(lowercase=True, ngram_range=(1, 2), min_df=2, max_features=50000, sublinear_tf=True)"
+    },
+    {
+     "line": 296,
+     "text": "lr = LogisticRegression(max_iter=2000, class_weight=\"balanced\", C=1.0).fit(Mtr, ytr)"
+    }
+   ],
+   "estimator_lines_total": 3,
+   "cli_lines": [
+    {
+     "line": 1893,
+     "text": "ap.add_argument(\"stage\", choices=[\"train_scores\", \"analyze\", \"derive\", \"summary\", \"all\"])"
+    },
+    {
+     "line": 1894,
+     "text": "ap.add_argument(\"--force\", action=\"store_true\")"
+    },
+    {
+     "line": 1895,
+     "text": "ap.add_argument(\"--budget\", type=float, default=480.0, help=\"seconds per 'analyze' call before it stops (resumable)\")"
+    }
+   ],
+   "cli_lines_total": 3
+  },
+  "revision/r4_deep.py": {
+   "sha256": "c9fb61968335f9e97e75e2ea0d1128e314e14e81550013c9c6540c017ad58812",
+   "bytes": 105344,
+   "n_lines": 1815,
+   "parses": true,
+   "docstring_head": [
+    "r4_deep.py - cross-benchmark transfer (R4) on the corrected AgentDojo extraction.",
+    "",
+    "Addresses review comments M6, M7, m1, m2 (AgentDojo part), m6 (within-AgentDojo <UNK>), m7, m15 (model probe), m16,",
+    "m17 item 3, Q2 and Q4 (REVIEW_REPORT.md), following REVISION_ANALYSIS_PLAN.md. Every number written to",
+    "r4_deep_results.json is computed here from the shared prediction caches (revision/cache/linear, revision/cache/gru) or",
+    "from the new fits listed below; nothing is tuned on test data (thresholds come from the training folds).",
+    "",
+    "New fits (the caches have no predictions for them; configurations copied by import, not re-implemented):",
+    "  lin_C1_UT, lin_C1_IT     every linear detector of the cache (build_linear_cache.fit_score) re-fitted within AgentDojo",
+    "                           on population C1 (P0 minus the 65 benign runs whose user task is an injection task), folds",
+    "                           exactly as r4_control.within_oof / ablation.py on C1 (the v0.3 C1 design).",
+    "  lin_noDoS_UT             same, on P0 without the 101 denial-of-service positives (Q4 refit sensitivity)."
+   ],
+   "env_vars": [
+    "AGENTDOJO",
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [
+    {
+     "line": 22,
+     "text": "Within-AgentDojo GRU units follow gru_ladder.py: repetition r uses fold seed r, training seed r and"
+    },
+    {
+     "line": 186,
+     "text": "def subset_folds(recs, scheme, seed):"
+    },
+    {
+     "line": 189,
+     "text": "groups = sorted(set(keys)); rng = np.random.default_rng(seed); rng.shuffle(groups)"
+    },
+    {
+     "line": 244,
+     "text": "return [\"seed0\", \"seed1\", \"seed2\"]"
+    },
+    {
+     "line": 366,
+     "text": "return {\"job\": job, \"unit\": u, \"seed\": sd, \"v03_ids\": [r[\"id\"] for r in A], \"v03_score\": sA[\"score\"],"
+    },
+    {
+     "line": 536,
+     "text": "def strat_boot(pop, y, methods, B=B, seed=SEED_STRAT, n_pos=None, pos_weights=None, metrics=(\"AUROC\",)):"
+    },
+    {
+     "line": 539,
+     "text": "rng = np.random.default_rng(seed)"
+    },
+    {
+     "line": 588,
+     "text": "def clus_boot(y, methods, design, B=B, seed=SEED_CLUSTER, wpos=None, metrics=(\"AUROC\", \"APw10\", \"APw05\")):"
+    },
+    {
+     "line": 591,
+     "text": "rng = np.random.default_rng(seed)"
+    },
+    {
+     "line": 710,
+     "text": "bt = strat_boot(pop, y, methods, B=B_, seed=SEED_STRAT, pos_weights=wdict, metrics=mets)"
+    },
+    {
+     "line": 712,
+     "text": "out[\"strat_native\"] = {\"seed\": SEED_STRAT, \"B\": B_, \"ci\": s, \"paired\": pr}"
+    },
+    {
+     "line": 718,
+     "text": "bt2 = strat_boot(pop, y, methods, B=B_, seed=SEED_STRAT, n_pos=npos, pos_weights=wdict,"
+    },
+    {
+     "line": 726,
+     "text": "bt3 = clus_boot(y, methods, des, B=B_, seed=SEED_CLUSTER, wpos=warr if mb else None,"
+    },
+    {
+     "line": 729,
+     "text": "out[\"cluster\"] = {\"seed\": SEED_CLUSTER, \"B\": B_, \"scheme\": scheme, \"n_clusters\": des.n_clusters(),"
+    },
+    {
+     "line": 876,
+     "text": "bt = strat_boot(pool, y, meths, seed=SEED_STRAT, metrics=(\"AUROC\", \"APw10\"))"
+    },
+    {
+     "line": 881,
+     "text": "bt2 = clus_boot(y, meths, des, seed=SEED_CLUSTER, metrics=(\"AUROC\", \"APw10\"))"
+    },
+    {
+     "line": 938,
+     "text": "bt = strat_boot(P0, y, meths, seed=SEED_STRAT, metrics=mets)"
+    },
+    {
+     "line": 940,
+     "text": "out = {\"ci\": s, \"paired\": pr, \"seed\": SEED_STRAT, \"B\": B}"
+    },
+    {
+     "line": 944,
+     "text": "bt = clus_boot(y, meths, des, seed=SEED_CLUSTER, metrics=mets)"
+    },
+    {
+     "line": 948,
+     "text": "out = {\"ci\": s, \"paired\": pr, \"seed\": SEED_CLUSTER, \"B\": B, \"n_clusters\": des.n_clusters(),"
+    },
+    {
+     "line": 953,
+     "text": "bt = strat_boot(pool, y, meths, seed=SEED_STRAT, pos_weights=wd, metrics=(\"AUROC\", \"APw10\", \"APw05\"))"
+    },
+    {
+     "line": 956,
+     "text": "bt2 = strat_boot(pool, y, meths, seed=SEED_STRAT, n_pos=npos10, pos_weights=wd, metrics=(\"AUROC\", \"AP_native\"))"
+    },
+    {
+     "line": 961,
+     "text": "\"p10_subsample\": {\"ci\": s2, \"paired\": pr2, \"n_pos\": npos10, \"n_neg\": nneg}, \"seed\": SEED_STRAT}"
+    },
+    {
+     "line": 966,
+     "text": "bt = clus_boot(y, meths, des, seed=SEED_CLUSTER, wpos=warr, metrics=(\"AUROC\", \"APw10\", \"APw05\"))"
+    },
+    {
+     "line": 974,
+     "text": "bt = strat_boot(P0, y, meths, seed=SEED_STRAT, n_pos=npos, metrics=(\"AP_native\",))"
+    },
+    {
+     "line": 991,
+     "text": "rng_seed = SEED_FAILED"
+    },
+    {
+     "line": 1006,
+     "text": "rng = np.random.default_rng(rng_seed)"
+    },
+    {
+     "line": 1046,
+     "text": "g = [pload(unit_path(\"gru_v03_transfer\", f\"seed{s}\")) for s in (0, 1, 2)]"
+    },
+    {
+     "line": 1060,
+     "text": "def _mirror(y, pop, spec, seed=SEED_STRAT, n_pos=None, pos_weights=None,"
+    },
+    {
+     "line": 1064,
+     "text": "bt = strat_boot(pop, y, methods, seed=seed, n_pos=n_pos, pos_weights=pos_weights, metrics=metrics)"
+    },
+    {
+     "line": 1141,
+     "text": "bt = strat_boot(pool, y, meths, seed=SEED_STRAT, metrics=(\"AUROC\",))"
+    },
+    {
+     "line": 1204,
+     "text": "bt = strat_boot(popA, yA, meths, seed=SEED_STRAT, metrics=(\"AUROC\", \"FPR@t_r80\"))"
+    },
+    {
+     "line": 1212,
+     "text": "btm = strat_boot(pool, yA, mm, seed=SEED_STRAT, metrics=(\"AUROC\",))"
+    },
+    {
+     "line": 1228,
+     "text": "bt = strat_boot(P0, y, meths, seed=SEED_STRAT, metrics=(\"AUROC\",))"
+    },
+    {
+     "line": 1269,
+     "text": "\"Corrected LR-B/LR-C values use the method order, seed (12345) and B (2000) of r4_control.py, LR-A those of \""
+    },
+    {
+     "line": 1271,
+     "text": "\"(checks_rerun_v03_vs_cache). WIT for LR-A and the GRU, and per-model LR-A/GRU, are new bootstraps (seed 12345).\","
+    },
+    {
+     "line": 1294,
+     "text": "bt1 = strat_boot(popE, yE, m1, B=1000, seed=5000, metrics=(\"AUROC\",))"
+    },
+    {
+     "line": 1296,
+     "text": "\"note\": \"gru_ladder.py R1 bootstrap: B = 1000, seed 5000, methods GRU and C (pool E)\"}"
+    },
+    {
+     "line": 1302,
+     "text": "bt3 = strat_boot(p3, y3, m3, B=1000, seed=5200 + i, metrics=(\"AUROC\",))"
+    },
+    {
+     "line": 1320,
+     "text": "meths, bt10 = _mirror(y, pool, spec, seed=999, n_pos=int(round(0.10 / 0.90 * nneg)), pos_weights=wd, metrics=(\"AUROC\",))"
+    },
+    {
+     "line": 1351,
+     "text": "# ---------------- m16: per-seed spread"
+    },
+    {
+     "line": 1365,
+     "text": "bts = strat_boot(np.arange(len(yE_)), yE_, one, B=1000, seed=6000 + sd,"
+    },
+    {
+     "line": 1368,
+     "text": "per.append({\"seed\": sd, \"AUROC\": r4(auc), \"FPR@t_r80\": r4(p8[yE_ == 0].mean()),"
+    },
+    {
+     "line": 1372,
+     "text": "\"thr_r80\": r4(float(gc[\"thr\"][det][\"t_r80\"][sd]), 6), \"single_seed_ci_width\": cw})"
+    },
+    {
+     "line": 1376,
+     "text": "wid = {k: r4(float(np.mean([p[\"single_seed_ci_width\"][k] for p in per]))) for k in (\"AUROC\", \"FPR@t_r80\", \"recall@t_r80\")}"
+    },
+    {
+     "line": 1377,
+     "text": "crit = {\"C2_AUROC_range_gt_single_seed_CI_width\": bool(rng_[\"AUROC\"] > wid[\"AUROC\"]),"
+    },
+    {
+     "line": 1378,
+     "text": "\"C3_FPR_range_gt_single_seed_CI_width\": bool(rng_[\"FPR@t_r80\"] > wid[\"FPR@t_r80\"]),"
+    },
+    {
+     "line": 1379,
+     "text": "\"C3_recall_range_gt_single_seed_CI_width\": bool(rng_[\"recall@t_r80\"] > wid[\"recall@t_r80\"]),"
+    },
+    {
+     "line": 1381,
+     "text": "ss[st][det] = {\"per_seed\": per, \"range\": rng_, \"sd\": sd_, \"mean_single_seed_ci_width\": wid, \"criteria\": crit}"
+    },
+    {
+     "line": 1382,
+     "text": "r1_auc = [p[\"AUROC\"] for p in ss[\"R1\"][\"GRU\"][\"per_seed\"]]"
+    },
+    {
+     "line": 1385,
+     "text": "dif = [ss[f\"R3_{d}\"][\"GRU\"][\"per_seed\"][k][\"AUROC\"] - r1_auc[k] for k in range(3)]"
+    },
+    {
+     "line": 1386,
+     "text": "sign[d] = {\"per_seed_R3_minus_R1\": [r4(x) for x in dif],"
+    },
+    {
+     "line": 1387,
+     "text": "\"same_sign_all_seeds\": bool(all(x < 0 for x in dif) or all(x > 0 for x in dif))}"
+    },
+    {
+     "line": 1388,
+     "text": "out[\"seed_spread\"] = ss"
+    },
+    {
+     "line": 1389,
+     "text": "out[\"seed_sign_consistency\"] = sign"
+    },
+    {
+     "line": 1392,
+     "text": "\"C1\": \"sign of R3-R1 AUROC identical across the 3 seeds (the criterion GRU_RESULTS.md used)\","
+    },
+    {
+     "line": 1393,
+     "text": "\"C2\": \"across-seed AUROC range exceeds the mean single-seed 95% bootstrap interval width (B = 1000)\","
+    },
+    {
+     "line": 1394,
+     "text": "\"C3\": \"across-seed range of FPR or recall at theta_r80 exceeds the mean single-seed 95% interval width\","
+    },
+    {
+     "line": 1395,
+     "text": "\"C4\": \"across-seed range of FPR or recall at theta_r80 >= 0.10 (absolute)\"},"
+    },
+    {
+     "line": 1396,
+     "text": "\"note\": \"GRU_PREREGISTRATION.md does not operationalise 'large seed variance'; C2-C4 are defined here, post hoc.\","
+    }
+   ],
+   "seed_lines_total": 74,
+   "bootstrap_lines": [
+    {
+     "line": 60,
+     "text": "B = 2000"
+    },
+    {
+     "line": 852,
+     "text": "\"on the other side (p < 1/B = 0.0005)\", \"by_config\": hol}"
+    },
+    {
+     "line": 1294,
+     "text": "bt1 = strat_boot(popE, yE, m1, B=1000, seed=5000, metrics=(\"AUROC\",))"
+    },
+    {
+     "line": 1296,
+     "text": "\"note\": \"gru_ladder.py R1 bootstrap: B = 1000, seed 5000, methods GRU and C (pool E)\"}"
+    },
+    {
+     "line": 1302,
+     "text": "bt3 = strat_boot(p3, y3, m3, B=1000, seed=5200 + i, metrics=(\"AUROC\",))"
+    },
+    {
+     "line": 1365,
+     "text": "bts = strat_boot(np.arange(len(yE_)), yE_, one, B=1000, seed=6000 + sd,"
+    },
+    {
+     "line": 1393,
+     "text": "\"C2\": \"across-seed AUROC range exceeds the mean single-seed 95% bootstrap interval width (B = 1000)\","
+    },
+    {
+     "line": 1490,
+     "text": "\"repetitions; the bootstrap resamples P0 (stratified, B = 2000, seed 12345) and applies the drawn \""
+    },
+    {
+     "line": 1727,
+     "text": "\"point = mean over repetitions of pooled out-of-fold AUROC; 95% stratified bootstrap (B = 2000, \""
+    }
+   ],
+   "bootstrap_lines_total": 9,
+   "estimator_lines": [
+    {
+     "line": 1704,
+     "text": "outer = StratifiedKFold(n_splits=K, shuffle=True, random_state=rep_i)"
+    },
+    {
+     "line": 1710,
+     "text": "pipe = make_pipeline(StandardScaler(), LogisticRegression(max_iter=5000, class_weight=\"balanced\"))"
+    },
+    {
+     "line": 1713,
+     "text": "gs = GridSearchCV(pipe, {\"logisticregression__C\": Cs}, scoring=\"roc_auc\","
+    },
+    {
+     "line": 1714,
+     "text": "cv=StratifiedKFold(n_splits=K, shuffle=True, random_state=100 + rep_i)).fit(Xtr, yb[tr])"
+    }
+   ],
+   "estimator_lines_total": 4,
+   "cli_lines": [
+    {
+     "line": 1779,
+     "text": "ap.add_argument(\"cmd\", choices=[\"status\", \"fit\", \"analyze\", \"assemble\"])"
+    },
+    {
+     "line": 1780,
+     "text": "ap.add_argument(\"what\", nargs=\"?\", default=\"all\")"
+    },
+    {
+     "line": 1781,
+     "text": "ap.add_argument(\"--budget\", type=float, default=480.0)"
+    }
+   ],
+   "cli_lines_total": 3
+  },
+  "revision/repro_checks.py": {
+   "sha256": "17c3aea8697143f299a1bfe6aa501476799e05564a4c3f8d4afdf634f082e4b3",
+   "bytes": 7636,
+   "n_lines": 143,
+   "parses": true,
+   "docstring_head": [
+    "Reproducibility checks for the revision (review comment m14). Writes, under revision/:",
+    "  requirements-lock.txt   exact installed versions (importlib.metadata) of the third-party packages the code imports,",
+    "                          with their installed runtime dependencies",
+    "  repro_checks.json       (1) result of tests/test_agentdojo_alignment.py, run as a script and under pytest;",
+    "                          (2) a parse check (ast) of every project script; (3) per script: SHA-256, the environment",
+    "                          variables it reads, its command-line flags, and every line that sets a seed, a bootstrap size,",
+    "                          a LogisticRegression / IsolationForest / TfidfVectorizer configuration (with line numbers),",
+    "                          so that REPRODUCIBILITY.md can be checked against the code.",
+    "Nothing is fitted and no existing file is modified. The test run uses -B and PYTHONDONTWRITEBYTECODE=1 and pytest's",
+    "cache provider is disabled, so that no bytecode or cache files are written next to the scripts.",
+    "Run (Git Bash, from agent-ids/):",
+    "  AGENTDRIFT=<AgentDrift clone> AGENTDOJO=<agentdojo repo> C:/Python310/python.exe -B revision/repro_checks.py"
+   ],
+   "env_vars": [
+    "AGENTDOJO",
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [
+    {
+     "line": 6,
+     "text": "variables it reads, its command-line flags, and every line that sets a seed, a bootstrap size,"
+    },
+    {
+     "line": 24,
+     "text": "\"seed\": r\"seed|random_state|default_rng|manual_seed|np\\.random\\.seed|RandomState|Generator\\(\","
+    },
+    {
+     "line": 121,
+     "text": "for k in [\"seed\", \"bootstrap\", \"estimator\", \"cli\"]:"
+    }
+   ],
+   "seed_lines_total": 3,
+   "bootstrap_lines": [],
+   "bootstrap_lines_total": 0,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "revision/summarize_gru_cache.py": {
+   "sha256": "fa688056b732f0f7647c502433d13b68c2bfa346dc3686d70dd72f2995ef82f4",
+   "bytes": 43589,
+   "n_lines": 615,
+   "parses": true,
+   "docstring_head": [
+    "Summary, reproduction anchors and integrity checks for the GRU prediction cache (family \"gru\").",
+    "",
+    "Reads only cache/gru/<setting>.pkl (written by build_gru_cache.py) plus the archived v0.3 result file",
+    "(archive_v0.3/gru_results.json) and the v0.3 scripts' re-run on the corrected AgentDojo data",
+    "(gru_results.json in agent-ids/, final because revision/rerun_v03_scripts.log contains \"gru_ladder exit 0\").",
+    "Writes revision/gru_cache_results.json and revision/cache/gru/CACHE_README.md. No model is fitted here except",
+    "in `recheck`, which refits a few units with the unmodified gru_detector.train_gru to prove the cached",
+    "scores are reproducible bit for bit.",
+    "",
+    "Resumable: each setting's summary is saved to cache/gru/_summary/<setting>.json and skipped next time.",
+    "Usage (AGENTDRIFT and AGENTDOJO set):",
+    "  python summarize_gru_cache.py summarize [SETTING ...]   # per-setting summaries (skips finished ones)"
+   ],
+   "env_vars": [
+    "AGENTDRIFT"
+   ],
+   "seed_lines": [
+    {
+     "line": 17,
+     "text": "Statistics. Point estimates are evalkit.point (metric averaged over the training seeds, or over the five"
+    },
+    {
+     "line": 19,
+     "text": "trajectories, B = 2000, one seed/repetition drawn per replicate), i.e. the v0.3 protocol. For R2, R4 and WUT a"
+    },
+    {
+     "line": 113,
+     "text": "def flag_rates(d, det, idx, seed):"
+    },
+    {
+     "line": 114,
+     "text": "\"\"\"Flag rate (fraction with pred True) on rows idx, point = mean over seeds/reps; 95% interval from a"
+    },
+    {
+     "line": 115,
+     "text": "row bootstrap (B = 2000) with one seed/repetition drawn per replicate (as evalkit).\"\"\""
+    },
+    {
+     "line": 116,
+     "text": "P = d[\"pred\"][det]; nrep = P[\"t_r80\"].shape[0]; rng = np.random.default_rng(seed)"
+    },
+    {
+     "line": 128,
+     "text": "def cluster_boot(d, dets, idxE, keyname, seed):"
+    },
+    {
+     "line": 132,
+     "text": "rng = np.random.default_rng(seed); res = {det: {\"AUROC\": np.empty(B), \"AUPRC\": np.empty(B)} for det in dets}"
+    },
+    {
+     "line": 139,
+     "text": "out = {\"cluster_key\": keyname, \"n_clusters\": int(len(uniq)), \"B\": B, \"seed\": seed,"
+    },
+    {
+     "line": 140,
+     "text": "\"method\": \"resample whole clusters of pool-E rows with replacement (n_clusters draws), one seed/rep per replicate\"}"
+    },
+    {
+     "line": 170,
+     "text": "out[k][\"mean_over_seeds\"] = {g: r4(np.mean([v for v in vals if v is not None])) for g, vals in out[k].items()"
+    },
+    {
+     "line": 173,
+     "text": "out[k + \"_mean_over_seeds\"] = r4(np.mean(out[k]))"
+    },
+    {
+     "line": 206,
+     "text": "def r4pops(d, dets, idxE, seed):"
+    },
+    {
+     "line": 214,
+     "text": "bt = ek.bootstrap(yc, meth, B=B, seed=seed)"
+    },
+    {
+     "line": 226,
+     "text": "btm = ek.bootstrap(yE, methE, B=B, pool=pool, pos_weights=w)          # default seed 12345 as r4_control.py"
+    },
+    {
+     "line": 241,
+     "text": "seed = 7000 + SETTINGS.index(name)"
+    },
+    {
+     "line": 244,
+     "text": "bt = ek.bootstrap(yE, methods, B=B, seed=seed)"
+    },
+    {
+     "line": 251,
+     "text": "\"bootstrap\": {\"B\": B, \"seed\": seed, \"type\": \"evalkit.bootstrap, stratified over pool-E test trajectories\"},"
+    },
+    {
+     "line": 258,
+     "text": "blk[\"per_seed_or_rep\"] = {\"AUROC\": [r4(ek.auroc(yE, s[idxE])) for s in S], \"AUPRC\": [r4(ek.auprc(yE, s[idxE])) for s in S]}"
+    },
+    {
+     "line": 264,
+     "text": "blk[\"failed_flag_rate\"] = flag_rates(d, det, idxF, seed + 100) if len(idxF) else None"
+    },
+    {
+     "line": 271,
+     "text": "res[\"cluster_bootstrap_sensitivity\"] = cluster_boot(d, dets, idxE, \"task\", seed + 200)"
+    },
+    {
+     "line": 306,
+     "text": "# 1) R1 GRU seed 0 with gru_detector.train_gru (the v0.3 code path of gru_ladder.gru_reps)"
+    },
+    {
+     "line": 312,
+     "text": "out[\"R1_GRU_seed0_train_gru_vs_cache\"] = {\"identical\": bool(np.array_equal(sc, d[\"scores\"][\"GRU\"][0][pE])),"
+    },
+    {
+     "line": 315,
+     "text": "# 2) R1 GRU-drop0.2 seed 0 refit with the dropout function (run-to-run determinism of the dropout arm)"
+    },
+    {
+     "line": 317,
+     "text": "out[\"R1_GRUdrop0.2_seed0_refit_vs_cache\"] = {\"identical\": bool(np.array_equal(sc2, d[\"scores\"][\"GRU-drop0.2\"][0][pE])),"
+    },
+    {
+     "line": 320,
+     "text": "# 3) R4 GRU seed 0: train on all AgentDrift, score AgentDojo P0 (one pass, as gru_ladder) and failed (one pass)"
+    },
+    {
+     "line": 328,
+     "text": "out[\"R4_GRU_seed0_train_gru_vs_cache\"] = {\"P0_identical\": bool(np.array_equal(a, d4[\"scores\"][\"GRU\"][0][pE4])),"
+    },
+    {
+     "line": 332,
+     "text": "# 4) WUT rep 0 fold 0 exactly as gru_ladder.full(): P0 folds, stratified_val(seed 0), train_gru(seed 0)"
+    },
+    {
+     "line": 335,
+     "text": "groups = sorted(set(keys)); rng = np.random.default_rng(0); rng.shuffle(groups)"
+    },
+    {
+     "line": 349,
+     "text": "untr[f\"{name}_seed{sd}\"] = int(sum(s[\"tool\"] not in V for r in f for s in r[\"steps\"]))"
+    },
+    {
+     "line": 355,
+     "text": "untr[f\"R3_{dm}_seed{sd}\"] = int(sum(s[\"tool\"] not in V for r in f for s in r[\"steps\"]))"
+    },
+    {
+     "line": 393,
+     "text": "\"per_seed\": per[s][\"detectors\"][\"GRU\"][\"per_seed_or_rep\"][\"AUROC\"]}"
+    },
+    {
+     "line": 394,
+     "text": "anchors[\"_note\"] = (\"v0.3 point = evalkit.point (mean over training seeds 0,1,2) on pool E; R1wd_s0 is the only world-disjoint \""
+    },
+    {
+     "line": 395,
+     "text": "\"split v0.3 ran. Intervals differ from v0.3 only through the bootstrap seed/B (v0.3: B = 1000).\")"
+    },
+    {
+     "line": 490,
+     "text": "\"vocabulary (benign training trajectories only) and seeds are those of `gru_detector.py`/`gru_ladder.py`, imported unmodified.\", \"\","
+    },
+    {
+     "line": 491,
+     "text": "\"- Scores: single-fit settings `scores[det]` has shape (3, n_test), training seeds 0, 1, 2 (row r = seed r). \""
+    },
+    {
+     "line": 492,
+     "text": "\"WUT: (5, n_test) out-of-fold scores, repetition r uses fold-assignment seed r and training seed r (as `gru_ladder.py`).\","
+    },
+    {
+     "line": 494,
+     "text": "\"rng seed 1000 + training seed), for every setting including R1 (as v0.3 `gru_ladder.py`; `data/val.jsonl` is not used).\","
+    },
+    {
+     "line": 497,
+     "text": "\"(single fit: arrays over seeds; WUT: arrays (rep, fold)).\","
+    },
+    {
+     "line": 503,
+     "text": "\"- Mechanism fields (single fit, per detector, per seed): `tool_contrib` (head weights over the 64 GRU hidden units \""
+    },
+    {
+     "line": 525,
+     "text": "L.append(f\"- p = 0 copy vs `gru_detector.train_gru` on R1 seed 0: scores identical = {v['scores_identical']} \""
+    },
+    {
+     "line": 531,
+     "text": "L.append(f\"- Cached scores equal a fresh unmodified `train_gru` refit: R1 seed 0 {rc['R1_GRU_seed0_train_gru_vs_cache']['identical']}, \""
+    },
+    {
+     "line": 532,
+     "text": "f\"R4 seed 0 P0 {rc['R4_GRU_seed0_train_gru_vs_cache']['P0_identical']} / failed {rc['R4_GRU_seed0_train_gru_vs_cache']['failed_identical']}, \""
+    },
+    {
+     "line": 534,
+     "text": "f\"GRU-drop0.2 R1 seed 0 refit identical {rc['R1_GRUdrop0.2_seed0_refit_vs_cache']['identical']}.\")"
+    },
+    {
+     "line": 543,
+     "text": "\"## Reproduction anchors (GRU, pool E AUROC, mean of 3 seeds) [anchors]\", \"\","
+    },
+    {
+     "line": 551,
+     "text": "L += [\"\", f\"R1-wd across the five split seeds: {', '.join(f'{x:.4f}' for x in rw['values_s0_to_s4'])} (mean {rw['mean']:.4f}).\", \"\","
+    },
+    {
+     "line": 581,
+     "text": "f\"(observation lengths far outside the AgentDrift standardisation); fraction of P0 scores exactly 1.0 per seed \""
+    },
+    {
+     "line": 588,
+     "text": "\"- WUT: failed attacks whose suite|user_task group has no P0 row are assigned to folds by default_rng(10000 + rep) \""
+    }
+   ],
+   "seed_lines_total": 48,
+   "bootstrap_lines": [
+    {
+     "line": 19,
+     "text": "trajectories, B = 2000, one seed/repetition drawn per replicate), i.e. the v0.3 protocol. For R2, R4 and WUT a"
+    },
+    {
+     "line": 36,
+     "text": "B = 2000"
+    },
+    {
+     "line": 115,
+     "text": "row bootstrap (B = 2000) with one seed/repetition drawn per replicate (as evalkit).\"\"\""
+    },
+    {
+     "line": 214,
+     "text": "bt = ek.bootstrap(yc, meth, B=B, seed=seed)"
+    },
+    {
+     "line": 226,
+     "text": "btm = ek.bootstrap(yE, methE, B=B, pool=pool, pos_weights=w)          # default seed 12345 as r4_control.py"
+    },
+    {
+     "line": 244,
+     "text": "bt = ek.bootstrap(yE, methods, B=B, seed=seed)"
+    },
+    {
+     "line": 395,
+     "text": "\"split v0.3 ran. Intervals differ from v0.3 only through the bootstrap seed/B (v0.3: B = 1000).\")"
+    },
+    {
+     "line": 552,
+     "text": "\"## Pool-E results (point [95% stratified bootstrap CI], B = 2000) [settings.<S>.detectors.<det>]\", \"\","
+    }
+   ],
+   "bootstrap_lines_total": 8,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [
+    {
+     "line": 605,
+     "text": "cmd = sys.argv[1] if len(sys.argv) > 1 else \"all\""
+    },
+    {
+     "line": 607,
+     "text": "print(\"COMPLETE\" if cmd_summarize(sys.argv[2:]) else \"INCOMPLETE\")"
+    }
+   ],
+   "cli_lines_total": 2
+  },
+  "revision/tool_state_labels.py": {
+   "sha256": "86fe6715a44acaef9a0954ad59f94989dc588677c2056a08f10768763cee8c4b",
+   "bytes": 14294,
+   "n_lines": 195,
+   "parses": true,
+   "docstring_head": [
+    "Hand annotation of every tool name in AgentDrift and AgentDojo as state-changing or not (review m8).",
+    "",
+    "Written by reading each tool name, its example arguments and an example observation (dumped from the data; see",
+    "features_obslen.py, part `annotation`, which writes revision/tool_state_annotation.json with the examples and counts).",
+    "No detector score was looked at while labelling. The dump also listed each tool's call count and its step-label counts",
+    "(benign / injection_point / hijacked / failed_injection, or the AgentDojo trace category), so the annotator was not blind",
+    "to how often a tool appears in attacked runs; the labels follow the criterion below, not those counts.",
+    "",
+    "Criterion. state_changing = True if a successful call, as its name and arguments indicate, (a) creates, modifies or",
+    "deletes persistent state of the environment or of an external system (records, files, messages or message flags,",
+    "folders, filters, accounts, settings, repositories, bookings, calendar entries, payments), or (b) transmits data or",
+    "messages to another party (send, forward, reply, post, share, submit, upload), or (c) executes arbitrary commands or"
+   ],
+   "env_vars": [],
+   "seed_lines": [],
+   "seed_lines_total": 0,
+   "bootstrap_lines": [],
+   "bootstrap_lines_total": 0,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  },
+  "revision/validate_linear_cache.py": {
+   "sha256": "d7a32889abd78d811b264d299e76d949d3447fa15ac44499474d9ff36dd1d576",
+   "bytes": 33805,
+   "n_lines": 454,
+   "parses": true,
+   "docstring_head": [
+    "Validate the LINEAR prediction cache and write its summary.",
+    "",
+    "Reads revision/cache/linear/<setting>.pkl (built by build_linear_cache.py) and writes",
+    "  cache/linear/_validation/<setting>.json   per-setting metrics (resumable: skipped when newer than the pickle)",
+    "  cache/linear/validation.json               format checks, sizes, metrics, reproduction anchors, R4 values",
+    "  cache/linear/CACHE_README.md               human-readable summary; every number in it is read from validation.json",
+    "Nothing here fits a model; everything is computed from the cached test scores.",
+    "",
+    "Metrics (population = pool E: AgentDrift benign + hard_negative + attacked, AgentDojo benign + attacked):",
+    "  AUROC, AUPRC (native prevalence), recall / FPR at t_r80 and t05. Point estimate = evalkit.point (mean over CV",
+    "  repetitions); 95% interval = evalkit.bootstrap (stratified, trajectory level; a random repetition per replicate),",
+    "  B = 1000 for AgentDrift settings (as v0.3 R1-R3) and B = 2000 for AgentDojo settings (as v0.3 R4), seed"
+   ],
+   "env_vars": [],
+   "seed_lines": [
+    {
+     "line": 12,
+     "text": "B = 1000 for AgentDrift settings (as v0.3 R1-R3) and B = 2000 for AgentDojo settings (as v0.3 R4), seed"
+    },
+    {
+     "line": 103,
+     "text": "B = 2000 if setting in DOJO else 1000; seed = 20260926 + idx"
+    },
+    {
+     "line": 110,
+     "text": "bt = ek.bootstrap(yE, methods, B=B, seed=seed)"
+    },
+    {
+     "line": 111,
+     "text": "out = {\"setting\": setting, \"B\": B, \"seed\": seed, \"n_pool_E\": int(len(Ei)), \"n_pos\": int(yE.sum()),"
+    },
+    {
+     "line": 113,
+     "text": "rng = np.random.default_rng(seed + 1)"
+    },
+    {
+     "line": 198,
+     "text": "add(f\"R1wd_s{sp['seed']}\", det, None, sp[\"AUROC\"][rep],"
+    },
+    {
+     "line": 275,
+     "text": "\"| IForest | IsolationForest(200 trees, random_state=0) on standardized C features of benign training rows, as rerun_r1r3.py |\","
+    },
+    {
+     "line": 305,
+     "text": "\"(R2 and R3 Markov/IForest, R3 LR-A, R1-wd LR-A/B/C for 5 split seeds, R4 LR-A transfer and within-UT). \""
+    },
+    {
+     "line": 396,
+     "text": "\"defines are assigned with np.random.default_rng(10000 + seed), position mod 5: \""
+    }
+   ],
+   "seed_lines_total": 9,
+   "bootstrap_lines": [
+    {
+     "line": 12,
+     "text": "B = 1000 for AgentDrift settings (as v0.3 R1-R3) and B = 2000 for AgentDojo settings (as v0.3 R4), seed"
+    },
+    {
+     "line": 103,
+     "text": "B = 2000 if setting in DOJO else 1000; seed = 20260926 + idx"
+    },
+    {
+     "line": 110,
+     "text": "bt = ek.bootstrap(yE, methods, B=B, seed=seed)"
+    },
+    {
+     "line": 270,
+     "text": "\"| LR-A, LR-B, LR-C | as ablation.py: StandardScaler on training rows, LogisticRegression(max_iter=1000, class_weight='balanced'); A = bag of tools (vocabulary from benign training trajectories), B = 10 behavioural featu"
+    }
+   ],
+   "bootstrap_lines_total": 4,
+   "estimator_lines": [
+    {
+     "line": 270,
+     "text": "\"| LR-A, LR-B, LR-C | as ablation.py: StandardScaler on training rows, LogisticRegression(max_iter=1000, class_weight='balanced'); A = bag of tools (vocabulary from benign training trajectories), B = 10 behavioural featu"
+    },
+    {
+     "line": 275,
+     "text": "\"| IForest | IsolationForest(200 trees, random_state=0) on standardized C features of benign training rows, as rerun_r1r3.py |\","
+    },
+    {
+     "line": 276,
+     "text": "\"| TFIDF | TfidfVectorizer(lowercase, (1,2)-grams, min_df=2, max_features=50000, sublinear_tf) on training texts + LogisticRegression(max_iter=2000, class_weight='balanced', C=1); text = ' \\\\|\\\\| '.join(f'{tool} {str(arg"
+    }
+   ],
+   "estimator_lines_total": 3,
+   "cli_lines": [
+    {
+     "line": 372,
+     "text": "ap = argparse.ArgumentParser(); ap.add_argument(\"--budget\", type=float, default=500.0)"
+    }
+   ],
+   "cli_lines_total": 1
+  },
+  "revision/write_diagnostics_summary.py": {
+   "sha256": "015f7572829f4fc4c4e1533f8eba576fbc78f6fc5307ea839e5f2da82d50a1f8",
+   "bytes": 33871,
+   "n_lines": 393,
+   "parses": true,
+   "docstring_head": [
+    "Write revision/diagnostics_summary.md from revision/diagnostics_results.json (review comments m5, m13, m14, m15).",
+    "",
+    "Every number in the summary is read from the results file; the key it comes from is printed next to it in",
+    "`backticks` (dotted path into diagnostics_results.json). Nothing is computed here except rounding and, for the key",
+    "search, counting rows that the audit stored. Fits nothing, reads no data set.",
+    "Run (from agent-ids/):  C:/Python310/python.exe revision/write_diagnostics_summary.py"
+   ],
+   "env_vars": [],
+   "seed_lines": [
+    {
+     "line": 58,
+     "text": "f\"{R['meta']['B']} and fixed seeds (`meta.seed_base` = {R['meta']['seed_base']} plus `meta.seed_offsets`). \""
+    },
+    {
+     "line": 88,
+     "text": "f\"- World-disjoint split, seed 0: {num(w + '.world_disjoint_splits.seed0.n_worlds_train')} training worlds + \""
+    },
+    {
+     "line": 89,
+     "text": "f\"{num(w + '.world_disjoint_splits.seed0.n_worlds_test')} test worlds = {num(w + '.world_disjoint_splits.seed0.n_worlds_total')}, \""
+    },
+    {
+     "line": 90,
+     "text": "f\"overlap {num(w + '.world_disjoint_splits.seed0.overlap')} (`{w}.world_disjoint_splits.seed0`). All five seeds partition the same \""
+    },
+    {
+     "line": 91,
+     "text": "f\"{num(w + '.world_disjoint_splits.seed4.n_worlds_total')} worlds with zero overlap (`{w}.world_disjoint_splits`). The split code therefore also counts 1,133 worlds, not 1,029.\","
+    },
+    {
+     "line": 123,
+     "text": "f\"- The count 1,029 also equals the number of negatives in the seed-0 world-disjoint test partition \""
+    },
+    {
+     "line": 124,
+     "text": "f\"(`m5_key_search.coincidence_world_disjoint_seed0_n_neg` = {ks['coincidence_world_disjoint_seed0_n_neg']:,}, from \""
+    },
+    {
+     "line": 278,
+     "text": "\"**Question.** Are the environment variables, dependencies, model settings and bootstrap seeds documented, is there a \""
+    },
+    {
+     "line": 284,
+     "text": "\"(n_estimators = 200, random_state = 0), and every bootstrap seed per script.\","
+    },
+    {
+     "line": 357,
+     "text": "sp = get(v3 + \".world.fold_seed_spread_3fold_shuffle_rs0_to_9\")"
+    }
+   ],
+   "seed_lines_total": 10,
+   "bootstrap_lines": [],
+   "bootstrap_lines_total": 0,
+   "estimator_lines": [],
+   "estimator_lines_total": 0,
+   "cli_lines": [],
+   "cli_lines_total": 0
+  }
+ },
+ "parse_failures": []
+}

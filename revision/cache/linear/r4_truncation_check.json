@@ -1,0 +1,164 @@
+{
+ "meta": {
+  "n_P0": 2686,
+  "n_pos": 2294,
+  "n_neg": 392,
+  "n_P0_traces_with_an_observation_over_2000_chars": 300,
+  "B": 2000,
+  "seed": 12345,
+  "cv_seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "note": "LR-C = r4_control 'full' (agnostic=False); LR-B = 'agn' (agnostic=True). Transfer models trained on all 10,656 pooled AgentDrift trajectories (unchanged across variants)."
+ },
+ "review_corrected_estimates": {
+  "transfer_LR-C": 0.476,
+  "transfer_LR-B": 0.483,
+  "withinUT_LR-C": 0.846,
+  "withinUT_LR-B": 0.773
+ },
+ "untruncated_corrected": {
+  "transfer_LR-C": {
+   "AUROC": [
+    0.4733,
+    0.4418,
+    0.5063
+   ],
+   "AUPRC_native": [
+    0.8213,
+    0.8081,
+    0.8364
+   ],
+   "FPR@t_r80": [
+    0.2245,
+    0.1837,
+    0.2679
+   ]
+  },
+  "withinUT_LR-C": {
+   "AUROC": [
+    0.797,
+    0.766,
+    0.8322
+   ],
+   "AUPRC_native": [
+    0.9466,
+    0.9319,
+    0.9599
+   ],
+   "FPR@t_r80": [
+    0.2158,
+    0.1403,
+    0.2806
+   ]
+  },
+  "transfer_LR-B": {
+   "AUROC": [
+    0.4816,
+    0.4499,
+    0.5146
+   ],
+   "AUPRC_native": [
+    0.8246,
+    0.8111,
+    0.8396
+   ],
+   "FPR@t_r80": [
+    0.2245,
+    0.1837,
+    0.2679
+   ]
+  },
+  "withinUT_LR-B": {
+   "AUROC": [
+    0.7409,
+    0.7086,
+    0.7726
+   ],
+   "AUPRC_native": [
+    0.9312,
+    0.918,
+    0.9433
+   ],
+   "FPR@t_r80": [
+    0.4281,
+    0.375,
+    0.4796
+   ]
+  }
+ },
+ "truncated_2000": {
+  "transfer_LR-C": {
+   "AUROC": [
+    0.4759,
+    0.444,
+    0.5093
+   ],
+   "AUPRC_native": [
+    0.8214,
+    0.808,
+    0.8361
+   ],
+   "FPR@t_r80": [
+    0.2245,
+    0.1837,
+    0.2679
+   ]
+  },
+  "withinUT_LR-C": {
+   "AUROC": [
+    0.8459,
+    0.8203,
+    0.8733
+   ],
+   "AUPRC_native": [
+    0.9612,
+    0.952,
+    0.9703
+   ],
+   "FPR@t_r80": [
+    0.1832,
+    0.1403,
+    0.2296
+   ]
+  },
+  "transfer_LR-B": {
+   "AUROC": [
+    0.4829,
+    0.4508,
+    0.5165
+   ],
+   "AUPRC_native": [
+    0.8241,
+    0.8105,
+    0.839
+   ],
+   "FPR@t_r80": [
+    0.2245,
+    0.1837,
+    0.2679
+   ]
+  },
+  "withinUT_LR-B": {
+   "AUROC": [
+    0.7728,
+    0.7444,
+    0.8032
+   ],
+   "AUPRC_native": [
+    0.9371,
+    0.9245,
+    0.9485
+   ],
+   "FPR@t_r80": [
+    0.3321,
+    0.2832,
+    0.3827
+   ]
+  }
+ }
+}

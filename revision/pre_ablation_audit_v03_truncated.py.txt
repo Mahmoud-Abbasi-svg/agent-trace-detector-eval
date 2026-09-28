@@ -1,0 +1,44 @@
+"""Read-only data audit for PRE_ABLATION_DESIGN.md (no detector experiments).
+
+Part A: tool-vocabulary coverage (R1, R3 per domain, R4; overall and by class), share of attacked
+        training traces containing tools absent from the benign vocabulary, and the structure of
+        the AgentDrift `world` field versus the binary label (attacked vs not).
+Part B: can each feature family predict DOMAIN or WORLD with the label held constant
+        (benign-only, and attacked-only as a check)? 5-fold stratified CV, multinomial LogReg.
+Run: AGENTDRIFT=<clone> python pre_ablation_audit.py
+"""
+import os, json, collections, numpy as np
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import StratifiedKFold
+from featurise import load, build_vocab, vectorise
+import evalkit as ek
+
+HERE = os.path.dirname(os.path.abspath(__file__)); MP = os.environ["AGENTDRIFT"]
+KW = (4, 5)
+
+
+def wid(r): return json.dumps(r["world"], sort_keys=True)
+def lab(r): return int(r["category"] == "attacked")
+def benign_vocab(recs): return {s["tool"] for r in recs if r["category"] == "benign" for s in r["steps"]}
+
+
+def coverage(V, recs):
+    occ = [s["tool"] in V for r in recs for s in r["steps"]]
+    zero = [not any(s["tool"] in V for s in r["steps"]) for r in recs]
+    return {"n_traces": len(recs), "occ_coverage": round(float(np.mean(occ)), 4),
+            "frac_traces_zero_known": round(float(np.mean(zero)), 4)}
+
+
+def by_class(V, recs):
+    out = {"all": coverage(V, recs)}
+    for c, name in [(1, "attacked"), (0, "not_attacked")]:
+        sub = [r for r in recs if lab(r) == c]
+        if sub: out[name] = coverage(V, sub)
+    return out
+
+
+def fam_X(recs, vocab, fam):
+    X = []
+    for r in recs:
+        a, b = vectorise(r, v

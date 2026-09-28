@@ -1,0 +1,39 @@
+{
+  "n_domains": 5,
+  "tools_per_domain": {
+    "email": 20,
+    "coding": 23,
+    "banking": 20,
+    "medical": 20,
+    "web": 20
+  },
+  "total_tools_strat_train": 103,
+  "td_test_tools": 103,
+  "td_test_tools_unseen_in_train": 0,
+  "step_labels_strat_train": {
+    "benign": 36189,
+    "failed_injection": 1050,
+    "injection_point": 3875,
+    "hijacked": 8636
+  },
+  "category_counts": {
+    "strat_train": {
+      "benign": 2800,
+      "failed_attack": 1050,
+      "attacked": 3875,
+      "hard_negative": 1050
+    },
+    "strat_test": {
+      "benign": 600,
+      "attacked": 831,
+      "failed_attack": 225,
+      "hard_negative": 225
+    },
+    "td_test": {
+      "failed_attack": 218,
+      "benign": 525,
+      "attacked": 775,
+      "hard_negative": 204
+    }
+  }
+}

@@ -1,0 +1,3760 @@
+{
+ "R1": {
+  "coverage": {
+   "unigram_occurrence_coverage": 1.0,
+   "bigram_occurrence_coverage": 0.997848,
+   "frac_poolE_rows_all_features_unseen": 0.0,
+   "tool_occurrence_coverage_exact_names": 1.0,
+   "n_test_tool_names": 103,
+   "n_test_tool_names_seen_in_training": 103,
+   "n_test_words": 133,
+   "n_test_words_seen": 133,
+   "top_seen_words": [
+    [
+     "get",
+     2059
+    ],
+    [
+     "search",
+     998
+    ],
+    [
+     "email",
+     763
+    ],
+    [
+     "patient",
+     691
+    ],
+    [
+     "read",
+     659
+    ],
+    [
+     "record",
+     546
+    ],
+    [
+     "form",
+     436
+    ],
+    [
+     "file",
+     419
+    ],
+    [
+     "create",
+     396
+    ],
+    [
+     "inbox",
+     375
+    ],
+    [
+     "send",
+     344
+    ],
+    [
+     "open",
+     336
+    ],
+    [
+     "execute",
+     312
+    ],
+    [
+     "command",
+     312
+    ],
+    [
+     "check",
+     301
+    ]
+   ],
+   "top_unseen_words": []
+  },
+  "n_features": 1138,
+  "thr_t_r80": 0.474906,
+  "train_AUROC_in_sample": 0.888754,
+  "refit_max_abs_score_diff": 0.0,
+  "top_positive": [
+   {
+    "feature": "text fill",
+    "coef": 4.276509,
+    "share_test_poolE_pos": 0.034898,
+    "share_test_poolE_neg": 0.004848
+   },
+   {
+    "feature": "inbox search",
+    "coef": 4.188155,
+    "share_test_poolE_pos": 0.016847,
+    "share_test_poolE_neg": 0.002424
+   },
+   {
+    "feature": "inbox get",
+    "coef": 3.791232,
+    "share_test_poolE_pos": 0.070999,
+    "share_test_poolE_neg": 0.02303
+   },
+   {
+    "feature": "forward",
+    "coef": 3.589967,
+    "share_test_poolE_pos": 0.12515,
+    "share_test_poolE_neg": 0.043636
+   },
+   {
+    "feature": "forward email",
+    "coef": 3.589967,
+    "share_test_poolE_pos": 0.12515,
+    "share_test_poolE_neg": 0.043636
+   },
+   {
+    "feature": "email forward",
+    "coef": 3.404875,
+    "share_test_poolE_pos": 0.074609,
+    "share_test_poolE_neg": 0.018182
+   },
+   {
+    "feature": "transactions transfer",
+    "coef": 3.340689,
+    "share_test_poolE_pos": 0.01444,
+    "share_test_poolE_neg": 0.002424
+   },
+   {
+    "feature": "links open",
+    "coef": 2.969598,
+    "share_test_poolE_pos": 0.006017,
+    "share_test_poolE_neg": 0.001212
+   },
+   {
+    "feature": "form download",
+    "coef": 2.688961,
+    "share_test_poolE_pos": 0.033694,
+    "share_test_poolE_neg": 0.003636
+   },
+   {
+    "feature": "fill form",
+    "coef": 2.590232,
+    "share_test_poolE_pos": 0.166065,
+    "share_test_poolE_neg": 0.105455
+   }
+  ],
+  "top_negative": [
+   {
+    "feature": "money get",
+    "coef": -2.559852,
+    "share_test_poolE_pos": 0.037304,
+    "share_test_poolE_neg": 0.076364
+   },
+   {
+    "feature": "links download",
+    "coef": -2.558886,
+    "share_test_poolE_pos": 0.008424,
+    "share_test_poolE_neg": 0.018182
+   },
+   {
+    "feature": "tab fill",
+    "coef": -2.481068,
+    "share_test_poolE_pos": 0.030084,
+    "share_test_poolE_neg": 0.050909
+   },
+   {
+    "feature": "inbox forward",
+    "coef": -2.420904,
+    "share_test_poolE_pos": 0.009627,
+    "share_test_poolE_neg": 0.01697
+   },
+   {
+    "feature": "issue execute",
+    "coef": -2.252873,
+    "share_test_poolE_pos": 0.002407,
+    "share_test_poolE_neg": 0.008485
+   },
+   {
+    "feature": "attachment move",
+    "coef": -2.237215,
+    "share_test_poolE_pos": 0.001203,
+    "share_test_poolE_neg": 0.020606
+   },
+   {
+    "feature": "code debug",
+    "coef": -2.196185,
+    "share_test_poolE_pos": 0.00722,
+    "share_test_poolE_neg": 0.010909
+   },
+   {
+    "feature": "money add",
+    "coef": -2.091892,
+    "share_test_poolE_pos": 0.00722,
+    "share_test_poolE_neg": 0.008485
+   },
+   {
+    "feature": "thread move",
+    "coef": -2.013811,
+    "share_test_poolE_pos": 0.00361,
+    "share_test_poolE_neg": 0.015758
+   },
+   {
+    "feature": "webpage extract",
+    "coef": -2.004942,
+    "share_test_poolE_pos": 0.019254,
+    "share_test_poolE_neg": 0.009697
+   }
+  ],
+  "top_positive_present_in_test": [
+   {
+    "feature": "text fill",
+    "coef": 4.276509,
+    "share_test_poolE_pos": 0.034898,
+    "share_test_poolE_neg": 0.004848
+   },
+   {
+    "feature": "inbox get",
+    "coef": 3.791232,
+    "share_test_poolE_pos": 0.070999,
+    "share_test_poolE_neg": 0.02303
+   },
+   {
+    "feature": "forward",
+    "coef": 3.589967,
+    "share_test_poolE_pos": 0.12515,
+    "share_test_poolE_neg": 0.043636
+   },
+   {
+    "feature": "forward email",
+    "coef": 3.589967,
+    "share_test_poolE_pos": 0.12515,
+    "share_test_poolE_neg": 0.043636
+   },
+   {
+    "feature": "email forward",
+    "coef": 3.404875,
+    "share_test_poolE_pos": 0.074609,
+    "share_test_poolE_neg": 0.018182
+   },
+   {
+    "feature": "form download",
+    "coef": 2.688961,
+    "share_test_poolE_pos": 0.033694,
+    "share_test_poolE_neg": 0.003636
+   },
+   {
+    "feature": "fill form",
+    "coef": 2.590232,
+    "share_test_poolE_pos": 0.166065,
+    "share_test_poolE_neg": 0.105455
+   },
+   {
+    "feature": "fill",
+    "coef": 2.590232,
+    "share_test_poolE_pos": 0.166065,
+    "share_test_poolE_neg": 0.105455
+   },
+   {
+    "feature": "delete file",
+    "coef": 2.570907,
+    "share_test_poolE_pos": 0.078219,
+    "share_test_poolE_neg": 0.010909
+   },
+   {
+    "feature": "form fill",
+    "coef": 2.5017,
+    "share_test_poolE_pos": 0.022864,
+    "share_test_poolE_neg": 0.001212
+   }
+  ],
+  "top_negative_present_in_test": [
+   {
+    "feature": "money get",
+    "coef": -2.559852,
+    "share_test_poolE_pos": 0.037304,
+    "share_test_poolE_neg": 0.076364
+   },
+   {
+    "feature": "links download",
+    "coef": -2.558886,
+    "share_test_poolE_pos": 0.008424,
+    "share_test_poolE_neg": 0.018182
+   },
+   {
+    "feature": "tab fill",
+    "coef": -2.481068,
+    "share_test_poolE_pos": 0.030084,
+    "share_test_poolE_neg": 0.050909
+   },
+   {
+    "feature": "inbox forward",
+    "coef": -2.420904,
+    "share_test_poolE_pos": 0.009627,
+    "share_test_poolE_neg": 0.01697
+   },
+   {
+    "feature": "attachment move",
+    "coef": -2.237215,
+    "share_test_poolE_pos": 0.001203,
+    "share_test_poolE_neg": 0.020606
+   },
+   {
+    "feature": "webpage extract",
+    "coef": -2.004942,
+    "share_test_poolE_pos": 0.019254,
+    "share_test_poolE_neg": 0.009697
+   },
+   {
+    "feature": "syntax format",
+    "coef": -1.862381,
+    "share_test_poolE_pos": 0.015644,
+    "share_test_poolE_neg": 0.019394
+   },
+   {
+    "feature": "record update",
+    "coef": -1.811524,
+    "share_test_poolE_pos": 0.025271,
+    "share_test_poolE_neg": 0.026667
+   },
+   {
+    "feature": "results update",
+    "coef": -1.760874,
+    "share_test_poolE_pos": 0.031288,
+    "share_test_poolE_neg": 0.02303
+   },
+   {
+    "feature": "code run",
+    "coef": -1.732651,
+    "share_test_poolE_pos": 0.006017,
+    "share_test_poolE_neg": 0.014545
+   }
+  ],
+  "n_features_present_in_test_1pct": 360
+ },
+ "R3_medical": {
+  "coverage": {
+   "unigram_occurrence_coverage": 0.319187,
+   "bigram_occurrence_coverage": 0.0,
+   "frac_poolE_rows_all_features_unseen": 0.0,
+   "tool_occurrence_coverage_exact_names": 0.0,
+   "n_test_tool_names": 20,
+   "n_test_tool_names_seen_in_training": 0,
+   "n_test_words": 31,
+   "n_test_words_seen": 7,
+   "top_seen_words": [
+    [
+     "get",
+     5646
+    ],
+    [
+     "send",
+     1230
+    ],
+    [
+     "create",
+     545
+    ],
+    [
+     "add",
+     506
+    ],
+    [
+     "search",
+     493
+    ],
+    [
+     "schedule",
+     418
+    ],
+    [
+     "submit",
+     315
+    ]
+   ],
+   "top_unseen_words": [
+    [
+     "patient",
+     4059
+    ],
+    [
+     "record",
+     3170
+    ],
+    [
+     "update",
+     1288
+    ],
+    [
+     "message",
+     1230
+    ],
+    [
+     "medical",
+     1059
+    ],
+    [
+     "history",
+     1059
+    ],
+    [
+     "lab",
+     739
+    ],
+    [
+     "appointments",
+     652
+    ],
+    [
+     "vitals",
+     621
+    ],
+    [
+     "appointment",
+     621
+    ],
+    [
+     "prescriptions",
+     587
+    ],
+    [
+     "results",
+     553
+    ],
+    [
+     "diagnosis",
+     506
+    ],
+    [
+     "patients",
+     493
+    ],
+    [
+     "insurance",
+     477
+    ]
+   ]
+  },
+  "n_features": 963,
+  "thr_t_r80": 0.483526,
+  "train_AUROC_in_sample": 0.903905,
+  "refit_max_abs_score_diff": 0.0,
+  "top_positive": [
+   {
+    "feature": "inbox search",
+    "coef": 4.760319,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "text fill",
+    "coef": 4.394184,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "inbox get",
+    "coef": 4.163498,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "transactions transfer",
+    "coef": 3.756729,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "forward",
+    "coef": 3.591108,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "forward email",
+    "coef": 3.591108,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "email forward",
+    "coef": 3.48703,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "links open",
+    "coef": 3.256587,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "command delete",
+    "coef": 2.936021,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "links fill",
+    "coef": 2.916339,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_negative": [
+   {
+    "feature": "inbox forward",
+    "coef": -2.797647,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "attachment move",
+    "coef": -2.687438,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "tab fill",
+    "coef": -2.681854,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "links download",
+    "coef": -2.644627,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "money get",
+    "coef": -2.573028,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "issue execute",
+    "coef": -2.328173,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "money add",
+    "coef": -2.202434,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "tests read",
+    "coef": -2.128015,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "command read",
+    "coef": -2.084246,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "webpage extract",
+    "coef": -2.080432,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_positive_present_in_test": [
+   {
+    "feature": "add",
+    "coef": 1.587189,
+    "share_test_poolE_pos": 0.215686,
+    "share_test_poolE_neg": 0.286631
+   },
+   {
+    "feature": "send",
+    "coef": 1.189357,
+    "share_test_poolE_pos": 0.597059,
+    "share_test_poolE_neg": 0.457754
+   },
+   {
+    "feature": "submit",
+    "coef": 0.398508,
+    "share_test_poolE_pos": 0.134314,
+    "share_test_poolE_neg": 0.188235
+   },
+   {
+    "feature": "search",
+    "coef": 0.355387,
+    "share_test_poolE_pos": 0.264706,
+    "share_test_poolE_neg": 0.210695
+   },
+   {
+    "feature": "schedule",
+    "coef": 0.202492,
+    "share_test_poolE_pos": 0.198039,
+    "share_test_poolE_neg": 0.211765
+   },
+   {
+    "feature": "create",
+    "coef": -0.195248,
+    "share_test_poolE_pos": 0.251961,
+    "share_test_poolE_neg": 0.273797
+   },
+   {
+    "feature": "get",
+    "coef": -0.259218,
+    "share_test_poolE_pos": 0.99902,
+    "share_test_poolE_neg": 0.995722
+   }
+  ],
+  "top_negative_present_in_test": [
+   {
+    "feature": "get",
+    "coef": -0.259218,
+    "share_test_poolE_pos": 0.99902,
+    "share_test_poolE_neg": 0.995722
+   },
+   {
+    "feature": "create",
+    "coef": -0.195248,
+    "share_test_poolE_pos": 0.251961,
+    "share_test_poolE_neg": 0.273797
+   },
+   {
+    "feature": "schedule",
+    "coef": 0.202492,
+    "share_test_poolE_pos": 0.198039,
+    "share_test_poolE_neg": 0.211765
+   },
+   {
+    "feature": "search",
+    "coef": 0.355387,
+    "share_test_poolE_pos": 0.264706,
+    "share_test_poolE_neg": 0.210695
+   },
+   {
+    "feature": "submit",
+    "coef": 0.398508,
+    "share_test_poolE_pos": 0.134314,
+    "share_test_poolE_neg": 0.188235
+   },
+   {
+    "feature": "send",
+    "coef": 1.189357,
+    "share_test_poolE_pos": 0.597059,
+    "share_test_poolE_neg": 0.457754
+   },
+   {
+    "feature": "add",
+    "coef": 1.587189,
+    "share_test_poolE_pos": 0.215686,
+    "share_test_poolE_neg": 0.286631
+   }
+  ],
+  "n_features_present_in_test_1pct": 7
+ },
+ "R3_banking": {
+  "coverage": {
+   "unigram_occurrence_coverage": 0.329578,
+   "bigram_occurrence_coverage": 0.0,
+   "frac_poolE_rows_all_features_unseen": 0.000641,
+   "tool_occurrence_coverage_exact_names": 0.0,
+   "n_test_tool_names": 20,
+   "n_test_tool_names_seen_in_training": 0,
+   "n_test_words": 33,
+   "n_test_words_seen": 5,
+   "top_seen_words": [
+    [
+     "get",
+     4319
+    ],
+    [
+     "check",
+     797
+    ],
+    [
+     "add",
+     411
+    ],
+    [
+     "delete",
+     171
+    ],
+    [
+     "open",
+     153
+    ]
+   ],
+   "top_unseen_words": [
+    [
+     "balance",
+     1210
+    ],
+    [
+     "transactions",
+     1043
+    ],
+    [
+     "transfer",
+     1038
+    ],
+    [
+     "money",
+     1038
+    ],
+    [
+     "statement",
+     666
+    ],
+    [
+     "beneficiary",
+     582
+    ],
+    [
+     "beneficiaries",
+     549
+    ],
+    [
+     "credit",
+     420
+    ],
+    [
+     "score",
+     420
+    ],
+    [
+     "interest",
+     403
+    ],
+    [
+     "rate",
+     403
+    ],
+    [
+     "limit",
+     377
+    ],
+    [
+     "set",
+     336
+    ],
+    [
+     "alert",
+     336
+    ],
+    [
+     "fees",
+     313
+    ]
+   ]
+  },
+  "n_features": 937,
+  "thr_t_r80": 0.487828,
+  "train_AUROC_in_sample": 0.892771,
+  "refit_max_abs_score_diff": 0.0,
+  "top_positive": [
+   {
+    "feature": "inbox search",
+    "coef": 4.789164,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "text fill",
+    "coef": 4.450635,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "inbox get",
+    "coef": 4.022076,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "forward email",
+    "coef": 3.530114,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "forward",
+    "coef": 3.530114,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "email forward",
+    "coef": 3.420677,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "links open",
+    "coef": 3.252206,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "links fill",
+    "coef": 2.944458,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "command delete",
+    "coef": 2.893248,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "form fill",
+    "coef": 2.868081,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_negative": [
+   {
+    "feature": "inbox forward",
+    "coef": -2.790105,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "tab fill",
+    "coef": -2.697992,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "attachment move",
+    "coef": -2.665014,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "links download",
+    "coef": -2.664679,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "issue execute",
+    "coef": -2.33694,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "appointments cancel",
+    "coef": -2.166647,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "tests read",
+    "coef": -2.133273,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "command read",
+    "coef": -2.119858,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "results update",
+    "coef": -2.094342,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "webpage extract",
+    "coef": -2.086094,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_positive_present_in_test": [
+   {
+    "feature": "delete",
+    "coef": 2.431564,
+    "share_test_poolE_pos": 0.103834,
+    "share_test_poolE_neg": 0.094118
+   },
+   {
+    "feature": "add",
+    "coef": 0.24583,
+    "share_test_poolE_pos": 0.36262,
+    "share_test_poolE_neg": 0.176471
+   },
+   {
+    "feature": "get",
+    "coef": -0.244841,
+    "share_test_poolE_pos": 0.985623,
+    "share_test_poolE_neg": 0.972193
+   },
+   {
+    "feature": "check",
+    "coef": -0.426668,
+    "share_test_poolE_pos": 0.416933,
+    "share_test_poolE_neg": 0.494118
+   },
+   {
+    "feature": "open",
+    "coef": -1.040535,
+    "share_test_poolE_pos": 0.121406,
+    "share_test_poolE_neg": 0.077005
+   }
+  ],
+  "top_negative_present_in_test": [
+   {
+    "feature": "open",
+    "coef": -1.040535,
+    "share_test_poolE_pos": 0.121406,
+    "share_test_poolE_neg": 0.077005
+   },
+   {
+    "feature": "check",
+    "coef": -0.426668,
+    "share_test_poolE_pos": 0.416933,
+    "share_test_poolE_neg": 0.494118
+   },
+   {
+    "feature": "get",
+    "coef": -0.244841,
+    "share_test_poolE_pos": 0.985623,
+    "share_test_poolE_neg": 0.972193
+   },
+   {
+    "feature": "add",
+    "coef": 0.24583,
+    "share_test_poolE_pos": 0.36262,
+    "share_test_poolE_neg": 0.176471
+   },
+   {
+    "feature": "delete",
+    "coef": 2.431564,
+    "share_test_poolE_pos": 0.103834,
+    "share_test_poolE_neg": 0.094118
+   }
+  ],
+  "n_features_present_in_test_1pct": 5
+ },
+ "R3_web": {
+  "coverage": {
+   "unigram_occurrence_coverage": 0.271081,
+   "bigram_occurrence_coverage": 0.003038,
+   "frac_poolE_rows_all_features_unseen": 0.003581,
+   "tool_occurrence_coverage_exact_names": 0.0,
+   "n_test_tool_names": 20,
+   "n_test_tool_names_seen_in_training": 0,
+   "n_test_words": 34,
+   "n_test_words_seen": 8,
+   "top_seen_words": [
+    [
+     "search",
+     1357
+    ],
+    [
+     "open",
+     1248
+    ],
+    [
+     "read",
+     1071
+    ],
+    [
+     "submit",
+     809
+    ],
+    [
+     "download",
+     458
+    ],
+    [
+     "file",
+     458
+    ],
+    [
+     "close",
+     372
+    ],
+    [
+     "check",
+     290
+    ]
+   ],
+   "top_unseen_words": [
+    [
+     "form",
+     2484
+    ],
+    [
+     "fill",
+     1675
+    ],
+    [
+     "tab",
+     1620
+    ],
+    [
+     "web",
+     1357
+    ],
+    [
+     "extract",
+     1074
+    ],
+    [
+     "webpage",
+     1071
+    ],
+    [
+     "site",
+     679
+    ],
+    [
+     "take",
+     573
+    ],
+    [
+     "screenshot",
+     573
+    ],
+    [
+     "copy",
+     560
+    ],
+    [
+     "text",
+     560
+    ],
+    [
+     "table",
+     546
+    ],
+    [
+     "links",
+     528
+    ],
+    [
+     "login",
+     498
+    ],
+    [
+     "page",
+     475
+    ]
+   ]
+  },
+  "n_features": 869,
+  "thr_t_r80": 0.471791,
+  "train_AUROC_in_sample": 0.879101,
+  "refit_max_abs_score_diff": 0.0,
+  "top_positive": [
+   {
+    "feature": "inbox search",
+    "coef": 4.793436,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "inbox get",
+    "coef": 4.114639,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "transactions transfer",
+    "coef": 3.777618,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "forward",
+    "coef": 3.516386,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "forward email",
+    "coef": 3.516386,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "email forward",
+    "coef": 3.486938,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "command delete",
+    "coef": 3.025313,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "delete file",
+    "coef": 2.774093,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "history update",
+    "coef": 2.665986,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "thread forward",
+    "coef": 2.661254,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_negative": [
+   {
+    "feature": "inbox forward",
+    "coef": -2.895321,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "attachment move",
+    "coef": -2.686747,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "money get",
+    "coef": -2.500354,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "issue execute",
+    "coef": -2.416429,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "appointments cancel",
+    "coef": -2.204501,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "money add",
+    "coef": -2.169691,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "tests read",
+    "coef": -2.145071,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "results update",
+    "coef": -2.118668,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "inbox reply",
+    "coef": -2.090714,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "code debug",
+    "coef": -2.075953,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_positive_present_in_test": [
+   {
+    "feature": "file",
+    "coef": 1.284632,
+    "share_test_poolE_pos": 0.289216,
+    "share_test_poolE_neg": 0.166845
+   },
+   {
+    "feature": "file close",
+    "coef": 0.813307,
+    "share_test_poolE_pos": 0.008824,
+    "share_test_poolE_neg": 0.039572
+   },
+   {
+    "feature": "search",
+    "coef": 0.006966,
+    "share_test_poolE_pos": 0.764706,
+    "share_test_poolE_neg": 0.484492
+   },
+   {
+    "feature": "submit",
+    "coef": -0.103982,
+    "share_test_poolE_pos": 0.442157,
+    "share_test_poolE_neg": 0.302674
+   },
+   {
+    "feature": "close",
+    "coef": -0.361442,
+    "share_test_poolE_pos": 0.076471,
+    "share_test_poolE_neg": 0.313369
+   },
+   {
+    "feature": "open",
+    "coef": -0.420941,
+    "share_test_poolE_pos": 0.497059,
+    "share_test_poolE_neg": 0.747594
+   },
+   {
+    "feature": "read",
+    "coef": -0.511159,
+    "share_test_poolE_pos": 0.629412,
+    "share_test_poolE_neg": 0.33369
+   },
+   {
+    "feature": "download",
+    "coef": -0.562579,
+    "share_test_poolE_pos": 0.289216,
+    "share_test_poolE_neg": 0.166845
+   },
+   {
+    "feature": "check",
+    "coef": -0.808695,
+    "share_test_poolE_pos": 0.117647,
+    "share_test_poolE_neg": 0.173262
+   }
+  ],
+  "top_negative_present_in_test": [
+   {
+    "feature": "check",
+    "coef": -0.808695,
+    "share_test_poolE_pos": 0.117647,
+    "share_test_poolE_neg": 0.173262
+   },
+   {
+    "feature": "download",
+    "coef": -0.562579,
+    "share_test_poolE_pos": 0.289216,
+    "share_test_poolE_neg": 0.166845
+   },
+   {
+    "feature": "read",
+    "coef": -0.511159,
+    "share_test_poolE_pos": 0.629412,
+    "share_test_poolE_neg": 0.33369
+   },
+   {
+    "feature": "open",
+    "coef": -0.420941,
+    "share_test_poolE_pos": 0.497059,
+    "share_test_poolE_neg": 0.747594
+   },
+   {
+    "feature": "close",
+    "coef": -0.361442,
+    "share_test_poolE_pos": 0.076471,
+    "share_test_poolE_neg": 0.313369
+   },
+   {
+    "feature": "submit",
+    "coef": -0.103982,
+    "share_test_poolE_pos": 0.442157,
+    "share_test_poolE_neg": 0.302674
+   },
+   {
+    "feature": "search",
+    "coef": 0.006966,
+    "share_test_poolE_pos": 0.764706,
+    "share_test_poolE_neg": 0.484492
+   },
+   {
+    "feature": "file close",
+    "coef": 0.813307,
+    "share_test_poolE_pos": 0.008824,
+    "share_test_poolE_neg": 0.039572
+   },
+   {
+    "feature": "file",
+    "coef": 1.284632,
+    "share_test_poolE_pos": 0.289216,
+    "share_test_poolE_neg": 0.166845
+   }
+  ],
+  "n_features_present_in_test_1pct": 9
+ },
+ "R3_email": {
+  "coverage": {
+   "unigram_occurrence_coverage": 0.374446,
+   "bigram_occurrence_coverage": 0.0,
+   "frac_poolE_rows_all_features_unseen": 0.0,
+   "tool_occurrence_coverage_exact_names": 0.0,
+   "n_test_tool_names": 20,
+   "n_test_tool_names_seen_in_training": 0,
+   "n_test_words": 25,
+   "n_test_words_seen": 9,
+   "top_seen_words": [
+    [
+     "search",
+     2060
+    ],
+    [
+     "get",
+     1880
+    ],
+    [
+     "read",
+     1537
+    ],
+    [
+     "create",
+     1154
+    ],
+    [
+     "send",
+     738
+    ],
+    [
+     "add",
+     324
+    ],
+    [
+     "delete",
+     285
+    ],
+    [
+     "download",
+     265
+    ],
+    [
+     "schedule",
+     200
+    ]
+   ],
+   "top_unseen_words": [
+    [
+     "email",
+     4537
+    ],
+    [
+     "inbox",
+     2060
+    ],
+    [
+     "forward",
+     1115
+    ],
+    [
+     "thread",
+     1052
+    ],
+    [
+     "move",
+     764
+    ],
+    [
+     "attachment",
+     752
+    ],
+    [
+     "contacts",
+     701
+    ],
+    [
+     "mark",
+     637
+    ],
+    [
+     "draft",
+     467
+    ],
+    [
+     "filter",
+     372
+    ],
+    [
+     "summarize",
+     360
+    ],
+    [
+     "reply",
+     350
+    ],
+    [
+     "contact",
+     324
+    ],
+    [
+     "folder",
+     315
+    ],
+    [
+     "unread",
+     185
+    ]
+   ]
+  },
+  "n_features": 978,
+  "thr_t_r80": 0.467482,
+  "train_AUROC_in_sample": 0.879241,
+  "refit_max_abs_score_diff": 0.0,
+  "top_positive": [
+   {
+    "feature": "text fill",
+    "coef": 4.461458,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "transactions transfer",
+    "coef": 3.768825,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "links open",
+    "coef": 3.247843,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "command delete",
+    "coef": 2.975755,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "links fill",
+    "coef": 2.960741,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "form fill",
+    "coef": 2.909611,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "delete file",
+    "coef": 2.814073,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "history update",
+    "coef": 2.653755,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "fill",
+    "coef": 2.646234,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "fill form",
+    "coef": 2.646234,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_negative": [
+   {
+    "feature": "links download",
+    "coef": -2.765253,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "tab fill",
+    "coef": -2.681336,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "money get",
+    "coef": -2.546549,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "issue execute",
+    "coef": -2.341989,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "money add",
+    "coef": -2.213052,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "tests read",
+    "coef": -2.180429,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "appointments cancel",
+    "coef": -2.169176,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "command read",
+    "coef": -2.112749,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "webpage extract",
+    "coef": -2.11043,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "code debug",
+    "coef": -2.09467,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_positive_present_in_test": [
+   {
+    "feature": "delete",
+    "coef": 1.858826,
+    "share_test_poolE_pos": 0.195098,
+    "share_test_poolE_neg": 0.083422
+   },
+   {
+    "feature": "add",
+    "coef": 1.096493,
+    "share_test_poolE_pos": 0.17451,
+    "share_test_poolE_neg": 0.145455
+   },
+   {
+    "feature": "search",
+    "coef": 1.016885,
+    "share_test_poolE_pos": 0.918627,
+    "share_test_poolE_neg": 0.902674
+   },
+   {
+    "feature": "download",
+    "coef": 0.732557,
+    "share_test_poolE_pos": 0.096078,
+    "share_test_poolE_neg": 0.165775
+   },
+   {
+    "feature": "send",
+    "coef": 0.47572,
+    "share_test_poolE_pos": 0.386275,
+    "share_test_poolE_neg": 0.298396
+   },
+   {
+    "feature": "schedule",
+    "coef": 0.312036,
+    "share_test_poolE_pos": 0.068627,
+    "share_test_poolE_neg": 0.126203
+   },
+   {
+    "feature": "create",
+    "coef": 0.298756,
+    "share_test_poolE_pos": 0.461765,
+    "share_test_poolE_neg": 0.557219
+   },
+   {
+    "feature": "read",
+    "coef": 0.202241,
+    "share_test_poolE_pos": 0.64902,
+    "share_test_poolE_neg": 0.53262
+   },
+   {
+    "feature": "get",
+    "coef": -0.367319,
+    "share_test_poolE_pos": 0.747059,
+    "share_test_poolE_neg": 0.709091
+   }
+  ],
+  "top_negative_present_in_test": [
+   {
+    "feature": "get",
+    "coef": -0.367319,
+    "share_test_poolE_pos": 0.747059,
+    "share_test_poolE_neg": 0.709091
+   },
+   {
+    "feature": "read",
+    "coef": 0.202241,
+    "share_test_poolE_pos": 0.64902,
+    "share_test_poolE_neg": 0.53262
+   },
+   {
+    "feature": "create",
+    "coef": 0.298756,
+    "share_test_poolE_pos": 0.461765,
+    "share_test_poolE_neg": 0.557219
+   },
+   {
+    "feature": "schedule",
+    "coef": 0.312036,
+    "share_test_poolE_pos": 0.068627,
+    "share_test_poolE_neg": 0.126203
+   },
+   {
+    "feature": "send",
+    "coef": 0.47572,
+    "share_test_poolE_pos": 0.386275,
+    "share_test_poolE_neg": 0.298396
+   },
+   {
+    "feature": "download",
+    "coef": 0.732557,
+    "share_test_poolE_pos": 0.096078,
+    "share_test_poolE_neg": 0.165775
+   },
+   {
+    "feature": "search",
+    "coef": 1.016885,
+    "share_test_poolE_pos": 0.918627,
+    "share_test_poolE_neg": 0.902674
+   },
+   {
+    "feature": "add",
+    "coef": 1.096493,
+    "share_test_poolE_pos": 0.17451,
+    "share_test_poolE_neg": 0.145455
+   },
+   {
+    "feature": "delete",
+    "coef": 1.858826,
+    "share_test_poolE_pos": 0.195098,
+    "share_test_poolE_neg": 0.083422
+   }
+  ],
+  "n_features_present_in_test_1pct": 9
+ },
+ "R3_coding": {
+  "coverage": {
+   "unigram_occurrence_coverage": 0.308033,
+   "bigram_occurrence_coverage": 0.013168,
+   "frac_poolE_rows_all_features_unseen": 0.029668,
+   "tool_occurrence_coverage_exact_names": 0.0,
+   "n_test_tool_names": 23,
+   "n_test_tool_names_seen_in_training": 0,
+   "n_test_words": 33,
+   "n_test_words_seen": 8,
+   "top_seen_words": [
+    [
+     "search",
+     1815
+    ],
+    [
+     "file",
+     1662
+    ],
+    [
+     "read",
+     1194
+    ],
+    [
+     "check",
+     758
+    ],
+    [
+     "open",
+     528
+    ],
+    [
+     "create",
+     493
+    ],
+    [
+     "delete",
+     326
+    ],
+    [
+     "close",
+     119
+    ]
+   ],
+   "top_unseen_words": [
+    [
+     "execute",
+     1615
+    ],
+    [
+     "command",
+     1615
+    ],
+    [
+     "code",
+     1603
+    ],
+    [
+     "git",
+     1256
+    ],
+    [
+     "run",
+     747
+    ],
+    [
+     "tests",
+     747
+    ],
+    [
+     "logs",
+     700
+    ],
+    [
+     "issue",
+     647
+    ],
+    [
+     "list",
+     602
+    ],
+    [
+     "files",
+     602
+    ],
+    [
+     "docs",
+     597
+    ],
+    [
+     "write",
+     597
+    ],
+    [
+     "install",
+     501
+    ],
+    [
+     "package",
+     501
+    ],
+    [
+     "syntax",
+     489
+    ]
+   ]
+  },
+  "n_features": 895,
+  "thr_t_r80": 0.472308,
+  "train_AUROC_in_sample": 0.883883,
+  "refit_max_abs_score_diff": 0.0,
+  "top_positive": [
+   {
+    "feature": "inbox search",
+    "coef": 4.892182,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "text fill",
+    "coef": 4.476755,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "inbox get",
+    "coef": 4.067298,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "transactions transfer",
+    "coef": 3.786445,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "forward email",
+    "coef": 3.587418,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "forward",
+    "coef": 3.587418,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "email forward",
+    "coef": 3.397141,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "links open",
+    "coef": 3.219787,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "links fill",
+    "coef": 2.961878,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "form fill",
+    "coef": 2.883931,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_negative": [
+   {
+    "feature": "inbox forward",
+    "coef": -2.778915,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "tab fill",
+    "coef": -2.749747,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "links download",
+    "coef": -2.680748,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "attachment move",
+    "coef": -2.668278,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "money get",
+    "coef": -2.534503,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "money add",
+    "coef": -2.225993,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "appointments cancel",
+    "coef": -2.178007,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "webpage extract",
+    "coef": -2.125019,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "results update",
+    "coef": -2.114324,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "attachment create",
+    "coef": -2.078909,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_positive_present_in_test": [
+   {
+    "feature": "file",
+    "coef": 1.110337,
+    "share_test_poolE_pos": 0.622549,
+    "share_test_poolE_neg": 0.321925
+   },
+   {
+    "feature": "delete",
+    "coef": 0.579218,
+    "share_test_poolE_pos": 0.279412,
+    "share_test_poolE_neg": 0.035294
+   },
+   {
+    "feature": "read",
+    "coef": 0.524284,
+    "share_test_poolE_pos": 0.519608,
+    "share_test_poolE_neg": 0.525134
+   },
+   {
+    "feature": "search",
+    "coef": 0.408086,
+    "share_test_poolE_pos": 0.665686,
+    "share_test_poolE_neg": 0.629947
+   },
+   {
+    "feature": "create",
+    "coef": 0.360792,
+    "share_test_poolE_pos": 0.239216,
+    "share_test_poolE_neg": 0.258824
+   },
+   {
+    "feature": "file check",
+    "coef": -0.06517,
+    "share_test_poolE_pos": 0.045098,
+    "share_test_poolE_neg": 0.019251
+   },
+   {
+    "feature": "file search",
+    "coef": -0.245144,
+    "share_test_poolE_pos": 0.066667,
+    "share_test_poolE_neg": 0.037433
+   },
+   {
+    "feature": "file read",
+    "coef": -0.250959,
+    "share_test_poolE_pos": 0.044118,
+    "share_test_poolE_neg": 0.033155
+   },
+   {
+    "feature": "open",
+    "coef": -0.330912,
+    "share_test_poolE_pos": 0.227451,
+    "share_test_poolE_neg": 0.301604
+   },
+   {
+    "feature": "check",
+    "coef": -0.797782,
+    "share_test_poolE_pos": 0.330392,
+    "share_test_poolE_neg": 0.389305
+   }
+  ],
+  "top_negative_present_in_test": [
+   {
+    "feature": "close",
+    "coef": -1.36386,
+    "share_test_poolE_pos": 0.043137,
+    "share_test_poolE_neg": 0.074866
+   },
+   {
+    "feature": "check",
+    "coef": -0.797782,
+    "share_test_poolE_pos": 0.330392,
+    "share_test_poolE_neg": 0.389305
+   },
+   {
+    "feature": "open",
+    "coef": -0.330912,
+    "share_test_poolE_pos": 0.227451,
+    "share_test_poolE_neg": 0.301604
+   },
+   {
+    "feature": "file read",
+    "coef": -0.250959,
+    "share_test_poolE_pos": 0.044118,
+    "share_test_poolE_neg": 0.033155
+   },
+   {
+    "feature": "file search",
+    "coef": -0.245144,
+    "share_test_poolE_pos": 0.066667,
+    "share_test_poolE_neg": 0.037433
+   },
+   {
+    "feature": "file check",
+    "coef": -0.06517,
+    "share_test_poolE_pos": 0.045098,
+    "share_test_poolE_neg": 0.019251
+   },
+   {
+    "feature": "create",
+    "coef": 0.360792,
+    "share_test_poolE_pos": 0.239216,
+    "share_test_poolE_neg": 0.258824
+   },
+   {
+    "feature": "search",
+    "coef": 0.408086,
+    "share_test_poolE_pos": 0.665686,
+    "share_test_poolE_neg": 0.629947
+   },
+   {
+    "feature": "read",
+    "coef": 0.524284,
+    "share_test_poolE_pos": 0.519608,
+    "share_test_poolE_neg": 0.525134
+   },
+   {
+    "feature": "delete",
+    "coef": 0.579218,
+    "share_test_poolE_pos": 0.279412,
+    "share_test_poolE_neg": 0.035294
+   }
+  ],
+  "n_features_present_in_test_1pct": 11
+ },
+ "R4": {
+  "coverage": {
+   "unigram_occurrence_coverage": 0.442588,
+   "bigram_occurrence_coverage": 0.058692,
+   "frac_poolE_rows_all_features_unseen": 0.0,
+   "tool_occurrence_coverage_exact_names": 0.075147,
+   "n_test_tool_names": 67,
+   "n_test_tool_names_seen_in_training": 7,
+   "n_test_words": 88,
+   "n_test_words_seen": 25,
+   "top_seen_words": [
+    [
+     "get",
+     5490
+    ],
+    [
+     "read",
+     2400
+    ],
+    [
+     "send",
+     2063
+    ],
+    [
+     "webpage",
+     1448
+    ],
+    [
+     "message",
+     962
+    ],
+    [
+     "transactions",
+     909
+    ],
+    [
+     "search",
+     867
+    ],
+    [
+     "money",
+     749
+    ],
+    [
+     "add",
+     659
+    ],
+    [
+     "file",
+     654
+    ],
+    [
+     "update",
+     485
+    ],
+    [
+     "create",
+     468
+    ],
+    [
+     "files",
+     398
+    ],
+    [
+     "email",
+     383
+    ],
+    [
+     "transaction",
+     292
+    ]
+   ],
+   "top_unseen_words": [
+    [
+     "channel",
+     3584
+    ],
+    [
+     "messages",
+     1949
+    ],
+    [
+     "user",
+     1431
+    ],
+    [
+     "to",
+     1145
+    ],
+    [
+     "in",
+     1049
+    ],
+    [
+     "calendar",
+     935
+    ],
+    [
+     "channels",
+     840
+    ],
+    [
+     "slack",
+     660
+    ],
+    [
+     "users",
+     630
+    ],
+    [
+     "for",
+     599
+    ],
+    [
+     "most",
+     589
+    ],
+    [
+     "recent",
+     589
+    ],
+    [
+     "direct",
+     585
+    ],
+    [
+     "scheduled",
+     561
+    ],
+    [
+     "hotels",
+     543
+    ]
+   ]
+  },
+  "n_features": 1156,
+  "thr_t_r80": 0.474575,
+  "train_AUROC_in_sample": 0.88719,
+  "refit_max_abs_score_diff": 0.0,
+  "top_positive": [
+   {
+    "feature": "inbox search",
+    "coef": 4.835254,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "text fill",
+    "coef": 4.430975,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "inbox get",
+    "coef": 4.057333,
+    "share_test_poolE_pos": 0.043156,
+    "share_test_poolE_neg": 0.017857
+   },
+   {
+    "feature": "transactions transfer",
+    "coef": 3.761018,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "forward",
+    "coef": 3.529517,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "forward email",
+    "coef": 3.529517,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "email forward",
+    "coef": 3.406456,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "links open",
+    "coef": 3.230378,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "command delete",
+    "coef": 2.967544,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "links fill",
+    "coef": 2.925009,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_negative": [
+   {
+    "feature": "inbox forward",
+    "coef": -2.844411,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "links download",
+    "coef": -2.71049,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "tab fill",
+    "coef": -2.707305,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "attachment move",
+    "coef": -2.664385,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "money get",
+    "coef": -2.529037,
+    "share_test_poolE_pos": 0.055362,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "issue execute",
+    "coef": -2.34818,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "money add",
+    "coef": -2.204632,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "appointments cancel",
+    "coef": -2.168717,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "tests read",
+    "coef": -2.16369,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "webpage extract",
+    "coef": -2.119636,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_positive_present_in_test": [
+   {
+    "feature": "inbox get",
+    "coef": 4.057333,
+    "share_test_poolE_pos": 0.043156,
+    "share_test_poolE_neg": 0.017857
+   },
+   {
+    "feature": "delete file",
+    "coef": 2.763984,
+    "share_test_poolE_pos": 0.069747,
+    "share_test_poolE_neg": 0.020408
+   },
+   {
+    "feature": "update",
+    "coef": 2.30313,
+    "share_test_poolE_pos": 0.165214,
+    "share_test_poolE_neg": 0.061224
+   },
+   {
+    "feature": "webpage read",
+    "coef": 2.195578,
+    "share_test_poolE_pos": 0.068003,
+    "share_test_poolE_neg": 0.007653
+   },
+   {
+    "feature": "delete",
+    "coef": 1.989059,
+    "share_test_poolE_pos": 0.072363,
+    "share_test_poolE_neg": 0.040816
+   },
+   {
+    "feature": "message get",
+    "coef": 1.957293,
+    "share_test_poolE_pos": 0.025719,
+    "share_test_poolE_neg": 0.015306
+   },
+   {
+    "feature": "file",
+    "coef": 1.826953,
+    "share_test_poolE_pos": 0.240628,
+    "share_test_poolE_neg": 0.114796
+   },
+   {
+    "feature": "email create",
+    "coef": 1.612743,
+    "share_test_poolE_pos": 0.017001,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "send email",
+    "coef": 1.312241,
+    "share_test_poolE_pos": 0.120314,
+    "share_test_poolE_neg": 0.107143
+   },
+   {
+    "feature": "send",
+    "coef": 1.214373,
+    "share_test_poolE_pos": 0.595031,
+    "share_test_poolE_neg": 0.331633
+   }
+  ],
+  "top_negative_present_in_test": [
+   {
+    "feature": "money get",
+    "coef": -2.529037,
+    "share_test_poolE_pos": 0.055362,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "transaction get",
+    "coef": -1.403554,
+    "share_test_poolE_pos": 0.016565,
+    "share_test_poolE_neg": 0.005102
+   },
+   {
+    "feature": "files delete",
+    "coef": -1.394174,
+    "share_test_poolE_pos": 0.013949,
+    "share_test_poolE_neg": 0.020408
+   },
+   {
+    "feature": "message send",
+    "coef": -1.322279,
+    "share_test_poolE_pos": 0.06408,
+    "share_test_poolE_neg": 0.028061
+   },
+   {
+    "feature": "read file",
+    "coef": -1.184404,
+    "share_test_poolE_pos": 0.139494,
+    "share_test_poolE_neg": 0.038265
+   },
+   {
+    "feature": "files",
+    "coef": -0.812396,
+    "share_test_poolE_pos": 0.088056,
+    "share_test_poolE_neg": 0.09949
+   },
+   {
+    "feature": "list",
+    "coef": -0.812396,
+    "share_test_poolE_pos": 0.03313,
+    "share_test_poolE_neg": 0.022959
+   },
+   {
+    "feature": "list files",
+    "coef": -0.812396,
+    "share_test_poolE_pos": 0.03313,
+    "share_test_poolE_neg": 0.022959
+   },
+   {
+    "feature": "check",
+    "coef": -0.761747,
+    "share_test_poolE_pos": 0.00959,
+    "share_test_poolE_neg": 0.035714
+   },
+   {
+    "feature": "info get",
+    "coef": -0.73948,
+    "share_test_poolE_pos": 0.01177,
+    "share_test_poolE_neg": 0.012755
+   }
+  ],
+  "n_features_present_in_test_1pct": 40
+ },
+ "LOSO_banking": {
+  "coverage": {
+   "unigram_occurrence_coverage": 0.360606,
+   "bigram_occurrence_coverage": 0.045426,
+   "frac_poolE_rows_all_features_unseen": 0.0,
+   "tool_occurrence_coverage_exact_names": 0.0,
+   "n_test_tool_names": 11,
+   "n_test_tool_names_seen_in_training": 0,
+   "n_test_words": 17,
+   "n_test_words_seen": 5,
+   "top_seen_words": [
+    [
+     "get",
+     1043
+    ],
+    [
+     "send",
+     749
+    ],
+    [
+     "read",
+     343
+    ],
+    [
+     "file",
+     343
+    ],
+    [
+     "user",
+     118
+    ]
+   ],
+   "top_unseen_words": [
+    [
+     "transactions",
+     909
+    ],
+    [
+     "money",
+     749
+    ],
+    [
+     "most",
+     589
+    ],
+    [
+     "recent",
+     589
+    ],
+    [
+     "scheduled",
+     561
+    ],
+    [
+     "update",
+     485
+    ],
+    [
+     "transaction",
+     292
+    ],
+    [
+     "password",
+     140
+    ],
+    [
+     "info",
+     118
+    ],
+    [
+     "iban",
+     101
+    ],
+    [
+     "schedule",
+     51
+    ],
+    [
+     "balance",
+     19
+    ]
+   ]
+  },
+  "n_features": 311,
+  "thr_t_r80": 0.535933,
+  "train_AUROC_in_sample": 0.914567,
+  "refit_max_abs_score_diff": 0.0,
+  "top_positive": [
+   {
+    "feature": "webpage read",
+    "coef": 3.482791,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "delete file",
+    "coef": 2.992698,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "webpage get",
+    "coef": 2.963078,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "events send",
+    "coef": 2.564957,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "send email",
+    "coef": 2.474625,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "messages read",
+    "coef": 2.449983,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "event get",
+    "coef": 2.404947,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "events delete",
+    "coef": 2.396427,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "post webpage",
+    "coef": 2.313123,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "post",
+    "coef": 2.313123,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_negative": [
+   {
+    "feature": "filename append",
+    "coef": -1.674899,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "messages get",
+    "coef": -1.599077,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "events create",
+    "coef": -1.45571,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "address create",
+    "coef": -1.338248,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "files delete",
+    "coef": -1.317669,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "events get",
+    "coef": -1.237173,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "events add",
+    "coef": -1.230848,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "hotels reserve",
+    "coef": -1.131888,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "delete email",
+    "coef": -1.113781,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "emails create",
+    "coef": -1.052969,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_positive_present_in_test": [
+   {
+    "feature": "file",
+    "coef": 2.289067,
+    "share_test_poolE_pos": 0.4769,
+    "share_test_poolE_neg": 0.267857
+   },
+   {
+    "feature": "send",
+    "coef": 2.035482,
+    "share_test_poolE_pos": 0.815201,
+    "share_test_poolE_neg": 0.535714
+   },
+   {
+    "feature": "get",
+    "coef": 1.188144,
+    "share_test_poolE_pos": 0.95082,
+    "share_test_poolE_neg": 0.857143
+   },
+   {
+    "feature": "file get",
+    "coef": 0.41671,
+    "share_test_poolE_pos": 0.38003,
+    "share_test_poolE_neg": 0.125
+   },
+   {
+    "feature": "user",
+    "coef": 0.370297,
+    "share_test_poolE_pos": 0.147541,
+    "share_test_poolE_neg": 0.196429
+   },
+   {
+    "feature": "file send",
+    "coef": 0.115629,
+    "share_test_poolE_pos": 0.020864,
+    "share_test_poolE_neg": 0.053571
+   },
+   {
+    "feature": "read",
+    "coef": 0.079635,
+    "share_test_poolE_pos": 0.4769,
+    "share_test_poolE_neg": 0.267857
+   },
+   {
+    "feature": "get user",
+    "coef": -0.423216,
+    "share_test_poolE_pos": 0.016393,
+    "share_test_poolE_neg": 0.053571
+   }
+  ],
+  "top_negative_present_in_test": [
+   {
+    "feature": "get user",
+    "coef": -0.423216,
+    "share_test_poolE_pos": 0.016393,
+    "share_test_poolE_neg": 0.053571
+   },
+   {
+    "feature": "read",
+    "coef": 0.079635,
+    "share_test_poolE_pos": 0.4769,
+    "share_test_poolE_neg": 0.267857
+   },
+   {
+    "feature": "file send",
+    "coef": 0.115629,
+    "share_test_poolE_pos": 0.020864,
+    "share_test_poolE_neg": 0.053571
+   },
+   {
+    "feature": "user",
+    "coef": 0.370297,
+    "share_test_poolE_pos": 0.147541,
+    "share_test_poolE_neg": 0.196429
+   },
+   {
+    "feature": "file get",
+    "coef": 0.41671,
+    "share_test_poolE_pos": 0.38003,
+    "share_test_poolE_neg": 0.125
+   },
+   {
+    "feature": "get",
+    "coef": 1.188144,
+    "share_test_poolE_pos": 0.95082,
+    "share_test_poolE_neg": 0.857143
+   },
+   {
+    "feature": "send",
+    "coef": 2.035482,
+    "share_test_poolE_pos": 0.815201,
+    "share_test_poolE_neg": 0.535714
+   },
+   {
+    "feature": "file",
+    "coef": 2.289067,
+    "share_test_poolE_pos": 0.4769,
+    "share_test_poolE_neg": 0.267857
+   }
+  ],
+  "n_features_present_in_test_1pct": 8
+ },
+ "LOSO_slack": {
+  "coverage": {
+   "unigram_occurrence_coverage": 0.431382,
+   "bigram_occurrence_coverage": 0.0,
+   "frac_poolE_rows_all_features_unseen": 0.0,
+   "tool_occurrence_coverage_exact_names": 0.0,
+   "n_test_tool_names": 11,
+   "n_test_tool_names_seen_in_training": 0,
+   "n_test_words": 20,
+   "n_test_words_seen": 7,
+   "top_seen_words": [
+    [
+     "get",
+     2508
+    ],
+    [
+     "read",
+     2057
+    ],
+    [
+     "user",
+     1288
+    ],
+    [
+     "to",
+     1071
+    ],
+    [
+     "send",
+     962
+    ],
+    [
+     "in",
+     630
+    ],
+    [
+     "add",
+     628
+    ]
+   ],
+   "top_unseen_words": [
+    [
+     "channel",
+     3584
+    ],
+    [
+     "messages",
+     1949
+    ],
+    [
+     "webpage",
+     1448
+    ],
+    [
+     "message",
+     962
+    ],
+    [
+     "channels",
+     840
+    ],
+    [
+     "slack",
+     660
+    ],
+    [
+     "users",
+     630
+    ],
+    [
+     "direct",
+     585
+    ],
+    [
+     "invite",
+     443
+    ],
+    [
+     "post",
+     410
+    ],
+    [
+     "remove",
+     217
+    ],
+    [
+     "from",
+     217
+    ],
+    [
+     "inbox",
+     108
+    ]
+   ]
+  },
+  "n_features": 292,
+  "thr_t_r80": 0.530991,
+  "train_AUROC_in_sample": 0.92511,
+  "refit_max_abs_score_diff": 0.0,
+  "top_positive": [
+   {
+    "feature": "money send",
+    "coef": 3.398522,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "delete file",
+    "coef": 2.957307,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "transactions get",
+    "coef": 2.734736,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "money get",
+    "coef": 2.659995,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "send",
+    "coef": 2.589734,
+    "share_test_poolE_pos": 0.599558,
+    "share_test_poolE_neg": 0.552381
+   },
+   {
+    "feature": "events send",
+    "coef": 2.502425,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "event get",
+    "coef": 2.436164,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "events delete",
+    "coef": 2.433545,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "file",
+    "coef": 2.424774,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "send email",
+    "coef": 2.321276,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_negative": [
+   {
+    "feature": "file send",
+    "coef": -1.501526,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "events create",
+    "coef": -1.49332,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "filename append",
+    "coef": -1.492954,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "files delete",
+    "coef": -1.407859,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "address create",
+    "coef": -1.304202,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "events get",
+    "coef": -1.249768,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "events add",
+    "coef": -1.229033,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "hotels reserve",
+    "coef": -1.19073,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "delete email",
+    "coef": -1.175428,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "transactions schedule",
+    "coef": -1.146314,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_positive_present_in_test": [
+   {
+    "feature": "send",
+    "coef": 2.589734,
+    "share_test_poolE_pos": 0.599558,
+    "share_test_poolE_neg": 0.552381
+   },
+   {
+    "feature": "read",
+    "coef": 0.990716,
+    "share_test_poolE_pos": 0.755531,
+    "share_test_poolE_neg": 0.647619
+   },
+   {
+    "feature": "add",
+    "coef": 0.495655,
+    "share_test_poolE_pos": 0.436947,
+    "share_test_poolE_neg": 0.257143
+   },
+   {
+    "feature": "in",
+    "coef": 0.149197,
+    "share_test_poolE_pos": 0.196903,
+    "share_test_poolE_neg": 0.142857
+   },
+   {
+    "feature": "get",
+    "coef": -0.035538,
+    "share_test_poolE_pos": 1.0,
+    "share_test_poolE_neg": 0.92381
+   },
+   {
+    "feature": "user",
+    "coef": -0.055832,
+    "share_test_poolE_pos": 0.566372,
+    "share_test_poolE_neg": 0.438095
+   },
+   {
+    "feature": "to",
+    "coef": -0.077276,
+    "share_test_poolE_pos": 0.566372,
+    "share_test_poolE_neg": 0.438095
+   }
+  ],
+  "top_negative_present_in_test": [
+   {
+    "feature": "to",
+    "coef": -0.077276,
+    "share_test_poolE_pos": 0.566372,
+    "share_test_poolE_neg": 0.438095
+   },
+   {
+    "feature": "user",
+    "coef": -0.055832,
+    "share_test_poolE_pos": 0.566372,
+    "share_test_poolE_neg": 0.438095
+   },
+   {
+    "feature": "get",
+    "coef": -0.035538,
+    "share_test_poolE_pos": 1.0,
+    "share_test_poolE_neg": 0.92381
+   },
+   {
+    "feature": "in",
+    "coef": 0.149197,
+    "share_test_poolE_pos": 0.196903,
+    "share_test_poolE_neg": 0.142857
+   },
+   {
+    "feature": "add",
+    "coef": 0.495655,
+    "share_test_poolE_pos": 0.436947,
+    "share_test_poolE_neg": 0.257143
+   },
+   {
+    "feature": "read",
+    "coef": 0.990716,
+    "share_test_poolE_pos": 0.755531,
+    "share_test_poolE_neg": 0.647619
+   },
+   {
+    "feature": "send",
+    "coef": 2.589734,
+    "share_test_poolE_pos": 0.599558,
+    "share_test_poolE_neg": 0.552381
+   }
+  ],
+  "n_features_present_in_test_1pct": 7
+ },
+ "LOSO_travel": {
+  "coverage": {
+   "unigram_occurrence_coverage": 0.313185,
+   "bigram_occurrence_coverage": 0.051475,
+   "frac_poolE_rows_all_features_unseen": 0.0,
+   "tool_occurrence_coverage_exact_names": 0.083948,
+   "n_test_tool_names": 23,
+   "n_test_tool_names_seen_in_training": 3,
+   "n_test_words": 40,
+   "n_test_words_seen": 10,
+   "top_seen_words": [
+    [
+     "get",
+     1506
+    ],
+    [
+     "in",
+     419
+    ],
+    [
+     "day",
+     110
+    ],
+    [
+     "calendar",
+     102
+    ],
+    [
+     "create",
+     100
+    ],
+    [
+     "event",
+     100
+    ],
+    [
+     "send",
+     46
+    ],
+    [
+     "email",
+     46
+    ],
+    [
+     "user",
+     25
+    ],
+    [
+     "events",
+     2
+    ]
+   ],
+   "top_unseen_words": [
+    [
+     "for",
+     599
+    ],
+    [
+     "hotels",
+     543
+    ],
+    [
+     "restaurants",
+     481
+    ],
+    [
+     "rating",
+     441
+    ],
+    [
+     "reviews",
+     441
+    ],
+    [
+     "car",
+     430
+    ],
+    [
+     "all",
+     425
+    ],
+    [
+     "city",
+     419
+    ],
+    [
+     "rental",
+     265
+    ],
+    [
+     "price",
+     180
+    ],
+    [
+     "prices",
+     155
+    ],
+    [
+     "companies",
+     124
+    ],
+    [
+     "address",
+     116
+    ],
+    [
+     "per",
+     108
+    ],
+    [
+     "cuisine",
+     80
+    ]
+   ]
+  },
+  "n_features": 255,
+  "thr_t_r80": 0.536972,
+  "train_AUROC_in_sample": 0.93729,
+  "refit_max_abs_score_diff": 0.0,
+  "top_positive": [
+   {
+    "feature": "webpage read",
+    "coef": 3.893713,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "money send",
+    "coef": 3.858304,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "delete file",
+    "coef": 3.259573,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "webpage get",
+    "coef": 3.154754,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "transactions get",
+    "coef": 2.995495,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "money get",
+    "coef": 2.988935,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "file",
+    "coef": 2.919442,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "events send",
+    "coef": 2.777576,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "send",
+    "coef": 2.773466,
+    "share_test_poolE_pos": 0.181319,
+    "share_test_poolE_neg": 0.126214
+   },
+   {
+    "feature": "messages read",
+    "coef": 2.673833,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_negative": [
+   {
+    "feature": "messages get",
+    "coef": -1.762676,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "filename append",
+    "coef": -1.70377,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "file send",
+    "coef": -1.599425,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "files delete",
+    "coef": -1.532377,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "events create",
+    "coef": -1.363496,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "events get",
+    "coef": -1.362211,
+    "share_test_poolE_pos": 0.005495,
+    "share_test_poolE_neg": 0.009709
+   },
+   {
+    "feature": "events add",
+    "coef": -1.295086,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "delete email",
+    "coef": -1.1888,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "messages add",
+    "coef": -1.179359,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "transactions schedule",
+    "coef": -1.169993,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_positive_present_in_test": [
+   {
+    "feature": "send",
+    "coef": 2.773466,
+    "share_test_poolE_pos": 0.181319,
+    "share_test_poolE_neg": 0.126214
+   },
+   {
+    "feature": "send email",
+    "coef": 2.558671,
+    "share_test_poolE_pos": 0.181319,
+    "share_test_poolE_neg": 0.126214
+   },
+   {
+    "feature": "event create",
+    "coef": 2.150685,
+    "share_test_poolE_pos": 0.021978,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "email",
+    "coef": 2.114326,
+    "share_test_poolE_pos": 0.181319,
+    "share_test_poolE_neg": 0.126214
+   },
+   {
+    "feature": "calendar event",
+    "coef": 2.01692,
+    "share_test_poolE_pos": 0.423077,
+    "share_test_poolE_neg": 0.165049
+   },
+   {
+    "feature": "event",
+    "coef": 2.01692,
+    "share_test_poolE_pos": 0.423077,
+    "share_test_poolE_neg": 0.165049
+   },
+   {
+    "feature": "create",
+    "coef": 1.868993,
+    "share_test_poolE_pos": 0.423077,
+    "share_test_poolE_neg": 0.165049
+   },
+   {
+    "feature": "create calendar",
+    "coef": 1.865191,
+    "share_test_poolE_pos": 0.423077,
+    "share_test_poolE_neg": 0.165049
+   },
+   {
+    "feature": "calendar",
+    "coef": 1.58829,
+    "share_test_poolE_pos": 0.428571,
+    "share_test_poolE_neg": 0.174757
+   },
+   {
+    "feature": "get",
+    "coef": 1.447153,
+    "share_test_poolE_pos": 1.0,
+    "share_test_poolE_neg": 1.0
+   }
+  ],
+  "top_negative_present_in_test": [
+   {
+    "feature": "get user",
+    "coef": -0.375063,
+    "share_test_poolE_pos": 0.082418,
+    "share_test_poolE_neg": 0.097087
+   },
+   {
+    "feature": "day get",
+    "coef": 0.321162,
+    "share_test_poolE_pos": 0.137363,
+    "share_test_poolE_neg": 0.116505
+   },
+   {
+    "feature": "event send",
+    "coef": 0.355949,
+    "share_test_poolE_pos": 0.021978,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "day create",
+    "coef": 0.416322,
+    "share_test_poolE_pos": 0.027473,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "day",
+    "coef": 0.526606,
+    "share_test_poolE_pos": 0.230769,
+    "share_test_poolE_neg": 0.23301
+   },
+   {
+    "feature": "user",
+    "coef": 0.548271,
+    "share_test_poolE_pos": 0.082418,
+    "share_test_poolE_neg": 0.097087
+   },
+   {
+    "feature": "in",
+    "coef": 0.752104,
+    "share_test_poolE_pos": 0.824176,
+    "share_test_poolE_neg": 0.864078
+   },
+   {
+    "feature": "email create",
+    "coef": 1.357308,
+    "share_test_poolE_pos": 0.021978,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "event get",
+    "coef": 1.396692,
+    "share_test_poolE_pos": 0.164835,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "get",
+    "coef": 1.447153,
+    "share_test_poolE_pos": 1.0,
+    "share_test_poolE_neg": 1.0
+   }
+  ],
+  "n_features_present_in_test_1pct": 19
+ },
+ "LOSO_workspace": {
+  "coverage": {
+   "unigram_occurrence_coverage": 0.571658,
+   "bigram_occurrence_coverage": 0.352913,
+   "frac_poolE_rows_all_features_unseen": 0.022556,
+   "tool_occurrence_coverage_exact_names": 0.361983,
+   "n_test_tool_names": 25,
+   "n_test_tool_names_seen_in_training": 3,
+   "n_test_words": 30,
+   "n_test_words_seen": 11,
+   "top_seen_words": [
+    [
+     "calendar",
+     833
+    ],
+    [
+     "events",
+     447
+    ],
+    [
+     "get",
+     433
+    ],
+    [
+     "day",
+     387
+    ],
+    [
+     "event",
+     386
+    ],
+    [
+     "create",
+     368
+    ],
+    [
+     "email",
+     337
+    ],
+    [
+     "file",
+     311
+    ],
+    [
+     "send",
+     306
+    ],
+    [
+     "to",
+     74
+    ],
+    [
+     "add",
+     31
+    ]
+   ],
+   "top_unseen_words": [
+    [
+     "search",
+     867
+    ],
+    [
+     "files",
+     398
+    ],
+    [
+     "emails",
+     369
+    ],
+    [
+     "by",
+     319
+    ],
+    [
+     "filename",
+     285
+    ],
+    [
+     "delete",
+     213
+    ],
+    [
+     "current",
+     148
+    ],
+    [
+     "list",
+     94
+    ],
+    [
+     "append",
+     74
+    ],
+    [
+     "participants",
+     31
+    ],
+    [
+     "contacts",
+     27
+    ],
+    [
+     "name",
+     25
+    ],
+    [
+     "reschedule",
+     24
+    ],
+    [
+     "received",
+     21
+    ],
+    [
+     "unread",
+     18
+    ]
+   ]
+  },
+  "n_features": 267,
+  "thr_t_r80": 0.516161,
+  "train_AUROC_in_sample": 0.913049,
+  "refit_max_abs_score_diff": 0.0,
+  "top_positive": [
+   {
+    "feature": "webpage read",
+    "coef": 3.846631,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "money send",
+    "coef": 3.687342,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "webpage get",
+    "coef": 3.192086,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "money get",
+    "coef": 2.971502,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "transactions get",
+    "coef": 2.940084,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "messages read",
+    "coef": 2.51882,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "message read",
+    "coef": 2.418397,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "money update",
+    "coef": 2.365545,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "post",
+    "coef": 2.300778,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "post webpage",
+    "coef": 2.300778,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_negative": [
+   {
+    "feature": "messages get",
+    "coef": -1.667229,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "file send",
+    "coef": -1.552504,
+    "share_test_poolE_pos": 0.070764,
+    "share_test_poolE_neg": 0.046875
+   },
+   {
+    "feature": "address create",
+    "coef": -1.523161,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "hotels reserve",
+    "coef": -1.250159,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "transactions schedule",
+    "coef": -1.187224,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "messages add",
+    "coef": -1.132543,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "channel",
+    "coef": -0.748878,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "get restaurants",
+    "coef": -0.687226,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "restaurants address",
+    "coef": -0.687226,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "messages send",
+    "coef": -0.64095,
+    "share_test_poolE_pos": 0.0,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "top_positive_present_in_test": [
+   {
+    "feature": "file get",
+    "coef": 2.239947,
+    "share_test_poolE_pos": 0.018622,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "send",
+    "coef": 2.042567,
+    "share_test_poolE_pos": 0.452514,
+    "share_test_poolE_neg": 0.226562
+   },
+   {
+    "feature": "file",
+    "coef": 1.679181,
+    "share_test_poolE_pos": 0.43203,
+    "share_test_poolE_neg": 0.234375
+   },
+   {
+    "feature": "event get",
+    "coef": 1.612281,
+    "share_test_poolE_pos": 0.026071,
+    "share_test_poolE_neg": 0.0
+   },
+   {
+    "feature": "calendar",
+    "coef": 1.455356,
+    "share_test_poolE_pos": 0.769088,
+    "share_test_poolE_neg": 0.539062
+   },
+   {
+    "feature": "create",
+    "coef": 1.454778,
+    "share_test_poolE_pos": 0.515829,
+    "share_test_poolE_neg": 0.328125
+   },
+   {
+    "feature": "event",
+    "coef": 1.454778,
+    "share_test_poolE_pos": 0.536313,
+    "share_test_poolE_neg": 0.34375
+   },
+   {
+    "feature": "create calendar",
+    "coef": 1.454778,
+    "share_test_poolE_pos": 0.472998,
+    "share_test_poolE_neg": 0.28125
+   },
+   {
+    "feature": "calendar event",
+    "coef": 1.454778,
+    "share_test_poolE_pos": 0.536313,
+    "share_test_poolE_neg": 0.34375
+   },
+   {
+    "feature": "add",
+    "coef": 1.247857,
+    "share_test_poolE_pos": 0.050279,
+    "share_test_poolE_neg": 0.03125
+   }
+  ],
+  "top_negative_present_in_test": [
+   {
+    "feature": "file send",
+    "coef": -1.552504,
+    "share_test_poolE_pos": 0.070764,
+    "share_test_poolE_neg": 0.046875
+   },
+   {
+    "feature": "events",
+    "coef": 0.014976,
+    "share_test_poolE_pos": 0.56797,
+    "share_test_poolE_neg": 0.46875
+   },
+   {
+    "feature": "day calendar",
+    "coef": 0.014976,
+    "share_test_poolE_pos": 0.324022,
+    "share_test_poolE_neg": 0.328125
+   },
+   {
+    "feature": "events get",
+    "coef": 0.014976,
+    "share_test_poolE_pos": 0.014898,
+    "share_test_poolE_neg": 0.078125
+   },
+   {
+    "feature": "calendar events",
+    "coef": 0.014976,
+    "share_test_poolE_pos": 0.56797,
+    "share_test_poolE_neg": 0.46875
+   },
+   {
+    "feature": "get day",
+    "coef": 0.014976,
+    "share_test_poolE_pos": 0.324022,
+    "share_test_poolE_neg": 0.328125
+   },
+   {
+    "feature": "to",
+    "coef": 0.11937,
+    "share_test_poolE_pos": 0.108007,
+    "share_test_poolE_neg": 0.117188
+   },
+   {
+    "feature": "day",
+    "coef": 0.174295,
+    "share_test_poolE_pos": 0.499069,
+    "share_test_poolE_neg": 0.398438
+   },
+   {
+    "feature": "day create",
+    "coef": 0.333389,
+    "share_test_poolE_pos": 0.054004,
+    "share_test_poolE_neg": 0.015625
+   },
+   {
+    "feature": "event create",
+    "coef": 0.334015,
+    "share_test_poolE_pos": 0.055866,
+    "share_test_poolE_neg": 0.0
+   }
+  ],
+  "n_features_present_in_test_1pct": 25
+ }
+}

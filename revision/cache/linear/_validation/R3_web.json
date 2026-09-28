@@ -1,0 +1,565 @@
+{
+ "setting": "R3_web",
+ "B": 1000,
+ "seed": 20260935,
+ "n_pool_E": 1955,
+ "n_pos": 1020,
+ "n_neg": 935,
+ "n_failed": 255,
+ "metrics": {
+  "LR-A": {
+   "AUROC": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "AUPRC": [
+    0.5217,
+    0.5217,
+    0.5217
+   ],
+   "recall@t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "FPR@t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "recall@t05": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "FPR@t05": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "failed_flag_rate@t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "failed_flag_rate@t05": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "AUROC_all_rows": 0.5
+  },
+  "LR-B": {
+   "AUROC": [
+    0.8963,
+    0.8812,
+    0.9095
+   ],
+   "AUPRC": [
+    0.8988,
+    0.8828,
+    0.9137
+   ],
+   "recall@t_r80": [
+    0.8245,
+    0.802,
+    0.8471
+   ],
+   "FPR@t_r80": [
+    0.1968,
+    0.1722,
+    0.2214
+   ],
+   "recall@t05": [
+    0.7618,
+    0.7353,
+    0.7873
+   ],
+   "FPR@t05": [
+    0.1444,
+    0.1219,
+    0.1679
+   ],
+   "failed_flag_rate@t_r80": [
+    0.4235,
+    0.3685,
+    0.4863
+   ],
+   "failed_flag_rate@t05": [
+    0.3725,
+    0.3137,
+    0.4353
+   ],
+   "AUROC_all_rows": 0.8743
+  },
+  "LR-C": {
+   "AUROC": [
+    0.8623,
+    0.8465,
+    0.8765
+   ],
+   "AUPRC": [
+    0.8684,
+    0.8517,
+    0.8829
+   ],
+   "recall@t_r80": [
+    0.9902,
+    0.9843,
+    0.9951
+   ],
+   "FPR@t_r80": [
+    0.707,
+    0.6802,
+    0.7369
+   ],
+   "recall@t05": [
+    0.9902,
+    0.9843,
+    0.9951
+   ],
+   "FPR@t05": [
+    0.7059,
+    0.6791,
+    0.7369
+   ],
+   "failed_flag_rate@t_r80": [
+    0.7451,
+    0.6902,
+    0.7962
+   ],
+   "failed_flag_rate@t05": [
+    0.7451,
+    0.6941,
+    0.8
+   ],
+   "AUROC_all_rows": 0.8427
+  },
+  "LR-B-noobs": {
+   "AUROC": [
+    0.6749,
+    0.6488,
+    0.6979
+   ],
+   "AUPRC": [
+    0.7194,
+    0.6947,
+    0.742
+   ],
+   "recall@t_r80": [
+    0.4706,
+    0.4412,
+    0.501
+   ],
+   "FPR@t_r80": [
+    0.1743,
+    0.1519,
+    0.2
+   ],
+   "recall@t05": [
+    0.2186,
+    0.1941,
+    0.2431
+   ],
+   "FPR@t05": [
+    0.0385,
+    0.0267,
+    0.0513
+   ],
+   "failed_flag_rate@t_r80": [
+    0.2235,
+    0.1725,
+    0.2745
+   ],
+   "failed_flag_rate@t05": [
+    0.0471,
+    0.0235,
+    0.0745
+   ],
+   "AUROC_all_rows": 0.67
+  },
+  "LR-C-noobs": {
+   "AUROC": [
+    0.6723,
+    0.6483,
+    0.695
+   ],
+   "AUPRC": [
+    0.6713,
+    0.6479,
+    0.6946
+   ],
+   "recall@t_r80": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "FPR@t_r80": [
+    0.9786,
+    0.9679,
+    0.9872
+   ],
+   "recall@t05": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "FPR@t05": [
+    0.8225,
+    0.8,
+    0.8481
+   ],
+   "failed_flag_rate@t_r80": [
+    0.9961,
+    0.9882,
+    1.0
+   ],
+   "failed_flag_rate@t05": [
+    0.8196,
+    0.7686,
+    0.8667
+   ],
+   "AUROC_all_rows": 0.6689
+  },
+  "LR-B-minus": {
+   "AUROC": [
+    0.8987,
+    0.885,
+    0.9112
+   ],
+   "AUPRC": [
+    0.9087,
+    0.8951,
+    0.9209
+   ],
+   "recall@t_r80": [
+    0.8863,
+    0.8657,
+    0.9039
+   ],
+   "FPR@t_r80": [
+    0.2834,
+    0.2567,
+    0.3123
+   ],
+   "recall@t05": [
+    0.8343,
+    0.8108,
+    0.8569
+   ],
+   "FPR@t05": [
+    0.2203,
+    0.1947,
+    0.2481
+   ],
+   "failed_flag_rate@t_r80": [
+    0.5255,
+    0.4667,
+    0.5843
+   ],
+   "failed_flag_rate@t05": [
+    0.4627,
+    0.4,
+    0.5255
+   ],
+   "AUROC_all_rows": 0.8705
+  },
+  "LR-C-drop": {
+   "AUROC": [
+    0.8943,
+    0.8795,
+    0.9075
+   ],
+   "AUPRC": [
+    0.8982,
+    0.8827,
+    0.9131
+   ],
+   "recall@t_r80": [
+    0.7863,
+    0.7618,
+    0.8098
+   ],
+   "FPR@t_r80": [
+    0.1679,
+    0.1433,
+    0.1925
+   ],
+   "recall@t05": [
+    0.7706,
+    0.7461,
+    0.7951
+   ],
+   "FPR@t05": [
+    0.1583,
+    0.1347,
+    0.1818
+   ],
+   "failed_flag_rate@t_r80": [
+    0.3412,
+    0.2824,
+    0.4039
+   ],
+   "failed_flag_rate@t05": [
+    0.3176,
+    0.2549,
+    0.3726
+   ],
+   "AUROC_all_rows": 0.8767
+  },
+  "Markov": {
+   "AUROC": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "AUPRC": [
+    0.5217,
+    0.5217,
+    0.5217
+   ],
+   "recall@t_r80": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "FPR@t_r80": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "recall@t05": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "FPR@t05": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "failed_flag_rate@t_r80": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "failed_flag_rate@t05": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "AUROC_all_rows": 0.5
+  },
+  "IForest": {
+   "AUROC": [
+    0.6544,
+    0.6305,
+    0.6773
+   ],
+   "AUPRC": [
+    0.6507,
+    0.6273,
+    0.6762
+   ],
+   "recall@t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "FPR@t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "recall@t05": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "FPR@t05": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "failed_flag_rate@t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "failed_flag_rate@t05": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "AUROC_all_rows": 0.5981
+  },
+  "TFIDF": {
+   "AUROC": [
+    0.98,
+    0.9758,
+    0.9842
+   ],
+   "AUPRC": [
+    0.9835,
+    0.9802,
+    0.9869
+   ],
+   "recall@t_r80": [
+    0.5716,
+    0.5421,
+    0.6049
+   ],
+   "FPR@t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "recall@t05": [
+    0.9451,
+    0.9323,
+    0.9588
+   ],
+   "FPR@t05": [
+    0.1455,
+    0.123,
+    0.1668
+   ],
+   "failed_flag_rate@t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "failed_flag_rate@t05": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "AUROC_all_rows": 0.9843
+  },
+  "TFIDF-nodigit": {
+   "AUROC": [
+    0.9688,
+    0.9623,
+    0.9749
+   ],
+   "AUPRC": [
+    0.9763,
+    0.9716,
+    0.9807
+   ],
+   "recall@t_r80": [
+    0.5941,
+    0.5647,
+    0.6265
+   ],
+   "FPR@t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "recall@t05": [
+    0.8892,
+    0.8706,
+    0.9088
+   ],
+   "FPR@t05": [
+    0.0888,
+    0.0706,
+    0.107
+   ],
+   "failed_flag_rate@t_r80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "failed_flag_rate@t05": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "AUROC_all_rows": 0.9755
+  }
+ },
+ "sizes": {
+  "n_train": 8446,
+  "n_train_pos": 3686,
+  "n_test": 2210,
+  "n_test_by_category": {
+   "benign": 680,
+   "attacked": 1020,
+   "hard_negative": 255,
+   "failed_attack": 255
+  },
+  "vocab_size": 83,
+  "kappa": 0.0,
+  "kappa_all_rows": 0.0,
+  "scheme": "single",
+  "detectors": [
+   "LR-A",
+   "LR-B",
+   "LR-C",
+   "LR-B-noobs",
+   "LR-C-noobs",
+   "LR-B-minus",
+   "LR-C-drop",
+   "Markov",
+   "IForest",
+   "TFIDF",
+   "TFIDF-nodigit"
+  ]
+ },
+ "format_checks": {
+  "meta_keys_complete": true,
+  "y_matches_meta": true,
+  "poolE_matches_meta": true,
+  "failed_rows_not_in_poolE": true,
+  "y1_only_attacked": true,
+  "ids_unique": true,
+  "score_and_pred_shapes": true,
+  "scores_finite": true,
+  "pred_equals_score_vs_training_threshold": true,
+  "t05_is_0.5": true,
+  "lrc_parts_reproduce_scores": true,
+  "coefs_present_LR-B_LR-C": true,
+  "row_order_equals_gru_cache": true
+ },
+ "reproduction_checks": {
+  "n": 7,
+  "n_pass": 7,
+  "max_abs_score_diff": 3.3916203179273907e-12,
+  "auroc_differs_from_v03_code_path": [
+   {
+    "rep": 0,
+    "check": "LR-A_vs_ablation.fit",
+    "auroc_v03_code": 0.499,
+    "auroc_cache": 0.5
+   }
+  ]
+ },
+ "lr_converged": {
+  "LR-A": true,
+  "LR-B": true,
+  "LR-C": true,
+  "LR-B-noobs": true,
+  "LR-C-noobs": true,
+  "LR-B-minus": true,
+  "LR-C-drop": true,
+  "TFIDF": true,
+  "TFIDF-nodigit": true
+ },
+ "tfidf_n_features": {
+  "TFIDF": 49677,
+  "TFIDF-nodigit": 43896
+ },
+ "provenance": {
+  "script": "<repo>\\revision\\build_linear_cache.py",
+  "script_sha256": "a4a4997543387841e271af9002baa9649b3311939c2870029c5ac371086d473f",
+  "python": "3.10.4",
+  "sklearn": "1.7.2",
+  "numpy": "2.2.6",
+  "built": "2026-09-26T21:32:51+0200",
+  "agentdojo_traces_sha256": "2c81a895c1f8be7ffdd88e790e3f75b83442c75e9c58cdf388d17df3df92296d",
+  "agentdojo_failed_sha256": "12292b33dcf83ffb8ae1d5156d2a44a54ee6b10fb16943160af0fec6134901f7"
+ }
+}

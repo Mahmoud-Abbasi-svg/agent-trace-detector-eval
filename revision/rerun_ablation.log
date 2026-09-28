@@ -1,0 +1,19 @@
+done R1
+<repo>\evalkit.py:55: RuntimeWarning: Mean of empty slice
+  return {k: float(np.nanmean([m[k] for m in ms])) for k in ms[0]}
+done R3 medical
+<repo>\evalkit.py:55: RuntimeWarning: Mean of empty slice
+  return {k: float(np.nanmean([m[k] for m in ms])) for k in ms[0]}
+done R3 banking
+<repo>\evalkit.py:55: RuntimeWarning: Mean of empty slice
+  return {k: float(np.nanmean([m[k] for m in ms])) for k in ms[0]}
+done R3 web
+<repo>\evalkit.py:55: RuntimeWarning: Mean of empty slice
+  return {k: float(np.nanmean([m[k] for m in ms])) for k in ms[0]}
+done R3 email
+<repo>\evalkit.py:55: RuntimeWarning: Mean of empty slice
+  return {k: float(np.nanmean([m[k] for m in ms])) for k in ms[0]}
+done R3 coding
+done R4 P0
+done R4 C1
+wrote ablation_results.json

@@ -1,0 +1,37 @@
+# requirements-lock.txt -- exact versions installed on the machine that produced the revision results
+# generated 2026-09-27 02:21:14 +0200 by revision/repro_checks.py (importlib.metadata)
+# Python 3.10.4 (CPython), Windows-10-10.0.26200-SP0
+# torch is the CPU build: pip install -r requirements-lock.txt --extra-index-url https://download.pytorch.org/whl/cpu
+# standard library only otherwise: os, sys, re, json, glob, math, time, pickle, argparse, hashlib, collections, itertools, copy, statistics, platform, warnings, subprocess, shutil, datetime
+
+# direct imports of the project code
+numpy==2.2.6
+scipy==1.15.3
+scikit-learn==1.7.2
+torch==2.11.0+cpu
+matplotlib==3.10.8
+
+# installed runtime dependencies of the packages above
+contourpy==1.3.2
+cycler==0.12.1
+filelock==3.32.6
+fonttools==4.61.1
+fsspec==2026.7.0
+Jinja2==3.1.2
+joblib==1.5.3
+kiwisolver==1.4.9
+MarkupSafe==2.1.2
+mpmath==1.3.0
+networkx==3.4.2
+packaging==21.3
+pillow==12.1.1
+pyparsing==3.0.9
+python-dateutil==2.9.0.post0
+setuptools==81.0.0
+six==1.17.0
+sympy==1.14.0
+threadpoolctl==3.6.0
+typing_extensions==4.16.0
+
+# optional: test runner for tests/test_agentdojo_alignment.py (the test also runs as a plain script)
+# pytest==9.1.0

@@ -1,0 +1,22 @@
+R1             tr=8775 val=1880 te=1881 prev tr/te=0.4416/0.4418 vocab=103 cov={'tool_occ_cov': 1.0, 'distinct_cov': 1.0, 'frac_zero_known': 0.0, 'frac_any_unseen': 0.0}
+R2             tr=9081 val=None te=1722 prev tr/te=0.4414/0.4501 vocab=103 cov={'tool_occ_cov': 1.0, 'distinct_cov': 1.0, 'frac_zero_known': 0.0, 'frac_any_unseen': 0.0}
+R3_medical     tr=8446 val=None te=2210 prev tr/te=0.4364/0.4615 vocab=83 cov={'tool_occ_cov': 0.0, 'distinct_cov': 0.0, 'frac_zero_known': 1.0, 'frac_any_unseen': 1.0}
+R3_banking     tr=8840 val=None te=1816 prev tr/te=0.4615/0.3447 vocab=83 cov={'tool_occ_cov': 0.0, 'distinct_cov': 0.0, 'frac_zero_known': 1.0, 'frac_any_unseen': 1.0}
+R3_web         tr=8446 val=None te=2210 prev tr/te=0.4364/0.4615 vocab=83 cov={'tool_occ_cov': 0.0, 'distinct_cov': 0.0, 'frac_zero_known': 1.0, 'frac_any_unseen': 1.0}
+R3_email       tr=8446 val=None te=2210 prev tr/te=0.4364/0.4615 vocab=83 cov={'tool_occ_cov': 0.0, 'distinct_cov': 0.0, 'frac_zero_known': 1.0, 'frac_any_unseen': 1.0}
+R3_coding      tr=8446 val=None te=2210 prev tr/te=0.4364/0.4615 vocab=80 cov={'tool_occ_cov': 0.0, 'distinct_cov': 0.0, 'frac_zero_known': 1.0, 'frac_any_unseen': 1.0}
+R4_transfer    tr=10656 val=None te=2686 prev tr/te=0.4416/0.8541 vocab=103 cov={'tool_occ_cov': 0.0751, 'distinct_cov': 0.1045, 'frac_zero_known': 0.6981, 'frac_any_unseen': 0.9873}
+seeds: {'train_seeds': [0, 1, 2], 'val_frac': 0.1, 'val_seed_base': 1000, 'K': 5}
+wrote gru_audit.json
+done R1
+done R2
+done R3 medical
+done R3 banking
+done R3 web
+done R3 email
+done R3 coding
+done R1_wd
+done R4 P0
+done R4 C1
+done R4 model_balanced
+wrote gru_results.json

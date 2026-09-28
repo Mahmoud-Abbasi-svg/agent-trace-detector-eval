@@ -1,0 +1,70 @@
+{
+ "counts_kept": {
+  "benign": 392,
+  "attack_failed": 4987,
+  "attacked": 2294
+ },
+ "excluded_fewer_than_two_calls": {
+  "benign_excluded_short": 236,
+  "attacked_excluded_short": 70,
+  "attack_failed_excluded_short": 2260
+ },
+ "unreadable": 0,
+ "by_model": {
+  "gpt-4o-2024-05-13": {
+   "benign_all": 124,
+   "benign": 92,
+   "benign_excluded_short": 32,
+   "attacked_all": 1936,
+   "attacked_excluded_short": 70,
+   "attack_failed_all": 4839,
+   "attack_failed": 3623,
+   "attacked": 1866,
+   "attack_failed_excluded_short": 1216
+  },
+  "claude-3-5-sonnet-20241022": {
+   "benign_all": 124,
+   "benign_excluded_short": 40,
+   "benign": 84,
+   "attack_failed_all": 622,
+   "attack_failed_excluded_short": 184,
+   "attacked_all": 7,
+   "attacked": 7,
+   "attack_failed": 438
+  },
+  "gemini-1.5-pro-002": {
+   "benign_all": 124,
+   "benign": 79,
+   "benign_excluded_short": 45,
+   "attacked_all": 107,
+   "attacked": 107,
+   "attack_failed_all": 522,
+   "attack_failed_excluded_short": 185,
+   "attack_failed": 337
+  },
+  "gpt-4-turbo-2024-04-09": {
+   "benign_all": 124,
+   "benign": 82,
+   "benign_excluded_short": 42,
+   "attacked_all": 180,
+   "attacked": 180,
+   "attack_failed_all": 449,
+   "attack_failed_excluded_short": 141,
+   "attack_failed": 308
+  },
+  "gemini-2.0-flash-001": {
+   "benign_all": 132,
+   "benign_excluded_short": 77,
+   "benign": 55,
+   "attack_failed_all": 815,
+   "attack_failed_excluded_short": 534,
+   "attacked_all": 134,
+   "attacked": 134,
+   "attack_failed": 281
+  }
+ },
+ "alignment": {
+  "unmatched_calls": 9
+ },
+ "truncation": "none"
+}

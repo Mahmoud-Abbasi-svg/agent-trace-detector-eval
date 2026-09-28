@@ -1,0 +1,29 @@
+{
+ "setting": "R1",
+ "seed": 0,
+ "n_test_poolE": 1656,
+ "scores_identical": true,
+ "max_abs_score_diff": 0.0,
+ "params_identical": true,
+ "thr_identical": true,
+ "thr_r80": 0.8944769501686096,
+ "vocab_identical": true,
+ "auroc_train_gru": 0.9364475075666412,
+ "auroc_copy_p0": 0.9364475075666412,
+ "seconds_train_gru": 31.60602855682373,
+ "seconds_copy": 31.66309428215027,
+ "epochs_run": 30,
+ "best_epoch": 26,
+ "torch": "2.11.0+cpu",
+ "threads": 8,
+ "timestamp": "2026-09-26T21:08:52",
+ "stream_check": {
+  "n_rows": 1500,
+  "epochs_p0": 6,
+  "epochs_p02": 6,
+  "common_epochs": 6,
+  "batch_orders_identical": true,
+  "realised_drop_rate_p02": 0.19701863354037266,
+  "tokens_dropped_p0": 0
+ }
+}

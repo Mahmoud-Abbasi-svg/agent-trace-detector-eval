@@ -1,0 +1,421 @@
+{
+ "setting": "R2",
+ "n_test": 1722,
+ "n_poolE": 1504,
+ "n_pos": 775,
+ "n_neg": 729,
+ "n_not_poolE": 218,
+ "test_composition": {
+  "failed_attack": 218,
+  "benign": 525,
+  "attacked": 775,
+  "hard_negative": 204
+ },
+ "n_train": 9081,
+ "n_train_pos": 4008,
+ "kappa": 1.0,
+ "vocab_size": 103,
+ "bootstrap": {
+  "B": 2000,
+  "seed": 7006,
+  "type": "evalkit.bootstrap, stratified over pool-E test trajectories"
+ },
+ "detectors": {
+  "GRU": {
+   "AUROC": [
+    0.9154,
+    0.8975,
+    0.9337
+   ],
+   "AUPRC": [
+    0.9212,
+    0.8992,
+    0.9432
+   ],
+   "ops": {
+    "t_r80": {
+     "precision": [
+      0.9368,
+      0.9079,
+      0.9635
+     ],
+     "recall": [
+      0.6559,
+      0.6194,
+      0.6891
+     ],
+     "FPR": [
+      0.0471,
+      0.0261,
+      0.07
+     ],
+     "FNR": [
+      0.3441,
+      0.3109,
+      0.3806
+     ],
+     "alerts_per_1000": [
+      360.8156,
+      339.7606,
+      380.3191
+     ]
+    },
+    "t_val80": {
+     "precision": [
+      0.9007,
+      0.8643,
+      0.944
+     ],
+     "recall": [
+      0.7578,
+      0.7238,
+      0.791
+     ],
+     "FPR": [
+      0.0892,
+      0.048,
+      0.1248
+     ],
+     "FNR": [
+      0.2422,
+      0.209,
+      0.2762
+     ],
+     "alerts_per_1000": [
+      433.7323,
+      410.9043,
+      456.117
+     ]
+    },
+    "t05": {
+     "precision": [
+      0.8628,
+      0.8285,
+      0.9034
+     ],
+     "recall": [
+      0.8297,
+      0.8,
+      0.8581
+     ],
+     "FPR": [
+      0.1408,
+      0.0947,
+      0.1824
+     ],
+     "FNR": [
+      0.1703,
+      0.1419,
+      0.2
+     ],
+     "alerts_per_1000": [
+      495.789,
+      464.0957,
+      523.2713
+     ]
+    }
+   },
+   "per_seed_or_rep": {
+    "AUROC": [
+     0.913,
+     0.9238,
+     0.9095
+    ],
+    "AUPRC": [
+     0.9146,
+     0.9331,
+     0.9157
+    ]
+   },
+   "thresholds": {
+    "t_r80": [
+     0.945,
+     0.9346,
+     0.9332
+    ],
+    "t05": 0.5,
+    "t_val80": [
+     0.7985,
+     0.7641,
+     0.7444
+    ]
+   },
+   "flag_rate_by_category": {
+    "attacked": {
+     "t_r80": 0.6559,
+     "t_val80": 0.7578,
+     "t05": 0.8297
+    },
+    "benign": {
+     "t_r80": 0.0267,
+     "t_val80": 0.0629,
+     "t05": 0.1073
+    },
+    "failed_attack": {
+     "t_r80": 0.0673,
+     "t_val80": 0.1086,
+     "t05": 0.1606
+    },
+    "hard_negative": {
+     "t_r80": 0.0997,
+     "t_val80": 0.1569,
+     "t05": 0.2271
+    }
+   },
+   "mean_score_by_category": {
+    "attacked": 0.8135,
+    "benign": 0.1307,
+    "failed_attack": 0.1815,
+    "hard_negative": 0.2375
+   },
+   "failed_flag_rate": {
+    "t_r80": [
+     0.0673,
+     0.0367,
+     0.1055
+    ],
+    "t_val80": [
+     0.1086,
+     0.055,
+     0.1697
+    ],
+    "t05": [
+     0.1606,
+     0.1054,
+     0.2385
+    ]
+   },
+   "failed_category": [
+    "failed_attack"
+   ],
+   "mechanism": {
+    "tool_contrib_mean": {
+     "train_neg": [
+      -4.8393,
+      -5.2517,
+      -5.1708
+     ],
+     "train_pos": [
+      5.1837,
+      4.8424,
+      4.9175
+     ],
+     "test_neg_poolE": [
+      -3.3897,
+      -3.8216,
+      -3.5853
+     ],
+     "test_pos": [
+      3.8134,
+      3.506,
+      3.5721
+     ],
+     "test_failed": [
+      -2.1837,
+      -2.7144,
+      -2.7721
+     ],
+     "mean_over_seeds": {
+      "train_neg": -5.0873,
+      "train_pos": 4.9812,
+      "test_neg_poolE": -3.5989,
+      "test_pos": 3.6305,
+      "test_failed": -2.5567
+     }
+    },
+    "beh_contrib_mean": {
+     "train_neg": [
+      -0.7479,
+      -0.7671,
+      -0.7722
+     ],
+     "train_pos": [
+      0.9468,
+      0.971,
+      0.9775
+     ],
+     "test_neg_poolE": [
+      -0.8959,
+      -0.8603,
+      -0.8932
+     ],
+     "test_pos": [
+      0.9216,
+      0.96,
+      0.9223
+     ],
+     "test_failed": [
+      -1.4219,
+      -1.4251,
+      -1.4576
+     ],
+     "mean_over_seeds": {
+      "train_neg": -0.7624,
+      "train_pos": 0.9651,
+      "test_neg_poolE": -0.8831,
+      "test_pos": 0.9346,
+      "test_failed": -1.4349
+     }
+    },
+    "bias": [
+     -0.2284,
+     -0.1407,
+     -0.096
+    ],
+    "unk_norm": [
+     0.6905,
+     0.6438,
+     0.0536
+    ],
+    "unk_init_norm": [
+     6.1373,
+     6.1452,
+     5.5967
+    ],
+    "tool_emb_norm_median": [
+     4.1178,
+     4.1833,
+     4.1012
+    ],
+    "tool_emb_norm_mean": [
+     4.1136,
+     4.2181,
+     4.0597
+    ],
+    "n_tool_emb_rows": [
+     103,
+     103,
+     103
+    ],
+    "unk_train_steps": [
+     0,
+     0,
+     0
+    ],
+    "logit_absmax_test": [
+     16.5186,
+     16.396,
+     17.9746
+    ],
+    "score_frac_exactly_1_poolE": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "score_frac_exactly_0_poolE": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "train_rows_note": "train_* = the 90% fit partition passed to the training function (validation rows excluded)",
+    "unk_norm_mean_over_seeds": 0.4626,
+    "tool_emb_norm_median_mean_over_seeds": 4.1341
+   },
+   "train": {
+    "units": [
+     "seed0",
+     "seed1",
+     "seed2"
+    ],
+    "epochs_run": [
+     30,
+     30,
+     30
+    ],
+    "best_epoch": [
+     28,
+     28,
+     28
+    ],
+    "best_val_ap": [
+     0.9617,
+     0.9288,
+     0.9531
+    ],
+    "thr_r80": [
+     0.945,
+     0.9346,
+     0.9332
+    ],
+    "thr_val80": [
+     0.7985,
+     0.7641,
+     0.7444
+    ],
+    "n_fit": [
+     8173,
+     8173,
+     8173
+    ],
+    "n_fit_pos": [
+     3607,
+     3607,
+     3607
+    ],
+    "n_val": [
+     908,
+     908,
+     908
+    ],
+    "n_val_pos": [
+     401,
+     401,
+     401
+    ],
+    "vocab_size_model": [
+     103,
+     103,
+     103
+    ],
+    "unk_train_steps": [
+     0,
+     0,
+     0
+    ],
+    "unk_train_traces": [
+     0,
+     0,
+     0
+    ],
+    "drop_rate_realised": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "fit_seconds": [
+     30.2106,
+     29.737,
+     30.0821
+    ],
+    "decomp_max_abs_err": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "fit_seconds_total": 90.0296,
+   "n_fits": 3
+  }
+ },
+ "paired": {},
+ "cluster_bootstrap_sensitivity": {
+  "cluster_key": "task",
+  "n_clusters": 35,
+  "B": 2000,
+  "seed": 7206,
+  "method": "resample whole clusters of pool-E rows with replacement (n_clusters draws), one seed/rep per replicate",
+  "GRU": {
+   "AUROC": [
+    0.9154,
+    0.885,
+    0.9416
+   ],
+   "AUPRC": [
+    0.9212,
+    0.8906,
+    0.9486
+   ]
+  }
+ },
+ "seconds": 3.8335
+}

@@ -1,0 +1,52 @@
+{
+ "torch": "2.11.0+cpu",
+ "threads": 8,
+ "timestamp": "2026-09-26T21:16:13",
+ "R1_GRU_seed0_train_gru_vs_cache": {
+  "identical": true,
+  "max_abs_diff": 0.0,
+  "thr_equal": true,
+  "seconds": 30.3
+ },
+ "R1_GRUdrop0.2_seed0_refit_vs_cache": {
+  "identical": true,
+  "max_abs_diff": 0.0,
+  "seconds": 30.7
+ },
+ "R4_GRU_seed0_train_gru_vs_cache": {
+  "P0_identical": true,
+  "failed_identical": true,
+  "max_abs_diff": 0.0,
+  "seconds": 29.5
+ },
+ "WUT_rep0_fold0_train_gru_vs_cache": {
+  "folds_equal_cache": true,
+  "identical": true,
+  "max_abs_diff": 0.0,
+  "thr_equal": true,
+  "seconds": 10.6
+ },
+ "unk_train_steps_untruncated": {
+  "R1_seed0": 0,
+  "R1_seed1": 0,
+  "R1_seed2": 0,
+  "R4_seed0": 0,
+  "R4_seed1": 0,
+  "R4_seed2": 0,
+  "R3_medical_seed0": 0,
+  "R3_medical_seed1": 0,
+  "R3_medical_seed2": 0,
+  "R3_banking_seed0": 0,
+  "R3_banking_seed1": 0,
+  "R3_banking_seed2": 0,
+  "R3_web_seed0": 0,
+  "R3_web_seed1": 0,
+  "R3_web_seed2": 0,
+  "R3_email_seed0": 0,
+  "R3_email_seed1": 0,
+  "R3_email_seed2": 0,
+  "R3_coding_seed0": 0,
+  "R3_coding_seed1": 0,
+  "R3_coding_seed2": 0
+ }
+}

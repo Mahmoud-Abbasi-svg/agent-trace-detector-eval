@@ -1,0 +1,126 @@
+{
+ "R1": {
+  "n_train": 8775,
+  "n_val": 1880,
+  "n_test": 1881,
+  "train_prev": 0.4416,
+  "test_prev": 0.4418,
+  "tool_vocab_size": 103,
+  "coverage": {
+   "tool_occ_cov": 1.0,
+   "distinct_cov": 1.0,
+   "frac_zero_known": 0.0,
+   "frac_any_unseen": 0.0
+  }
+ },
+ "R2": {
+  "n_train": 9081,
+  "n_val": null,
+  "n_test": 1722,
+  "train_prev": 0.4414,
+  "test_prev": 0.4501,
+  "tool_vocab_size": 103,
+  "coverage": {
+   "tool_occ_cov": 1.0,
+   "distinct_cov": 1.0,
+   "frac_zero_known": 0.0,
+   "frac_any_unseen": 0.0
+  }
+ },
+ "R3_medical": {
+  "n_train": 8446,
+  "n_val": null,
+  "n_test": 2210,
+  "train_prev": 0.4364,
+  "test_prev": 0.4615,
+  "tool_vocab_size": 83,
+  "coverage": {
+   "tool_occ_cov": 0.0,
+   "distinct_cov": 0.0,
+   "frac_zero_known": 1.0,
+   "frac_any_unseen": 1.0
+  }
+ },
+ "R3_banking": {
+  "n_train": 8840,
+  "n_val": null,
+  "n_test": 1816,
+  "train_prev": 0.4615,
+  "test_prev": 0.3447,
+  "tool_vocab_size": 83,
+  "coverage": {
+   "tool_occ_cov": 0.0,
+   "distinct_cov": 0.0,
+   "frac_zero_known": 1.0,
+   "frac_any_unseen": 1.0
+  }
+ },
+ "R3_web": {
+  "n_train": 8446,
+  "n_val": null,
+  "n_test": 2210,
+  "train_prev": 0.4364,
+  "test_prev": 0.4615,
+  "tool_vocab_size": 83,
+  "coverage": {
+   "tool_occ_cov": 0.0,
+   "distinct_cov": 0.0,
+   "frac_zero_known": 1.0,
+   "frac_any_unseen": 1.0
+  }
+ },
+ "R3_email": {
+  "n_train": 8446,
+  "n_val": null,
+  "n_test": 2210,
+  "train_prev": 0.4364,
+  "test_prev": 0.4615,
+  "tool_vocab_size": 83,
+  "coverage": {
+   "tool_occ_cov": 0.0,
+   "distinct_cov": 0.0,
+   "frac_zero_known": 1.0,
+   "frac_any_unseen": 1.0
+  }
+ },
+ "R3_coding": {
+  "n_train": 8446,
+  "n_val": null,
+  "n_test": 2210,
+  "train_prev": 0.4364,
+  "test_prev": 0.4615,
+  "tool_vocab_size": 80,
+  "coverage": {
+   "tool_occ_cov": 0.0,
+   "distinct_cov": 0.0,
+   "frac_zero_known": 1.0,
+   "frac_any_unseen": 1.0
+  }
+ },
+ "R4_transfer": {
+  "n_train": 10656,
+  "n_val": null,
+  "n_test": 2686,
+  "train_prev": 0.4416,
+  "test_prev": 0.8541,
+  "tool_vocab_size": 103,
+  "coverage": {
+   "tool_occ_cov": 0.0751,
+   "distinct_cov": 0.1045,
+   "frac_zero_known": 0.6981,
+   "frac_any_unseen": 0.9873
+  }
+ },
+ "seeds": {
+  "train_seeds": [
+   0,
+   1,
+   2
+  ],
+  "val_frac": 0.1,
+  "val_seed_base": 1000,
+  "K": 5
+ },
+ "R1_val_source": "data/val.jsonl (1880)",
+ "other_val_source": "stratified 10% of that rung's train"
+}

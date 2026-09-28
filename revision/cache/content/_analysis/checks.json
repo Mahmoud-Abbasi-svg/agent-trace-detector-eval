@@ -1,0 +1,54 @@
+{
+ "R1:TFIDF": {
+  "AUROC_vs_evalkit": 0.0,
+  "AP_native_vs_sklearn": 0.0,
+  "AP_w02_vs_sklearn_weighted": 0.0,
+  "AP_w10_vs_sklearn_weighted": 0.0
+ },
+ "R1:LR-C": {
+  "AUROC_vs_evalkit": 0.0,
+  "AP_native_vs_sklearn": 0.0,
+  "AP_w02_vs_sklearn_weighted": 0.0,
+  "AP_w10_vs_sklearn_weighted": 0.0
+ },
+ "R3_banking:TFIDF": {
+  "AUROC_vs_evalkit": 0.0,
+  "AP_native_vs_sklearn": 0.0,
+  "AP_w02_vs_sklearn_weighted": 0.0,
+  "AP_w10_vs_sklearn_weighted": 0.0
+ },
+ "R3_banking:LR-C": {
+  "AUROC_vs_evalkit": 0.0,
+  "AP_native_vs_sklearn": 0.0,
+  "AP_w02_vs_sklearn_weighted": 0.0,
+  "AP_w10_vs_sklearn_weighted": 0.0
+ },
+ "R4:TFIDF": {
+  "AUROC_vs_evalkit": 0.0,
+  "AP_native_vs_sklearn": 0.0,
+  "AP_w02_vs_sklearn_weighted": 0.0,
+  "AP_w10_vs_sklearn_weighted": 0.0
+ },
+ "R4:LR-C": {
+  "AUROC_vs_evalkit": 0.0,
+  "AP_native_vs_sklearn": 0.0,
+  "AP_w02_vs_sklearn_weighted": 0.0,
+  "AP_w10_vs_sklearn_weighted": 0.0
+ },
+ "LOSO_slack:TFIDF": {
+  "AUROC_vs_evalkit": 0.0,
+  "AP_native_vs_sklearn": 0.0,
+  "AP_w02_vs_sklearn_weighted": 0.0,
+  "AP_w10_vs_sklearn_weighted": 0.0
+ },
+ "LOSO_slack:LR-C": {
+  "AUROC_vs_evalkit": 0.0,
+  "AP_native_vs_sklearn": 0.0,
+  "AP_w02_vs_sklearn_weighted": 0.0,
+  "AP_w10_vs_sklearn_weighted": 0.0
+ },
+ "max_abs_diff": 0.0,
+ "pass": true,
+ "AUROC_vs_validation_json_max_abs_diff": 4.9e-05,
+ "AUROC_vs_validation_json_note": "validation.json stores 4 decimals, so differences up to 5e-5 are rounding"
+}
