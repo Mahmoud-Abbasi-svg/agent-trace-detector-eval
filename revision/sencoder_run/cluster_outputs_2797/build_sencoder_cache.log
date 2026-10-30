@@ -1,0 +1,1036 @@
+2026-10-08T16:55:35 smoke SE R1 seed0: {'fit_seconds': 165.48564505577087, 'total_seconds': 168.25619506835938, 'epochs': 27, 'best_epoch': 19, 'best_val_f1': 0.9704749679075738, 'class_weights': [0.08053273254025846, 0.7517235192007091, 0.33700950262957996, 2.8307342456294524], 'pos_weight': 1.2646974476627473, 'masked_baseline_max_abs_diff': 0.0, 'padded_baseline_max_abs_diff': 0.0, 'auroc_all_test_sanity': 0.9983531029740416}
+2026-10-08T16:58:14 smoke SE R4 seed0: {'fit_seconds': 156.92072296142578, 'total_seconds': 158.69667267799377, 'epochs': 21, 'best_epoch': 13, 'best_val_f1': 0.9767932489451476, 'class_weights': [0.0820181040526975, 0.7647921910368416, 0.3440874247361122, 2.809102280174349], 'pos_weight': 1.2644628099173554, 'masked_baseline_max_abs_diff': None, 'padded_baseline_max_abs_diff': None}
+2026-10-08T16:59:39 smoke SE WUT rep0_fold0: {'fit_seconds': 85.0623517036438, 'total_seconds': 85.17191886901855, 'epochs': 36, 'best_epoch': 28, 'best_val_f1': 0.988950276243094, 'class_weights': [1.0, 1.0, 1.0, 1.0], 'pos_weight': 0.17097170971709716, 'masked_baseline_max_abs_diff': None, 'padded_baseline_max_abs_diff': None}
+2026-10-08T16:59:49 smoke GRU R1 seed0: {'fit_seconds': 9.647348403930664, 'total_seconds': 9.822625875473022, 'epochs': 30, 'best_epoch': 26, 'best_val_f1': None, 'class_weights': None, 'pos_weight': None, 'masked_baseline_max_abs_diff': None, 'padded_baseline_max_abs_diff': None}
+2026-10-08T16:59:51 smoke GRU C1 rep0_fold0: {'fit_seconds': 2.4206926822662354, 'total_seconds': 2.4384782314300537, 'epochs': None, 'best_epoch': None, 'best_val_f1': None, 'class_weights': None, 'pos_weight': None, 'masked_baseline_max_abs_diff': None, 'padded_baseline_max_abs_diff': None}
+2026-10-08T17:00:35 run: 570 units, 570 to do, workers 15 x threads 2
+2026-10-08T17:04:42   [1/570] SE R1 seed8: fit 241.4s epochs 20 best 12 valAP nan
+2026-10-08T17:04:50   [2/570] SE R1 seed4: fit 249.3s epochs 20 best 12 valAP nan
+2026-10-08T17:05:12   [3/570] SE R1 seed6: fit 271.3s epochs 21 best 13 valAP nan
+2026-10-08T17:05:23   [4/570] SE R1wd_s0 seed0: fit 287.8s epochs 23 best 15 valAP nan
+2026-10-08T17:05:31   [5/570] SE R1 seed9: fit 290.2s epochs 23 best 15 valAP nan
+2026-10-08T17:05:34   [6/570] SE R1wd_s0 seed4: fit 298.8s epochs 26 best 18 valAP nan
+2026-10-08T17:05:52   [7/570] SE R1wd_s0 seed3: fit 316.2s epochs 26 best 18 valAP nan
+2026-10-08T17:06:22   [8/570] SE R1 seed0: fit 341.4s epochs 27 best 19 valAP nan
+2026-10-08T17:06:27   [9/570] SE R1wd_s0 seed2: fit 351.1s epochs 30 best 22 valAP nan
+2026-10-08T17:06:46   [10/570] SE R1 seed3: fit 365.5s epochs 29 best 21 valAP nan
+2026-10-08T17:07:12   [11/570] SE R1 seed2: fit 391.2s epochs 31 best 23 valAP nan
+2026-10-08T17:08:51   [12/570] SE R1 seed7: fit 490.5s epochs 40 best 38 valAP nan
+2026-10-08T17:08:59   [13/570] SE R1wd_s0 seed8: fit 214.6s epochs 18 best 10 valAP nan
+2026-10-08T17:09:06   [14/570] SE R1wd_s0 seed1: fit 510.6s epochs 40 best 39 valAP nan
+2026-10-08T17:09:08   [15/570] SE R1 seed1: fit 506.7s epochs 40 best 39 valAP nan
+2026-10-08T17:09:18   [16/570] SE R1 seed5: fit 516.8s epochs 40 best 36 valAP nan
+2026-10-08T17:09:51   [17/570] SE R1wd_s0 seed9: fit 259.7s epochs 20 best 12 valAP nan
+2026-10-08T17:10:01   [18/570] SE R1wd_s1 seed2: fit 217.9s epochs 17 best 9 valAP nan
+2026-10-08T17:10:41   [19/570] SE R1wd_s1 seed1: fit 288.9s epochs 24 best 16 valAP nan
+2026-10-08T17:10:52   [20/570] SE R1wd_s0 seed6: fit 361.6s epochs 29 best 21 valAP nan
+2026-10-08T17:11:15   [21/570] SE R1wd_s0 seed7: fit 362.1s epochs 29 best 21 valAP nan
+2026-10-08T17:11:46   [22/570] SE R1wd_s1 seed0: fit 370.5s epochs 31 best 23 valAP nan
+2026-10-08T17:12:58   [23/570] SE R1wd_s0 seed5: fit 495.0s epochs 40 best 33 valAP nan
+2026-10-08T17:13:52   [24/570] SE R1wd_s1 seed5: fit 399.1s epochs 33 best 25 valAP nan
+2026-10-08T17:14:15   [25/570] SE R1wd_s1 seed7: fit 315.3s epochs 25 best 17 valAP nan
+2026-10-08T17:14:48   [26/570] SE R1wd_s1 seed3: fit 500.7s epochs 40 best 34 valAP nan
+2026-10-08T17:15:14   [27/570] SE R1wd_s1 seed4: fit 506.9s epochs 40 best 39 valAP nan
+2026-10-08T17:16:12   [28/570] SE R1wd_s2 seed6: fit 265.3s epochs 21 best 13 valAP nan
+2026-10-08T17:16:16   [29/570] SE R1wd_s2 seed3: fit 334.3s epochs 26 best 18 valAP nan
+2026-10-08T17:16:38   [30/570] SE R1wd_s1 seed8: fit 450.9s epochs 36 best 28 valAP nan
+2026-10-08T17:16:59   [31/570] SE R1wd_s2 seed1: fit 427.0s epochs 37 best 29 valAP nan
+2026-10-08T17:17:16   [32/570] SE R1wd_s1 seed6: fit 503.7s epochs 40 best 37 valAP nan
+2026-10-08T17:17:16   [33/570] SE R1wd_s2 seed0: fit 478.0s epochs 40 best 39 valAP nan
+2026-10-08T17:17:39   [34/570] SE R1wd_s1 seed9: fit 511.2s epochs 40 best 34 valAP nan
+2026-10-08T17:18:29   [35/570] SE R1wd_s2 seed2: fit 507.8s epochs 40 best 37 valAP nan
+2026-10-08T17:18:32   [36/570] SE R1wd_s2 seed7: fit 333.1s epochs 26 best 18 valAP nan
+2026-10-08T17:18:36   [37/570] SE R1wd_s2 seed5: fit 439.8s epochs 35 best 27 valAP nan
+2026-10-08T17:18:51   [38/570] SE R1wd_s2 seed8: fit 298.0s epochs 24 best 16 valAP nan
+2026-10-08T17:19:08   [39/570] SE R1wd_s3 seed1: fit 233.6s epochs 19 best 11 valAP nan
+2026-10-08T17:19:14   [40/570] SE R1wd_s2 seed4: fit 501.2s epochs 40 best 39 valAP nan
+2026-10-08T17:19:23   [41/570] SE R1wd_s3 seed0: fit 274.8s epochs 22 best 14 valAP nan
+2026-10-08T17:20:23   [42/570] SE R1wd_s2 seed9: fit 367.3s epochs 29 best 21 valAP nan
+2026-10-08T17:22:46   [43/570] SE R1wd_s3 seed8: fit 306.1s epochs 25 best 17 valAP nan
+2026-10-08T17:22:54   [44/570] SE R1wd_s3 seed6: fit 337.9s epochs 26 best 18 valAP nan
+2026-10-08T17:23:00   [45/570] SE R1wd_s3 seed2: fit 408.1s epochs 33 best 25 valAP nan
+2026-10-08T17:23:05   [46/570] SE R1wd_s4 seed3: fit 236.6s epochs 18 best 10 valAP nan
+2026-10-08T17:23:10   [47/570] SE R1wd_s3 seed9: fit 280.3s epochs 23 best 15 valAP nan
+2026-10-08T17:24:34   [48/570] SE R1wd_s3 seed3: fit 496.7s epochs 40 best 35 valAP nan
+2026-10-08T17:25:05   [49/570] SE R1wd_s4 seed0: fit 392.9s epochs 31 best 23 valAP nan
+2026-10-08T17:25:06   [50/570] SE R1wd_s3 seed7: fit 468.8s epochs 37 best 29 valAP nan
+2026-10-08T17:25:10   [51/570] SE R1wd_s3 seed4: fit 511.7s epochs 40 best 33 valAP nan
+2026-10-08T17:25:29   [52/570] SE R1wd_s3 seed5: fit 508.8s epochs 40 best 35 valAP nan
+2026-10-08T17:25:45   [53/570] SE R1wd_s4 seed2: fit 413.8s epochs 34 best 26 valAP nan
+2026-10-08T17:25:59   [54/570] SE R1wd_s4 seed1: fit 442.5s epochs 35 best 27 valAP nan
+2026-10-08T17:26:06   [55/570] SE R1wd_s4 seed6: fit 342.6s epochs 27 best 19 valAP nan
+2026-10-08T17:26:11   [56/570] SE R1wd_s4 seed4: fit 415.8s epochs 34 best 26 valAP nan
+2026-10-08T17:26:30   [57/570] SE R1wd_s4 seed7: fit 223.2s epochs 19 best 11 valAP nan
+2026-10-08T17:26:42   [58/570] SE R1wd_s4 seed9: fit 221.1s epochs 19 best 11 valAP nan
+2026-10-08T17:28:13   [59/570] SE R1wd_s4 seed5: fit 529.4s epochs 40 best 40 valAP nan
+2026-10-08T17:28:41   [60/570] SE R2 seed0: fit 335.8s epochs 26 best 18 valAP nan
+2026-10-08T17:29:12   [61/570] SE R1wd_s4 seed8: fit 377.7s epochs 30 best 22 valAP nan
+2026-10-08T17:30:35   [62/570] SE R2 seed4: fit 328.3s epochs 25 best 17 valAP nan
+2026-10-08T17:30:46   [63/570] SE R2 seed8: fit 286.2s epochs 23 best 15 valAP nan
+2026-10-08T17:31:03   [64/570] SE R2 seed1: fit 472.6s epochs 38 best 30 valAP nan
+2026-10-08T17:31:12   [65/570] SE R3_medical seed0: fit 300.5s epochs 25 best 17 valAP nan
+2026-10-08T17:31:29   [66/570] SE R2 seed3: fit 383.2s epochs 28 best 20 valAP nan
+2026-10-08T17:32:29   [67/570] SE R2 seed7: fit 403.5s epochs 30 best 22 valAP nan
+2026-10-08T17:32:37   [68/570] SE R2 seed9: fit 391.2s epochs 29 best 21 valAP nan
+2026-10-08T17:32:51   [69/570] SE R3_medical seed3: fit 277.3s epochs 23 best 15 valAP nan
+2026-10-08T17:32:56   [70/570] SE R2 seed6: fit 446.6s epochs 34 best 26 valAP nan
+2026-10-08T17:32:56   [71/570] SE R2 seed2: fit 502.1s epochs 40 best 34 valAP nan
+2026-10-08T17:33:11   [72/570] SE R2 seed5: fit 481.0s epochs 37 best 29 valAP nan
+2026-10-08T17:33:42   [73/570] SE R3_medical seed2: fit 419.2s epochs 34 best 26 valAP nan
+2026-10-08T17:34:24   [74/570] SE R3_medical seed1: fit 473.4s epochs 38 best 30 valAP nan
+2026-10-08T17:36:21   [75/570] SE R3_medical seed8: fit 317.6s epochs 28 best 20 valAP nan
+2026-10-08T17:36:31   [76/570] SE R3_banking seed2: fit 232.8s epochs 20 best 12 valAP nan
+2026-10-08T17:36:48   [77/570] SE R3_medical seed4: fit 486.1s epochs 40 best 35 valAP nan
+2026-10-08T17:37:04   [78/570] SE R3_medical seed5: fit 471.5s epochs 39 best 31 valAP nan
+2026-10-08T17:37:46   [79/570] SE R3_banking seed5: fit 289.5s epochs 23 best 15 valAP nan
+2026-10-08T17:38:01   [80/570] SE R3_medical seed7: fit 434.6s epochs 34 best 26 valAP nan
+2026-10-08T17:38:10   [81/570] SE R3_banking seed3: fit 318.4s epochs 24 best 16 valAP nan
+2026-10-08T17:38:17   [82/570] SE R3_medical seed6: fit 461.8s epochs 39 best 31 valAP nan
+2026-10-08T17:38:46   [83/570] SE R3_banking seed0: fit 436.8s epochs 36 best 28 valAP nan
+2026-10-08T17:39:00   [84/570] SE R3_medical seed9: fit 467.5s epochs 36 best 28 valAP nan
+2026-10-08T17:39:05   [85/570] SE R3_banking seed4: fit 368.9s epochs 30 best 22 valAP nan
+2026-10-08T17:39:54   [86/570] SE R3_banking seed1: fit 444.5s epochs 35 best 27 valAP nan
+2026-10-08T17:40:45   [87/570] SE R3_banking seed6: fit 453.1s epochs 37 best 29 valAP nan
+2026-10-08T17:41:04   [88/570] SE R3_banking seed9: fit 282.0s epochs 21 best 13 valAP nan
+2026-10-08T17:41:36   [89/570] SE R3_web seed6: fit 198.8s epochs 19 best 11 valAP nan
+2026-10-08T17:41:46   [90/570] SE R3_web seed5: fit 215.0s epochs 19 best 11 valAP nan
+2026-10-08T17:42:35   [91/570] SE R3_banking seed7: fit 532.7s epochs 40 best 36 valAP nan
+2026-10-08T17:42:57   [92/570] SE R3_web seed2: fit 351.9s epochs 28 best 20 valAP nan
+2026-10-08T17:43:07   [93/570] SE R3_banking seed8: fit 522.1s epochs 40 best 36 valAP nan
+2026-10-08T17:44:00   [94/570] SE R3_web seed7: fit 313.5s epochs 26 best 18 valAP nan
+2026-10-08T17:44:21   [95/570] SE R3_web seed3: fit 394.5s epochs 32 best 24 valAP nan
+2026-10-08T17:44:45   [96/570] SE R3_web seed1: fit 476.9s epochs 38 best 30 valAP nan
+2026-10-08T17:44:54   [97/570] SE R3_web seed0: fit 502.6s epochs 40 best 32 valAP nan
+2026-10-08T17:45:03   [98/570] SE R3_email seed0: fit 308.4s epochs 26 best 18 valAP nan
+2026-10-08T17:45:38   [99/570] SE R3_web seed4: fit 456.6s epochs 36 best 28 valAP nan
+2026-10-08T17:45:39   [100/570] SE R3_web seed9: fit 394.0s epochs 32 best 24 valAP nan
+2026-10-08T17:45:54   [101/570] SE R3_email seed3: fit 257.2s epochs 21 best 13 valAP nan
+2026-10-08T17:46:38   [102/570] SE R3_email seed4: fit 292.0s epochs 24 best 16 valAP nan
+2026-10-08T17:47:01   [103/570] SE R3_web seed8: fit 481.4s epochs 40 best 32 valAP nan
+2026-10-08T17:47:34   [104/570] SE R3_email seed7: fit 266.5s epochs 22 best 14 valAP nan
+2026-10-08T17:48:26   [105/570] SE R3_email seed2: fit 441.8s epochs 37 best 29 valAP nan
+2026-10-08T17:48:29   [106/570] SE R3_email seed6: fit 332.1s epochs 29 best 21 valAP nan
+2026-10-08T17:48:55   [107/570] SE R3_email seed9: fit 273.8s epochs 23 best 15 valAP nan
+2026-10-08T17:48:56   [108/570] SE R3_email seed1: fit 490.3s epochs 40 best 32 valAP nan
+2026-10-08T17:50:25   [109/570] SE R3_email seed5: fit 470.0s epochs 40 best 34 valAP nan
+2026-10-08T17:50:52   [110/570] SE R3_coding seed3: fit 313.3s epochs 25 best 17 valAP nan
+2026-10-08T17:51:08   [111/570] SE R3_coding seed1: fit 373.7s epochs 30 best 22 valAP nan
+2026-10-08T17:51:36   [112/570] SE R3_coding seed2: fit 392.3s epochs 31 best 23 valAP nan
+2026-10-08T17:51:53   [113/570] SE R3_coding seed0: fit 427.0s epochs 34 best 26 valAP nan
+2026-10-08T17:51:55   [114/570] SE R3_email seed8: fit 474.8s epochs 37 best 29 valAP nan
+2026-10-08T17:51:57   [115/570] SE R3_coding seed4: fit 376.8s epochs 29 best 21 valAP nan
+2026-10-08T17:52:53   [116/570] SE R3_coding seed5: fit 418.4s epochs 32 best 24 valAP nan
+2026-10-08T17:53:43   [117/570] SE R4 seed2: fit 283.9s epochs 18 best 10 valAP nan
+2026-10-08T17:53:47   [118/570] SE R3_coding seed7: fit 405.1s epochs 33 best 25 valAP nan
+2026-10-08T17:53:50   [119/570] SE R4 seed0: fit 317.1s epochs 21 best 13 valAP nan
+2026-10-08T17:54:46   [120/570] SE R3_coding seed6: fit 487.1s epochs 39 best 31 valAP nan
+2026-10-08T17:55:05   [121/570] SE R3_coding seed8: fit 450.6s epochs 36 best 28 valAP nan
+2026-10-08T17:55:14   [122/570] SE WUT rep0_fold2: fit 86.9s epochs 17 best 9 valAP nan
+2026-10-08T17:55:30   [123/570] SE WUT rep0_fold3: fit 99.5s epochs 22 best 14 valAP nan
+2026-10-08T17:55:37   [124/570] SE WUT rep0_fold1: fit 113.4s epochs 24 best 16 valAP nan
+2026-10-08T17:55:51   [125/570] SE WUT rep0_fold0: fit 178.3s epochs 36 best 28 valAP nan
+2026-10-08T17:56:23   [126/570] SE WUT rep0_fold4: fit 97.3s epochs 22 best 14 valAP nan
+2026-10-08T17:56:31   [127/570] SE WUT rep1_fold1: fit 76.8s epochs 17 best 9 valAP nan
+2026-10-08T17:56:36   [128/570] SE R4 seed4: fit 340.1s epochs 22 best 14 valAP nan
+2026-10-08T17:56:49   [129/570] SE WUT rep1_fold3: fit 71.8s epochs 16 best 8 valAP nan
+2026-10-08T17:56:58   [130/570] SE WUT rep1_fold2: fit 87.6s epochs 21 best 13 valAP nan
+2026-10-08T17:57:02   [131/570] SE R3_coding seed9: fit 515.3s epochs 40 best 33 valAP nan
+2026-10-08T17:57:23   [132/570] SE WUT rep1_fold4: fit 91.9s epochs 19 best 11 valAP nan
+2026-10-08T17:57:27   [133/570] SE WUT rep1_fold0: fit 142.2s epochs 31 best 23 valAP nan
+2026-10-08T17:57:34   [134/570] SE WUT rep2_fold0: fit 70.7s epochs 16 best 8 valAP nan
+2026-10-08T17:57:47   [135/570] SE R4 seed3: fit 437.8s epochs 28 best 20 valAP nan
+2026-10-08T17:57:58   [136/570] SE WUT rep2_fold3: fit 69.0s epochs 15 best 7 valAP nan
+2026-10-08T17:58:04   [137/570] SE R4 seed9: fit 362.8s epochs 22 best 14 valAP nan
+2026-10-08T17:58:30   [138/570] SE WUT rep2_fold2: fit 114.5s epochs 24 best 16 valAP nan
+2026-10-08T17:58:38   [139/570] SE WUT rep2_fold4: fit 99.1s epochs 21 best 13 valAP nan
+2026-10-08T17:59:13   [140/570] SE WUT rep3_fold0: fit 130.7s epochs 28 best 20 valAP nan
+2026-10-08T17:59:22   [141/570] SE WUT rep3_fold3: fit 106.9s epochs 23 best 15 valAP nan
+2026-10-08T17:59:24   [142/570] SE WUT rep4_fold1: fit 79.7s epochs 17 best 9 valAP nan
+2026-10-08T17:59:29   [143/570] SE R4 seed1: fit 630.1s epochs 40 best 38 valAP nan
+2026-10-08T17:59:29   [144/570] SE WUT rep5_fold2: not started (stop rule)
+2026-10-08T17:59:29   [145/570] SE WUT rep5_fold3: not started (stop rule)
+2026-10-08T17:59:29   [146/570] SE WUT rep5_fold4: not started (stop rule)
+2026-10-08T17:59:29   [147/570] SE WUT rep6_fold0: not started (stop rule)
+2026-10-08T17:59:29   [148/570] SE WUT rep6_fold1: not started (stop rule)
+2026-10-08T17:59:29   [149/570] SE WUT rep6_fold2: not started (stop rule)
+2026-10-08T17:59:29   [150/570] SE WUT rep6_fold3: not started (stop rule)
+2026-10-08T17:59:29   [151/570] SE WUT rep6_fold4: not started (stop rule)
+2026-10-08T17:59:29   [152/570] SE WUT rep7_fold0: not started (stop rule)
+2026-10-08T17:59:29   [153/570] SE WUT rep7_fold1: not started (stop rule)
+2026-10-08T17:59:29   [154/570] SE WUT rep7_fold2: not started (stop rule)
+2026-10-08T17:59:30   [155/570] SE WUT rep7_fold3: not started (stop rule)
+2026-10-08T17:59:30   [156/570] SE WUT rep7_fold4: not started (stop rule)
+2026-10-08T17:59:30   [157/570] SE WUT rep8_fold0: not started (stop rule)
+2026-10-08T17:59:30   [158/570] SE WUT rep8_fold1: not started (stop rule)
+2026-10-08T17:59:30   [159/570] SE WUT rep8_fold2: not started (stop rule)
+2026-10-08T17:59:30   [160/570] SE WUT rep8_fold3: not started (stop rule)
+2026-10-08T17:59:30   [161/570] SE WUT rep8_fold4: not started (stop rule)
+2026-10-08T17:59:30   [162/570] SE WUT rep9_fold0: not started (stop rule)
+2026-10-08T17:59:30   [163/570] SE WUT rep9_fold1: not started (stop rule)
+2026-10-08T17:59:30   [164/570] SE WUT rep9_fold2: not started (stop rule)
+2026-10-08T17:59:30   [165/570] SE WUT rep9_fold3: not started (stop rule)
+2026-10-08T17:59:30   [166/570] SE WUT rep9_fold4: not started (stop rule)
+2026-10-08T17:59:30   [167/570] SE C1 rep0_fold0: not started (stop rule)
+2026-10-08T17:59:30   [168/570] SE C1 rep0_fold1: not started (stop rule)
+2026-10-08T17:59:30   [169/570] SE C1 rep0_fold2: not started (stop rule)
+2026-10-08T17:59:30   [170/570] SE C1 rep0_fold3: not started (stop rule)
+2026-10-08T17:59:30   [171/570] SE C1 rep0_fold4: not started (stop rule)
+2026-10-08T17:59:30   [172/570] SE C1 rep1_fold0: not started (stop rule)
+2026-10-08T17:59:30   [173/570] SE C1 rep1_fold1: not started (stop rule)
+2026-10-08T17:59:30   [174/570] SE C1 rep1_fold2: not started (stop rule)
+2026-10-08T17:59:30   [175/570] SE C1 rep1_fold3: not started (stop rule)
+2026-10-08T17:59:30   [176/570] SE C1 rep1_fold4: not started (stop rule)
+2026-10-08T17:59:30   [177/570] SE C1 rep2_fold0: not started (stop rule)
+2026-10-08T17:59:30   [178/570] SE C1 rep2_fold1: not started (stop rule)
+2026-10-08T17:59:30   [179/570] SE C1 rep2_fold2: not started (stop rule)
+2026-10-08T17:59:30   [180/570] SE C1 rep2_fold3: not started (stop rule)
+2026-10-08T17:59:30   [181/570] SE C1 rep2_fold4: not started (stop rule)
+2026-10-08T17:59:30   [182/570] SE C1 rep3_fold0: not started (stop rule)
+2026-10-08T17:59:30   [183/570] SE C1 rep3_fold1: not started (stop rule)
+2026-10-08T17:59:30   [184/570] SE C1 rep3_fold2: not started (stop rule)
+2026-10-08T17:59:30   [185/570] SE C1 rep3_fold3: not started (stop rule)
+2026-10-08T17:59:30   [186/570] SE C1 rep3_fold4: not started (stop rule)
+2026-10-08T17:59:30   [187/570] SE C1 rep4_fold0: not started (stop rule)
+2026-10-08T17:59:30   [188/570] SE C1 rep4_fold1: not started (stop rule)
+2026-10-08T17:59:30   [189/570] SE C1 rep4_fold2: not started (stop rule)
+2026-10-08T17:59:30   [190/570] SE C1 rep4_fold3: not started (stop rule)
+2026-10-08T17:59:30   [191/570] SE C1 rep4_fold4: not started (stop rule)
+2026-10-08T17:59:30   [192/570] SE C1 rep5_fold0: not started (stop rule)
+2026-10-08T17:59:30   [193/570] SE C1 rep5_fold1: not started (stop rule)
+2026-10-08T17:59:30   [194/570] SE C1 rep5_fold2: not started (stop rule)
+2026-10-08T17:59:30   [195/570] SE C1 rep5_fold3: not started (stop rule)
+2026-10-08T17:59:30   [196/570] SE C1 rep5_fold4: not started (stop rule)
+2026-10-08T17:59:30   [197/570] SE C1 rep6_fold0: not started (stop rule)
+2026-10-08T17:59:30   [198/570] SE C1 rep6_fold1: not started (stop rule)
+2026-10-08T17:59:30   [199/570] SE C1 rep6_fold2: not started (stop rule)
+2026-10-08T17:59:30   [200/570] SE C1 rep6_fold3: not started (stop rule)
+2026-10-08T17:59:30   [201/570] SE C1 rep6_fold4: not started (stop rule)
+2026-10-08T17:59:30   [202/570] SE C1 rep7_fold0: not started (stop rule)
+2026-10-08T17:59:30   [203/570] SE C1 rep7_fold1: not started (stop rule)
+2026-10-08T17:59:30   [204/570] SE C1 rep7_fold2: not started (stop rule)
+2026-10-08T17:59:30   [205/570] SE C1 rep7_fold3: not started (stop rule)
+2026-10-08T17:59:30   [206/570] SE C1 rep7_fold4: not started (stop rule)
+2026-10-08T17:59:30   [207/570] SE C1 rep8_fold0: not started (stop rule)
+2026-10-08T17:59:30   [208/570] SE C1 rep8_fold1: not started (stop rule)
+2026-10-08T17:59:30   [209/570] SE C1 rep8_fold2: not started (stop rule)
+2026-10-08T17:59:30   [210/570] SE C1 rep8_fold3: not started (stop rule)
+2026-10-08T17:59:30   [211/570] SE C1 rep8_fold4: not started (stop rule)
+2026-10-08T17:59:30   [212/570] SE C1 rep9_fold0: not started (stop rule)
+2026-10-08T17:59:30   [213/570] SE C1 rep9_fold1: not started (stop rule)
+2026-10-08T17:59:30   [214/570] SE C1 rep9_fold2: not started (stop rule)
+2026-10-08T17:59:30   [215/570] SE C1 rep9_fold3: not started (stop rule)
+2026-10-08T17:59:30   [216/570] SE C1 rep9_fold4: not started (stop rule)
+2026-10-08T17:59:30   [217/570] GRU R1 seed0: not started (stop rule)
+2026-10-08T17:59:30   [218/570] GRU R1 seed1: not started (stop rule)
+2026-10-08T17:59:30   [219/570] GRU R1 seed2: not started (stop rule)
+2026-10-08T17:59:30   [220/570] GRU R1 seed3: not started (stop rule)
+2026-10-08T17:59:30   [221/570] GRU R1 seed4: not started (stop rule)
+2026-10-08T17:59:30   [222/570] GRU R1 seed5: not started (stop rule)
+2026-10-08T17:59:30   [223/570] GRU R1 seed6: not started (stop rule)
+2026-10-08T17:59:30   [224/570] GRU R1 seed7: not started (stop rule)
+2026-10-08T17:59:30   [225/570] GRU R1 seed8: not started (stop rule)
+2026-10-08T17:59:30   [226/570] GRU R1 seed9: not started (stop rule)
+2026-10-08T17:59:30   [227/570] GRU R1wd_s0 seed0: not started (stop rule)
+2026-10-08T17:59:30   [228/570] GRU R1wd_s0 seed1: not started (stop rule)
+2026-10-08T17:59:30   [229/570] GRU R1wd_s0 seed2: not started (stop rule)
+2026-10-08T17:59:30   [230/570] GRU R1wd_s0 seed3: not started (stop rule)
+2026-10-08T17:59:30   [231/570] GRU R1wd_s0 seed4: not started (stop rule)
+2026-10-08T17:59:30   [232/570] GRU R1wd_s0 seed5: not started (stop rule)
+2026-10-08T17:59:30   [233/570] GRU R1wd_s0 seed6: not started (stop rule)
+2026-10-08T17:59:30   [234/570] GRU R1wd_s0 seed7: not started (stop rule)
+2026-10-08T17:59:30   [235/570] GRU R1wd_s0 seed8: not started (stop rule)
+2026-10-08T17:59:30   [236/570] GRU R1wd_s0 seed9: not started (stop rule)
+2026-10-08T17:59:30   [237/570] GRU R1wd_s1 seed0: not started (stop rule)
+2026-10-08T17:59:30   [238/570] GRU R1wd_s1 seed1: not started (stop rule)
+2026-10-08T17:59:30   [239/570] GRU R1wd_s1 seed2: not started (stop rule)
+2026-10-08T17:59:30   [240/570] GRU R1wd_s1 seed3: not started (stop rule)
+2026-10-08T17:59:30   [241/570] GRU R1wd_s1 seed4: not started (stop rule)
+2026-10-08T17:59:30   [242/570] GRU R1wd_s1 seed5: not started (stop rule)
+2026-10-08T17:59:30   [243/570] GRU R1wd_s1 seed6: not started (stop rule)
+2026-10-08T17:59:30   [244/570] GRU R1wd_s1 seed7: not started (stop rule)
+2026-10-08T17:59:30   [245/570] GRU R1wd_s1 seed8: not started (stop rule)
+2026-10-08T17:59:30   [246/570] GRU R1wd_s1 seed9: not started (stop rule)
+2026-10-08T17:59:30   [247/570] GRU R1wd_s2 seed0: not started (stop rule)
+2026-10-08T17:59:30   [248/570] GRU R1wd_s2 seed1: not started (stop rule)
+2026-10-08T17:59:30   [249/570] GRU R1wd_s2 seed2: not started (stop rule)
+2026-10-08T17:59:30   [250/570] GRU R1wd_s2 seed3: not started (stop rule)
+2026-10-08T17:59:30   [251/570] GRU R1wd_s2 seed4: not started (stop rule)
+2026-10-08T17:59:30   [252/570] GRU R1wd_s2 seed5: not started (stop rule)
+2026-10-08T17:59:30   [253/570] GRU R1wd_s2 seed6: not started (stop rule)
+2026-10-08T17:59:30   [254/570] GRU R1wd_s2 seed7: not started (stop rule)
+2026-10-08T17:59:30   [255/570] GRU R1wd_s2 seed8: not started (stop rule)
+2026-10-08T17:59:30   [256/570] GRU R1wd_s2 seed9: not started (stop rule)
+2026-10-08T17:59:30   [257/570] GRU R1wd_s3 seed0: not started (stop rule)
+2026-10-08T17:59:30   [258/570] GRU R1wd_s3 seed1: not started (stop rule)
+2026-10-08T17:59:30   [259/570] GRU R1wd_s3 seed2: not started (stop rule)
+2026-10-08T17:59:30   [260/570] GRU R1wd_s3 seed3: not started (stop rule)
+2026-10-08T17:59:30   [261/570] GRU R1wd_s3 seed4: not started (stop rule)
+2026-10-08T17:59:30   [262/570] GRU R1wd_s3 seed5: not started (stop rule)
+2026-10-08T17:59:30   [263/570] GRU R1wd_s3 seed6: not started (stop rule)
+2026-10-08T17:59:30   [264/570] GRU R1wd_s3 seed7: not started (stop rule)
+2026-10-08T17:59:30   [265/570] GRU R1wd_s3 seed8: not started (stop rule)
+2026-10-08T17:59:30   [266/570] GRU R1wd_s3 seed9: not started (stop rule)
+2026-10-08T17:59:30   [267/570] GRU R1wd_s4 seed0: not started (stop rule)
+2026-10-08T17:59:30   [268/570] GRU R1wd_s4 seed1: not started (stop rule)
+2026-10-08T17:59:30   [269/570] GRU R1wd_s4 seed2: not started (stop rule)
+2026-10-08T17:59:30   [270/570] GRU R1wd_s4 seed3: not started (stop rule)
+2026-10-08T17:59:30   [271/570] GRU R1wd_s4 seed4: not started (stop rule)
+2026-10-08T17:59:30   [272/570] GRU R1wd_s4 seed5: not started (stop rule)
+2026-10-08T17:59:30   [273/570] GRU R1wd_s4 seed6: not started (stop rule)
+2026-10-08T17:59:30   [274/570] GRU R1wd_s4 seed7: not started (stop rule)
+2026-10-08T17:59:30   [275/570] GRU R1wd_s4 seed8: not started (stop rule)
+2026-10-08T17:59:30   [276/570] GRU R1wd_s4 seed9: not started (stop rule)
+2026-10-08T17:59:30   [277/570] GRU R2 seed0: not started (stop rule)
+2026-10-08T17:59:30   [278/570] GRU R2 seed1: not started (stop rule)
+2026-10-08T17:59:30   [279/570] GRU R2 seed2: not started (stop rule)
+2026-10-08T17:59:30   [280/570] GRU R2 seed3: not started (stop rule)
+2026-10-08T17:59:30   [281/570] GRU R2 seed4: not started (stop rule)
+2026-10-08T17:59:30   [282/570] GRU R2 seed5: not started (stop rule)
+2026-10-08T17:59:30   [283/570] GRU R2 seed6: not started (stop rule)
+2026-10-08T17:59:30   [284/570] GRU R2 seed7: not started (stop rule)
+2026-10-08T17:59:30   [285/570] GRU R2 seed8: not started (stop rule)
+2026-10-08T17:59:30   [286/570] GRU R2 seed9: not started (stop rule)
+2026-10-08T17:59:30   [287/570] GRU R3_medical seed0: not started (stop rule)
+2026-10-08T17:59:30   [288/570] GRU R3_medical seed1: not started (stop rule)
+2026-10-08T17:59:30   [289/570] GRU R3_medical seed2: not started (stop rule)
+2026-10-08T17:59:30   [290/570] GRU R3_medical seed3: not started (stop rule)
+2026-10-08T17:59:30   [291/570] GRU R3_medical seed4: not started (stop rule)
+2026-10-08T17:59:30   [292/570] GRU R3_medical seed5: not started (stop rule)
+2026-10-08T17:59:30   [293/570] GRU R3_medical seed6: not started (stop rule)
+2026-10-08T17:59:30   [294/570] GRU R3_medical seed7: not started (stop rule)
+2026-10-08T17:59:30   [295/570] GRU R3_medical seed8: not started (stop rule)
+2026-10-08T17:59:30   [296/570] GRU R3_medical seed9: not started (stop rule)
+2026-10-08T17:59:30   [297/570] GRU R3_banking seed0: not started (stop rule)
+2026-10-08T17:59:30   [298/570] GRU R3_banking seed1: not started (stop rule)
+2026-10-08T17:59:30   [299/570] GRU R3_banking seed2: not started (stop rule)
+2026-10-08T17:59:30   [300/570] GRU R3_banking seed3: not started (stop rule)
+2026-10-08T17:59:30   [301/570] GRU R3_banking seed4: not started (stop rule)
+2026-10-08T17:59:30   [302/570] GRU R3_banking seed5: not started (stop rule)
+2026-10-08T17:59:30   [303/570] GRU R3_banking seed6: not started (stop rule)
+2026-10-08T17:59:30   [304/570] GRU R3_banking seed7: not started (stop rule)
+2026-10-08T17:59:30   [305/570] GRU R3_banking seed8: not started (stop rule)
+2026-10-08T17:59:30   [306/570] GRU R3_banking seed9: not started (stop rule)
+2026-10-08T17:59:30   [307/570] GRU R3_web seed0: not started (stop rule)
+2026-10-08T17:59:30   [308/570] GRU R3_web seed1: not started (stop rule)
+2026-10-08T17:59:30   [309/570] GRU R3_web seed2: not started (stop rule)
+2026-10-08T17:59:30   [310/570] GRU R3_web seed3: not started (stop rule)
+2026-10-08T17:59:30   [311/570] GRU R3_web seed4: not started (stop rule)
+2026-10-08T17:59:30   [312/570] GRU R3_web seed5: not started (stop rule)
+2026-10-08T17:59:30   [313/570] GRU R3_web seed6: not started (stop rule)
+2026-10-08T17:59:30   [314/570] GRU R3_web seed7: not started (stop rule)
+2026-10-08T17:59:30   [315/570] GRU R3_web seed8: not started (stop rule)
+2026-10-08T17:59:30   [316/570] GRU R3_web seed9: not started (stop rule)
+2026-10-08T17:59:30   [317/570] GRU R3_email seed0: not started (stop rule)
+2026-10-08T17:59:30   [318/570] GRU R3_email seed1: not started (stop rule)
+2026-10-08T17:59:30   [319/570] GRU R3_email seed2: not started (stop rule)
+2026-10-08T17:59:30   [320/570] GRU R3_email seed3: not started (stop rule)
+2026-10-08T17:59:30   [321/570] GRU R3_email seed4: not started (stop rule)
+2026-10-08T17:59:30   [322/570] GRU R3_email seed5: not started (stop rule)
+2026-10-08T17:59:30   [323/570] GRU R3_email seed6: not started (stop rule)
+2026-10-08T17:59:30   [324/570] GRU R3_email seed7: not started (stop rule)
+2026-10-08T17:59:30   [325/570] GRU R3_email seed8: not started (stop rule)
+2026-10-08T17:59:30   [326/570] GRU R3_email seed9: not started (stop rule)
+2026-10-08T17:59:30   [327/570] GRU R3_coding seed0: not started (stop rule)
+2026-10-08T17:59:30   [328/570] GRU R3_coding seed1: not started (stop rule)
+2026-10-08T17:59:30   [329/570] GRU R3_coding seed2: not started (stop rule)
+2026-10-08T17:59:30   [330/570] GRU R3_coding seed3: not started (stop rule)
+2026-10-08T17:59:30   [331/570] GRU R3_coding seed4: not started (stop rule)
+2026-10-08T17:59:30   [332/570] GRU R3_coding seed5: not started (stop rule)
+2026-10-08T17:59:30   [333/570] GRU R3_coding seed6: not started (stop rule)
+2026-10-08T17:59:30   [334/570] GRU R3_coding seed7: not started (stop rule)
+2026-10-08T17:59:30   [335/570] GRU R3_coding seed8: not started (stop rule)
+2026-10-08T17:59:30   [336/570] GRU R3_coding seed9: not started (stop rule)
+2026-10-08T17:59:30   [337/570] GRU R4 seed0: not started (stop rule)
+2026-10-08T17:59:30   [338/570] GRU R4 seed1: not started (stop rule)
+2026-10-08T17:59:30   [339/570] GRU R4 seed2: not started (stop rule)
+2026-10-08T17:59:30   [340/570] GRU R4 seed3: not started (stop rule)
+2026-10-08T17:59:30   [341/570] GRU R4 seed4: not started (stop rule)
+2026-10-08T17:59:30   [342/570] GRU R4 seed5: not started (stop rule)
+2026-10-08T17:59:30   [343/570] GRU R4 seed6: not started (stop rule)
+2026-10-08T17:59:30   [344/570] GRU R4 seed7: not started (stop rule)
+2026-10-08T17:59:30   [345/570] GRU R4 seed8: not started (stop rule)
+2026-10-08T17:59:30   [346/570] GRU R4 seed9: not started (stop rule)
+2026-10-08T17:59:30   [347/570] GRU WUT rep0_fold0: not started (stop rule)
+2026-10-08T17:59:30   [348/570] GRU WUT rep0_fold1: not started (stop rule)
+2026-10-08T17:59:30   [349/570] GRU WUT rep0_fold2: not started (stop rule)
+2026-10-08T17:59:30   [350/570] GRU WUT rep0_fold3: not started (stop rule)
+2026-10-08T17:59:30   [351/570] GRU WUT rep0_fold4: not started (stop rule)
+2026-10-08T17:59:30   [352/570] GRU WUT rep1_fold0: not started (stop rule)
+2026-10-08T17:59:30   [353/570] GRU WUT rep1_fold1: not started (stop rule)
+2026-10-08T17:59:30   [354/570] GRU WUT rep1_fold2: not started (stop rule)
+2026-10-08T17:59:30   [355/570] GRU WUT rep1_fold3: not started (stop rule)
+2026-10-08T17:59:30   [356/570] GRU WUT rep1_fold4: not started (stop rule)
+2026-10-08T17:59:30   [357/570] GRU WUT rep2_fold0: not started (stop rule)
+2026-10-08T17:59:30   [358/570] GRU WUT rep2_fold1: not started (stop rule)
+2026-10-08T17:59:30   [359/570] GRU WUT rep2_fold2: not started (stop rule)
+2026-10-08T17:59:30   [360/570] GRU WUT rep2_fold3: not started (stop rule)
+2026-10-08T17:59:30   [361/570] GRU WUT rep2_fold4: not started (stop rule)
+2026-10-08T17:59:30   [362/570] GRU WUT rep3_fold0: not started (stop rule)
+2026-10-08T17:59:30   [363/570] GRU WUT rep3_fold1: not started (stop rule)
+2026-10-08T17:59:30   [364/570] GRU WUT rep3_fold2: not started (stop rule)
+2026-10-08T17:59:30   [365/570] GRU WUT rep3_fold3: not started (stop rule)
+2026-10-08T17:59:30   [366/570] GRU WUT rep3_fold4: not started (stop rule)
+2026-10-08T17:59:30   [367/570] GRU WUT rep4_fold0: not started (stop rule)
+2026-10-08T17:59:30   [368/570] GRU WUT rep4_fold1: not started (stop rule)
+2026-10-08T17:59:30   [369/570] GRU WUT rep4_fold2: not started (stop rule)
+2026-10-08T17:59:30   [370/570] GRU WUT rep4_fold3: not started (stop rule)
+2026-10-08T17:59:30   [371/570] GRU WUT rep4_fold4: not started (stop rule)
+2026-10-08T17:59:30   [372/570] GRU WUT rep5_fold0: not started (stop rule)
+2026-10-08T17:59:30   [373/570] GRU WUT rep5_fold1: not started (stop rule)
+2026-10-08T17:59:30   [374/570] GRU WUT rep5_fold2: not started (stop rule)
+2026-10-08T17:59:30   [375/570] GRU WUT rep5_fold3: not started (stop rule)
+2026-10-08T17:59:30   [376/570] GRU WUT rep5_fold4: not started (stop rule)
+2026-10-08T17:59:30   [377/570] GRU WUT rep6_fold0: not started (stop rule)
+2026-10-08T17:59:30   [378/570] GRU WUT rep6_fold1: not started (stop rule)
+2026-10-08T17:59:30   [379/570] GRU WUT rep6_fold2: not started (stop rule)
+2026-10-08T17:59:30   [380/570] GRU WUT rep6_fold3: not started (stop rule)
+2026-10-08T17:59:30   [381/570] GRU WUT rep6_fold4: not started (stop rule)
+2026-10-08T17:59:30   [382/570] GRU WUT rep7_fold0: not started (stop rule)
+2026-10-08T17:59:30   [383/570] GRU WUT rep7_fold1: not started (stop rule)
+2026-10-08T17:59:30   [384/570] GRU WUT rep7_fold2: not started (stop rule)
+2026-10-08T17:59:30   [385/570] GRU WUT rep7_fold3: not started (stop rule)
+2026-10-08T17:59:30   [386/570] GRU WUT rep7_fold4: not started (stop rule)
+2026-10-08T17:59:30   [387/570] GRU WUT rep8_fold0: not started (stop rule)
+2026-10-08T17:59:30   [388/570] GRU WUT rep8_fold1: not started (stop rule)
+2026-10-08T17:59:30   [389/570] GRU WUT rep8_fold2: not started (stop rule)
+2026-10-08T17:59:30   [390/570] GRU WUT rep8_fold3: not started (stop rule)
+2026-10-08T17:59:30   [391/570] GRU WUT rep8_fold4: not started (stop rule)
+2026-10-08T17:59:30   [392/570] GRU WUT rep9_fold0: not started (stop rule)
+2026-10-08T17:59:30   [393/570] GRU WUT rep9_fold1: not started (stop rule)
+2026-10-08T17:59:30   [394/570] GRU WUT rep9_fold2: not started (stop rule)
+2026-10-08T17:59:30   [395/570] GRU WUT rep9_fold3: not started (stop rule)
+2026-10-08T17:59:30   [396/570] GRU WUT rep9_fold4: not started (stop rule)
+2026-10-08T17:59:30   [397/570] GRU C1 rep0_fold0: not started (stop rule)
+2026-10-08T17:59:30   [398/570] GRU C1 rep0_fold1: not started (stop rule)
+2026-10-08T17:59:30   [399/570] GRU C1 rep0_fold2: not started (stop rule)
+2026-10-08T17:59:30   [400/570] GRU C1 rep0_fold3: not started (stop rule)
+2026-10-08T17:59:30   [401/570] GRU C1 rep0_fold4: not started (stop rule)
+2026-10-08T17:59:30   [402/570] GRU C1 rep1_fold0: not started (stop rule)
+2026-10-08T17:59:30   [403/570] GRU C1 rep1_fold1: not started (stop rule)
+2026-10-08T17:59:30   [404/570] GRU C1 rep1_fold2: not started (stop rule)
+2026-10-08T17:59:30   [405/570] GRU C1 rep1_fold3: not started (stop rule)
+2026-10-08T17:59:30   [406/570] GRU C1 rep1_fold4: not started (stop rule)
+2026-10-08T17:59:30   [407/570] GRU C1 rep2_fold0: not started (stop rule)
+2026-10-08T17:59:30   [408/570] GRU C1 rep2_fold1: not started (stop rule)
+2026-10-08T17:59:30   [409/570] GRU C1 rep2_fold2: not started (stop rule)
+2026-10-08T17:59:30   [410/570] GRU C1 rep2_fold3: not started (stop rule)
+2026-10-08T17:59:30   [411/570] GRU C1 rep2_fold4: not started (stop rule)
+2026-10-08T17:59:30   [412/570] GRU C1 rep3_fold0: not started (stop rule)
+2026-10-08T17:59:30   [413/570] GRU C1 rep3_fold1: not started (stop rule)
+2026-10-08T17:59:30   [414/570] GRU C1 rep3_fold2: not started (stop rule)
+2026-10-08T17:59:30   [415/570] SE WUT rep4_fold0: fit 91.6s epochs 20 best 12 valAP nan
+2026-10-08T17:59:30   [416/570] GRU C1 rep3_fold3: not started (stop rule)
+2026-10-08T17:59:30   [417/570] GRU C1 rep3_fold4: not started (stop rule)
+2026-10-08T17:59:30   [418/570] GRU C1 rep4_fold0: not started (stop rule)
+2026-10-08T17:59:30   [419/570] GRU C1 rep4_fold1: not started (stop rule)
+2026-10-08T17:59:30   [420/570] GRU C1 rep4_fold2: not started (stop rule)
+2026-10-08T17:59:30   [421/570] GRU C1 rep4_fold3: not started (stop rule)
+2026-10-08T17:59:30   [422/570] GRU C1 rep4_fold4: not started (stop rule)
+2026-10-08T17:59:30   [423/570] GRU C1 rep5_fold0: not started (stop rule)
+2026-10-08T17:59:30   [424/570] GRU C1 rep5_fold1: not started (stop rule)
+2026-10-08T17:59:30   [425/570] GRU C1 rep5_fold2: not started (stop rule)
+2026-10-08T17:59:30   [426/570] GRU C1 rep5_fold3: not started (stop rule)
+2026-10-08T17:59:30   [427/570] GRU C1 rep5_fold4: not started (stop rule)
+2026-10-08T17:59:30   [428/570] GRU C1 rep6_fold0: not started (stop rule)
+2026-10-08T17:59:30   [429/570] GRU C1 rep6_fold1: not started (stop rule)
+2026-10-08T17:59:30   [430/570] GRU C1 rep6_fold2: not started (stop rule)
+2026-10-08T17:59:30   [431/570] GRU C1 rep6_fold3: not started (stop rule)
+2026-10-08T17:59:30   [432/570] GRU C1 rep6_fold4: not started (stop rule)
+2026-10-08T17:59:30   [433/570] GRU C1 rep7_fold0: not started (stop rule)
+2026-10-08T17:59:30   [434/570] GRU C1 rep7_fold1: not started (stop rule)
+2026-10-08T17:59:30   [435/570] GRU C1 rep7_fold2: not started (stop rule)
+2026-10-08T17:59:30   [436/570] GRU C1 rep7_fold3: not started (stop rule)
+2026-10-08T17:59:30   [437/570] GRU C1 rep7_fold4: not started (stop rule)
+2026-10-08T17:59:30   [438/570] GRU C1 rep8_fold0: not started (stop rule)
+2026-10-08T17:59:30   [439/570] GRU C1 rep8_fold1: not started (stop rule)
+2026-10-08T17:59:30   [440/570] GRU C1 rep8_fold2: not started (stop rule)
+2026-10-08T17:59:30   [441/570] GRU C1 rep8_fold3: not started (stop rule)
+2026-10-08T17:59:30   [442/570] GRU C1 rep8_fold4: not started (stop rule)
+2026-10-08T17:59:30   [443/570] GRU C1 rep9_fold0: not started (stop rule)
+2026-10-08T17:59:30   [444/570] GRU C1 rep9_fold1: not started (stop rule)
+2026-10-08T17:59:30   [445/570] GRU C1 rep9_fold2: not started (stop rule)
+2026-10-08T17:59:30   [446/570] GRU C1 rep9_fold3: not started (stop rule)
+2026-10-08T17:59:30   [447/570] GRU C1 rep9_fold4: not started (stop rule)
+2026-10-08T17:59:30   [448/570] SE-W0 R4 seed0: not started (stop rule)
+2026-10-08T17:59:30   [449/570] SE-W0 R4 seed1: not started (stop rule)
+2026-10-08T17:59:30   [450/570] SE-W0 R4 seed2: not started (stop rule)
+2026-10-08T17:59:30   [451/570] SE-W0 R4 seed3: not started (stop rule)
+2026-10-08T17:59:30   [452/570] SE-W0 R4 seed4: not started (stop rule)
+2026-10-08T17:59:30   [453/570] SE-W0 R4 seed5: not started (stop rule)
+2026-10-08T17:59:30   [454/570] SE-W0 R4 seed6: not started (stop rule)
+2026-10-08T17:59:30   [455/570] SE-W0 R4 seed7: not started (stop rule)
+2026-10-08T17:59:30   [456/570] SE-W0 R4 seed8: not started (stop rule)
+2026-10-08T17:59:30   [457/570] SE-W0 R4 seed9: not started (stop rule)
+2026-10-08T17:59:30   [458/570] SE-W0 WUT rep0_fold0: not started (stop rule)
+2026-10-08T17:59:30   [459/570] SE-W0 WUT rep0_fold1: not started (stop rule)
+2026-10-08T17:59:30   [460/570] SE-W0 WUT rep0_fold2: not started (stop rule)
+2026-10-08T17:59:30   [461/570] SE-W0 WUT rep0_fold3: not started (stop rule)
+2026-10-08T17:59:30   [462/570] SE-W0 WUT rep0_fold4: not started (stop rule)
+2026-10-08T17:59:30   [463/570] SE-W0 WUT rep1_fold0: not started (stop rule)
+2026-10-08T17:59:30   [464/570] SE-W0 WUT rep1_fold1: not started (stop rule)
+2026-10-08T17:59:30   [465/570] SE-W0 WUT rep1_fold2: not started (stop rule)
+2026-10-08T17:59:30   [466/570] SE-W0 WUT rep1_fold3: not started (stop rule)
+2026-10-08T17:59:30   [467/570] SE-W0 WUT rep1_fold4: not started (stop rule)
+2026-10-08T17:59:30   [468/570] SE-W0 WUT rep2_fold0: not started (stop rule)
+2026-10-08T17:59:30   [469/570] SE-W0 WUT rep2_fold1: not started (stop rule)
+2026-10-08T17:59:30   [470/570] SE-W0 WUT rep2_fold2: not started (stop rule)
+2026-10-08T17:59:30   [471/570] SE-W0 WUT rep2_fold3: not started (stop rule)
+2026-10-08T17:59:30   [472/570] SE-W0 WUT rep2_fold4: not started (stop rule)
+2026-10-08T17:59:30   [473/570] SE-W0 WUT rep3_fold0: not started (stop rule)
+2026-10-08T17:59:30   [474/570] SE-W0 WUT rep3_fold1: not started (stop rule)
+2026-10-08T17:59:30   [475/570] SE-W0 WUT rep3_fold2: not started (stop rule)
+2026-10-08T17:59:30   [476/570] SE-W0 WUT rep3_fold3: not started (stop rule)
+2026-10-08T17:59:30   [477/570] SE-W0 WUT rep3_fold4: not started (stop rule)
+2026-10-08T17:59:30   [478/570] SE-W0 WUT rep4_fold0: not started (stop rule)
+2026-10-08T17:59:30   [479/570] SE-W0 WUT rep4_fold1: not started (stop rule)
+2026-10-08T17:59:30   [480/570] SE-W0 WUT rep4_fold2: not started (stop rule)
+2026-10-08T17:59:30   [481/570] SE-W0 WUT rep4_fold3: not started (stop rule)
+2026-10-08T17:59:30   [482/570] SE-W0 WUT rep4_fold4: not started (stop rule)
+2026-10-08T17:59:30   [483/570] SE-W0 WUT rep5_fold0: not started (stop rule)
+2026-10-08T17:59:30   [484/570] SE-W0 WUT rep5_fold1: not started (stop rule)
+2026-10-08T17:59:30   [485/570] SE-W0 WUT rep5_fold2: not started (stop rule)
+2026-10-08T17:59:30   [486/570] SE-W0 WUT rep5_fold3: not started (stop rule)
+2026-10-08T17:59:30   [487/570] SE-W0 WUT rep5_fold4: not started (stop rule)
+2026-10-08T17:59:30   [488/570] SE-W0 WUT rep6_fold0: not started (stop rule)
+2026-10-08T17:59:30   [489/570] SE-W0 WUT rep6_fold1: not started (stop rule)
+2026-10-08T17:59:30   [490/570] SE-W0 WUT rep6_fold2: not started (stop rule)
+2026-10-08T17:59:30   [491/570] SE-W0 WUT rep6_fold3: not started (stop rule)
+2026-10-08T17:59:30   [492/570] SE-W0 WUT rep6_fold4: not started (stop rule)
+2026-10-08T17:59:30   [493/570] SE-W0 WUT rep7_fold0: not started (stop rule)
+2026-10-08T17:59:30   [494/570] SE-W0 WUT rep7_fold1: not started (stop rule)
+2026-10-08T17:59:30   [495/570] SE-W0 WUT rep7_fold2: not started (stop rule)
+2026-10-08T17:59:30   [496/570] SE-W0 WUT rep7_fold3: not started (stop rule)
+2026-10-08T17:59:30   [497/570] SE-W0 WUT rep7_fold4: not started (stop rule)
+2026-10-08T17:59:30   [498/570] SE-W0 WUT rep8_fold0: not started (stop rule)
+2026-10-08T17:59:30   [499/570] SE-W0 WUT rep8_fold1: not started (stop rule)
+2026-10-08T17:59:30   [500/570] SE-W0 WUT rep8_fold2: not started (stop rule)
+2026-10-08T17:59:30   [501/570] SE-W0 WUT rep8_fold3: not started (stop rule)
+2026-10-08T17:59:30   [502/570] SE-W0 WUT rep8_fold4: not started (stop rule)
+2026-10-08T17:59:30   [503/570] SE-W0 WUT rep9_fold0: not started (stop rule)
+2026-10-08T17:59:30   [504/570] SE-W0 WUT rep9_fold1: not started (stop rule)
+2026-10-08T17:59:30   [505/570] SE-W0 WUT rep9_fold2: not started (stop rule)
+2026-10-08T17:59:30   [506/570] SE-W0 WUT rep9_fold3: not started (stop rule)
+2026-10-08T17:59:30   [507/570] SE-W0 WUT rep9_fold4: not started (stop rule)
+2026-10-08T17:59:30   [508/570] SE-W0 C1 rep0_fold0: not started (stop rule)
+2026-10-08T17:59:30   [509/570] SE-W0 C1 rep0_fold1: not started (stop rule)
+2026-10-08T17:59:30   [510/570] SE-W0 C1 rep0_fold2: not started (stop rule)
+2026-10-08T17:59:30   [511/570] SE-W0 C1 rep0_fold3: not started (stop rule)
+2026-10-08T17:59:30   [512/570] SE-W0 C1 rep0_fold4: not started (stop rule)
+2026-10-08T17:59:30   [513/570] SE-W0 C1 rep1_fold0: not started (stop rule)
+2026-10-08T17:59:30   [514/570] SE-W0 C1 rep1_fold1: not started (stop rule)
+2026-10-08T17:59:30   [515/570] SE-W0 C1 rep1_fold2: not started (stop rule)
+2026-10-08T17:59:30   [516/570] SE-W0 C1 rep1_fold3: not started (stop rule)
+2026-10-08T17:59:30   [517/570] SE-W0 C1 rep1_fold4: not started (stop rule)
+2026-10-08T17:59:30   [518/570] SE-W0 C1 rep2_fold0: not started (stop rule)
+2026-10-08T17:59:30   [519/570] SE-W0 C1 rep2_fold1: not started (stop rule)
+2026-10-08T17:59:30   [520/570] SE-W0 C1 rep2_fold2: not started (stop rule)
+2026-10-08T17:59:30   [521/570] SE-W0 C1 rep2_fold3: not started (stop rule)
+2026-10-08T17:59:30   [522/570] SE-W0 C1 rep2_fold4: not started (stop rule)
+2026-10-08T17:59:30   [523/570] SE-W0 C1 rep3_fold0: not started (stop rule)
+2026-10-08T17:59:30   [524/570] SE-W0 C1 rep3_fold1: not started (stop rule)
+2026-10-08T17:59:30   [525/570] SE-W0 C1 rep3_fold2: not started (stop rule)
+2026-10-08T17:59:30   [526/570] SE-W0 C1 rep3_fold3: not started (stop rule)
+2026-10-08T17:59:30   [527/570] SE-W0 C1 rep3_fold4: not started (stop rule)
+2026-10-08T17:59:30   [528/570] SE-W0 C1 rep4_fold0: not started (stop rule)
+2026-10-08T17:59:30   [529/570] SE-W0 C1 rep4_fold1: not started (stop rule)
+2026-10-08T17:59:30   [530/570] SE-W0 C1 rep4_fold2: not started (stop rule)
+2026-10-08T17:59:30   [531/570] SE-W0 C1 rep4_fold3: not started (stop rule)
+2026-10-08T17:59:30   [532/570] SE-W0 C1 rep5_fold0: not started (stop rule)
+2026-10-08T17:59:30   [533/570] SE-W0 C1 rep4_fold4: not started (stop rule)
+2026-10-08T17:59:30   [534/570] SE-W0 C1 rep5_fold1: not started (stop rule)
+2026-10-08T17:59:30   [535/570] SE-W0 C1 rep5_fold2: not started (stop rule)
+2026-10-08T17:59:30   [536/570] SE-W0 C1 rep5_fold3: not started (stop rule)
+2026-10-08T17:59:30   [537/570] SE-W0 C1 rep5_fold4: not started (stop rule)
+2026-10-08T17:59:30   [538/570] SE-W0 C1 rep6_fold0: not started (stop rule)
+2026-10-08T17:59:30   [539/570] SE-W0 C1 rep6_fold1: not started (stop rule)
+2026-10-08T17:59:30   [540/570] SE-W0 C1 rep6_fold2: not started (stop rule)
+2026-10-08T17:59:30   [541/570] SE-W0 C1 rep6_fold3: not started (stop rule)
+2026-10-08T17:59:30   [542/570] SE-W0 C1 rep6_fold4: not started (stop rule)
+2026-10-08T17:59:30   [543/570] SE-W0 C1 rep7_fold0: not started (stop rule)
+2026-10-08T17:59:30   [544/570] SE-W0 C1 rep7_fold1: not started (stop rule)
+2026-10-08T17:59:30   [545/570] SE-W0 C1 rep7_fold2: not started (stop rule)
+2026-10-08T17:59:30   [546/570] SE-W0 C1 rep7_fold3: not started (stop rule)
+2026-10-08T17:59:30   [547/570] SE-W0 C1 rep7_fold4: not started (stop rule)
+2026-10-08T17:59:30   [548/570] SE-W0 C1 rep8_fold0: not started (stop rule)
+2026-10-08T17:59:30   [549/570] SE-W0 C1 rep8_fold1: not started (stop rule)
+2026-10-08T17:59:30   [550/570] SE-W0 C1 rep8_fold2: not started (stop rule)
+2026-10-08T17:59:30   [551/570] SE-W0 C1 rep8_fold3: not started (stop rule)
+2026-10-08T17:59:30   [552/570] SE-W0 C1 rep8_fold4: not started (stop rule)
+2026-10-08T17:59:30   [553/570] SE-W0 C1 rep9_fold0: not started (stop rule)
+2026-10-08T17:59:30   [554/570] SE-W0 C1 rep9_fold1: not started (stop rule)
+2026-10-08T17:59:30   [555/570] SE-W0 C1 rep9_fold2: not started (stop rule)
+2026-10-08T17:59:30   [556/570] SE-W0 C1 rep9_fold3: not started (stop rule)
+2026-10-08T17:59:30   [557/570] SE-W0 C1 rep9_fold4: not started (stop rule)
+2026-10-08T17:59:30   [558/570] SE R4 seed8: fit 451.1s epochs 28 best 20 valAP nan
+2026-10-08T17:59:32   [559/570] SE WUT rep3_fold2: fit 125.0s epochs 28 best 20 valAP nan
+2026-10-08T17:59:36   [560/570] SE R4 seed7: fit 459.0s epochs 29 best 21 valAP nan
+2026-10-08T17:59:44   [561/570] SE WUT rep2_fold1: fit 192.5s epochs 40 best 32 valAP nan
+2026-10-08T17:59:44   [562/570] SE WUT rep3_fold1: fit 140.7s epochs 32 best 24 valAP nan
+2026-10-08T17:59:46   [563/570] SE WUT rep3_fold4: fit 118.8s epochs 24 best 16 valAP nan
+2026-10-08T17:59:52   [564/570] SE R4 seed5: fit 521.7s epochs 34 best 26 valAP nan
+2026-10-08T18:00:01   [565/570] SE WUT rep4_fold3: fit 83.4s epochs 20 best 12 valAP nan
+2026-10-08T18:00:18   [566/570] SE WUT rep5_fold1: fit 54.4s epochs 18 best 10 valAP nan
+2026-10-08T18:00:31   [567/570] SE WUT rep4_fold2: fit 120.4s epochs 34 best 26 valAP nan
+2026-10-08T18:00:47   [568/570] SE WUT rep4_fold4: fit 94.4s epochs 31 best 23 valAP nan
+2026-10-08T18:00:53   [569/570] SE WUT rep5_fold0: fit 91.5s epochs 35 best 27 valAP nan
+2026-10-08T18:01:08   [570/570] SE R4 seed6: fit 570.2s epochs 40 best 36 valAP nan
+2026-10-08T18:01:08 run finished in 3633s; stop rule TRIGGERED
+2026-10-09T09:04:42 run: 570 units, 413 to do, workers 6 x threads 2
+2026-10-09T09:05:35   [1/413] SE WUT rep6_fold1: fit 52.6s epochs 12 best 4 valAP nan
+2026-10-09T09:05:42   [2/413] SE WUT rep5_fold4: fit 60.4s epochs 15 best 7 valAP nan
+2026-10-09T09:05:54   [3/413] SE WUT rep5_fold3: fit 71.9s epochs 17 best 9 valAP nan
+2026-10-09T09:05:57   [4/413] SE WUT rep5_fold2: fit 75.2s epochs 19 best 11 valAP nan
+2026-10-09T09:06:19   [5/413] SE WUT rep6_fold2: fit 97.4s epochs 21 best 13 valAP nan
+2026-10-09T09:06:24   [6/413] SE WUT rep6_fold0: fit 102.3s epochs 24 best 16 valAP nan
+2026-10-09T09:06:51   [7/413] SE WUT rep6_fold4: fit 68.6s epochs 20 best 12 valAP nan
+2026-10-09T09:06:52   [8/413] SE WUT rep7_fold1: fit 54.6s epochs 13 best 5 valAP nan
+2026-10-09T09:07:11   [9/413] SE WUT rep6_fold3: fit 95.8s epochs 23 best 15 valAP nan
+2026-10-09T09:07:26   [10/413] SE WUT rep7_fold0: fit 91.6s epochs 27 best 19 valAP nan
+2026-10-09T09:07:30   [11/413] SE WUT rep7_fold2: fit 70.5s epochs 19 best 11 valAP nan
+2026-10-09T09:07:57   [12/413] SE WUT rep8_fold0: fit 64.8s epochs 17 best 9 valAP nan
+2026-10-09T09:08:17   [13/413] SE WUT rep7_fold3: fit 112.5s epochs 25 best 17 valAP nan
+2026-10-09T09:08:18   [14/413] SE WUT rep8_fold1: fit 67.2s epochs 16 best 8 valAP nan
+2026-10-09T09:08:23   [15/413] SE WUT rep8_fold2: fit 56.9s epochs 15 best 7 valAP nan
+2026-10-09T09:08:51   [16/413] SE WUT rep7_fold4: fit 119.7s epochs 29 best 21 valAP nan
+2026-10-09T09:08:52   [17/413] SE WUT rep8_fold4: fit 54.6s epochs 16 best 8 valAP nan
+2026-10-09T09:09:03   [18/413] SE WUT rep8_fold3: fit 92.8s epochs 23 best 15 valAP nan
+2026-10-09T09:09:59   [19/413] SE WUT rep9_fold0: fit 101.5s epochs 25 best 17 valAP nan
+2026-10-09T09:10:02   [20/413] SE WUT rep9_fold2: fit 98.9s epochs 22 best 14 valAP nan
+2026-10-09T09:10:13   [21/413] SE WUT rep9_fold1: fit 114.7s epochs 29 best 21 valAP nan
+2026-10-09T09:10:27   [22/413] SE WUT rep9_fold3: fit 95.7s epochs 26 best 18 valAP nan
+2026-10-09T09:10:55   [23/413] SE C1 rep0_fold0: fit 111.7s epochs 30 best 22 valAP nan
+2026-10-09T09:11:08   [24/413] SE WUT rep9_fold4: fit 136.0s epochs 35 best 27 valAP nan
+2026-10-09T09:11:32   [25/413] SE C1 rep0_fold1: fit 92.6s epochs 21 best 13 valAP nan
+2026-10-09T09:11:33   [26/413] SE C1 rep0_fold4: fit 65.6s epochs 17 best 9 valAP nan
+2026-10-09T09:11:48   [27/413] SE C1 rep0_fold2: fit 106.1s epochs 24 best 16 valAP nan
+2026-10-09T09:12:06   [28/413] SE C1 rep1_fold0: fit 71.2s epochs 18 best 10 valAP nan
+2026-10-09T09:12:08   [29/413] SE C1 rep0_fold3: fit 114.4s epochs 26 best 18 valAP nan
+2026-10-09T09:12:53   [30/413] SE C1 rep1_fold3: fit 79.4s epochs 17 best 9 valAP nan
+2026-10-09T09:12:53   [31/413] SE C1 rep1_fold2: fit 81.4s epochs 20 best 12 valAP nan
+2026-10-09T09:13:00   [32/413] SE C1 rep1_fold4: fit 71.1s epochs 15 best 7 valAP nan
+2026-10-09T09:13:14   [33/413] SE C1 rep1_fold1: fit 126.1s epochs 36 best 28 valAP nan
+2026-10-09T09:13:22   [34/413] SE C1 rep2_fold1: fit 74.6s epochs 18 best 10 valAP nan
+2026-10-09T09:13:36   [35/413] SE C1 rep2_fold0: fit 89.6s epochs 26 best 18 valAP nan
+2026-10-09T09:14:30   [36/413] SE C1 rep2_fold4: fit 90.4s epochs 21 best 13 valAP nan
+2026-10-09T09:14:33   [37/413] SE C1 rep2_fold2: fit 100.5s epochs 25 best 17 valAP nan
+2026-10-09T09:14:50   [38/413] SE C1 rep2_fold3: fit 116.8s epochs 26 best 18 valAP nan
+2026-10-09T09:14:51   [39/413] SE C1 rep3_fold2: fit 75.2s epochs 16 best 8 valAP nan
+2026-10-09T09:15:00   [40/413] SE C1 rep3_fold1: fit 97.7s epochs 28 best 20 valAP nan
+2026-10-09T09:15:47   [41/413] SE C1 rep4_fold1: fit 55.3s epochs 13 best 5 valAP nan
+2026-10-09T09:15:48   [42/413] SE C1 rep3_fold0: fit 153.9s epochs 40 best 34 valAP nan
+2026-10-09T09:15:54   [43/413] SE C1 rep3_fold3: fit 83.8s epochs 18 best 10 valAP nan
+2026-10-09T09:16:04   [44/413] SE C1 rep4_fold0: fit 73.9s epochs 17 best 9 valAP nan
+2026-10-09T09:16:18   [45/413] SE C1 rep4_fold2: fit 77.1s epochs 20 best 12 valAP nan
+2026-10-09T09:16:34   [46/413] SE C1 rep3_fold4: fit 120.0s epochs 28 best 20 valAP nan
+2026-10-09T09:16:52   [47/413] SE C1 rep5_fold0: fit 58.0s epochs 16 best 8 valAP nan
+2026-10-09T09:17:14   [48/413] SE C1 rep5_fold2: fit 56.0s epochs 14 best 6 valAP nan
+2026-10-09T09:17:15   [49/413] SE C1 rep4_fold4: fit 86.7s epochs 18 best 10 valAP nan
+2026-10-09T09:17:39   [50/413] SE C1 rep5_fold1: fit 95.1s epochs 19 best 11 valAP nan
+2026-10-09T09:17:48   [51/413] SE C1 rep4_fold3: fit 121.0s epochs 29 best 21 valAP nan
+2026-10-09T09:17:51   [52/413] SE C1 rep5_fold3: fit 77.2s epochs 18 best 10 valAP nan
+2026-10-09T09:18:25   [53/413] SE C1 rep6_fold1: fit 69.6s epochs 19 best 11 valAP nan
+2026-10-09T09:18:41   [54/413] SE C1 rep6_fold0: fit 87.0s epochs 23 best 15 valAP nan
+2026-10-09T09:18:48   [55/413] SE C1 rep6_fold3: fit 59.7s epochs 12 best 4 valAP nan
+2026-10-09T09:18:51   [56/413] SE C1 rep5_fold4: fit 118.4s epochs 27 best 19 valAP nan
+2026-10-09T09:18:58   [57/413] SE C1 rep6_fold4: fit 67.3s epochs 15 best 7 valAP nan
+2026-10-09T09:19:21   [58/413] SE C1 rep7_fold0: fit 55.9s epochs 17 best 9 valAP nan
+2026-10-09T09:19:30   [59/413] SE C1 rep6_fold2: fit 110.9s epochs 25 best 17 valAP nan
+2026-10-09T09:20:27   [60/413] SE C1 rep7_fold2: fit 99.0s epochs 26 best 18 valAP nan
+2026-10-09T09:20:28   [61/413] SE C1 rep7_fold1: fit 107.3s epochs 24 best 16 valAP nan
+2026-10-09T09:20:35   [62/413] SE C1 rep7_fold4: fit 96.0s epochs 23 best 15 valAP nan
+2026-10-09T09:20:51   [63/413] SE C1 rep8_fold1: fit 80.4s epochs 17 best 9 valAP nan
+2026-10-09T09:20:54   [64/413] SE C1 rep8_fold0: fit 93.2s epochs 24 best 16 valAP nan
+2026-10-09T09:21:18   [65/413] SE C1 rep7_fold3: fit 146.8s epochs 34 best 26 valAP nan
+2026-10-09T09:21:33   [66/413] SE C1 rep8_fold2: fit 65.9s epochs 17 best 9 valAP nan
+2026-10-09T09:21:55   [67/413] SE C1 rep8_fold3: fit 86.1s epochs 20 best 12 valAP nan
+2026-10-09T09:22:15   [68/413] SE C1 rep9_fold0: fit 84.0s epochs 19 best 11 valAP nan
+2026-10-09T09:22:23   [69/413] SE C1 rep9_fold1: fit 88.6s epochs 20 best 12 valAP nan
+2026-10-09T09:22:33   [70/413] GRU R1 seed0: fit 18.1s epochs 30 best 26 valAP 0.9431
+2026-10-09T09:22:34   [71/413] GRU R1 seed1: fit 10.9s epochs 24 best 19 valAP 0.9364
+2026-10-09T09:22:41   [72/413] SE C1 rep9_fold2: fit 83.2s epochs 21 best 13 valAP nan
+2026-10-09T09:22:47   [73/413] SE C1 rep9_fold3: fit 73.7s epochs 16 best 8 valAP nan
+2026-10-09T09:22:48   [74/413] GRU R1 seed3: fit 13.3s epochs 30 best 29 valAP 0.9470
+2026-10-09T09:22:49   [75/413] SE C1 rep9_fold4: fit 54.8s epochs 14 best 6 valAP nan
+2026-10-09T09:22:50   [76/413] GRU R1 seed4: fit 8.8s epochs 20 best 15 valAP 0.9473
+2026-10-09T09:22:51   [77/413] GRU R1 seed2: fit 17.2s epochs 30 best 26 valAP 0.9433
+2026-10-09T09:22:57   [78/413] GRU R1 seed5: fit 10.0s epochs 19 best 14 valAP 0.9394
+2026-10-09T09:22:57   [79/413] GRU R1 seed6: fit 9.6s epochs 22 best 17 valAP 0.9499
+2026-10-09T09:23:01   [80/413] GRU R1 seed7: fit 11.0s epochs 26 best 21 valAP 0.9460
+2026-10-09T09:23:03   [81/413] SE C1 rep8_fold4: fit 147.9s epochs 36 best 28 valAP nan
+2026-10-09T09:23:03   [82/413] GRU R1 seed8: fit 12.6s epochs 30 best 30 valAP 0.9461
+2026-10-09T09:23:04   [83/413] GRU R1 seed9: fit 12.7s epochs 30 best 28 valAP 0.9353
+2026-10-09T09:23:08   [84/413] GRU R1wd_s0 seed0: fit 10.0s epochs 19 best 14 valAP 0.9371
+2026-10-09T09:23:09   [85/413] GRU R1wd_s0 seed1: fit 11.3s epochs 26 best 21 valAP 0.9406
+2026-10-09T09:23:11   [86/413] GRU R1wd_s0 seed2: fit 9.9s epochs 23 best 18 valAP 0.9457
+2026-10-09T09:23:16   [87/413] GRU R1wd_s0 seed4: fit 13.1s epochs 28 best 23 valAP 0.9387
+2026-10-09T09:23:16   [88/413] GRU R1wd_s0 seed5: fit 12.4s epochs 30 best 28 valAP 0.9555
+2026-10-09T09:23:17   [89/413] GRU R1wd_s0 seed3: fit 13.9s epochs 30 best 28 valAP 0.9462
+2026-10-09T09:23:21   [90/413] GRU R1wd_s0 seed6: fit 12.8s epochs 25 best 20 valAP 0.9443
+2026-10-09T09:23:21   [91/413] GRU R1wd_s0 seed8: fit 10.0s epochs 24 best 19 valAP 0.9455
+2026-10-09T09:23:23   [92/413] GRU R1wd_s0 seed7: fit 13.1s epochs 30 best 27 valAP 0.9507
+2026-10-09T09:23:28   [93/413] GRU R1wd_s1 seed0: fit 11.0s epochs 21 best 16 valAP 0.9312
+2026-10-09T09:23:30   [94/413] GRU R1wd_s1 seed1: fit 12.4s epochs 30 best 26 valAP 0.9477
+2026-10-09T09:23:31   [95/413] GRU R1wd_s1 seed3: fit 9.7s epochs 23 best 18 valAP 0.9369
+2026-10-09T09:23:32   [96/413] GRU R1wd_s0 seed9: fit 15.3s epochs 30 best 28 valAP 0.9523
+2026-10-09T09:23:35   [97/413] GRU R1wd_s1 seed4: fit 11.9s epochs 28 best 23 valAP 0.9548
+2026-10-09T09:23:36   [98/413] GRU R1wd_s1 seed5: fit 7.5s epochs 18 best 13 valAP 0.9452
+2026-10-09T09:23:36   [99/413] GRU R1wd_s1 seed2: fit 14.8s epochs 29 best 24 valAP 0.9549
+2026-10-09T09:23:41   [100/413] GRU R1wd_s1 seed6: fit 11.1s epochs 19 best 14 valAP 0.9368
+2026-10-09T09:23:44   [101/413] GRU R1wd_s1 seed9: fit 9.3s epochs 22 best 17 valAP 0.9508
+2026-10-09T09:23:46   [102/413] GRU R1wd_s2 seed0: fit 10.1s epochs 24 best 19 valAP 0.9428
+2026-10-09T09:23:47   [103/413] GRU R1wd_s1 seed8: fit 14.4s epochs 28 best 23 valAP 0.9477
+2026-10-09T09:23:47   [104/413] GRU R1wd_s1 seed7: fit 14.9s epochs 23 best 18 valAP 0.9183
+2026-10-09T09:23:51   [105/413] GRU R1wd_s2 seed1: fit 14.7s epochs 30 best 26 valAP 0.9494
+2026-10-09T09:23:56   [106/413] GRU R1wd_s2 seed2: fit 14.1s epochs 30 best 26 valAP 0.9311
+2026-10-09T09:23:57   [107/413] GRU R1wd_s2 seed5: fit 9.8s epochs 24 best 19 valAP 0.9382
+2026-10-09T09:23:59   [108/413] GRU R1wd_s2 seed3: fit 14.1s epochs 24 best 19 valAP 0.9362
+2026-10-09T09:24:01   [109/413] GRU R1wd_s2 seed4: fit 14.0s epochs 24 best 19 valAP 0.9374
+2026-10-09T09:24:01   [110/413] GRU R1wd_s2 seed6: fit 14.0s epochs 29 best 24 valAP 0.9258
+2026-10-09T09:24:05   [111/413] GRU R1wd_s2 seed7: fit 13.4s epochs 30 best 30 valAP 0.9527
+2026-10-09T09:24:06   [112/413] GRU R1wd_s2 seed8: fit 10.2s epochs 23 best 18 valAP 0.9376
+2026-10-09T09:24:08   [113/413] GRU R1wd_s3 seed0: fit 8.7s epochs 18 best 13 valAP 0.9300
+2026-10-09T09:24:11   [114/413] GRU R1wd_s3 seed1: fit 9.8s epochs 21 best 16 valAP 0.9471
+2026-10-09T09:24:12   [115/413] GRU R1wd_s2 seed9: fit 14.8s epochs 29 best 24 valAP 0.9351
+2026-10-09T09:24:13   [116/413] GRU R1wd_s3 seed2: fit 11.6s epochs 30 best 29 valAP 0.9483
+2026-10-09T09:24:17   [117/413] GRU R1wd_s3 seed3: fit 11.2s epochs 24 best 19 valAP 0.9185
+2026-10-09T09:24:20   [118/413] GRU R1wd_s3 seed4: fit 13.2s epochs 30 best 30 valAP 0.9469
+2026-10-09T09:24:20   [119/413] GRU R1wd_s3 seed5: fit 11.5s epochs 26 best 21 valAP 0.9400
+2026-10-09T09:24:21   [120/413] GRU R1wd_s3 seed6: fit 9.6s epochs 23 best 18 valAP 0.9349
+2026-10-09T09:24:22   [121/413] GRU R1wd_s3 seed7: fit 9.9s epochs 22 best 17 valAP 0.9340
+2026-10-09T09:24:25   [122/413] GRU R1wd_s3 seed8: fit 11.7s epochs 30 best 30 valAP 0.9358
+2026-10-09T09:24:29   [123/413] GRU R1wd_s4 seed0: fit 8.7s epochs 24 best 19 valAP 0.9360
+2026-10-09T09:24:29   [124/413] GRU R1wd_s3 seed9: fit 12.2s epochs 30 best 25 valAP 0.9394
+2026-10-09T09:24:30   [125/413] GRU R1wd_s4 seed1: fit 9.3s epochs 24 best 19 valAP 0.9411
+2026-10-09T09:24:33   [126/413] GRU R1wd_s4 seed3: fit 9.9s epochs 24 best 19 valAP 0.9459
+2026-10-09T09:24:33   [127/413] GRU R1wd_s4 seed2: fit 11.7s epochs 30 best 26 valAP 0.9451
+2026-10-09T09:24:34   [128/413] GRU R1wd_s4 seed4: fit 7.9s epochs 23 best 18 valAP 0.9463
+2026-10-09T09:24:39   [129/413] GRU R1wd_s4 seed6: fit 9.3s epochs 27 best 22 valAP 0.9433
+2026-10-09T09:24:40   [130/413] GRU R1wd_s4 seed5: fit 10.5s epochs 30 best 28 valAP 0.9310
+2026-10-09T09:24:40   [131/413] GRU R1wd_s4 seed9: fit 7.0s epochs 19 best 14 valAP 0.9409
+2026-10-09T09:24:41   [132/413] GRU R1wd_s4 seed7: fit 10.8s epochs 26 best 21 valAP 0.9395
+2026-10-09T09:24:47   [133/413] GRU R1wd_s4 seed8: fit 13.8s epochs 30 best 26 valAP 0.9509
+2026-10-09T09:24:47   [134/413] GRU R2 seed0: fit 13.5s epochs 30 best 28 valAP 0.9617
+2026-10-09T09:24:52   [135/413] GRU R2 seed3: fit 11.1s epochs 27 best 22 valAP 0.9576
+2026-10-09T09:24:53   [136/413] GRU R2 seed1: fit 13.7s epochs 30 best 28 valAP 0.9288
+2026-10-09T09:24:55   [137/413] GRU R2 seed4: fit 14.1s epochs 30 best 27 valAP 0.9449
+2026-10-09T09:24:56   [138/413] GRU R2 seed2: fit 16.3s epochs 30 best 28 valAP 0.9531
+2026-10-09T09:25:00   [139/413] GRU R2 seed6: fit 12.3s epochs 30 best 30 valAP 0.9497
+2026-10-09T09:25:01   [140/413] GRU R2 seed5: fit 14.2s epochs 27 best 22 valAP 0.9515
+2026-10-09T09:25:02   [141/413] GRU R2 seed7: fit 9.8s epochs 20 best 15 valAP 0.9362
+2026-10-09T09:25:06   [142/413] GRU R2 seed8: fit 13.0s epochs 27 best 22 valAP 0.9388
+2026-10-09T09:25:07   [143/413] GRU R3_medical seed0: fit 10.1s epochs 22 best 17 valAP 0.9475
+2026-10-09T09:25:08   [144/413] GRU R2 seed9: fit 12.2s epochs 30 best 28 valAP 0.9383
+2026-10-09T09:25:09   [145/413] GRU R3_medical seed1: fit 9.0s epochs 24 best 19 valAP 0.9558
+2026-10-09T09:25:11   [146/413] GRU R3_medical seed3: fit 9.1s epochs 19 best 14 valAP 0.9491
+2026-10-09T09:25:12   [147/413] GRU R3_medical seed2: fit 10.5s epochs 27 best 22 valAP 0.9585
+2026-10-09T09:25:16   [148/413] GRU R3_medical seed4: fit 10.0s epochs 21 best 16 valAP 0.9581
+2026-10-09T09:25:17   [149/413] GRU R3_medical seed6: fit 8.9s epochs 25 best 20 valAP 0.9439
+2026-10-09T09:25:18   [150/413] GRU R3_medical seed5: fit 10.9s epochs 30 best 30 valAP 0.9568
+2026-10-09T09:25:20   [151/413] GRU R3_medical seed8: fit 8.5s epochs 22 best 17 valAP 0.9533
+2026-10-09T09:25:20   [152/413] GRU R3_medical seed9: fit 7.9s epochs 23 best 18 valAP 0.9463
+2026-10-09T09:25:22   [153/413] GRU R3_medical seed7: fit 12.4s epochs 24 best 19 valAP 0.9430
+2026-10-09T09:25:25   [154/413] GRU R3_banking seed1: fit 7.7s epochs 22 best 17 valAP 0.9566
+2026-10-09T09:25:28   [155/413] GRU R3_banking seed0: fit 10.9s epochs 21 best 16 valAP 0.9495
+2026-10-09T09:25:29   [156/413] GRU R3_banking seed2: fit 10.6s epochs 30 best 26 valAP 0.9689
+2026-10-09T09:25:31   [157/413] GRU R3_banking seed4: fit 10.8s epochs 30 best 30 valAP 0.9506
+2026-10-09T09:25:32   [158/413] GRU R3_banking seed3: fit 11.4s epochs 30 best 25 valAP 0.9648
+2026-10-09T09:25:34   [159/413] GRU R3_banking seed6: fit 8.7s epochs 24 best 19 valAP 0.9555
+2026-10-09T09:25:36   [160/413] GRU R3_banking seed5: fit 14.1s epochs 26 best 21 valAP 0.9536
+2026-10-09T09:25:40   [161/413] GRU R3_banking seed7: fit 12.2s epochs 26 best 21 valAP 0.9613
+2026-10-09T09:25:41   [162/413] GRU R3_banking seed8: fit 11.8s epochs 27 best 22 valAP 0.9553
+2026-10-09T09:25:41   [163/413] GRU R3_web seed0: fit 9.6s epochs 25 best 20 valAP 0.9496
+2026-10-09T09:25:43   [164/413] GRU R3_banking seed9: fit 11.6s epochs 26 best 21 valAP 0.9538
+2026-10-09T09:25:44   [165/413] GRU R3_web seed1: fit 10.2s epochs 24 best 19 valAP 0.9482
+2026-10-09T09:25:50   [166/413] GRU R3_web seed5: fit 7.9s epochs 20 best 15 valAP 0.9408
+2026-10-09T09:25:50   [167/413] GRU R3_web seed2: fit 13.2s epochs 28 best 23 valAP 0.9563
+2026-10-09T09:25:54   [168/413] GRU R3_web seed4: fit 12.5s epochs 30 best 29 valAP 0.9591
+2026-10-09T09:25:55   [169/413] GRU R3_web seed3: fit 14.8s epochs 30 best 26 valAP 0.9474
+2026-10-09T09:25:57   [170/413] GRU R3_web seed6: fit 13.7s epochs 30 best 29 valAP 0.9497
+2026-10-09T09:25:57   [171/413] GRU R3_web seed7: fit 12.9s epochs 30 best 25 valAP 0.9465
+2026-10-09T09:26:02   [172/413] GRU R3_web seed9: fit 11.7s epochs 30 best 26 valAP 0.9490
+2026-10-09T09:26:02   [173/413] GRU R3_web seed8: fit 12.1s epochs 27 best 22 valAP 0.9738
+2026-10-09T09:26:03   [174/413] GRU R3_email seed1: fit 7.5s epochs 19 best 14 valAP 0.9409
+2026-10-09T09:26:07   [175/413] GRU R3_email seed0: fit 13.2s epochs 23 best 18 valAP 0.9384
+2026-10-09T09:26:11   [176/413] GRU R3_email seed2: fit 13.3s epochs 30 best 26 valAP 0.9454
+2026-10-09T09:26:12   [177/413] GRU R3_email seed3: fit 14.0s epochs 26 best 21 valAP 0.9416
+2026-10-09T09:26:14   [178/413] GRU R3_email seed4: fit 11.9s epochs 30 best 30 valAP 0.9379
+2026-10-09T09:26:15   [179/413] GRU R3_email seed6: fit 11.8s epochs 25 best 20 valAP 0.9480
+2026-10-09T09:26:15   [180/413] GRU R3_email seed5: fit 13.1s epochs 27 best 22 valAP 0.9344
+2026-10-09T09:26:17   [181/413] GRU R3_email seed7: fit 9.2s epochs 23 best 18 valAP 0.9281
+2026-10-09T09:26:23   [182/413] GRU R3_email seed9: fit 11.4s epochs 24 best 19 valAP 0.9446
+2026-10-09T09:26:24   [183/413] GRU R3_email seed8: fit 12.5s epochs 26 best 21 valAP 0.9464
+2026-10-09T09:26:25   [184/413] GRU R3_coding seed2: fit 9.0s epochs 20 best 15 valAP 0.9434
+2026-10-09T09:26:27   [185/413] GRU R3_coding seed0: fit 12.4s epochs 30 best 29 valAP 0.9473
+2026-10-09T09:26:28   [186/413] GRU R3_coding seed1: fit 12.6s epochs 27 best 22 valAP 0.9527
+2026-10-09T09:26:28   [187/413] GRU R3_coding seed3: fit 11.0s epochs 27 best 22 valAP 0.9525
+2026-10-09T09:26:34   [188/413] GRU R3_coding seed6: fit 9.2s epochs 21 best 16 valAP 0.9547
+2026-10-09T09:26:37   [189/413] GRU R3_coding seed4: fit 12.8s epochs 27 best 22 valAP 0.9565
+2026-10-09T09:26:37   [190/413] GRU R3_coding seed5: fit 12.6s epochs 30 best 30 valAP 0.9473
+2026-10-09T09:26:39   [191/413] GRU R3_coding seed9: fit 11.2s epochs 26 best 21 valAP 0.9682
+2026-10-09T09:26:40   [192/413] GRU R3_coding seed7: fit 12.8s epochs 29 best 24 valAP 0.9426
+2026-10-09T09:26:42   [193/413] GRU R3_coding seed8: fit 13.8s epochs 29 best 24 valAP 0.9565
+2026-10-09T09:26:48   [194/413] GRU R4 seed2: fit 10.9s epochs 22 best 17 valAP 0.9489
+2026-10-09T09:26:49   [195/413] GRU R4 seed1: fit 11.9s epochs 19 best 14 valAP 0.9569
+2026-10-09T09:26:50   [196/413] GRU R4 seed0: fit 15.3s epochs 24 best 19 valAP 0.9553
+2026-10-09T09:26:51   [197/413] GRU R4 seed4: fit 10.9s epochs 21 best 16 valAP 0.9462
+2026-10-09T09:26:54   [198/413] GRU R4 seed3: fit 13.6s epochs 28 best 23 valAP 0.9508
+2026-10-09T09:26:56   [199/413] GRU R4 seed5: fit 13.3s epochs 23 best 18 valAP 0.9352
+2026-10-09T09:26:58   [200/413] GRU WUT rep0_fold0: fit 3.9s epochs 30 best 29 valAP 0.9970
+2026-10-09T09:27:00   [201/413] GRU WUT rep0_fold2: fit 1.9s epochs 14 best 9 valAP 0.9804
+2026-10-09T09:27:00   [202/413] GRU WUT rep0_fold1: fit 4.0s epochs 30 best 29 valAP 0.9945
+2026-10-09T09:27:01   [203/413] GRU R4 seed6: fit 11.7s epochs 20 best 15 valAP 0.9478
+2026-10-09T09:27:03   [204/413] GRU WUT rep1_fold0: fit 2.5s epochs 14 best 9 valAP 0.9865
+2026-10-09T09:27:03   [205/413] GRU WUT rep0_fold3: fit 3.8s epochs 30 best 28 valAP 0.9932
+2026-10-09T09:27:04   [206/413] GRU R4 seed9: fit 12.3s epochs 21 best 16 valAP 0.9620
+2026-10-09T09:27:04   [207/413] GRU WUT rep0_fold4: fit 4.0s epochs 26 best 21 valAP 0.9944
+2026-10-09T09:27:06   [208/413] GRU R4 seed7: fit 16.3s epochs 30 best 27 valAP 0.9495
+2026-10-09T09:27:07   [209/413] GRU WUT rep1_fold3: fit 2.7s epochs 20 best 15 valAP 0.9869
+2026-10-09T09:27:07   [210/413] GRU R4 seed8: fit 16.2s epochs 27 best 22 valAP 0.9494
+2026-10-09T09:27:07   [211/413] GRU WUT rep1_fold2: fit 3.9s epochs 30 best 29 valAP 0.9932
+2026-10-09T09:27:08   [212/413] GRU WUT rep1_fold1: fit 4.7s epochs 30 best 27 valAP 0.9892
+2026-10-09T09:27:08   [213/413] GRU WUT rep1_fold4: fit 3.6s epochs 21 best 16 valAP 0.9928
+2026-10-09T09:27:09   [214/413] GRU WUT rep2_fold0: fit 2.9s epochs 23 best 18 valAP 0.9886
+2026-10-09T09:27:11   [215/413] GRU WUT rep2_fold2: fit 3.3s epochs 16 best 11 valAP 0.9685
+2026-10-09T09:27:11   [216/413] GRU WUT rep2_fold4: fit 3.5s epochs 27 best 22 valAP 0.9724
+2026-10-09T09:27:12   [217/413] GRU WUT rep3_fold1: fit 2.6s epochs 20 best 15 valAP 0.9887
+2026-10-09T09:27:13   [218/413] GRU WUT rep2_fold1: fit 5.9s epochs 29 best 24 valAP 0.9900
+2026-10-09T09:27:13   [219/413] GRU WUT rep2_fold3: fit 5.6s epochs 30 best 30 valAP 0.9936
+2026-10-09T09:27:14   [220/413] GRU WUT rep3_fold0: fit 5.7s epochs 30 best 25 valAP 0.9942
+2026-10-09T09:27:15   [221/413] GRU WUT rep3_fold3: fit 3.1s epochs 19 best 14 valAP 0.9920
+2026-10-09T09:27:16   [222/413] GRU WUT rep3_fold4: fit 3.7s epochs 23 best 18 valAP 0.9886
+2026-10-09T09:27:16   [223/413] GRU WUT rep3_fold2: fit 5.3s epochs 28 best 23 valAP 0.9937
+2026-10-09T09:27:17   [224/413] GRU WUT rep4_fold0: fit 3.5s epochs 26 best 21 valAP 0.9912
+2026-10-09T09:27:17   [225/413] GRU WUT rep4_fold1: fit 4.0s epochs 30 best 26 valAP 0.9922
+2026-10-09T09:27:19   [226/413] GRU WUT rep5_fold0: fit 2.4s epochs 13 best 8 valAP 0.9782
+2026-10-09T09:27:19   [227/413] GRU WUT rep4_fold4: fit 3.2s epochs 19 best 14 valAP 0.9734
+2026-10-09T09:27:19   [228/413] GRU WUT rep5_fold2: fit 2.1s epochs 16 best 11 valAP 0.9910
+2026-10-09T09:27:20   [229/413] GRU WUT rep5_fold1: fit 3.0s epochs 23 best 18 valAP 0.9909
+2026-10-09T09:27:20   [230/413] GRU WUT rep4_fold3: fit 5.0s epochs 30 best 27 valAP 0.9855
+2026-10-09T09:27:20   [231/413] GRU WUT rep4_fold2: fit 5.9s epochs 30 best 29 valAP 0.9913
+2026-10-09T09:27:22   [232/413] GRU WUT rep5_fold4: fit 2.7s epochs 15 best 10 valAP 0.9849
+2026-10-09T09:27:24   [233/413] GRU WUT rep6_fold0: fit 4.0s epochs 30 best 30 valAP 0.9908
+2026-10-09T09:27:24   [234/413] GRU WUT rep6_fold1: fit 3.9s epochs 30 best 28 valAP 0.9923
+2026-10-09T09:27:24   [235/413] GRU WUT rep5_fold3: fit 5.4s epochs 27 best 22 valAP 0.9938
+2026-10-09T09:27:25   [236/413] GRU WUT rep6_fold2: fit 5.0s epochs 29 best 24 valAP 0.9801
+2026-10-09T09:27:25   [237/413] GRU WUT rep6_fold3: fit 5.6s epochs 30 best 29 valAP 0.9947
+2026-10-09T09:27:26   [238/413] GRU WUT rep6_fold4: fit 4.3s epochs 30 best 29 valAP 0.9792
+2026-10-09T09:27:27   [239/413] GRU WUT rep7_fold1: fit 3.3s epochs 18 best 13 valAP 0.9880
+2026-10-09T09:27:27   [240/413] GRU WUT rep7_fold0: fit 3.7s epochs 30 best 30 valAP 0.9937
+2026-10-09T09:27:28   [241/413] GRU WUT rep7_fold3: fit 2.7s epochs 15 best 10 valAP 0.9829
+2026-10-09T09:27:28   [242/413] GRU WUT rep7_fold2: fit 4.1s epochs 23 best 18 valAP 0.9911
+2026-10-09T09:27:29   [243/413] GRU WUT rep7_fold4: fit 3.4s epochs 23 best 18 valAP 0.9862
+2026-10-09T09:27:30   [244/413] GRU WUT rep8_fold0: fit 3.6s epochs 27 best 22 valAP 0.9912
+2026-10-09T09:27:31   [245/413] GRU WUT rep8_fold2: fit 3.1s epochs 19 best 14 valAP 0.9907
+2026-10-09T09:27:32   [246/413] GRU WUT rep8_fold3: fit 3.9s epochs 24 best 19 valAP 0.9912
+2026-10-09T09:27:32   [247/413] GRU WUT rep8_fold1: fit 4.6s epochs 30 best 30 valAP 0.9924
+2026-10-09T09:27:33   [248/413] GRU WUT rep8_fold4: fit 4.2s epochs 30 best 30 valAP 0.9952
+2026-10-09T09:27:34   [249/413] GRU WUT rep9_fold1: fit 3.6s epochs 22 best 17 valAP 0.9871
+2026-10-09T09:27:34   [250/413] GRU WUT rep9_fold0: fit 4.9s epochs 30 best 27 valAP 0.9901
+2026-10-09T09:27:35   [251/413] GRU WUT rep9_fold4: fit 3.2s epochs 23 best 18 valAP 0.9877
+2026-10-09T09:27:35   [252/413] GRU WUT rep9_fold3: fit 3.5s epochs 30 best 30 valAP 0.9888
+2026-10-09T09:27:36   [253/413] GRU WUT rep9_fold2: fit 4.9s epochs 28 best 23 valAP 0.9938
+2026-10-09T09:27:36   [254/413] GRU C1 rep0_fold0: fit 3.2s epochs None best None valAP nan
+2026-10-09T09:27:36   [255/413] GRU C1 rep0_fold1: fit 2.4s epochs None best None valAP nan
+2026-10-09T09:27:38   [256/413] GRU C1 rep1_fold2: fit 1.6s epochs None best None valAP nan
+2026-10-09T09:27:38   [257/413] GRU C1 rep1_fold1: fit 2.0s epochs None best None valAP nan
+2026-10-09T09:27:39   [258/413] GRU C1 rep0_fold2: fit 4.8s epochs None best None valAP nan
+2026-10-09T09:27:39   [259/413] GRU C1 rep0_fold4: fit 3.9s epochs None best None valAP nan
+2026-10-09T09:27:39   [260/413] GRU C1 rep1_fold0: fit 3.3s epochs None best None valAP nan
+2026-10-09T09:27:40   [261/413] GRU C1 rep0_fold3: fit 4.7s epochs None best None valAP nan
+2026-10-09T09:27:40   [262/413] GRU C1 rep1_fold3: fit 2.3s epochs None best None valAP nan
+2026-10-09T09:27:40   [263/413] GRU C1 rep1_fold4: fit 2.5s epochs None best None valAP nan
+2026-10-09T09:27:43   [264/413] GRU C1 rep3_fold0: fit 2.5s epochs None best None valAP nan
+2026-10-09T09:27:43   [265/413] GRU C1 rep2_fold0: fit 4.3s epochs None best None valAP nan
+2026-10-09T09:27:43   [266/413] GRU C1 rep2_fold2: fit 4.3s epochs None best None valAP nan
+2026-10-09T09:27:44   [267/413] GRU C1 rep2_fold1: fit 4.6s epochs None best None valAP nan
+2026-10-09T09:27:44   [268/413] GRU C1 rep2_fold4: fit 4.0s epochs None best None valAP nan
+2026-10-09T09:27:45   [269/413] GRU C1 rep2_fold3: fit 5.2s epochs None best None valAP nan
+2026-10-09T09:27:46   [270/413] GRU C1 rep3_fold1: fit 2.7s epochs None best None valAP nan
+2026-10-09T09:27:46   [271/413] GRU C1 rep3_fold4: fit 2.3s epochs None best None valAP nan
+2026-10-09T09:27:47   [272/413] GRU C1 rep3_fold2: fit 3.4s epochs None best None valAP nan
+2026-10-09T09:27:47   [273/413] GRU C1 rep4_fold0: fit 3.0s epochs None best None valAP nan
+2026-10-09T09:27:48   [274/413] GRU C1 rep3_fold3: fit 4.3s epochs None best None valAP nan
+2026-10-09T09:27:49   [275/413] GRU C1 rep4_fold1: fit 3.6s epochs None best None valAP nan
+2026-10-09T09:27:49   [276/413] GRU C1 rep5_fold0: fit 2.0s epochs None best None valAP nan
+2026-10-09T09:27:49   [277/413] GRU C1 rep4_fold2: fit 3.7s epochs None best None valAP nan
+2026-10-09T09:27:50   [278/413] GRU C1 rep4_fold3: fit 4.0s epochs None best None valAP nan
+2026-10-09T09:27:51   [279/413] GRU C1 rep4_fold4: fit 4.5s epochs None best None valAP nan
+2026-10-09T09:27:52   [280/413] GRU C1 rep5_fold3: fit 2.9s epochs None best None valAP nan
+2026-10-09T09:27:53   [281/413] GRU C1 rep5_fold2: fit 3.9s epochs None best None valAP nan
+2026-10-09T09:27:53   [282/413] GRU C1 rep5_fold1: fit 4.8s epochs None best None valAP nan
+2026-10-09T09:27:53   [283/413] GRU C1 rep5_fold4: fit 3.8s epochs None best None valAP nan
+2026-10-09T09:27:54   [284/413] GRU C1 rep6_fold0: fit 3.3s epochs None best None valAP nan
+2026-10-09T09:27:54   [285/413] GRU C1 rep6_fold2: fit 1.8s epochs None best None valAP nan
+2026-10-09T09:27:54   [286/413] GRU C1 rep6_fold1: fit 3.0s epochs None best None valAP nan
+2026-10-09T09:27:55   [287/413] GRU C1 rep6_fold4: fit 2.0s epochs None best None valAP nan
+2026-10-09T09:27:55   [288/413] GRU C1 rep7_fold2: fit 1.0s epochs None best None valAP nan
+2026-10-09T09:27:56   [289/413] GRU C1 rep6_fold3: fit 3.4s epochs None best None valAP nan
+2026-10-09T09:27:57   [290/413] GRU C1 rep7_fold0: fit 3.5s epochs None best None valAP nan
+2026-10-09T09:27:58   [291/413] GRU C1 rep7_fold1: fit 4.2s epochs None best None valAP nan
+2026-10-09T09:27:58   [292/413] GRU C1 rep8_fold0: fit 3.2s epochs None best None valAP nan
+2026-10-09T09:27:59   [293/413] GRU C1 rep7_fold3: fit 4.3s epochs None best None valAP nan
+2026-10-09T09:27:59   [294/413] GRU C1 rep7_fold4: fit 4.0s epochs None best None valAP nan
+2026-10-09T09:27:59   [295/413] GRU C1 rep8_fold1: fit 3.4s epochs None best None valAP nan
+2026-10-09T09:28:00   [296/413] GRU C1 rep8_fold4: fit 2.1s epochs None best None valAP nan
+2026-10-09T09:28:01   [297/413] GRU C1 rep8_fold2: fit 3.8s epochs None best None valAP nan
+2026-10-09T09:28:01   [298/413] GRU C1 rep8_fold3: fit 3.0s epochs None best None valAP nan
+2026-10-09T09:28:02   [299/413] GRU C1 rep9_fold0: fit 3.1s epochs None best None valAP nan
+2026-10-09T09:28:03   [300/413] GRU C1 rep9_fold4: fit 1.9s epochs None best None valAP nan
+2026-10-09T09:28:03   [301/413] GRU C1 rep9_fold2: fit 3.9s epochs None best None valAP nan
+2026-10-09T09:28:04   [302/413] GRU C1 rep9_fold1: fit 4.7s epochs None best None valAP nan
+2026-10-09T09:28:04   [303/413] GRU C1 rep9_fold3: fit 3.8s epochs None best None valAP nan
+2026-10-09T09:32:08   [304/413] SE-W0 R4 seed5: fit 242.4s epochs 18 best 10 valAP nan
+2026-10-09T09:33:55   [305/413] SE-W0 R4 seed3: fit 350.3s epochs 23 best 15 valAP nan
+2026-10-09T09:36:28   [306/413] SE-W0 R4 seed0: fit 505.6s epochs 36 best 28 valAP nan
+2026-10-09T09:36:59   [307/413] SE-W0 R4 seed1: fit 536.1s epochs 40 best 37 valAP nan
+2026-10-09T09:37:14   [308/413] SE-W0 R4 seed4: fit 549.6s epochs 40 best 39 valAP nan
+2026-10-09T09:37:29   [309/413] SE-W0 R4 seed2: fit 565.2s epochs 40 best 40 valAP nan
+2026-10-09T09:39:00   [310/413] SE-W0 WUT rep0_fold1: fit 90.4s epochs 22 best 14 valAP nan
+2026-10-09T09:39:17   [311/413] SE-W0 WUT rep0_fold0: fit 122.1s epochs 28 best 20 valAP nan
+2026-10-09T09:39:22   [312/413] SE-W0 R4 seed7: fit 325.8s epochs 24 best 16 valAP nan
+2026-10-09T09:40:36   [313/413] SE-W0 WUT rep0_fold4: fit 74.0s epochs 19 best 11 valAP nan
+2026-10-09T09:40:42   [314/413] SE-W0 WUT rep0_fold2: fit 101.8s epochs 21 best 13 valAP nan
+2026-10-09T09:41:19   [315/413] SE-W0 R4 seed6: fit 550.5s epochs 40 best 39 valAP nan
+2026-10-09T09:41:38   [316/413] SE-W0 WUT rep0_fold3: fit 140.4s epochs 33 best 25 valAP nan
+2026-10-09T09:41:55   [317/413] SE-W0 R4 seed9: fit 294.6s epochs 22 best 14 valAP nan
+2026-10-09T09:42:16   [318/413] SE-W0 WUT rep1_fold0: fit 99.3s epochs 25 best 17 valAP nan
+2026-10-09T09:42:18   [319/413] SE-W0 R4 seed8: fit 349.2s epochs 23 best 15 valAP nan
+2026-10-09T09:42:27   [320/413] SE-W0 WUT rep1_fold2: fit 67.7s epochs 17 best 9 valAP nan
+2026-10-09T09:42:33   [321/413] SE-W0 WUT rep1_fold1: fit 110.5s epochs 26 best 18 valAP nan
+2026-10-09T09:42:40   [322/413] SE-W0 WUT rep1_fold3: fit 61.8s epochs 14 best 6 valAP nan
+2026-10-09T09:43:04   [323/413] SE-W0 WUT rep2_fold0: fit 48.1s epochs 14 best 6 valAP nan
+2026-10-09T09:43:07   [324/413] SE-W0 WUT rep1_fold4: fit 72.0s epochs 19 best 11 valAP nan
+2026-10-09T09:43:28   [325/413] SE-W0 WUT rep2_fold3: fit 55.5s epochs 14 best 6 valAP nan
+2026-10-09T09:43:44   [326/413] SE-W0 WUT rep2_fold2: fit 76.9s epochs 18 best 10 valAP nan
+2026-10-09T09:44:03   [327/413] SE-W0 WUT rep3_fold0: fit 59.1s epochs 16 best 8 valAP nan
+2026-10-09T09:44:12   [328/413] SE-W0 WUT rep3_fold1: fit 64.6s epochs 17 best 9 valAP nan
+2026-10-09T09:44:23   [329/413] SE-W0 WUT rep2_fold1: fit 125.3s epochs 30 best 22 valAP nan
+2026-10-09T09:44:48   [330/413] SE-W0 WUT rep2_fold4: fit 128.3s epochs 32 best 24 valAP nan
+2026-10-09T09:44:51   [331/413] SE-W0 WUT rep3_fold2: fit 82.6s epochs 20 best 12 valAP nan
+2026-10-09T09:45:18   [332/413] SE-W0 WUT rep4_fold1: fit 54.1s epochs 13 best 5 valAP nan
+2026-10-09T09:45:29   [333/413] SE-W0 WUT rep3_fold3: fit 104.0s epochs 23 best 15 valAP nan
+2026-10-09T09:45:38   [334/413] SE-W0 WUT rep4_fold0: fit 86.4s epochs 22 best 14 valAP nan
+2026-10-09T09:45:53   [335/413] SE-W0 WUT rep3_fold4: fit 109.9s epochs 24 best 16 valAP nan
+2026-10-09T09:46:29   [336/413] SE-W0 WUT rep4_fold2: fit 100.6s epochs 26 best 18 valAP nan
+2026-10-09T09:46:30   [337/413] SE-W0 WUT rep4_fold4: fit 71.6s epochs 18 best 10 valAP nan
+2026-10-09T09:46:34   [338/413] SE-W0 WUT rep4_fold3: fit 102.2s epochs 24 best 16 valAP nan
+2026-10-09T09:46:35   [339/413] SE-W0 WUT rep5_fold0: fit 66.3s epochs 19 best 11 valAP nan
+2026-10-09T09:47:00   [340/413] SE-W0 WUT rep5_fold1: fit 81.0s epochs 20 best 12 valAP nan
+2026-10-09T09:47:02   [341/413] SE-W0 WUT rep5_fold2: fit 68.0s epochs 17 best 9 valAP nan
+2026-10-09T09:47:51   [342/413] SE-W0 WUT rep6_fold0: fit 77.4s epochs 17 best 9 valAP nan
+2026-10-09T09:48:04   [343/413] SE-W0 WUT rep5_fold4: fit 93.7s epochs 23 best 15 valAP nan
+2026-10-09T09:48:11   [344/413] SE-W0 WUT rep6_fold1: fit 95.1s epochs 22 best 14 valAP nan
+2026-10-09T09:48:23   [345/413] SE-W0 WUT rep6_fold2: fit 83.3s epochs 18 best 10 valAP nan
+2026-10-09T09:48:34   [346/413] SE-W0 WUT rep6_fold3: fit 91.9s epochs 22 best 14 valAP nan
+2026-10-09T09:49:03   [347/413] SE-W0 WUT rep7_fold1: fit 52.4s epochs 13 best 5 valAP nan
+2026-10-09T09:49:07   [348/413] SE-W0 WUT rep5_fold3: fit 158.1s epochs 39 best 31 valAP nan
+2026-10-09T09:49:16   [349/413] SE-W0 WUT rep6_fold4: fit 84.2s epochs 23 best 15 valAP nan
+2026-10-09T09:49:18   [350/413] SE-W0 WUT rep7_fold0: fit 74.3s epochs 21 best 13 valAP nan
+2026-10-09T09:49:54   [351/413] SE-W0 WUT rep7_fold2: fit 90.3s epochs 24 best 16 valAP nan
+2026-10-09T09:50:12   [352/413] SE-W0 WUT rep7_fold4: fit 68.5s epochs 17 best 9 valAP nan
+2026-10-09T09:50:35   [353/413] SE-W0 WUT rep8_fold0: fit 87.1s epochs 22 best 14 valAP nan
+2026-10-09T09:50:35   [354/413] SE-W0 WUT rep7_fold3: fit 121.1s epochs 25 best 17 valAP nan
+2026-10-09T09:50:36   [355/413] SE-W0 WUT rep8_fold1: fit 80.3s epochs 19 best 11 valAP nan
+2026-10-09T09:50:44   [356/413] SE-W0 WUT rep8_fold2: fit 86.0s epochs 22 best 14 valAP nan
+2026-10-09T09:50:55   [357/413] SE-W0 WUT rep8_fold3: fit 61.0s epochs 14 best 6 valAP nan
+2026-10-09T09:51:55   [358/413] SE-W0 WUT rep9_fold0: fit 79.5s epochs 17 best 9 valAP nan
+2026-10-09T09:52:07   [359/413] SE-W0 WUT rep8_fold4: fit 114.4s epochs 32 best 24 valAP nan
+2026-10-09T09:52:27   [360/413] SE-W0 WUT rep9_fold3: fit 102.3s epochs 23 best 15 valAP nan
+2026-10-09T09:52:31   [361/413] SE-W0 WUT rep9_fold2: fit 114.2s epochs 25 best 17 valAP nan
+2026-10-09T09:52:34   [362/413] SE-W0 WUT rep9_fold1: fit 118.8s epochs 24 best 16 valAP nan
+2026-10-09T09:53:05   [363/413] SE-W0 WUT rep9_fold4: fit 129.4s epochs 26 best 18 valAP nan
+2026-10-09T09:53:37   [364/413] SE-W0 C1 rep0_fold1: fit 89.8s epochs 27 best 19 valAP nan
+2026-10-09T09:53:38   [365/413] SE-W0 C1 rep0_fold0: fit 102.7s epochs 22 best 14 valAP nan
+2026-10-09T09:54:07   [366/413] SE-W0 C1 rep0_fold4: fit 92.7s epochs 19 best 11 valAP nan
+2026-10-09T09:54:16   [367/413] SE-W0 C1 rep0_fold3: fit 105.2s epochs 32 best 24 valAP nan
+2026-10-09T09:54:30   [368/413] SE-W0 C1 rep1_fold0: fit 84.8s epochs 16 best 8 valAP nan
+2026-10-09T09:54:30   [369/413] SE-W0 C1 rep0_fold2: fit 123.0s epochs 25 best 17 valAP nan
+2026-10-09T09:54:37   [370/413] SE-W0 C1 rep1_fold1: fit 60.5s epochs 21 best 13 valAP nan
+2026-10-09T09:55:15   [371/413] SE-W0 C1 rep1_fold3: fit 67.3s epochs 14 best 6 valAP nan
+2026-10-09T09:55:34   [372/413] SE-W0 C1 rep2_fold2: fit 56.8s epochs 17 best 9 valAP nan
+2026-10-09T09:55:39   [373/413] SE-W0 C1 rep2_fold1: fit 68.4s epochs 15 best 7 valAP nan
+2026-10-09T09:55:51   [374/413] SE-W0 C1 rep1_fold4: fit 94.7s epochs 28 best 20 valAP nan
+2026-10-09T09:55:51   [375/413] SE-W0 C1 rep1_fold2: fit 133.5s epochs 27 best 19 valAP nan
+2026-10-09T09:56:14   [376/413] SE-W0 C1 rep2_fold0: fit 104.0s epochs 25 best 17 valAP nan
+2026-10-09T09:56:44   [377/413] SE-W0 C1 rep3_fold0: fit 65.4s epochs 14 best 6 valAP nan
+2026-10-09T09:56:52   [378/413] SE-W0 C1 rep2_fold3: fit 97.6s epochs 20 best 12 valAP nan
+2026-10-09T09:56:56   [379/413] SE-W0 C1 rep2_fold4: fit 82.1s epochs 17 best 9 valAP nan
+2026-10-09T09:56:58   [380/413] SE-W0 C1 rep3_fold1: fit 66.3s epochs 22 best 14 valAP nan
+2026-10-09T09:56:58   [381/413] SE-W0 C1 rep3_fold2: fit 66.7s epochs 13 best 5 valAP nan
+2026-10-09T09:57:48   [382/413] SE-W0 C1 rep4_fold0: fit 55.2s epochs 13 best 5 valAP nan
+2026-10-09T09:58:08   [383/413] SE-W0 C1 rep3_fold4: fit 83.1s epochs 18 best 10 valAP nan
+2026-10-09T09:58:27   [384/413] SE-W0 C1 rep4_fold3: fit 88.7s epochs 20 best 12 valAP nan
+2026-10-09T09:58:29   [385/413] SE-W0 C1 rep4_fold1: fit 91.9s epochs 20 best 12 valAP nan
+2026-10-09T09:59:07   [386/413] SE-W0 C1 rep4_fold2: fit 129.6s epochs 35 best 27 valAP nan
+2026-10-09T09:59:10   [387/413] SE-W0 C1 rep3_fold3: fit 176.4s epochs 36 best 28 valAP nan
+2026-10-09T09:59:32   [388/413] SE-W0 C1 rep5_fold0: fit 83.9s epochs 22 best 14 valAP nan
+2026-10-09T09:59:48   [389/413] SE-W0 C1 rep5_fold2: fit 79.1s epochs 17 best 9 valAP nan
+2026-10-09T09:59:58   [390/413] SE-W0 C1 rep4_fold4: fit 130.4s epochs 31 best 23 valAP nan
+2026-10-09T10:00:20   [391/413] SE-W0 C1 rep5_fold3: fit 72.4s epochs 16 best 8 valAP nan
+2026-10-09T10:00:35   [392/413] SE-W0 C1 rep5_fold4: fit 84.2s epochs 18 best 10 valAP nan
+2026-10-09T10:00:59   [393/413] SE-W0 C1 rep5_fold1: fit 152.3s epochs 30 best 22 valAP nan
+2026-10-09T10:01:15   [394/413] SE-W0 C1 rep6_fold1: fit 86.8s epochs 17 best 9 valAP nan
+2026-10-09T10:01:28   [395/413] SE-W0 C1 rep6_fold0: fit 115.9s epochs 29 best 21 valAP nan
+2026-10-09T10:01:28   [396/413] SE-W0 C1 rep6_fold3: fit 68.0s epochs 15 best 7 valAP nan
+2026-10-09T10:01:52   [397/413] SE-W0 C1 rep6_fold4: fit 76.9s epochs 19 best 11 valAP nan
+2026-10-09T10:02:47   [398/413] SE-W0 C1 rep6_fold2: fit 168.3s epochs 40 best 34 valAP nan
+2026-10-09T10:02:52   [399/413] SE-W0 C1 rep7_fold0: fit 112.7s epochs 25 best 17 valAP nan
+2026-10-09T10:03:00   [400/413] SE-W0 C1 rep7_fold1: fit 105.4s epochs 24 best 16 valAP nan
+2026-10-09T10:03:03   [401/413] SE-W0 C1 rep7_fold2: fit 95.5s epochs 26 best 18 valAP nan
+2026-10-09T10:03:16   [402/413] SE-W0 C1 rep7_fold4: fit 83.9s epochs 22 best 14 valAP nan
+2026-10-09T10:03:21   [403/413] SE-W0 C1 rep7_fold3: fit 113.0s epochs 24 best 16 valAP nan
+2026-10-09T10:04:19   [404/413] SE-W0 C1 rep8_fold1: fit 87.0s epochs 17 best 9 valAP nan
+2026-10-09T10:04:26   [405/413] SE-W0 C1 rep8_fold3: fit 82.0s epochs 20 best 12 valAP nan
+2026-10-09T10:04:56   [406/413] SE-W0 C1 rep9_fold0: fit 94.9s epochs 22 best 14 valAP nan
+2026-10-09T10:04:58   [407/413] SE-W0 C1 rep8_fold2: fit 117.8s epochs 29 best 21 valAP nan
+2026-10-09T10:05:21   [408/413] SE-W0 C1 rep8_fold4: fit 124.7s epochs 32 best 24 valAP nan
+2026-10-09T10:05:35   [409/413] SE-W0 C1 rep8_fold0: fit 168.1s epochs 39 best 31 valAP nan
+2026-10-09T10:05:51   [410/413] SE-W0 C1 rep9_fold2: fit 85.7s epochs 21 best 13 valAP nan
+2026-10-09T10:05:59   [411/413] SE-W0 C1 rep9_fold4: fit 60.3s epochs 17 best 9 valAP nan
+2026-10-09T10:06:27   [412/413] SE-W0 C1 rep9_fold3: fit 91.0s epochs 25 best 17 valAP nan
+2026-10-09T10:06:54   [413/413] SE-W0 C1 rep9_fold1: fit 154.3s epochs 40 best 32 valAP nan
+2026-10-09T10:06:54 run finished in 3732s; stop rule not triggered
+2026-10-09T10:07:16 assembled sencoder C1
+2026-10-09T10:07:17 assembled sencoder R1
+2026-10-09T10:07:17 assembled sencoder R1wd_s0
+2026-10-09T10:07:17 assembled sencoder R1wd_s1
+2026-10-09T10:07:17 assembled sencoder R1wd_s2
+2026-10-09T10:07:18 assembled sencoder R1wd_s3
+2026-10-09T10:07:18 assembled sencoder R1wd_s4
+2026-10-09T10:07:18 assembled sencoder R2
+2026-10-09T10:07:18 assembled sencoder R3_banking
+2026-10-09T10:07:18 assembled sencoder R3_coding
+2026-10-09T10:07:18 assembled sencoder R3_email
+2026-10-09T10:07:19 assembled sencoder R3_medical
+2026-10-09T10:07:19 assembled sencoder R3_web
+2026-10-09T10:07:19 assembled sencoder R4
+2026-10-09T10:07:20 assembled sencoder WUT
+2026-10-09T10:07:20 assembled gru10 R1
+2026-10-09T10:07:21 assembled gru10 R1wd_s0
+2026-10-09T10:07:21 assembled gru10 R1wd_s1
+2026-10-09T10:07:22 assembled gru10 R1wd_s2
+2026-10-09T10:07:22 assembled gru10 R1wd_s3
+2026-10-09T10:07:22 assembled gru10 R1wd_s4
+2026-10-09T10:07:23 assembled gru10 R2
+2026-10-09T10:07:23 assembled gru10 R3_medical
+2026-10-09T10:07:23 assembled gru10 R3_banking
+2026-10-09T10:07:23 assembled gru10 R3_web
+2026-10-09T10:07:23 assembled gru10 R3_email
+2026-10-09T10:07:23 assembled gru10 R3_coding
+2026-10-09T10:07:24 assembled gru10 R4
+2026-10-09T10:07:24 assembled gru10 WUT
+2026-10-09T10:07:24 assembled gru10 C1
+2026-10-09T10:07:37 drift R1: {'n_steps': 9284, 'mean': 0.04107871020549025, 'median': 0.02654975652694702, 'p90': 0.10349841117858886, 'frac_exact_match_le_1e-6': 0.11945282205945713}
+2026-10-09T10:07:40 drift R1wd_s0: {'n_steps': 9531, 'mean': 0.040175618342144545, 'median': 0.02464115619659424, 'p90': 0.10274964570999146, 'frac_exact_match_le_1e-6': 0.14741370265449585}
+2026-10-09T10:07:42 drift R1wd_s1: {'n_steps': 9809, 'mean': 0.038967409311588756, 'median': 0.024359822273254395, 'p90': 0.10033152103424076, 'frac_exact_match_le_1e-6': 0.1419104903659904}
+2026-10-09T10:07:45 drift R1wd_s2: {'n_steps': 9799, 'mean': 0.03881517685558227, 'median': 0.024470210075378418, 'p90': 0.10022093057632447, 'frac_exact_match_le_1e-6': 0.1494030003061537}
+2026-10-09T10:07:48 drift R1wd_s3: {'n_steps': 9570, 'mean': 0.03843903625646729, 'median': 0.02415218949317932, 'p90': 0.09661806821823121, 'frac_exact_match_le_1e-6': 0.14535005224660397}
+2026-10-09T10:07:51 drift R1wd_s4: {'n_steps': 9612, 'mean': 0.038208009437179245, 'median': 0.023793399333953857, 'p90': 0.09784992933273315, 'frac_exact_match_le_1e-6': 0.14731585518102372}
+2026-10-09T10:07:53 drift R2: {'n_steps': 8606, 'mean': 0.08006090216655497, 'median': 0.052518606185913086, 'p90': 0.1989923119544983, 'frac_exact_match_le_1e-6': 0.042644666511736}
+2026-10-09T10:07:56 drift R3_medical: {'n_steps': 11171, 'mean': 0.29596461243237177, 'median': 0.29797273874282837, 'p90': 0.3679097294807434, 'frac_exact_match_le_1e-6': 0.0}
+2026-10-09T10:07:58 drift R3_banking: {'n_steps': 8465, 'mean': 0.2831293178111649, 'median': 0.27857279777526855, 'p90': 0.4149325370788574, 'frac_exact_match_le_1e-6': 0.0}
+2026-10-09T10:08:01 drift R3_web: {'n_steps': 11183, 'mean': 0.40962439423691316, 'median': 0.42307019233703613, 'p90': 0.5361235737800599, 'frac_exact_match_le_1e-6': 0.0}
+2026-10-09T10:08:04 drift R3_email: {'n_steps': 11331, 'mean': 0.2600727700911493, 'median': 0.24798274040222168, 'p90': 0.36521661281585693, 'frac_exact_match_le_1e-6': 0.0}
+2026-10-09T10:08:07 drift R3_coding: {'n_steps': 11192, 'mean': 0.3831827161597984, 'median': 0.38386020064353943, 'p90': 0.5084783554077148, 'frac_exact_match_le_1e-6': 0.0}
+2026-10-09T10:08:19 drift R4: {'n_steps': 14079, 'mean': 0.32028824278505463, 'median': 0.30395710468292236, 'p90': 0.47113072872161865, 'frac_exact_match_le_1e-6': 0.0}
+2026-10-09T10:09:02 drift written

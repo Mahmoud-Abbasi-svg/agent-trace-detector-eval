@@ -8,3 +8,9 @@ revision/logs/
 paper/*.aux
 paper/*.log
 paper/*.out
+revision/cache/**/*.npz
+revision/monitor_run/hpc/*.tgz
+paper/monitor_build/
+paper/sencoder_build/
+paper/main_v0*.tex
+paper/supplement_v0*.tex

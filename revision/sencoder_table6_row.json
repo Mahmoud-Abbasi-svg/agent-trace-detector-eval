@@ -1,0 +1,128 @@
+{
+ "note": "Computed 9 Oct 2026 after the SE run, not pre-registered. Estimator is revision/r4_deep.py eval_config (plan procedure, suite|user_task cluster bootstrap, B=2000, seed 20260927), imported unmodified, with SE scores from revision/cache/sencoder_fits/{R4,WUT,C1}.pkl injected as detector 'SE' next to MAIN5. The same call with MAIN5 alone reproduces the published P0_UT cluster values in r4_deep_results.json exactly (max abs diff 0). Adding SE changes the random stream, so the five published rows shift by at most 0.0052 in this joint run and the published values remain the reference for them. SE within uses 10 repetitions, the others 5. IT was not run for SE.",
+ "P0_UT": {
+  "transfer_AUROC": [
+   0.481,
+   0.3985,
+   0.5604
+  ],
+  "within_AUROC": [
+   0.9563,
+   0.9156,
+   0.9838
+  ],
+  "within_minus_transfer": {
+   "mean": 0.4781,
+   "lo": 0.3894,
+   "hi": 0.5632,
+   "p_boot": 0.0,
+   "frac_le0": 0.0
+  },
+  "within_APw10": [
+   0.7271,
+   0.5012,
+   0.9339
+  ],
+  "holm_over_six_representations_p": {
+   "LR-A": 0.0,
+   "LR-B": 0.0,
+   "LR-C": 0.0,
+   "GRU": 0.0,
+   "TFIDF": 0.0,
+   "SE": 0.0
+  }
+ },
+ "P0F_UT": {
+  "transfer_AUROC": [
+   0.5719,
+   0.4901,
+   0.657
+  ]
+ },
+ "decisions_plan_procedure": {
+  "P0_UT": {
+   "within_AUROC": 0.9563,
+   "within_AUROC_lo": 0.9156,
+   "within_AP10": 0.7271,
+   "within_AP10_lo": 0.5012,
+   "within_reasonable": true,
+   "transfer_AUROC": 0.481,
+   "transfer_ci": [
+    0.3985,
+    0.5604
+   ],
+   "transfer_near_chance": true,
+   "delta_AUROC": [
+    0.4781,
+    0.3894,
+    0.5632
+   ],
+   "delta_p_boot": 0.0,
+   "delta_excludes_0": true
+  },
+  "P0F_UT": {
+   "within_AUROC": 0.6692,
+   "within_AUROC_lo": 0.6052,
+   "within_AP10": 0.1736,
+   "within_AP10_lo": 0.1235,
+   "within_reasonable": false,
+   "transfer_AUROC": 0.5719,
+   "transfer_ci": [
+    0.4901,
+    0.657
+   ],
+   "transfer_near_chance": true,
+   "delta_AUROC": [
+    0.0992,
+    -0.0098,
+    0.1984
+   ],
+   "delta_p_boot": 0.071,
+   "delta_excludes_0": false
+  },
+  "C1_UT": {
+   "within_AUROC": 0.9486,
+   "within_AUROC_lo": 0.8598,
+   "within_AP10": 0.6784,
+   "within_AP10_lo": 0.2696,
+   "within_reasonable": true,
+   "transfer_AUROC": 0.4666,
+   "transfer_ci": [
+    0.3896,
+    0.5355
+   ],
+   "transfer_near_chance": true,
+   "delta_AUROC": [
+    0.4838,
+    0.3761,
+    0.5761
+   ],
+   "delta_p_boot": 0.0,
+   "delta_excludes_0": true
+  },
+  "MB_UT": {
+   "within_AUROC": 0.9613,
+   "within_AUROC_lo": 0.9171,
+   "within_AP10": 0.7423,
+   "within_AP10_lo": 0.5011,
+   "within_reasonable": true,
+   "transfer_AUROC": 0.4739,
+   "transfer_ci": [
+    0.3847,
+    0.5548
+   ],
+   "transfer_near_chance": true,
+   "delta_AUROC": [
+    0.4902,
+    0.3986,
+    0.5827
+   ],
+   "delta_p_boot": 0.0,
+   "delta_excludes_0": true
+  }
+ },
+ "case_conditions_UT": {
+  "A_within_reasonable_P0_and_C1_transfer_near_chance_delta_detected": true,
+  "IT": "not run"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "calls": 200,
+ "http_ok": 200,
+ "parse_ok": 199,
+ "wall_s": 89.4,
+ "cost_usd_sync": 0.6366,
+ "mean_usage": {
+  "input_tokens": 386.2,
+  "output_tokens": 218.8,
+  "cache_read_input_tokens": 2229.0,
+  "cache_creation_input_tokens": 0.0
+ }
+}

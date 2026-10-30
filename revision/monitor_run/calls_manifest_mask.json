@@ -1,0 +1,135 @@
+{
+ "plan": "MONITOR_PREREGISTRATION.md (amendment 2), arm MON-L-mask",
+ "scanner_blob": "67d819d37845bbcc354e49db38b23b63c0b9880c",
+ "masks_file_sha256": "50f43dc58308faf9e86998705c32558faddb5353627944e942c83d5583daadad",
+ "groups": {
+  "MASK_0.75_d0": {
+   "mask_key": "0.75|0",
+   "tools_masked": 26,
+   "achieved_coverage": 0.7873761309780267,
+   "steps_masked": 2245,
+   "calls": 10552,
+   "sha256": "b4c86074cca3dc9d2afe519a745fbcd5762925fb61f31858b19515d1a552ead8"
+  },
+  "MASK_0.75_d1": {
+   "mask_key": "0.75|1",
+   "tools_masked": 26,
+   "achieved_coverage": 0.7878069797501077,
+   "steps_masked": 2250,
+   "calls": 10552,
+   "sha256": "b354b2ec68923337c1db77ae503989e676f3d6ca1c525a74c5519fc8397516d8"
+  },
+  "MASK_0.75_d2": {
+   "mask_key": "0.75|2",
+   "tools_masked": 26,
+   "achieved_coverage": 0.7775743214131839,
+   "steps_masked": 2380,
+   "calls": 10552,
+   "sha256": "48f597e1c179c16d30490c4aea4fd948a52aaed0e5e7934f45f6e5bf17db35ef"
+  },
+  "MASK_0.75_d3": {
+   "mask_key": "0.75|3",
+   "tools_masked": 26,
+   "achieved_coverage": 0.756893580353296,
+   "steps_masked": 2580,
+   "calls": 10552,
+   "sha256": "1f404cf2029d1eb38c9df646e778584b419009a6d30b3e40c15e8ec7e3d6fd9d"
+  },
+  "MASK_0.75_d4": {
+   "mask_key": "0.75|4",
+   "tools_masked": 26,
+   "achieved_coverage": 0.7675570874623008,
+   "steps_masked": 2453,
+   "calls": 10552,
+   "sha256": "4dc88542e0eda28d6fcd3bd55519975c6b26c81c4addf6c440a643d54a29f23f"
+  },
+  "MASK_0.5_d0": {
+   "mask_key": "0.5|0",
+   "tools_masked": 52,
+   "achieved_coverage": 0.46348556656613527,
+   "steps_masked": 5671,
+   "calls": 10552,
+   "sha256": "389730c22fb58b7c6b6fa0c172cad8ac8b381ee156cd534b159d96b76766bfea"
+  },
+  "MASK_0.5_d1": {
+   "mask_key": "0.5|1",
+   "tools_masked": 52,
+   "achieved_coverage": 0.5356527358897027,
+   "steps_masked": 4917,
+   "calls": 10552,
+   "sha256": "c322076f292cb55293a066f078f2bab1d21019f7a166ebd2a63cc4ea9843ca18"
+  },
+  "MASK_0.5_d2": {
+   "mask_key": "0.5|2",
+   "tools_masked": 52,
+   "achieved_coverage": 0.4808272296423955,
+   "steps_masked": 5477,
+   "calls": 10552,
+   "sha256": "329fb887aed630518eee604ed2622b28a72cdf023daea5639f83473357cfb87b"
+  },
+  "MASK_0.5_d3": {
+   "mask_key": "0.5|3",
+   "tools_masked": 52,
+   "achieved_coverage": 0.4604696251615683,
+   "steps_masked": 5627,
+   "calls": 10552,
+   "sha256": "fd3c4a56e425b99af90f5063aa730c2682664ee71af0f5203e71f4337c258b19"
+  },
+  "MASK_0.5_d4": {
+   "mask_key": "0.5|4",
+   "tools_masked": 52,
+   "achieved_coverage": 0.47307195174493755,
+   "steps_masked": 5550,
+   "calls": 10552,
+   "sha256": "6ccd8bed4f839abf06febd22ae0d85aef21c8911bd84fe1e9fea5ee965f525dd"
+  },
+  "MASK_0.25_d0": {
+   "mask_key": "0.25|0",
+   "tools_masked": 77,
+   "achieved_coverage": 0.23901335631193452,
+   "steps_masked": 8027,
+   "calls": 10552,
+   "sha256": "643808afda024806c65a304a39e5794740d1a8f64ac8fff1faec58f41bac793c"
+  },
+  "MASK_0.25_d1": {
+   "mask_key": "0.25|1",
+   "tools_masked": 77,
+   "achieved_coverage": 0.1947436449806118,
+   "steps_masked": 8518,
+   "calls": 10552,
+   "sha256": "e7565a97611ee824a30ea693205e121fba570ae75f11942c9bdaf448ebc4fdd8"
+  },
+  "MASK_0.25_d2": {
+   "mask_key": "0.25|2",
+   "tools_masked": 77,
+   "achieved_coverage": 0.2177940542869453,
+   "steps_masked": 8272,
+   "calls": 10552,
+   "sha256": "06e9dde3c60c00b11f03595eb8d99b87b744dc26fc89c8ad08b7a27c35eb8e84"
+  },
+  "MASK_0.25_d3": {
+   "mask_key": "0.25|3",
+   "tools_masked": 77,
+   "achieved_coverage": 0.267664799655321,
+   "steps_masked": 7750,
+   "calls": 10552,
+   "sha256": "c824e00deaa019ce278b3970f18e73f54a0bdbf8989b0d7b9150602d6e8d399b"
+  },
+  "MASK_0.25_d4": {
+   "mask_key": "0.25|4",
+   "tools_masked": 77,
+   "achieved_coverage": 0.20637656182679878,
+   "steps_masked": 8355,
+   "calls": 10552,
+   "sha256": "3387492711e4d565388061f805c74bda70e1740e74fceff78d8062a49ac1b3ee"
+  },
+  "MASK_0.0_d0": {
+   "mask_key": "0.0|0",
+   "tools_masked": 103,
+   "achieved_coverage": 0.0,
+   "steps_masked": 10552,
+   "calls": 10552,
+   "sha256": "b6213d869b62cb99f3b52de032ec7c011745f2d79f2669b80e58a7a0deca6e0b"
+  }
+ }
+}

@@ -1,32 +1,48 @@
-# Evaluating Baseline Detectors of Hijacked LLM Agents Under Rare Attacks and Distribution Shift
+# What Standard Evaluations Hide About Detectors of Hijacked LLM Agents: Rare Attacks, Unseen Tools and Benchmark Transfer
 
-Code, derived data and result files for the paper by **Mahmoud Abbasi** and **Juan Manuel Núñez Velasco**
-(BISITE Research Group, University of Salamanca).
+Code, derived data, result files and every monitor call for the paper by **Mahmoud Abbasi** (University of Salamanca),
+**Juan M. Núñez V.** (AIR Institute, Salamanca) and **Amin Shahraki** (University of Oslo).
 
-The paper evaluates simple detectors that flag hijacked LLM agents from their tool-call traces. It covers
-logistic regression on tool-identity, behavioral and combined features, a GRU sequence model and a TF-IDF content
-reference. The evaluation runs at controlled attack prevalence and under world, task, domain and cross-benchmark
-shifts on [AgentDrift](https://github.com/Asif-0209/AgentDrift) and
+The paper evaluates detectors that flag hijacked LLM agents from their tool-call traces: logistic regression on
+behavioral and combined features (LR-B, LR-C), a GRU sequence model, a transformer over frozen step embeddings (SE),
+a TF-IDF content reference, and the released AlignmentCheck action monitor with two backbones (MON-L, Llama 3.3 70B
+w4a16; MON-A, Claude Sonnet 5.5). The evaluation runs at controlled attack prevalence, under graded tool coverage and
+under world, task, domain and cross-benchmark shifts on [AgentDrift](https://github.com/Asif-0209/AgentDrift) and
 [AgentDojo](https://github.com/ethz-spylab/agentdojo).
+
+`EXTENDED_REPORT.pdf` is the extended report cited by the paper. It is the long version of this work (38 pages, main
+text and supplement), written before the third author joined, and gives every analysis summarized in the paper, each
+analysis plan with its deviations, and all supplementary tables.
 
 ## Repository layout
 
 | Path | Contents |
 |---|---|
+| `EXTENDED_REPORT.pdf` | The extended report (see above) |
 | `featurise.py`, `evalkit.py`, `gru_detector.py`, `baseline_drift.py` | Shared modules: features, metrics and bootstrap, the GRU, the Markov and Isolation Forest references |
 | `agentdojo_extract.py` | Extracts AgentDojo traces with positional pairing of tool calls and observations |
 | `agentdojo_traces.jsonl`, `agentdojo_failed.jsonl` | Extracted AgentDojo traces (population P0, 392 benign and 2,294 compromised) and the 4,987 unsuccessful attacks |
 | `rerun_r1r3.py`, `ablation.py`, `world_disjoint_r1.py`, `r4_control.py`, `gru_ladder.py`, `gru_r3_diagnostic.py`, `pre_ablation_audit.py` | Experiment scripts from the first version, re-run on the corrected extraction, with their result files (`*.json`) |
-| `R4_CONTROL.md`, `PRE_ABLATION_DESIGN.md`, `GRU_PREREGISTRATION.md`, `REVISION_ANALYSIS_PLAN.md` | The four internal analysis plans (not externally registered; see Section IV-A and Table S3 of the paper) |
-| `revision/` | Prediction-cache builders, the seven analysis streams, their result files and summaries, `DEVIATIONS.md`, `RESULTS_SUMMARY.md` and the reproducibility guide |
-| `revision/cache/` | Validation and summary files of the prediction caches (the cached predictions themselves, about 300 MB, are not included and are rebuilt by the scripts) |
-| `paper/` | Scripts that generate every table and figure of the paper from the result files, with their outputs |
-| `archive_v0.3/` | Results and the earlier AgentDojo extraction of the first version, kept for the comparisons reported in Section S2 |
+| `R4_CONTROL.md`, `PRE_ABLATION_DESIGN.md`, `GRU_PREREGISTRATION.md`, `REVISION_ANALYSIS_PLAN.md` | The four internal analysis plans of the first studies |
+| `SENCODER_PREREGISTRATION.md`, `revision/sencoder_run/SENCODER_PREREGISTRATION.amendment*.md`, `SENCODER_RESULTS.md` | Plan, amendments and results of the SE study |
+| `MONITOR_PREREGISTRATION.md`, `revision/monitor_run/MONITOR_PREREGISTRATION.*.md` | Plan of the monitor study, its first version and amendments 1 to 4 |
+| `revision/` | Prediction-cache builders, the analysis streams, their result files and summaries, `DEVIATIONS.md`, `RESULTS_SUMMARY.md`, `PLAN_MANIFEST.txt` (a time-stamped log with the SHA-256 of every plan and result) and the reproducibility guide `REPRODUCIBILITY.md` |
+| `revision/sencoder_*.py`, `revision/sencoder_results.json`, `revision/sencoder_summary.md`, `revision/sencoder_run/` | SE: embedding, training and analysis scripts, results, cluster logs and manifests |
+| `revision/monitor_render.py`, `monitor_score_vllm.py`, `monitor_score_api.py`, `monitor_detector.py`, `monitor_tables.py` | Monitor study: one AlignmentCheck call per agent step, scoring with vLLM (MON-L) and with the provider's batch interface (MON-A), the frozen analysis and its tables |
+| `revision/monitor_results.json`, `revision/monitor_summary.md` | Results of the frozen monitor analysis |
+| `revision/monitor_run/` | Every monitor call and every raw monitor output with its score (see `revision/monitor_run/README.md`) |
+| `revision/cache/` | Validation and summary files of the prediction caches. The cached predictions and embeddings themselves (about 800 MB) are not included and are rebuilt by the scripts |
+| `paper/` | Scripts that generate every table from the result files, with their outputs: `tables/` (first studies), `tables_sencoder/` (adds SE) and `tables_monitor/` (adds the monitor; these are the tables of the paper and of the extended report) |
+| `paper_v06/make_figures_v06.py`, `paper_v06/fig_v06_*` | The figures of the paper |
+| `MANUSCRIPT_SOURCE.*.md`, `SUPPLEMENT_SOURCE.*.md` | Sources of the extended report, into which `paper/build_sencoder.py` and `paper/build_monitor.py` insert the generated tables |
+| `archive_v0.3/` | Results and the earlier AgentDojo extraction of the first version, kept for the comparisons in the extended report |
 | `tests/` | Unit test of the AgentDojo extraction |
+| `THIRD_PARTY/` | Licenses of AgentDojo and of the vendored AlignmentCheck scanner (LlamaFirewall) |
 
 ## Setup
 
-The results were computed with CPython 3.10.4 on a CPU.
+The detector results were computed with CPython 3.10.4 on a CPU. SE ran on one node of a Slurm cluster, and MON-L
+on one NVIDIA H100 80GB HBM3 with vLLM 0.29.0 (versions in `revision/monitor_run/mon_l/env.json`).
 
 ```bash
 pip install -r revision/requirements-lock.txt --extra-index-url https://download.pytorch.org/whl/cpu
@@ -41,42 +57,53 @@ export AGENTDRIFT=$PWD/AgentDrift
 export AGENTDOJO=$PWD/agentdojo
 ```
 
-## Reproducing the paper
+## Reproducing the tables and figures
 
-Regenerating the tables and figures needs only the files in this repository.
+The tables and figures are regenerated from the result files in this repository. `build_monitor.py` imports the
+monitor analysis module, which reads `AGENTDRIFT` when it is imported, so that variable must be set.
 
 ```bash
 cd paper
-python gen_tables_v04.py      # writes paper/tables/v04_* and s_* (Markdown and LaTeX)
-python make_figures_v04.py    # writes paper/fig_v04_*.pdf and .png
+python gen_tables_v04.py      # paper/tables/
+python build_sencoder.py      # paper/tables_sencoder/
+python build_monitor.py       # paper/tables_monitor/, the tables of the paper
+cd ../paper_v06
+python make_figures_v06.py    # paper_v06/fig_v06_*.pdf and .png
 ```
 
-Re-running the experiments from the benchmarks follows `revision/REPRODUCIBILITY.md`, which lists every script in
-execution order with its command line, inputs, outputs, seeds and bootstrap settings. In short:
+The two build scripts also assemble the LaTeX of the extended report from `MANUSCRIPT_SOURCE.*.md` and
+`SUPPLEMENT_SOURCE.*.md`.
 
-1. `python agentdojo_extract.py`, then `python tests/test_agentdojo_alignment.py`
-2. the first-version experiment scripts (Section 4.2 of the guide)
-3. the prediction caches, `bash revision/offline_driver.sh`
-4. the analysis streams in `revision/` (Section 4.4 of the guide)
+Re-running the experiments from the benchmarks follows `revision/REPRODUCIBILITY.md` for the detectors, the SE plan
+with `revision/sencoder_run/` for SE, and the monitor plan with `revision/monitor_run/README.md` for the monitor.
 
 ## Notes
 
-- Absolute paths of the machine the analyses ran on were replaced in the result files by `<repo>`, `$AGENTDRIFT`,
-  `$AGENTDOJO` or `<local>`. No numeric result was changed. `revision/offline_driver.sh` was also made portable, so its SHA-256 in
-  `revision/repro_checks.json` no longer matches. No Python script was modified.
+- Absolute paths of the machines the analyses ran on were replaced in the result, log and manifest files by `<repo>`,
+  `$AGENTDRIFT`, `$AGENTDOJO` or `<local>`. No numeric result was changed. SHA-256 values in `PLAN_MANIFEST.txt` and
+  `repro_checks.json` refer to the files as they were on the analysis machine, so they do not match the files in
+  which a path was replaced. `revision/offline_driver.sh` was also made portable. No Python script was modified, so
+  some scripts keep a local default path, which the environment variables override.
+- Monitor call and result files larger than 1 MB are stored gzip-compressed (`*.jsonl.gz`) with unchanged content,
+  so the SHA-256 values in the call manifests hold for the decompressed files.
 - Comment identifiers such as M3 or m14 in the documentation refer to an internal pre-submission review.
-- `GRU_PREREGISTRATION.md` keeps its file name from the first version. The plans were internal and not externally
-  registered, and the paper describes what was known when each plan was written.
+- The analysis plans were internal and not externally registered. The paper and the extended report describe what
+  was known when each plan was written.
 
 ## Licenses
 
 - Code in this repository is released under the MIT License (see `LICENSE`).
-- `agentdojo_traces.jsonl`, `agentdojo_failed.jsonl` and `archive_v0.3/agentdojo_traces.jsonl` are derived from the
-  AgentDojo recorded runs, which are released under the MIT License by their authors (see
-  `THIRD_PARTY/AgentDojo-LICENSE.txt`).
-- Files derived from AgentDrift, such as the tool annotation in `revision/tool_state_annotation.json`, are shared under
+- `revision/monitor_run/alignmentcheck_scanner.py` is vendored from LlamaFirewall (Meta Platforms, Inc. and
+  affiliates), released under the MIT License (see `THIRD_PARTY/LlamaFirewall-LICENSE.txt`).
+- `agentdojo_traces.jsonl`, `agentdojo_failed.jsonl`, `archive_v0.3/agentdojo_traces.jsonl`,
+  `revision/monitor_run/agentdojo_run_context.jsonl`, the AgentDojo environment files in `revision/sencoder_run/` and
+  the AgentDojo parts of the monitor calls are derived from AgentDojo, which is released under the MIT License by its
+  authors (see `THIRD_PARTY/AgentDojo-LICENSE.txt`).
+- Files derived from AgentDrift, such as `revision/tool_state_annotation.json`, the task-disjoint split in
+  `revision/monitor_run/agentdrift_taskdisjoint/` and the AgentDrift parts of the monitor calls, are shared under
   CC BY 4.0 with attribution to Pinjari and Saint-Germain, *AgentDrift: A Step-Labeled Benchmark of
-  Injection-Hijacked LLM Agent Trajectories* (2026), https://github.com/Asif-0209/AgentDrift.
+  Injection-Hijacked LLM Agent Trajectories* (2026), https://github.com/Asif-0209/AgentDrift. They were changed by
+  extraction, splitting and rendering into monitor prompts.
 
 ## Citation
 

@@ -1,0 +1,123 @@
+{
+  "model": "sentence-transformers/all-mpnet-base-v2",
+  "revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+  "pooling_config": {
+    "embedding_dimension": 768,
+    "pooling_mode": "mean",
+    "include_prompt": true
+  },
+  "modules": [
+    "Transformer",
+    "Pooling",
+    "Normalize"
+  ],
+  "normalised": true,
+  "max_seq_length": 384,
+  "text_format": "TOOL: {tool} | ARGS: {json, sorted keys} | OBS: {obs}",
+  "thought_excluded": true,
+  "device": "cpu",
+  "gpu": null,
+  "batch_size": 64,
+  "torch_threads": 32,
+  "torch": "2.11.0+cu130",
+  "torch_cuda": "13.0",
+  "transformers": "5.14.1",
+  "sentence_transformers": "6.0.1",
+  "python": "3.13.5",
+  "numpy": "2.2.6",
+  "slurm_job_id": "2762",
+  "built": "2026-10-08T16:25:46+0200",
+  "code_sha256": {
+    "sencoder_embed.py": "3bc9998ebc8513e70d302c175f33814346450d876ca8eeb397eea579f5ffc51a",
+    "sencoder_text.py": "5d61ef245fd9af0d0cadce03fd1b58804e306b2b353bd8a79cf7177315855961",
+    "sencoder_embed_gpu.py": "6a7b0a1ed681fdc09000bd19c853337823a7cb7d0cddc2db3b075f6c45798938"
+  },
+  "sources": {
+    "agentdrift_train": {
+      "path": "$AGENTDRIFT/data/train.jsonl",
+      "sha256": "7ba9c1b2b5364d46dd7b6496370ef8ce338112b3de61f025cacb8988031d0535",
+      "n_traces": 8775,
+      "n_steps": 49750,
+      "n_steps_truncated": 3,
+      "pct_truncated": 0.006,
+      "seconds": 354.1
+    },
+    "agentdrift_val": {
+      "path": "$AGENTDRIFT/data/val.jsonl",
+      "sha256": "947e8d28857b3925a05522eef87032f529c1891219ecc8bcf4a1bb37084cc94a",
+      "n_traces": 1880,
+      "n_steps": 10722,
+      "n_steps_truncated": 0,
+      "pct_truncated": 0.0,
+      "seconds": 72.9
+    },
+    "agentdrift_test": {
+      "path": "$AGENTDRIFT/data/test.jsonl",
+      "sha256": "29171469b6f45c54aa096e0a0961a1aac70268289f2016de4614fe885ebfa5d0",
+      "n_traces": 1881,
+      "n_steps": 10552,
+      "n_steps_truncated": 0,
+      "pct_truncated": 0.0,
+      "seconds": 70.3
+    },
+    "agentdojo": {
+      "path": "/lustre<repo>/agentdojo_traces.jsonl",
+      "sha256": "2c81a895c1f8be7ffdd88e790e3f75b83442c75e9c58cdf388d17df3df92296d",
+      "n_traces": 2686,
+      "n_steps": 14079,
+      "n_steps_truncated": 950,
+      "pct_truncated": 6.748,
+      "seconds": 234.9
+    },
+    "agentdojo_failed": {
+      "path": "/lustre<repo>/agentdojo_failed.jsonl",
+      "sha256": "12292b33dcf83ffb8ae1d5156d2a44a54ee6b10fb16943160af0fec6134901f7",
+      "n_traces": 4987,
+      "n_steps": 21519,
+      "n_steps_truncated": 3237,
+      "pct_truncated": 15.043,
+      "seconds": 442.9
+    }
+  },
+  "taskdisjoint": {
+    "n_records": 12536,
+    "missing_in_standard": 0,
+    "text_mismatch": 0,
+    "files": {
+      "train": {
+        "path": "$AGENTDRIFT/data_taskdisjoint/train.jsonl",
+        "sha256": "74ebd2a081a97e4a986b2456e33b1840e954f5e945c184825ef0b87a07715435"
+      },
+      "val": {
+        "path": "$AGENTDRIFT/data_taskdisjoint/val.jsonl",
+        "sha256": "50fcc3b3b2f03843b1289ba6518a1f2789c3ca4e6a1dc4687869f5e980c43c14"
+      },
+      "test": {
+        "path": "$AGENTDRIFT/data_taskdisjoint/test.jsonl",
+        "sha256": "df1c15dd6f25f52d66d2cd19852326b78fd8d6dbf9f6f2c71da913761132a6c9"
+      }
+    },
+    "identical_to_standard": true
+  },
+  "masked_r1": {
+    "mask_file_sha256": "50f43dc58308faf9e86998705c32558faddb5353627944e942c83d5583daadad",
+    "n_masks": 17,
+    "n_steps_poolE": 9284,
+    "n_unique_texts": 17914,
+    "n_unique_truncated": 0
+  },
+  "padded_r1": {
+    "pads": [
+      0,
+      100,
+      1200
+    ],
+    "n_padded_steps": 831,
+    "n_padded_steps_truncated": {
+      "pad0": 0,
+      "pad100": 0,
+      "pad1200": 14
+    }
+  },
+  "total_seconds": 1418.7
+}

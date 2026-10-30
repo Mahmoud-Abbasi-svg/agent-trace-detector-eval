@@ -1,0 +1,397 @@
+{
+ "agentdojo": {
+  "ieee": "E. Debenedetti, J. Zhang, M. Balunović, L. Beurer-Kellner, M. Fischer, and F. Tramèr, \"AgentDojo: A dynamic environment to evaluate prompt injection attacks and defenses for LLM agents,\" in *Proc. Adv. Neural Inf. Process. Syst. (NeurIPS), Datasets Benchmarks Track*, vol. 37, Vancouver, BC, Canada, 2024, pp. 82895–82920, doi: 10.52202/079017-2636.",
+  "verified_by": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/97091a5177d8dc64b1da8bf3e1f6fb54-Abstract-Datasets_and_Benchmarks_Track.html ; NeurIPS BibTeX for the same paper ; https://api.crossref.org/works/10.52202/079017-2636 ; https://arxiv.org/abs/2406.13352",
+  "notes": "Resolves the v0.3 [VERIFY]. Six authors, all listed. Volume, pages and DOI from the NeurIPS BibTeX and Crossref. NeurIPS prints 'Balunovic'; arXiv prints 'Balunović'. arXiv:2406.13352. The repository commit used (github.com/ethz-spylab/agentdojo, commit 089ed468, MIT licence) belongs in the Code and Data Availability statement (m21) rather than in the reference."
+ },
+ "traceaegis": {
+  "ieee": "J. Liu et al., \"TraceAegis: Securing LLM-based agents via hierarchical and behavioral anomaly detection,\" arXiv:2510.11203v1, Oct. 2025.",
+  "verified_by": "https://arxiv.org/abs/2510.11203 ; cached abs page <local> (citation_author, citation_title, submission history)",
+  "notes": "Eight authors (J. Liu, B. Ruan, X. Yang, Z. Lin, Y. Liu, Y. Wang, T. Wei, Z. Liang), so et al. is used. Only v1 exists (13 Oct. 2025). Replaces the v0.3 placeholder \"Liu et al., 'TraceAegis'\". The paper says TraceAegis-Bench will be released with the final paper, so the benchmark has no separate citation. Publication status checked on 26 Sep. 2026 (arXiv journal-ref and comments, Semantic Scholar, web search): no peer-reviewed version found."
+ },
+ "praetor": {
+  "ieee": "H. Dang, \"Enforcing benign trajectories: A behavioral firewall for structured-workflow AI agents,\" arXiv:2604.26274v1, Apr. 2026.",
+  "verified_by": "https://arxiv.org/abs/2604.26274 ; cached abs page <local> (citation_author, citation_title, submission history)",
+  "notes": "Single author (Hung Dang). The v0.3 entry wrongly used et al. and an abbreviated, reordered title (m20). The system is called Praetor inside the paper, but the name does not appear in the title, so the text should introduce it as \"Praetor [@praetor]\". Only v1 exists (29 Apr. 2026). Publication status checked on 26 Sep. 2026 (arXiv journal-ref and comments, Semantic Scholar, web search): no peer-reviewed version found."
+ },
+ "agentsentry": {
+  "ieee": "R. Sequeira, S. Damianakis, U. Iqbal, and K. Psounis, \"Agent-Sentry: Bounding LLM agents via execution provenance,\" arXiv:2603.22868v2, May 2026.",
+  "verified_by": "https://arxiv.org/abs/2603.22868 ; cached abs page <local> (citation_author, citation_title, submission history)",
+  "notes": "Four authors, all listed. v1 was posted 24 Mar. 2026 and v2, the version audited in Table I, on 8 May 2026. The v0.3 entry had only \"Sequeira et al.\" and no title. Publication status checked on 26 Sep. 2026 (arXiv journal-ref and comments, Semantic Scholar, web search): no peer-reviewed version found."
+ },
+ "agentdrift": {
+  "ieee": "A. Pinjari and M. P. Saint-Germain, \"AgentDrift: A step-labeled benchmark of injection-hijacked LLM agent trajectories,\" arXiv:2609.06972v1, Sep. 2026.",
+  "verified_by": "https://arxiv.org/abs/2609.06972 ; cached abs page <local> (citation_author, citation_title, submission history)",
+  "notes": "Two authors (Asif Pinjari, Mithun Paul Saint-Germain). Only v1 exists (7 Sep. 2026). The v0.3 entry also gave the dataset location (github.com/Asif-0209/AgentDrift, v2.0, commit 014a514f, CC BY 4.0). I suggest moving the commit and licence to the Code and Data Availability statement requested in m21 and keeping the reference to the paper itself; if the journal prefers it in the reference, append \"[Online]. Available: https://github.com/Asif-0209/AgentDrift\". Publication status checked on 26 Sep. 2026 (arXiv journal-ref and comments, Semantic Scholar, web search): no peer-reviewed version found."
+ },
+ "driftnet": {
+  "ieee": "A. Pinjari and M. P. Saint-Germain, \"DriftNet: A dual-head trajectory transformer for detecting and localizing prompt injection in LLM agents,\" arXiv:2609.10892v1, Sep. 2026.",
+  "verified_by": "https://arxiv.org/abs/2609.10892 ; cached abs page <local> (citation_author, citation_title, submission history)",
+  "notes": "Two authors; only v1 exists (9 Sep. 2026). The v0.3 entry was already complete except for the version. Publication status checked on 26 Sep. 2026 (arXiv journal-ref and comments, Semantic Scholar, web search): no peer-reviewed version found."
+ },
+ "trajguard": {
+  "ieee": "L. Advani, \"Trajectory Guard: A lightweight, sequence-aware model for real-time anomaly detection in agentic AI,\" arXiv:2601.00516v1, Jan. 2026.",
+  "verified_by": "https://arxiv.org/abs/2601.00516 ; cached abs page <local> (citation_author, citation_title, submission history)",
+  "notes": "Single author (Laksh Advani); the v0.3 entry wrongly used et al. (m20). The arXiv title joins the two parts with a double hyphen (\"Trajectory Guard -- A Lightweight ...\"); the entry uses a colon, as IEEE style does for subtitles. The arXiv comment says \"Accepted to AAAI Trustagent 2026\" (an AAAI 2026 workshop). If the workshop version is confirmed, the entry can add \"in *Proc. AAAI 2026 Workshop on Trustworthy Agents (TrustAgent)*\"; until then cite the arXiv version, which is the one audited. Workshop confirmed: the AAAI-26 workshop W51 'How Can We Trust and Control Agentic AI? Toward Alignment, Robustness, and Verifiability in Autonomous LLM Agents' (OpenReview group TrustAgent), Singapore, 27 Jan. 2026, where the paper was a poster (https://aaai.org/conference/aaai/aaai-26/workshops-program/ ; https://trustagenticai.github.io/AAAI2026/paper.html). The workshop is non-archival (no pages or DOI), so the arXiv entry stays; 'presented at' the workshop may be added."
+ },
+ "mcpshield": {
+  "ieee": "S. Zavrak, \"Content-aware attack detection in LLM agent tool-call traffic: An empirical study of features, architectures, and evaluation protocols,\" arXiv:2605.11053v3, May 2026.",
+  "verified_by": "https://arxiv.org/abs/2605.11053 ; cached abs page <local> (citation_author, citation_title, submission history) ; version string 2605.11053v3 printed in full_2605.11053.txt line 55",
+  "notes": "Single author (Sultan Zavrak); the v0.3 entry wrongly used et al. (m20). Versions v1 (11 May 2026), v2 (13 May) and v3 (22 May); the arXiv comment says v2 renamed the manuscript (brand removed) with no change to methods or results. v1 was circulated under the name MCPShield, which the paper keeps as a short label; state this once in the Table I note. Publication status checked on 26 Sep. 2026 (arXiv journal-ref and comments, Semantic Scholar, web search): no peer-reviewed version found."
+ },
+ "skynet": {
+  "ieee": "C. Zhang et al., \"Skynet: Workflow-level anomaly detection for agentic AI via semantic and structural modeling,\" arXiv:2609.06835v2, Sep. 2026.",
+  "verified_by": "https://arxiv.org/abs/2609.06835 ; cached abs page <local> (citation_author, citation_title, submission history)",
+  "notes": "Nine authors (C. Zhang, H. Yu, H. Jin, S. Shi, N. Zhang, Y. Shi, Y. R. Gel, Y. T. Hou, W. Lou), so et al. is used. v1 6 Sep. 2026, v2 12 Sep. 2026 (audited). The arXiv comment says \"Accepted by ACM MobiHoc 2026\"; replace with the proceedings entry once its DOI and pages are available. The v0.3 entry had no authors (m20). MobiHoc 2026 takes place 23 to 26 Nov. 2026 in Tokyo, so no proceedings, pages or DOI exist yet; the arXiv PDF carries a placeholder ACM DOI (https://www.sigmobile.org/mobihoc/2026/)."
+ },
+ "trajad": {
+  "ieee": "Y. Liu et al., \"TrajAD: Trajectory anomaly detection for trustworthy LLM agents,\" arXiv:2602.06443v1, Feb. 2026.",
+  "verified_by": "https://arxiv.org/abs/2602.06443 ; cached abs page <local> (citation_author, citation_title, submission history)",
+  "notes": "Eight authors (Y. Liu, C. Zhang, Z. Han, H. Liu, Y. Wang, Y. Yu, X. Wang, Y. Yin), so et al. is used. Only v1 exists (6 Feb. 2026). TrajBench is introduced in this paper and is cited through it. The v0.3 entry (\"TrajAD / TrajBench\") had no authors (m20). Publication status checked on 26 Sep. 2026 (arXiv journal-ref and comments, Semantic Scholar, web search): no peer-reviewed version found."
+ },
+ "sentinelagent": {
+  "ieee": "X. He, D. Wu, Y. Zhai, and K. Sun, \"SentinelAgent: Graph-based anomaly detection in multi-agent systems,\" arXiv:2505.24201v1, May 2025.",
+  "verified_by": "https://arxiv.org/abs/2505.24201 ; cached abs page <local> (citation_author, citation_title, submission history)",
+  "notes": "Four authors, all listed. Only v1 exists (30 May 2025). The v0.3 entry had no authors (m20). Publication status checked on 26 Sep. 2026 (arXiv journal-ref and comments, Semantic Scholar, web search): no peer-reviewed version found."
+ },
+ "llamafirewall": {
+  "ieee": "S. Chennabasappa et al., \"LlamaFirewall: An open source guardrail system for building secure AI agents,\" arXiv:2505.03574v1, May 2025.",
+  "verified_by": "https://arxiv.org/abs/2505.03574 ; cached abs page <local> (citation_author, citation_title, submission history)",
+  "notes": "Nineteen authors, first author Sahana Chennabasappa, so et al. is used; the v0.3 entry gave \"Meta\" as author (m20). Only v1 exists (6 May 2025). PromptGuard 2 and AlignmentCheck are described in this paper (Sec. 4.1, 4.2, App. B and C) and are cited through it. Publication status checked on 26 Sep. 2026 (arXiv journal-ref and comments, Semantic Scholar, web search): no peer-reviewed version found."
+ },
+ "axelsson2000": {
+  "ieee": "S. Axelsson, \"The base-rate fallacy and the difficulty of intrusion detection,\" *ACM Trans. Inf. Syst. Secur.*, vol. 3, no. 3, pp. 186–205, Aug. 2000, doi: 10.1145/357830.357849.",
+  "verified_by": "https://api.crossref.org/works/10.1145/357830.357849",
+  "notes": "Pages and month added (m20). Volume, number and DOI were already correct."
+ },
+ "davis2006": {
+  "ieee": "J. Davis and M. Goadrich, \"The relationship between precision-recall and ROC curves,\" in *Proc. 23rd Int. Conf. Mach. Learn. (ICML)*, Pittsburgh, PA, USA, 2006, pp. 233–240, doi: 10.1145/1143844.1143874.",
+  "verified_by": "https://api.crossref.org/works/10.1145/1143844.1143874",
+  "notes": "Resolves [VERIFY]; pages, location and DOI added."
+ },
+ "saito2015": {
+  "ieee": "T. Saito and M. Rehmsmeier, \"The precision-recall plot is more informative than the ROC plot when evaluating binary classifiers on imbalanced datasets,\" *PLoS ONE*, vol. 10, no. 3, Mar. 2015, Art. no. e0118432, doi: 10.1371/journal.pone.0118432.",
+  "verified_by": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0118432 ; https://api.crossref.org/works/10.1371/journal.pone.0118432",
+  "notes": "Resolves [VERIFY]. PLoS ONE uses an article number instead of pages. McDermott et al. [mcdermott2024] dispute the general preference for AUPRC that this paper argues for; Section II-C now cites both."
+ },
+ "sommer2010": {
+  "ieee": "R. Sommer and V. Paxson, \"Outside the closed world: On using machine learning for network intrusion detection,\" in *Proc. IEEE Symp. Secur. Privacy (SP)*, Oakland, CA, USA, 2010, pp. 305–316, doi: 10.1109/SP.2010.25.",
+  "verified_by": "https://api.crossref.org/works/10.1109/SP.2010.25",
+  "notes": "Resolves [VERIFY]; pages, location and DOI added."
+ },
+ "pendlebury2019": {
+  "ieee": "F. Pendlebury, F. Pierazzi, R. Jordaney, J. Kinder, and L. Cavallaro, \"TESSERACT: Eliminating experimental bias in malware classification across space and time,\" in *Proc. 28th USENIX Secur. Symp. (USENIX Security)*, Santa Clara, CA, USA, Aug. 2019, pp. 729–746.",
+  "verified_by": "https://www.usenix.org/conference/usenixsecurity19/presentation/pendlebury",
+  "notes": "Resolves [VERIFY]. Five authors, so all are listed instead of et al. USENIX issues no DOIs; the presentation URL can be appended as [Online]. Available: if the journal wants a link."
+ },
+ "arp2022": {
+  "ieee": "D. Arp et al., \"Dos and don'ts of machine learning in computer security,\" in *Proc. 31st USENIX Secur. Symp. (USENIX Security)*, Boston, MA, USA, Aug. 2022, pp. 3971–3988.",
+  "verified_by": "https://www.usenix.org/conference/usenixsecurity22/presentation/arp",
+  "notes": "Resolves [VERIFY]. Eight authors (D. Arp, E. Quiring, F. Pendlebury, A. Warnecke, F. Pierazzi, C. Wressnegger, L. Cavallaro, K. Rieck), so et al. is correct. No DOI (USENIX)."
+ },
+ "miller2021": {
+  "ieee": "J. Miller et al., \"Accuracy on the line: On the strong correlation between out-of-distribution and in-distribution generalization,\" in *Proc. 38th Int. Conf. Mach. Learn. (ICML)*, ser. PMLR, vol. 139, 2021, pp. 7721–7735.",
+  "verified_by": "https://proceedings.mlr.press/v139/miller21b.html ; https://proceedings.mlr.press/v139/miller21b/miller21b.pdf",
+  "notes": "Nine authors. The PDF prints 'John Miller'. No DOI (PMLR). Cited in Sec. II-C."
+ },
+ "teney2023": {
+  "ieee": "D. Teney, Y. Lin, S. J. Oh, and E. Abbasnejad, \"ID and OOD performance are sometimes inversely correlated on real-world datasets,\" in *Proc. Adv. Neural Inf. Process. Syst. (NeurIPS)*, vol. 36, 2023, pp. 71703–71722, doi: 10.52202/075280-3139.",
+  "verified_by": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/e304d374c85e385eb217ed4a025b6b63-Abstract-Conference.html ; https://api.crossref.org/works/10.52202/075280-3139",
+  "notes": "arXiv:2209.00613. The review marks it as the most directly relevant item for the RQ3 reversal. Cited in Sec. II-C."
+ },
+ "damour2022": {
+  "ieee": "A. D'Amour et al., \"Underspecification presents challenges for credibility in modern machine learning,\" *J. Mach. Learn. Res.*, vol. 23, no. 226, pp. 1–61, 2022.",
+  "verified_by": "https://jmlr.org/papers/v23/20-1335.html",
+  "notes": "40 authors. No DOI (JMLR). Cited in Sec. II-C."
+ },
+ "koh2021wilds": {
+  "ieee": "P. W. Koh et al., \"WILDS: A benchmark of in-the-wild distribution shifts,\" in *Proc. 38th Int. Conf. Mach. Learn. (ICML)*, ser. PMLR, vol. 139, 2021, pp. 5637–5664.",
+  "verified_by": "https://proceedings.mlr.press/v139/koh21a.html",
+  "notes": "23 authors. No DOI (PMLR). Cited in Sec. II-C."
+ },
+ "gulrajani2021": {
+  "ieee": "I. Gulrajani and D. Lopez-Paz, \"In search of lost domain generalization,\" in *Proc. Int. Conf. Learn. Represent. (ICLR)*, 2021. [Online]. Available: https://openreview.net/forum?id=lQdXeXDoWtI",
+  "verified_by": "https://iclr.cc/virtual/2021/poster/2998 ; https://arxiv.org/abs/2007.01434",
+  "notes": "ICLR has no pages or DOI. Cited in Sec. II-C."
+ },
+ "taori2020": {
+  "ieee": "R. Taori, A. Dave, V. Shankar, N. Carlini, B. Recht, and L. Schmidt, \"Measuring robustness to natural distribution shifts in image classification,\" in *Proc. Adv. Neural Inf. Process. Syst. (NeurIPS)*, vol. 33, 2020, pp. 18583–18599.",
+  "verified_by": "https://proceedings.neurips.cc/paper/2020/hash/d8330f857a17c53d217014ee776bfd50-Abstract.html",
+  "notes": "Six authors, all listed. No DOI. Cited in Sec. II-C; a candidate for removal if space is short."
+ },
+ "geirhos2020": {
+  "ieee": "R. Geirhos et al., \"Shortcut learning in deep neural networks,\" *Nature Mach. Intell.*, vol. 2, no. 11, pp. 665–673, Nov. 2020, doi: 10.1038/s42256-020-00257-z.",
+  "verified_by": "https://www.nature.com/articles/s42256-020-00257-z ; https://api.crossref.org/works/10.1038/s42256-020-00257-z",
+  "notes": "Seven authors. Listed by the review (M12) though not in the task list. Cited in Sec. II-C."
+ },
+ "mcdermott2024": {
+  "ieee": "M. B. A. McDermott, H. Zhang, L. H. Hansen, G. Angelotti, and J. Gallifant, \"A closer look at AUROC and AUPRC under class imbalance,\" in *Proc. Adv. Neural Inf. Process. Syst. (NeurIPS)*, vol. 37, Vancouver, BC, Canada, 2024, pp. 44102–44163, doi: 10.52202/079017-1400.",
+  "verified_by": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/4df3510ad02a86d69dc32388d91606f8-Abstract-Conference.html ; https://api.crossref.org/works/10.52202/079017-1400 ; https://arxiv.org/abs/2401.06091",
+  "notes": "Five authors, all listed. The NeurIPS proceedings print 'Matthew B. McDermott' and arXiv 'Matthew B. A. McDermott'; use 'M. B. McDermott' if you prefer to match the proceedings exactly. Listed by the review (M12) as disputing the premise taken from Saito and Rehmsmeier. Cited in Sec. II-C."
+ },
+ "lipton2018": {
+  "ieee": "Z. C. Lipton, Y.-X. Wang, and A. J. Smola, \"Detecting and correcting for label shift with black box predictors,\" in *Proc. 35th Int. Conf. Mach. Learn. (ICML)*, ser. PMLR, vol. 80, 2018, pp. 3122–3130.",
+  "verified_by": "https://proceedings.mlr.press/v80/lipton18a.html ; https://arxiv.org/abs/1802.03916",
+  "notes": "No DOI (PMLR). Cited in Sec. II-C."
+ },
+ "saerens2002": {
+  "ieee": "M. Saerens, P. Latinne, and C. Decaestecker, \"Adjusting the outputs of a classifier to new *a priori* probabilities: A simple procedure,\" *Neural Comput.*, vol. 14, no. 1, pp. 21–41, Jan. 2002, doi: 10.1162/089976602753284446.",
+  "verified_by": "https://api.crossref.org/works/10.1162/089976602753284446 ; https://direct.mit.edu/neco/article/14/1/21/6577 (search result)",
+  "notes": "Relevant because the paper imposes prior (prevalence) shift. Cited in Sec. II-C."
+ },
+ "quinonero2009": {
+  "ieee": "J. Quiñonero-Candela, M. Sugiyama, A. Schwaighofer, and N. D. Lawrence, Eds., *Dataset Shift in Machine Learning*. Cambridge, MA, USA: MIT Press, 2009, doi: 10.7551/mitpress/9780262170055.001.0001.",
+  "verified_by": "https://api.crossref.org/works/10.7551/mitpress/9780262170055.001.0001 ; https://books.google.es/books/about/Dataset_Shift_in_Machine_Learning.html?id=7zrhAAAAMAAJ",
+  "notes": "Added beyond the review's list as the standard reference for the taxonomy of shift. Crossref records Dec. 2008 as the issue date; 2009 is the print year and the usual citation. The city was seen only in a search summary; drop it for strict verification. Optional; can be removed if space is short."
+ },
+ "morenotorres2012": {
+  "ieee": "J. G. Moreno-Torres, T. Raeder, R. Alaiz-Rodríguez, N. V. Chawla, and F. Herrera, \"A unifying view on dataset shift in classification,\" *Pattern Recognit.*, vol. 45, no. 1, pp. 521–530, Jan. 2012, doi: 10.1016/j.patcog.2011.06.019.",
+  "verified_by": "https://api.crossref.org/works/10.1016/j.patcog.2011.06.019",
+  "notes": "Added beyond the review's list; defines prior-probability shift. Optional."
+ },
+ "siblini2020": {
+  "ieee": "W. Siblini, J. Fréry, L. He-Guelton, F. Oblé, and Y.-Q. Wang, \"Master your metrics with calibration,\" in *Advances in Intelligent Data Analysis XVIII (IDA 2020)*, ser. Lecture Notes in Computer Science, vol. 12080, Konstanz, Germany, 2020, pp. 457–469, doi: 10.1007/978-3-030-44584-3_36.",
+  "verified_by": "https://api.crossref.org/works/10.1007/978-3-030-44584-3_36 (authors, title, pages 457-469, DOI) ; search results for the proceedings volume (Springer book page https://link.springer.com/book/10.1007/978-3-030-44584-3 and dblp conf/ida/2020: LNCS 12080, Konstanz, 27-29 Apr. 2020) ; https://arxiv.org/abs/1909.02827 ; https://github.com/wissam-sib/calibrated_metrics",
+  "notes": "Added beyond the review's list because it is a direct precedent for the revision's primary estimand. The plan's prevalence-weighted average precision (REVISION_ANALYSIS_PLAN.md Sec. 3.1, each positive weighted by pi/(1-pi) * n_neg/n_pos) is algebraically the same as Siblini et al.'s calibrated average precision, since weighting positives by w is equivalent to weighting false positives by 1/w. The gap statement therefore credits the estimator to them. Please check the implementation against their code. Cite in Sec. II-C, Sec. IV-B and the gap paragraph."
+ },
+ "boyd2013": {
+  "ieee": "K. Boyd, K. H. Eng, and C. D. Page, \"Area under the precision-recall curve: Point estimates and confidence intervals,\" in *Proc. Eur. Conf. Mach. Learn. Knowl. Discovery Databases (ECML PKDD)*, ser. Lecture Notes in Computer Science, vol. 8190, 2013, pp. 451–466, doi: 10.1007/978-3-642-40994-3_29.",
+  "verified_by": "https://link.springer.com/chapter/10.1007/978-3-642-40994-3_29 (search result: LNCS 8190, pp. 451-466) ; https://dl.acm.org/doi/10.1007/978-3-642-40994-3_29 (search result) ; https://api.crossref.org/works/10.1007/978-3-642-40994-3_29 (authors, pages, DOI)",
+  "notes": "Added beyond the review's list; compares AUPRC estimators and intervals. Crossref's container title for this DOI is wrong ('Advanced Information Systems Engineering'); volume and book come from the Springer and ACM listings. An erratum exists (DOI 10.1007/978-3-642-40994-3_55). Optional."
+ },
+ "lopezpaz2017": {
+  "ieee": "D. Lopez-Paz and M. Oquab, \"Revisiting classifier two-sample tests,\" in *Proc. Int. Conf. Learn. Represent. (ICLR)*, 2017. [Online]. Available: https://arxiv.org/abs/1610.06545",
+  "verified_by": "https://export.arxiv.org/api/query?search_query=ti:%22Revisiting%20classifier%20two-sample%20tests%22 (arXiv 1610.06545, authors) ; search results for dblp record conf/iclr/Lopez-PazO17 and https://github.com/lopezpaz/classifier_tests ('ICLR 2017')",
+  "notes": "Added beyond the review's list because the revision plan (Sec. 4, 'Shift size') uses a classifier two-sample test. Conference location and ordinal were not checked on a loaded page and are omitted. Cite where the shift-size test is described."
+ },
+ "jordaney2017": {
+  "ieee": "R. Jordaney et al., \"Transcend: Detecting concept drift in malware classification models,\" in *Proc. 26th USENIX Secur. Symp. (USENIX Security)*, Vancouver, BC, Canada, 2017, pp. 625–642.",
+  "verified_by": "https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/jordaney",
+  "notes": "Seven authors. No DOI (USENIX). Cited in Sec. II-D."
+ },
+ "barbero2022": {
+  "ieee": "F. Barbero, F. Pendlebury, F. Pierazzi, and L. Cavallaro, \"Transcending TRANSCEND: Revisiting malware classification in the presence of concept drift,\" in *Proc. IEEE Symp. Secur. Privacy (SP)*, San Francisco, CA, USA, 2022, pp. 805–823, doi: 10.1109/SP46214.2022.9833659.",
+  "verified_by": "https://www.ieee-security.org/TC/SP2022/program-papers.html ; Crossref record for DOI 10.1109/SP46214.2022.9833659 ; https://arxiv.org/abs/2010.03856",
+  "notes": "Cited in Sec. II-D."
+ },
+ "yang2021cade": {
+  "ieee": "L. Yang et al., \"CADE: Detecting and explaining concept drift samples for security applications,\" in *Proc. 30th USENIX Secur. Symp. (USENIX Security)*, 2021, pp. 2327–2344.",
+  "verified_by": "https://www.usenix.org/conference/usenixsecurity21/presentation/yang-limin",
+  "notes": "Seven authors. No DOI (USENIX). Cited in Sec. II-D."
+ },
+ "chen2023continual": {
+  "ieee": "Y. Chen, Z. Ding, and D. Wagner, \"Continuous learning for Android malware detection,\" in *Proc. 32nd USENIX Secur. Symp. (USENIX Security)*, Anaheim, CA, USA, 2023, pp. 1127–1144.",
+  "verified_by": "https://www.usenix.org/conference/usenixsecurity23/presentation/chen-yizheng",
+  "notes": "No DOI (USENIX). arXiv:2302.04332. Cited in Sec. II-D."
+ },
+ "apruzzese2023": {
+  "ieee": "G. Apruzzese, P. Laskov, and J. Schneider, \"SoK: Pragmatic assessment of machine learning for network intrusion detection,\" in *Proc. IEEE 8th Eur. Symp. Secur. Privacy (EuroS&P)*, 2023, pp. 592–614, doi: 10.1109/EuroSP57164.2023.00042.",
+  "verified_by": "https://api.crossref.org/works/10.1109/EuroSP57164.2023.00042 ; https://arxiv.org/abs/2305.00550",
+  "notes": "Title confirmed (the review gave only authors and venue). Cited in Sec. II-D."
+ },
+ "greshake2023": {
+  "ieee": "K. Greshake, S. Abdelnabi, S. Mishra, C. Endres, T. Holz, and M. Fritz, \"Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection,\" in *Proc. 16th ACM Workshop Artif. Intell. Secur. (AISec)*, Copenhagen, Denmark, 2023, pp. 79–90, doi: 10.1145/3605764.3623985.",
+  "verified_by": "https://api.crossref.org/works/10.1145/3605764.3623985 ; https://arxiv.org/abs/2302.12173",
+  "notes": "Six authors, all listed. Cited in Sec. II-B."
+ },
+ "liu2024formalizing": {
+  "ieee": "Y. Liu, Y. Jia, R. Geng, J. Jia, and N. Z. Gong, \"Formalizing and benchmarking prompt injection attacks and defenses,\" in *Proc. 33rd USENIX Secur. Symp. (USENIX Security)*, Philadelphia, PA, USA, 2024, pp. 1831–1847.",
+  "verified_by": "https://www.usenix.org/conference/usenixsecurity24/presentation/liu-yupei",
+  "notes": "No DOI (USENIX). Cited in Sec. II-B."
+ },
+ "liu2025datasentinel": {
+  "ieee": "Y. Liu, Y. Jia, J. Jia, D. Song, and N. Z. Gong, \"DataSentinel: A game-theoretic detection of prompt injection attacks,\" in *Proc. IEEE Symp. Secur. Privacy (SP)*, San Francisco, CA, USA, 2025, pp. 2190–2208, doi: 10.1109/SP61157.2025.00250.",
+  "verified_by": "https://api.crossref.org/works/10.1109/SP61157.2025.00250 ; https://arxiv.org/abs/2504.11358",
+  "notes": "Five authors, so all are listed rather than et al. Cited in Sec. II-B."
+ },
+ "zhu2025melon": {
+  "ieee": "K. Zhu, X. Yang, J. Wang, W. Guo, and W. Y. Wang, \"MELON: Provable defense against indirect prompt injection attacks in AI agents,\" in *Proc. 42nd Int. Conf. Mach. Learn. (ICML)*, ser. PMLR, vol. 267, 2025, pp. 80310–80329.",
+  "verified_by": "https://proceedings.mlr.press/v267/zhu25z.html ; https://arxiv.org/abs/2502.05174",
+  "notes": "Inference-time, training-free defense (masked re-execution and tool-call comparison), evaluated on AgentDojo; the reason it is not audited in Table I (Q3). Cited in Sec. II-A (audit protocol) and II-B."
+ },
+ "abdelnabi2025drift": {
+  "ieee": "S. Abdelnabi, A. Fay, G. Cherubin, A. Salem, M. Fritz, and A. Paverd, \"Get my drift? Catching LLM task drift with activation deltas,\" in *Proc. IEEE Conf. Secure Trustworthy Mach. Learn. (SaTML)*, Copenhagen, Denmark, 2025, pp. 43–67, doi: 10.1109/SaTML64287.2025.00011.",
+  "verified_by": "https://api.crossref.org/works/10.1109/SaTML64287.2025.00011 ; https://cispa.de/en/research/publications/84748-get-my-drift-catching-llm-task-drift-with-activation-deltas",
+  "notes": "arXiv:2406.00799. Cited in Sec. II-B."
+ },
+ "jacob2025promptshield": {
+  "ieee": "D. Jacob, H. Alzahrani, Z. Hu, B. Alomair, and D. Wagner, \"PromptShield: Deployable detection for prompt injection attacks,\" in *Proc. 15th ACM Conf. Data Appl. Secur. Privacy (CODASPY)*, Pittsburgh, PA, USA, 2025, pp. 341–352, doi: 10.1145/3714393.3726501.",
+  "verified_by": "https://api.crossref.org/works/10.1145/3714393.3726501 ; https://www.codaspy.org/2025/toc.html ; abstract via https://export.arxiv.org/api/query?id_list=2501.15145 (low-FPR evaluation regime)",
+  "notes": "The arXiv abstract stresses performance in the low false-positive-rate regime, which Section II-B cites. Cited in Sec. II-B."
+ },
+ "debenedetti2026camel": {
+  "ieee": "E. Debenedetti et al., \"Defeating prompt injections by design,\" in *Proc. IEEE Conf. Secure Trustworthy Mach. Learn. (SaTML)*, Munich, Germany, 2026, pp. 587–618, doi: 10.1109/SaTML68715.2026.00040.",
+  "verified_by": "https://api.crossref.org/works/10.1109/satml68715.2026.00040 ; https://satml.org/2026/accepted-papers/ ; https://arxiv.org/abs/2503.18813",
+  "notes": "The CaMeL paper. The task expected an arXiv 2025 entry; it now has a peer-reviewed version at IEEE SaTML 2026, so the key is debenedetti2026camel. Ten authors. Cited in Sec. II-B."
+ },
+ "chen2025struq": {
+  "ieee": "S. Chen, J. Piet, C. Sitawarin, and D. Wagner, \"StruQ: Defending against prompt injection with structured queries,\" in *Proc. 34th USENIX Secur. Symp. (USENIX Security)*, Seattle, WA, USA, 2025, pp. 2383–2400.",
+  "verified_by": "https://www.usenix.org/conference/usenixsecurity25/presentation/chen-sizhe",
+  "notes": "Added beyond the review's list (cited by AgentDrift as a text-level defense). Optional. No DOI (USENIX)."
+ },
+ "an2025ipiguard": {
+  "ieee": "H. An et al., \"IPIGuard: A novel tool dependency graph-based defense against indirect prompt injection in LLM agents,\" in *Proc. Conf. Empirical Methods Natural Lang. Process. (EMNLP)*, Suzhou, China, 2025, pp. 1023–1039, doi: 10.18653/v1/2025.emnlp-main.53.",
+  "verified_by": "https://aclanthology.org/2025.emnlp-main.53/",
+  "notes": "Added beyond the review's list. Seven authors. Optional."
+ },
+ "zhan2024injecagent": {
+  "ieee": "Q. Zhan, Z. Liang, Z. Ying, and D. Kang, \"InjecAgent: Benchmarking indirect prompt injections in tool-integrated large language model agents,\" in *Findings Assoc. Comput. Linguistics: ACL 2024*, Bangkok, Thailand, 2024, pp. 10471–10506, doi: 10.18653/v1/2024.findings-acl.624.",
+  "verified_by": "https://aclanthology.org/2024.findings-acl.624/",
+  "notes": "Cited in Sec. II-B."
+ },
+ "zhang2025asb": {
+  "ieee": "H. Zhang et al., \"Agent Security Bench (ASB): Formalizing and benchmarking attacks and defenses in LLM-based agents,\" in *Proc. 13th Int. Conf. Learn. Represent. (ICLR)*, Singapore, 2025.",
+  "verified_by": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/5750f91d8fb9d5c02bd8ad2c3b44456b-Abstract-Conference.html ; https://arxiv.org/abs/2410.02644",
+  "notes": "Eight authors. ICLR has no pages or DOI. ASB is named in Table I (Praetor row). Cited in Sec. II-A, II-B and Table I."
+ },
+ "yuan2024rjudge": {
+  "ieee": "T. Yuan et al., \"R-Judge: Benchmarking safety risk awareness for LLM agents,\" in *Findings Assoc. Comput. Linguistics: EMNLP 2024*, Miami, FL, USA, 2024, pp. 1467–1490, doi: 10.18653/v1/2024.findings-emnlp.79.",
+  "verified_by": "https://aclanthology.org/2024.findings-emnlp.79/",
+  "notes": "Twelve authors. Cited in Sec. II-B."
+ },
+ "chen2026tracesafe": {
+  "ieee": "Y.-S. Chen, S.-Y. Huang, C.-L. Yang, and Y.-N. Chen, \"TraceSafe: A systematic assessment of LLM guardrails on multi-step tool-calling trajectories,\" in *Proc. 3rd Conf. Lang. Model. (COLM)*, San Francisco, CA, USA, 2026, arXiv:2604.07223.",
+  "verified_by": "https://arxiv.org/abs/2604.07223 ; https://colm.eventhosts.cc/virtual/2026/poster/2248 ; https://github.com/yenshan0530/TraceSafe",
+  "notes": "COLM 2026 acceptance confirmed on the official schedule (poster session 3, 7 Oct. 2026). No pages or DOI. Not audited (benchmark); see the audit paragraph. Cited in Sec. II-A and II-B."
+ },
+ "fomin2026": {
+  "ieee": "M. Fomin, \"When benchmarks lie: Evaluating malicious prompt classifiers under true distribution shift,\" arXiv:2602.14161, 2026.",
+  "verified_by": "https://arxiv.org/abs/2602.14161 ; abstract via https://export.arxiv.org/api/query?id_list=2602.14161",
+  "notes": "Single author (Max Fomin). v1 15 Feb. 2026, v2 19 Jul. 2026; the v2 comment says it extends an AIWILD workshop paper at ICLR 2026. The figures quoted in Sec. II-B (18 source datasets; pooled CV AUC 8.0 to 16.5 points above leave-one-dataset-out) come from the current abstract. M12 precedent; cited in Sec. I and II-B."
+ },
+ "zheng2026stepguard": {
+  "ieee": "Z. Zheng et al., \"StepGuard: Learning step-level guardrails with scalable supervision and safety-utility balancing,\" arXiv:2608.24777, 2026.",
+  "verified_by": "https://arxiv.org/abs/2608.24777",
+  "notes": "Exists (Q3 asked). Eight authors. v1 25 Aug. 2026; the arXiv comment says accepted by EMNLP 2026, but it is not in the ACL Anthology yet, so cite arXiv (or 'to appear in Proc. EMNLP 2026'). A step-level guard model for agent tool actions, not a whole-trace detector. See the audit note on its timing."
+ },
+ "liu2026agentdog": {
+  "ieee": "D. Liu et al., \"AgentDoG: A diagnostic guardrail framework for AI agent safety and security,\" arXiv:2601.18491, 2026.",
+  "verified_by": "https://arxiv.org/abs/2601.18491 ; https://github.com/LiYu0524/ATbench",
+  "notes": "Exists (Q3 asked). arXiv lists 43 individual authors, first Dongrui Liu; AgentDrift's reference list cites it as 'AgentDoG Team, Shanghai AI Laboratory', but the arXiv author list should be used. It introduced the first 500-trajectory release of ATBench. v2 23 Apr. 2026; no venue."
+ },
+ "li2026atbench": {
+  "ieee": "Y. Li et al., \"ATBench: A diverse and realistic agent trajectory benchmark for safety evaluation and diagnosis,\" in *Proc. 3rd Conf. Lang. Model. (COLM)*, San Francisco, CA, USA, 2026, arXiv:2604.02022.",
+  "verified_by": "https://arxiv.org/abs/2604.02022 ; https://colm.eventhosts.cc/virtual/2026/poster/2159",
+  "notes": "13 authors on arXiv (12 on the COLM page). The 1,000-trajectory version (503 safe, 497 unsafe) used by MCPShield and Skynet. Named in Table I; cited in Sec. II-A and II-B."
+ },
+ "liu2008iforest": {
+  "ieee": "F. T. Liu, K. M. Ting, and Z.-H. Zhou, \"Isolation forest,\" in *Proc. 8th IEEE Int. Conf. Data Mining (ICDM)*, Pisa, Italy, 2008, pp. 413–422, doi: 10.1109/ICDM.2008.17.",
+  "verified_by": "https://api.crossref.org/works/10.1109/ICDM.2008.17",
+  "notes": "Cite in Sec. V-D where the Isolation Forest baseline is introduced."
+ },
+ "cho2014gru": {
+  "ieee": "K. Cho et al., \"Learning phrase representations using RNN encoder-decoder for statistical machine translation,\" in *Proc. Conf. Empirical Methods Natural Lang. Process. (EMNLP)*, Doha, Qatar, Oct. 2014, pp. 1724–1734, doi: 10.3115/v1/D14-1179.",
+  "verified_by": "https://aclanthology.org/D14-1179/ ; https://api.crossref.org/works/10.3115/v1/D14-1179",
+  "notes": "Seven authors. The official title writes 'Encoder–Decoder' with an en dash; a hyphen is used here. Cite in Sec. V-E for the GRU."
+ },
+ "kingma2015adam": {
+  "ieee": "D. P. Kingma and J. Ba, \"Adam: A method for stochastic optimization,\" in *Proc. 3rd Int. Conf. Learn. Represent. (ICLR)*, San Diego, CA, USA, 2015. [Online]. Available: https://arxiv.org/abs/1412.6980",
+  "verified_by": "https://arxiv.org/abs/1412.6980 (arXiv comment: published at ICLR 2015, San Diego)",
+  "notes": "Cite in Sec. V-E."
+ },
+ "efron1993bootstrap": {
+  "ieee": "B. Efron and R. J. Tibshirani, *An Introduction to the Bootstrap*. New York, NY, USA: Chapman & Hall, 1993.",
+  "verified_by": "https://archive.org/details/introductiontobo0000efro ; Psychometrika book review (https://www.cambridge.org/core/journals/psychometrika/article/abs/b-efron-and-r-j-tibshirani-1993-an-introduction-to-the-bootstrap-new-york-chapman-hall-xvi-436-pp-isbn-04120423t2-5000/D7CC806A82BF7AA651C2BBF745D58017) ; https://api.crossref.org/works/10.1007/978-1-4899-4541-9",
+  "notes": "Two DOIs exist (10.1007/978-1-4899-4541-9 for the 1993 edition under Springer US; 10.1201/9780429246593 for the 1994 CRC eBook); none is given to avoid a publisher mismatch. Cite in Sec. IV-H."
+ },
+ "field2007bootstrap": {
+  "ieee": "C. A. Field and A. H. Welsh, \"Bootstrapping clustered data,\" *J. R. Stat. Soc. B, Stat. Methodol.*, vol. 69, no. 3, pp. 369–390, Jun. 2007, doi: 10.1111/j.1467-9868.2007.00593.x.",
+  "verified_by": "https://academic.oup.com/jrsssb/article/69/3/369/7109454 ; https://api.crossref.org/works/10.1111/j.1467-9868.2007.00593.x",
+  "notes": "Cite where the cluster bootstrap of the revision is described (Sec. IV-H)."
+ },
+ "bengio2004cv": {
+  "ieee": "Y. Bengio and Y. Grandvalet, \"No unbiased estimator of the variance of K-fold cross-validation,\" *J. Mach. Learn. Res.*, vol. 5, pp. 1089–1105, Sep. 2004.",
+  "verified_by": "https://www.jmlr.org/papers/v5/grandvalet04a.html",
+  "notes": "No DOI (JMLR). Cite where within-AgentDojo cross-validation intervals are discussed (Sec. IV-F, IV-H, VIII)."
+ },
+ "holm1979": {
+  "ieee": "S. Holm, \"A simple sequentially rejective multiple test procedure,\" *Scand. J. Statist.*, vol. 6, no. 2, pp. 65–70, 1979.",
+  "verified_by": "JSTOR stable URL http://www.jstor.org/stable/4615733 (seen in search results; the page itself did not load) ; https://en.wikipedia.org/wiki/Holm%E2%80%93Bonferroni_method (reference list)",
+  "notes": "No DOI found. Volume, number and pages rest on two consistent secondary sources. Cite where the Holm correction of the revision is introduced."
+ },
+ "salton1988tfidf": {
+  "ieee": "G. Salton and C. Buckley, \"Term-weighting approaches in automatic text retrieval,\" *Inf. Process. Manage.*, vol. 24, no. 5, pp. 513–523, 1988, doi: 10.1016/0306-4573(88)90021-0.",
+  "verified_by": "https://api.crossref.org/works/10.1016/0306-4573(88)90021-0 ; https://eric.ed.gov/?id=EJ382487",
+  "notes": "Cite for the TF-IDF content detector (with sparckjones1972 for inverse document frequency)."
+ },
+ "sparckjones1972": {
+  "ieee": "K. Spärck Jones, \"A statistical interpretation of term specificity and its application in retrieval,\" *J. Documentation*, vol. 28, no. 1, pp. 11–21, 1972, doi: 10.1108/eb026526.",
+  "verified_by": "https://www.emerald.com/insight/content/doi/10.1108/eb026526/full/html ; https://api.crossref.org/works/10.1108/eb026526",
+  "notes": "The publisher prints 'Karen Sparck Jones'; either spelling is acceptable if used consistently."
+ },
+ "reimers2019sbert": {
+  "ieee": "N. Reimers and I. Gurevych, \"Sentence-BERT: Sentence embeddings using Siamese BERT-networks,\" in *Proc. Conf. Empirical Methods Natural Lang. Process. 9th Int. Joint Conf. Natural Lang. Process. (EMNLP-IJCNLP)*, Hong Kong, China, Nov. 2019, pp. 3982–3992, doi: 10.18653/v1/D19-1410.",
+  "verified_by": "https://aclanthology.org/D19-1410/",
+  "notes": "Pages from the ACL Anthology (Crossref's 3980-3990 is wrong). SBERT is named in Table I (MCPShield row) and used by Praetor and Trajectory Guard."
+ },
+ "jin2020textfooler": {
+  "ieee": "D. Jin, Z. Jin, J. T. Zhou, and P. Szolovits, \"Is BERT really robust? A strong baseline for natural language attack on text classification and entailment,\" in *Proc. AAAI Conf. Artif. Intell.*, vol. 34, no. 5, 2020, pp. 8018–8025, doi: 10.1609/aaai.v34i05.6311.",
+  "verified_by": "https://ojs.aaai.org/index.php/AAAI/article/view/6311 ; https://api.crossref.org/works/10.1609/aaai.v34i05.6311",
+  "notes": "The TextFooler paper; named in Table I (Praetor row)."
+ },
+ "song2020mpnet": {
+  "ieee": "K. Song, X. Tan, T. Qin, J. Lu, and T.-Y. Liu, \"MPNet: Masked and permuted pre-training for language understanding,\" in *Proc. Adv. Neural Inf. Process. Syst. (NeurIPS)*, vol. 33, 2020, pp. 16857–16867.",
+  "verified_by": "https://proceedings.neurips.cc/paper_files/paper/2020/hash/c3a690be93aa602ee2dc0ccab5b7b67e-Abstract.html",
+  "notes": "The base model of all-mpnet-base-v2 (per the model card). Optional if space is short; the model card alone identifies the encoder."
+ },
+ "mpnetmodelcard": {
+  "ieee": "Sentence Transformers, \"all-mpnet-base-v2,\" Hugging Face model card. Accessed: Sep. 26, 2026. [Online]. Available: https://huggingface.co/sentence-transformers/all-mpnet-base-v2",
+  "verified_by": "https://huggingface.co/sentence-transformers/all-mpnet-base-v2 ; https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2",
+  "notes": "No paper exists for this checkpoint; the card says it fine-tunes microsoft/mpnet-base on about 1B sentence pairs. Named in Sec. II-E (DriftNet) and Table I."
+ },
+ "qwen3": {
+  "ieee": "A. Yang et al., \"Qwen3 technical report,\" arXiv:2505.09388, 2025.",
+  "verified_by": "https://arxiv.org/abs/2505.09388",
+  "notes": "60 authors. Named in Table I (TrajAD row)."
+ },
+ "qin2024toolllm": {
+  "ieee": "Y. Qin et al., \"ToolLLM: Facilitating large language models to master 16000+ real-world APIs,\" in *Proc. 12th Int. Conf. Learn. Represent. (ICLR)*, Vienna, Austria, 2024.",
+  "verified_by": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/28e50ee5b72e90b50e7196fde8ea260e-Abstract-Conference.html ; https://arxiv.org/abs/2307.16789",
+  "notes": "Introduces ToolBench (Praetor's benign traces). 19 authors. No pages or DOI (ICLR)."
+ },
+ "li2026agentdyn": {
+  "ieee": "H. Li, R. Wen, S. Shi, N. Zhang, Y. Vorobeychik, and C. Xiao, \"AgentDyn: Are your agent security defenses deployable in real-world dynamic environments?\" arXiv:2602.03117, 2026.",
+  "verified_by": "https://arxiv.org/abs/2602.03117 (citation_author metadata of v3) ; https://github.com/SaFo-Lab/AgentDyn",
+  "notes": "Author order per arXiv (S. Shi third, N. Zhang fourth); AgentDrift's reference list swaps them. Title of v3 (7 May 2026); v1 had a different title. No venue found."
+ },
+ "fu2025raseval": {
+  "ieee": "Y. Fu, X. Yuan, and D. Wang, \"RAS-Eval: A comprehensive benchmark for security evaluation of LLM agents in real-world environments,\" arXiv:2506.15253, 2025.",
+  "verified_by": "https://arxiv.org/abs/2506.15253",
+  "notes": "No later venue found. Used by MCPShield and Trajectory Guard."
+ },
+ "galileo2025": {
+  "ieee": "Galileo AI, \"Agent Leaderboard v2,\" Hugging Face dataset, 2025. Accessed: Sep. 26, 2026. [Online]. Available: https://huggingface.co/datasets/galileo-ai/agent-leaderboard-v2",
+  "verified_by": "https://huggingface.co/datasets/galileo-ai/agent-leaderboard-v2 ; https://galileo.ai/blog/agent-leaderboard-v2 (P. Bhavsar, 17 Jul. 2025) ; full_2601.00516.txt line 324 (Trajectory Guard points to the same dataset)",
+  "notes": "No paper exists. The dataset release is the primary source, so it is cited as a web resource; the accompanying blog post (P. Bhavsar, Galileo AI, 17 Jul. 2025) can replace it if the journal prefers an authored item."
+ },
+ "zhang2025agentalign": {
+  "ieee": "J. Zhang, L. Yin, Y. Zhou, and S. Hu, \"AgentAlign: Navigating safety alignment in the shift from informative to agentic large language models,\" arXiv:2505.23020, 2025.",
+  "verified_by": "https://arxiv.org/abs/2505.23020 ; https://github.com/jc-ryan/AgentAlign",
+  "notes": "The arXiv comment says 'Submitted to ACL 2025'; it is not in the ACL Anthology. Cite as arXiv."
+ },
+ "zhang2025whowhen": {
+  "ieee": "S. Zhang et al., \"Which agent causes task failures and when? On automated failure attribution of LLM multi-agent systems,\" in *Proc. 42nd Int. Conf. Mach. Learn. (ICML)*, ser. PMLR, vol. 267, 2025, pp. 76583–76599.",
+  "verified_by": "https://proceedings.mlr.press/v267/zhang25cq.html",
+  "notes": "Introduces the Who&When dataset. Eleven authors. No DOI (PMLR)."
+ },
+ "song2024eto": {
+  "ieee": "Y. Song, D. Yin, X. Yue, J. Huang, S. Li, and B. Y. Lin, \"Trial and error: Exploration-based trajectory optimization of LLM agents,\" in *Proc. 62nd Annu. Meeting Assoc. Comput. Linguistics (Vol. 1: Long Papers)*, Bangkok, Thailand, Aug. 2024, pp. 7584–7600, doi: 10.18653/v1/2024.acl-long.409.",
+  "verified_by": "https://aclanthology.org/2024.acl-long.409/",
+  "notes": "ETO (Skynet's benign data). The ACL title says 'of LLM Agents'; only arXiv (2403.02502) says 'for'."
+ },
+ "zhang2024agentsafetybench": {
+  "ieee": "Z. Zhang et al., \"Agent-SafetyBench: Evaluating the safety of LLM agents,\" arXiv:2412.14470, 2024.",
+  "verified_by": "https://arxiv.org/abs/2412.14470 ; https://github.com/thu-coai/Agent-SafetyBench",
+  "notes": "Seven authors. arXiv only (v2 20 May 2025)."
+ },
+ "zhu2025agenterrorbench": {
+  "ieee": "K. Zhu et al., \"Where LLM agents fail and how they can learn from failures,\" arXiv:2509.25370, 2025.",
+  "verified_by": "https://arxiv.org/abs/2509.25370",
+  "notes": "Introduces AgentErrorBench (Skynet's intrinsic-failure data). 18 authors. arXiv only; not in the ICLR 2026 proceedings."
+ },
+ "promptguard2": {
+  "ieee": "Meta, \"Llama Prompt Guard 2 model card,\" Hugging Face, 2025. Accessed: Sep. 26, 2026. [Online]. Available: https://huggingface.co/meta-llama/Llama-Prompt-Guard-2-86M",
+  "verified_by": "https://huggingface.co/meta-llama/Llama-Prompt-Guard-2-86M ; https://github.com/meta-llama/PurpleLlama/tree/main/Llama-Prompt-Guard-2",
+  "notes": "No separate paper; the model is described in the LlamaFirewall paper (Sec. 4.1, App. B), so cite the two together. AlignmentCheck has no source beyond the LlamaFirewall paper, repository and documentation and is cited through [llamafirewall]."
+ }
+}

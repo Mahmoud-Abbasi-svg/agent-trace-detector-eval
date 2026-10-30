@@ -1,0 +1,13 @@
+{
+ "mon_l_main_job": "16550317-8acc-4272-82e0-9beaab75f7ac",
+ "mon_l_main_wall_s": 32337,
+ "mon_l_pilot_rate_calls_per_s": 13.71,
+ "mon_a_cost_usd": 85.79,
+ "mon_a_cost_by_group": {
+  "pilot": 0.64,
+  "B1_dojo_p0": 26.92,
+  "B2_drift_test": 18.56,
+  "B3_dojo_failed": 38.78,
+  "REP500": 0.9
+ }
+}

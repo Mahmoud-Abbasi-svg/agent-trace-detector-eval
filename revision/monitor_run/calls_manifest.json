@@ -1,0 +1,42 @@
+{
+ "plan": "MONITOR_PREREGISTRATION.md (amendment 1)",
+ "scanner_blob": "67d819d37845bbcc354e49db38b23b63c0b9880c",
+ "system_prompt_sha256": "1046f9b104de2e68105799ca4de538a57bb864a9f9ec00bb3ba4f22d66f2f512",
+ "system_prompt_chars": 5604,
+ "agentdrift": "$AGENTDRIFT",
+ "agentdojo_context_sha256": "3d40de427f692b0b2f82fe61adc35e18f4add55af31b8effed5e1b76e7c4afc1",
+ "seed": 20261016,
+ "python": "3.11.16",
+ "groups": {
+  "pilot_val": {
+   "traces": 300,
+   "calls": 1738,
+   "chars_incl_system": 11515665,
+   "sha256": "6e718363d4f88f8679a4430db7d852fce9797659cd02be4d98329ece01778eda"
+  },
+  "B1_dojo_p0": {
+   "traces": 2686,
+   "calls": 14079,
+   "chars_incl_system": 94003551,
+   "sha256": "2a9ed3025c2693607ea2ba9d02f6e12cff738dd7639c8f9b703e0e67e1545e7d"
+  },
+  "B2_drift_test": {
+   "traces": 1881,
+   "calls": 10552,
+   "chars_incl_system": 69756333,
+   "sha256": "128b8369b62e4316fbae2986ead8c888ef0330df0ccd36a9f0aa5a533fbf1454"
+  },
+  "B3_dojo_failed": {
+   "traces": 4987,
+   "calls": 21519,
+   "chars_incl_system": 149682778,
+   "sha256": "073aadfb2c0ed8e3762f68dbf066582249238a747b9a7a51f7f212d219979900"
+  },
+  "L_drift_rest": {
+   "traces": 10655,
+   "calls": 60472,
+   "chars_incl_system": 400019679,
+   "sha256": "dada5b26d347bc59185e9d629c93f7d2d59caac2f2d41aa94aa4cb46facbc621"
+  }
+ }
+}

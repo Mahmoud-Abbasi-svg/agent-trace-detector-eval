@@ -1,0 +1,14 @@
+{
+ "s_monitor_ladder": {
+  "env": "table*",
+  "colspec": "@{}l*{8}{@{\\hspace{3pt}}c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 9
+ },
+ "s_monitor_arms": {
+  "env": "table*",
+  "colspec": "@{}l*{8}{@{\\hspace{3pt}}c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 9
+ }
+}

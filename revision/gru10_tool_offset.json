@@ -1,0 +1,105 @@
+{
+ "note": "Post hoc, computed 9 Oct 2026 after the SE results were known. Same estimator as oov_mechanism.py s4_gru_offset (tool_contrib on pool-E held-out negatives minus train_tool_contrib on all label-0 fit-partition rows), applied to revision/cache/gru10. Seeds 0 to 2 reproduce the 3-seed values exactly. GRU-drop0.2 was not refit at 10 seeds.",
+ "offset_per_seed": {
+  "R1": [
+   0.5702,
+   0.4479,
+   0.5788,
+   0.733,
+   0.2991,
+   0.2192,
+   0.3727,
+   0.3999,
+   0.6462,
+   0.4917
+  ],
+  "R3_medical": [
+   7.6114,
+   6.8605,
+   8.1748,
+   5.1968,
+   3.3418,
+   9.9028,
+   4.5709,
+   5.7709,
+   2.8729,
+   4.3147
+  ],
+  "R3_banking": [
+   5.4421,
+   -0.7821,
+   8.0334,
+   7.5165,
+   8.5253,
+   8.1337,
+   5.7362,
+   3.5121,
+   4.8797,
+   5.7893
+  ],
+  "R3_web": [
+   8.6172,
+   5.3844,
+   7.5824,
+   8.1112,
+   7.2547,
+   4.664,
+   10.0418,
+   7.7126,
+   6.5083,
+   7.8794
+  ],
+  "R3_email": [
+   7.812,
+   4.3262,
+   7.8391,
+   7.6533,
+   8.233,
+   10.4431,
+   6.4151,
+   5.4625,
+   6.392,
+   3.6868
+  ],
+  "R3_coding": [
+   8.1556,
+   7.2088,
+   2.0986,
+   6.2207,
+   7.6119,
+   9.7937,
+   5.0975,
+   6.7139,
+   7.9429,
+   7.8809
+  ]
+ },
+ "offset_mean_10_seeds": {
+  "R1": 0.476,
+  "R3_medical": 5.862,
+  "R3_banking": 5.679,
+  "R3_web": 7.376,
+  "R3_email": 6.826,
+  "R3_coding": 6.872
+ },
+ "R3_cells_mean": 6.5229,
+ "R3_cells_positive": "49/50",
+ "R3_unk_init_trained_toolmedian_ranges": [
+  [
+   5.25,
+   6.477
+  ],
+  [
+   0.095,
+   2.332
+  ],
+  [
+   4.146,
+   4.824
+  ]
+ ],
+ "reproduces_3seed": {
+  "R3_cells_mean_3seed": 6.291,
+  "R3_cells_positive_3seed": "14/15"
+ }
+}

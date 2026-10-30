@@ -1,22 +1,27 @@
 cff-version: 1.2.0
 message: "If you use this code or data, please cite the paper."
-title: "Evaluating Baseline Detectors of Hijacked LLM Agents Under Rare Attacks and Distribution Shift"
+title: "What Standard Evaluations Hide About Detectors of Hijacked LLM Agents: Rare Attacks, Unseen Tools and Benchmark Transfer"
 type: software
 license: MIT
 repository-code: "https://github.com/Mahmoud-Abbasi-svg/agent-trace-detector-eval"
 authors:
   - family-names: Abbasi
     given-names: Mahmoud
-    affiliation: "BISITE Research Group, University of Salamanca"
-  - family-names: "Núñez Velasco"
-    given-names: "Juan Manuel"
-    affiliation: "BISITE Research Group, University of Salamanca"
+    affiliation: "University of Salamanca"
+  - family-names: "Núñez V."
+    given-names: "Juan M."
+    affiliation: "AIR Institute"
+  - family-names: Shahraki
+    given-names: Amin
+    affiliation: "University of Oslo"
 preferred-citation:
   type: article
-  title: "Evaluating Baseline Detectors of Hijacked LLM Agents Under Rare Attacks and Distribution Shift"
+  title: "What Standard Evaluations Hide About Detectors of Hijacked LLM Agents: Rare Attacks, Unseen Tools and Benchmark Transfer"
   year: 2026
   authors:
     - family-names: Abbasi
       given-names: Mahmoud
-    - family-names: "Núñez Velasco"
-      given-names: "Juan Manuel"
+    - family-names: "Núñez V."
+      given-names: "Juan M."
+    - family-names: Shahraki
+      given-names: Amin

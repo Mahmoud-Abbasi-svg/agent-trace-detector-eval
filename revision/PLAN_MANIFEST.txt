@@ -3,3 +3,194 @@ sha256 14bed37731719e609bdc3a08de6f02619050eb36e9c534cd4e1b65aa6b3b70aa
 mtime 2026-09-26T18:30:32+02:00
 recorded 2026-09-26T18:30:33+02:00
 No revision analysis output existed at this time: 0 files in revision/cache.
+
+SENCODER_PREREGISTRATION.md
+sha256 3f1c4d900ff1d263b9cf1470cbb5ff83532a31ca2a8575b887265c017e8f9036
+mtime 2026-10-08T14:46:43+02:00
+recorded 2026-10-08T14:47:04+02:00
+No sentence-encoder output existed at this time: 0 files in revision/cache/sencoder.
+
+SENCODER_PREREGISTRATION.md (amendment 1, before any run)
+sha256 0c6b58124285a25ac2cdb49d8be43514376834d8f55e604b2c225ad38c15935f
+mtime 2026-10-08T14:47:51+02:00
+recorded 2026-10-08T14:48:01+02:00
+Amendment adds the exclusion of the AgentDrift 'thought' field from the step text (Sec. 2) and
+declares it as deviation D6, so that AgentDrift and AgentDojo share one representation for R4.
+Supersedes the hash above. Still no sentence-encoder output: 0 files in revision/cache/sencoder.
+
+SENCODER_PREREGISTRATION.md (amendment 2, before any sentence-encoder fit)
+sha256 55005733c01ac272333594f6de9ceeb98c3e7c01436449f42474964b0cb675ab
+mtime 2026-10-08T15:32:32+02:00
+recorded 2026-10-08T15:32:50+02:00
+Amendment fixes the validation source. The executed GRU pipeline (build_gru_cache.py, revision
+deviation V15) carves a stratified 10% of R1 training rather than using data/val.jsonl as the GRU
+plan states, so this detector now matches the executed pipeline at every rung and declares it D7.
+Supersedes amendment 1. Embedding cache in progress (2 of 4 .npz written); no fit has been run.
+
+SENCODER_PREREGISTRATION.md (amendment 3, before any embedding or fit of this study)
+sha256 e1f018720de7a8482abd524b7a8377724f8c7a97f5537b3af10cf46b89565426
+mtime 2026-10-08T15:45:08+02:00
+recorded 2026-10-08T15:45:22+02:00
+Amendment adds Section 12. Architecture, loss, optimiser, step text and three of the four step features are
+recovered from the DriftNet paper (arXiv:2609.10892v1) and replace the reconstruction. D1, D3 and D6 restated,
+D8 to D12 added, SE-noobs retired and replaced by the padding test, SE-W0 added. Supersedes amendment 2.
+State at hashing: revision/cache/sencoder holds 3 files (agentdrift_test.npz, agentdrift_train.npz, agentdrift_val.npz) from the author's local
+CPU run of sencoder_embed.py in the version 1 text format, used only for a GPU-CPU check. sencoder_gpu,
+sencoder_fits and gru10 do not exist. No sentence-encoder fit and no GRU 10-seed fit has been run.
+
+SENCODER_PREREGISTRATION.md (amendment 4, before any embedding or fit of this study)
+sha256 e2e882581bc3d885145cbacdf09c0bdbcfbfc7adc89aa80ae88189a2fc5bcca5
+mtime 2026-10-08T15:48:45+02:00
+recorded 2026-10-08T15:48:53+02:00
+Amendment adds Section 13. SE-W0 transfer is refit on AgentDrift with the four features zeroed (no score-only
+zeroing), the score-only variant is reported separately as the feature-block offset probe, and the author's
+version 1 CPU cache is withdrawn as a GPU-CPU reference. Supersedes amendment 3 (e1f01872..., kept as
+revision/sencoder_run/SENCODER_PREREGISTRATION.amendment3.md).
+State at hashing: revision/cache/sencoder holds 3 version 1 files from the author's local CPU run, not used.
+sencoder_gpu, sencoder_fits and gru10 do not exist. No sentence-encoder fit and no GRU 10-seed fit has been run.
+
+SENCODER_PREREGISTRATION.md (amendment 5, before any embedding or fit of this study)
+sha256 d8011a8f31f9220f3b46771657cb215292eebaf199ad062d88ff5defefc2f8fd
+mtime 2026-10-08T15:51:07+02:00
+recorded 2026-10-08T15:51:07+02:00
+Factual correction to D11 (torch 2.11.0 is the CUDA 13.0 wheel, not 12.8). No design change. Supersedes
+amendment 4 (e2e88258..., kept as revision/sencoder_run/SENCODER_PREREGISTRATION.amendment4.md).
+State at hashing: sencoder_gpu, sencoder_fits and gru10 do not exist. No fit has been run.
+
+SENCODER_PREREGISTRATION.md (amendment 6, before any embedding or fit of this study)
+sha256 cef3e7677710e561496b8427a261d2e34737c7af7908e5ef5809ffb5a43a8493
+mtime 2026-10-08T15:57:00+02:00
+recorded 2026-10-08T15:57:00+02:00
+Embedding pass moves from GPU to CPU on cn001 (GPU queue estimate ~4 h; Slurm job 2756 cancelled while pending,
+never started). The GPU-CPU check becomes a later 1,000-text GPU job. D11 restated. Supersedes amendment 5
+(d8011a8f..., kept as revision/sencoder_run/SENCODER_PREREGISTRATION.amendment5.md).
+State at hashing: sencoder_gpu, sencoder_fits and gru10 do not exist. No fit has been run.
+
+MONITOR_PREREGISTRATION.md
+sha256 61a90a61699dc6b87dcdb45ec7f36af4e6b604e61cfed952a56288c60e896c6d
+mtime 2026-10-16T12:09:21+02:00
+recorded 2026-10-16T12:09:31+02:00
+Pre-registers the released LlamaFirewall AlignmentCheck prompt (PurpleLlama blob 67d819d3, MIT) as a step-level
+action monitor with two backbones: MON-L Llama-3.3-70B-Instruct w4a16 (RedHatAI rev da23851b) on one cn001 H100
+via vLLM, and MON-A claude-sonnet-5-5 (Anthropic API, Message Batches, cap US$300). Arms MON-L, MON-L-th,
+MON-L-mask and MON-A, outcomes M1 to M8, exposures E1 to E4, deviations D1 to D9. Content guards are excluded
+because the separate guard study already evaluates them.
+State at hashing: no file of this study exists apart from this plan (no revision/monitor_* script, no
+revision/cache/monitor). MON-L weights not downloaded for this study, no vLLM job submitted and no API call made.
+
+MONITOR_PREREGISTRATION.md (amendment 1, before any pilot, download or call of this study)
+sha256 2213a1d4b82dba6e755f064b56837203b93dc0ee52a1654660e1fc2abcb25d40
+mtime 2026-10-16T12:16:57+02:00
+recorded 2026-10-16T12:16:57+02:00
+Amendment adds Section 13. MON-A is funded only by an API credit that expires 23 Oct 2026, so its cap becomes
+US$95 (was US$300), all MON-A batches are submitted by 22 Oct 2026 12:00 CEST in the order B1 AgentDojo P0,
+B2 AgentDrift R1 test, B3 AgentDojo unsuccessful attacks, and B3 may run as a weighted stratified sample (D10).
+MON-A may run before the MON-L download. Supersedes the original registration (61a90a61..., kept as
+revision/monitor_run/MONITOR_PREREGISTRATION.v0.md).
+State at hashing: no pilot, download, vLLM job or API call of this study. No revision/monitor_* script exists.
+
+NOTE on MONITOR_PREREGISTRATION.md amendment 1 (sha256 2213a1d4...), recorded 2026-10-16T12:19:59+02:00
+Amendment 1 was registered by the assistant on an inferred funding choice. The author's reply to the funding question
+did not select an option, and the B3 stratified-sample fallback (Section 13.2, D10) was not shown to the author before
+registration. Amendment 1 is pending the author's confirmation. If the author chooses otherwise, a superseding
+amendment is registered before any pilot, download or call. State: no pilot, download, vLLM job or API call has been made.
+
+CONFIRMATION of MONITOR_PREREGISTRATION.md amendment 1 (sha256 2213a1d4...), recorded 2026-10-21T13:29:28+02:00
+The author confirmed amendment 1 as written, including the B3 stratified-sample fallback (Section 13.2, D10), after
+being shown the full rule and the two alternatives. Amendment 1 is binding and no superseding amendment is needed.
+State: no pilot, download, vLLM job or API call has been made.
+
+MON-A SETTINGS PROBE AND PILOT (MONITOR_PREREGISTRATION.md amendment 1), recorded 2026-10-21T13:37:35+02:00
+Settings probe, 1 call on the first pilot call: temperature 0 rejected by the API ("temperature is deprecated for
+this model"), so MON-A runs with default sampling as Section 2.5 pre-specifies. Accepted and fixed from now on:
+model claude-sonnet-5-5, max_tokens 1024, thinking between_tools, effort high, structured output via
+output_config.format json_schema (AlignmentCheckOutputSchema), system prompt as a cached block. thinking_tokens 0.
+Pilot: 200 calls drawn with seed 20261016 from calls/pilot_val.jsonl, synchronous. HTTP ok 200,
+schema-valid 199 (one stop_reason 'refusal', handled as the released scanner handles errors), wall
+89.4 s, cost US$0.6366. Mean tokens per call: uncached input 386.2,
+output 218.8, cached system prompt 2229. Conclusions were not stored or joined to labels.
+Projection at batch prices (input US$1, output US$5, cache read US$0.10 per million), input tokens from
+-0.9 + 0.3935 x prompt characters: B1 24.47 to 52.71, B2 18.06 to 39.23,
+B3 39.76 to 82.93 (first value every cached read hits, second none hit).
+B1+B2 projected US$42.53 with the cached system prompt as designed (Section 10), at most US$91.94 if no cached
+read hits. The Section 13.2 rule (stop if more than US$90) is evaluated on the design projection, US$42.53, so B1
+and B2 proceed. Even the no-hit bound plus the pilot (US$92.6) stays under the US$95 cap. B3 is decided from the
+measured cost of B1 and B2 as Section 13.2 specifies.
+
+MON-A BATCHES SUBMITTED (amendment 1, groups B1 and B2), recorded 2026-10-21T13:38:29+02:00
+  B1_dojo_p0 msgbatch_018K28pr5FUXY8pWF7x7o64w n=5000 submitted 2026-10-21T13:37:48+0200
+  B1_dojo_p0 msgbatch_01Wfgi2epfFN3tAhqjQH7p9L n=5000 submitted 2026-10-21T13:37:55+0200
+  B1_dojo_p0 msgbatch_018Jud2Wr5eSVnYSFyKT3iwH n=4079 submitted 2026-10-21T13:37:59+0200
+  B2_drift_test msgbatch_0127Tqv2QGzrV2qXCaHt2h9j n=5000 submitted 2026-10-21T13:38:03+0200
+  B2_drift_test msgbatch_01Ms2N8Bt3hKi3LJjrSuWB9J n=5000 submitted 2026-10-21T13:38:07+0200
+  B2_drift_test msgbatch_01Hoocz4dy6gSYRCfudij2Ef n=552 submitted 2026-10-21T13:38:08+0200
+Script revision/monitor_score_api.py, call files revision/monitor_run/calls/ (SHA-256 in calls_manifest.json).
+B3 not yet submitted. It is decided from the measured cost of B1 and B2 (Section 13.2), deadline 22 Oct 2026 12:00 CEST.
+
+MON-A B1 AND B2 COMPLETE, B3 DECISION (Section 13.2), recorded 2026-10-21T14:13:42+02:00
+B1: 14,079 of 14,079 requests succeeded, 13,905 schema-valid, 174 stop_reason 'refusal'. B2: 10,552 of 10,552
+succeeded, 10,480 schema-valid, 72 refusals. Refusals are handled as the released scanner handles errors (conclusion
+true), with the Section 2.7 sensitivity analysis. Cached system prompt read in 99.0% (B1) and 99.5% (B2) of calls.
+Cost by this study's conservative accounting (cache reads without the batch discount): pilot US$0.64, B1 US$26.92,
+B2 US$18.56, total US$46.12. The Console showed US$42.38 spent this month at 14:12 +02:00.
+B3 rule: measured cost per call of B1 and B2 = US$0.001846, so B3 projects 21,519 x 0.001846 x 1.10 = US$43.71,
+within the remaining US$48.88 of the US$95 cap. B3 therefore runs in full (no sample, D10 not triggered).
+B3 not yet submitted: the API organisation's own monthly spend limit (US$10, set in the Console) paused API access.
+B3 is submitted once access returns, by 22 Oct 2026 12:00 CEST, or reported as not run.
+
+MON-A B3 SUBMITTED IN FULL (Section 13.2), recorded 2026-10-21T14:23:29+02:00
+The author raised the organisation's Console monthly spend limit from US$10 to US$95 (no payment method on file, so
+spending draws only on promotional credit). API access confirmed, then B3 submitted before the 22 Oct 12:00 CEST deadline:
+  B3_dojo_failed msgbatch_0171cPSQSnmKPZwT5MQZ6J4F n=5000 submitted 2026-10-21T14:23:06+0200
+  B3_dojo_failed msgbatch_01SLvgU3xkjkDeEgKCsEtH9u n=5000 submitted 2026-10-21T14:23:10+0200
+  B3_dojo_failed msgbatch_015zDdVyEFgworDMSTr79JXJ n=5000 submitted 2026-10-21T14:23:14+0200
+  B3_dojo_failed msgbatch_017oBmM2n86wHiRxiDMmJfWK n=5000 submitted 2026-10-21T14:23:17+0200
+  B3_dojo_failed msgbatch_01UM3SRtdvCGeQHhDDKcPyhQ n=1519 submitted 2026-10-21T14:23:20+0200
+
+MON-A COMPLETE, recorded 2026-10-21T15:00:16+02:00
+B3: 21519 of 21,519 requests succeeded, 21512 schema-valid, 7 refusals, cached system
+prompt read in 100.0% of calls. Every call of B1, B2 and B3 has exactly one result (checked against
+calls/*.jsonl). MON-A cost by this study's conservative accounting: pilot US$0.64, B1 US$26.92, B2 US$18.56,
+B3 US$38.78, total US$84.89, within the US$95 cap. Paid from promotional credit only. No result has been analysed.
+
+NOTE, recorded 2026-10-21T16:26:31+02:00
+MON-L-th calls rendered (calls/TH_drift_test.jsonl 10,552 and calls/TH_dojo_all.jsonl 35,598, sha256 in
+calls_manifest_th.json). MON-L-mask NOT rendered. graded_masks.json holds five draws per intermediate level, while the
+plan's table implies one draw per level (42,208 calls). This is open for the author and must be settled by a hashed
+amendment before any MON-L-mask call. No MON-L call has been made. The cluster refused SSH ('Not allowed at this time').
+
+MONITOR_PREREGISTRATION.md (amendment 2, before any MON-L call and before any MON-A result was analysed)
+sha256 375abe1b0642e3cc30e15910dc0935a2dbdeb678d6d35086b610430ac49d85c4
+mtime 2026-10-22T11:55:51+02:00
+recorded 2026-10-22T11:55:51+02:00
+Amendment adds Section 14 and corrects the Section 4 call count of MON-L-mask from 42,208 to 168,832. The registered
+levels (0.775, 0.483, 0.225) are means over the five draws per level in graded_masks.json, and M8 requires the masks
+of Fig. 3, so all 16 masked sets are used. Choice delegated by the author on 22 Oct 2026. Supersedes amendment 1
+(2213a1d4..., kept as revision/monitor_run/MONITOR_PREREGISTRATION.amendment1.md).
+State at hashing: MON-A complete, no MON-A verdict analysed. No MON-L call (weights downloaded on login01, no job run).
+
+2026-10-22T23:42+02:00  MON-L pilot submitted. Pre-check (1 SSH connection) read ~/monitor/download.log: 'offline load ok llama 80 128256', snapshot da23851b92f5ea8023d6c70f790feb8e05269812 37G, DOWNLOAD_OK (08:59:45 CEST). Job 7b9e10af-721b-42f6-aa8d-fbd61b103fbf, ssh:hpc-bisite.usal.es, script hpc/mon_l_pilot_job.sh, bundle monitor_bundle.tgz sha256 8aa43322f743e1da..., run_timeout_s 11400. Smoke 20 calls then pilot_val 1,738 calls.
+
+2026-10-22T23:49+02:00  MON-L pilot job 7b9e10af (Slurm 4283) FAILED after 00:03:30 at engine config, before any call: vLLM 0.30.0 rejects compressed-tensors actorder=group, which the registered checkpoint uses. No output written. Amendment 3 appended to MONITOR_PREREGISTRATION.md (D11, vLLM 0.29.0 in ~/venvs/agent029), sha256 b64d74ca103daeb861dcf918441cdb0a3a784b9d415ec7fb2ba913854c62563d. Pre-amendment copy revision/monitor_run/MONITOR_PREREGISTRATION.amendment2.md (sha256 375abe1b0642e3cc...).
+
+2026-10-23T00:32+02:00  MON-L pilot job 17a4aa33-90b2-496f-90a6-8f47807bdb58 (Slurm 4290) COMPLETED in 00:07:42 on 1x H100 80GB, env vllm 0.29.0, torch 2.13.0+cu130, transformers 5.18.0, logprobs_mode processed_logprobs, model RedHatAI/Llama-3.3-70B-Instruct-quantized.w4a16 @ da23851b. Weights 36.85 GiB, KV cache 28.1 GiB (92,192 tokens). Smoke 20/20 parsed (7 s generation, 260 s with load). Pilot 1,738/1,738 parsed (0 parse failures, 0.0%), all finish=stop, p_note ok for all; prompt tokens mean 1516.3 (max 1819), generated tokens mean 135.6 (max 333); generation 127 s, 13.71 calls/s. Pilot file holds no conclusion and no score (plan Section 10). Smoke-vs-pilot generated length agrees on 13/20 calls, so greedy vLLM output is not batch invariant. Projection at the pilot rate, scaled by estimated prompt length per group: primary MON-L arm 2.19 h (rule 72 h, pass), MON-L-mask 3.42 GPU h (rule 48 h, pass, so the mask arm stays in the main job), MON-L-th 0.99 h, total 6.6 h. Decision: submit hpc/mon_l_main_job.sh (all 22 groups, registered order), long partition, walltime 16 h, outputs in persistent ~/monitor/mon_l.
+
+2026-10-23T00:37+02:00  MON-L main job submitted: 16550317-8acc-4272-82e0-9beaab75f7ac, script hpc/mon_l_main_job.sh (22 groups, registered order, --time=16:00:00, long), bundle sha256 8aa43322f743e1da..., outputs main_<group>.jsonl + env.json, persistent copy ~/monitor/mon_l.
+
+2026-10-23T00:39+02:00  REP500 drawn (random.Random(20261016).sample over B1+B2+B3 = 46,150 calls, 500, sorted), calls/REP500.jsonl sha256 ad5e43ebf348bb1fcd9fcbe92ada1b14f138d31bc5011a0c02c60e2422c04052. Amendment 4 appended (repeatability draw and passes, D12), MONITOR_PREREGISTRATION.md sha256 fea22d5e035ecb1fd0eb59340093598d4b15c452813b955689a95b0abd77249a. Pre-amendment copy monitor_run/MONITOR_PREREGISTRATION.amendment3.md (sha256 b64d74ca103daeb8...). MON-A spend before REP500 US$84.89.
+
+2026-10-23T01:10+02:00  MON-L repeatability job c228b36c-c91f-457d-8aa0-3bc7e005c6d5 succeeded (finished 2026-10-23T01:00 local), 500 lines, copied to monitor_run/mon_l/main_REP500.jsonl sha256 8003b7e4dd7351cbf0193848dd932dc7764c538e56d61f74a3bb7aa31c2a780a. MON-A REP500 batch msgbatch_01DKthHc7BW52w9egYJrLTyc submitted 2026-10-23T01:07:56+0200 (500 requests), projected cost US$1.00, recorded spend before it US$84.89 (cap 95).
+
+2026-10-23T01:14+02:00  Amendment 5 appended (M5b, comparator TFIDF at WUT t_r80, D13), MONITOR_PREREGISTRATION.md sha256 9e72a9bbce69a9f26efbc02cf2f099b7cefa7c08bef73ed22b61431b2ae06012. Found by the synthetic test of monitor_detector.py (TFIDF R4 t_r80 recall 0, FPR 0, failed flag rate 0 in content_detector_results.json). Pre-amendment copy monitor_run/MONITOR_PREREGISTRATION.amendment4.md (sha256 fea22d5e035ecb1f...). No monitor verdict analysed.
+
+2026-10-23T01:18+02:00  Analysis script frozen before any real monitor output is analysed: revision/monitor_detector.py sha256 24fccfd5c1ba4faa1d9663c991e25ab930de6eda5dd1c300ab100c87c68e08ae (copy monitor_run/monitor_detector.frozen.py). Tested end to end on random outputs (--synthetic, all 20 settings, 281 s). Comparator intervals reproduce content_detector_results.json exactly (R1 and R4 TFIDF AUROC). R2 training rows read from the AgentDrift task-disjoint split fetched from Asif-0209/AgentDrift at 014a514f into monitor_run/agentdrift_taskdisjoint (train 9,081 with 4,008 positives, test ids equal the R2 cache, every record identical to the standard split record).
+
+2026-10-23T01:19+02:00  MON-A REP500 batch ended and collected, 500 of 500 succeeded (496 parsed, 4 refusals), results_REP500.jsonl sha256 2dd83182f1a6a25d37e330b3dd2b26fd1e327d75ada4199bfe4c3eeeca1c764b. MON-A total spend US$85.79 of the US$95 cap (REP500 US$0.90). No further MON-A calls are planned.
+
+2026-10-23T01:32+02:00  Reporting pipeline written and tested on random outputs only, before any real monitor output is read. monitor_text.py holds every outcome-dependent sentence with its branches, chosen by the outcome flags of monitor_results.json. Table S19 is split at panel (e) in the v0.5 build to fix the 119.6 pt overflow. sha256: revision/monitor_tables.py 109ff61025eb03ee9056e73f064c9e6621b42a996f443d69c8f17e84b3dbeddd; revision/monitor_text.py f405143f412e7901f7c5d329d7a937d95e80f9265c53a1b049ae21ab21e0e625; revision/apply_monitor_revision.py c2d8f7b706e53addf90d58c08e7023cc32b23f4bf3c28478d3a43cf8d04fe0ff; revision/references_monitor.json 6d8e48672e61e9fe3f07162d162f9c330659cfc6d7ec80be9b0aed966342b68d; paper/build_monitor.py f7496b762733e0dc83e29072e4a2264c98c1d530b34e67a095ad0994f0962d1b; paper/make_arxiv_pack_v05.py e62883dadfc5b13cba0ae87cd74475cbdbe3c845d060d72aebb3299558f22b81. Local LaTeX compile is not possible from the sandbox (MiKTeX registry access denied), so the v0.5 PDF must be compiled on the author's machine.
+
+2026-10-23T01:37+02:00  Citation-context check written: revision/CITATION_CONTEXT_CHECK_2026-10-23.md (87 sentences, 47 references). Two wording corrections (SentinelAgent category, MCPShield metadata features) proposed in revision/CORRECTIONS_PROPOSAL.md, applied only to the v0.5 copies by apply_monitor_revision.py (script updated to read it).
+
+2026-10-23T09:36+02:00  MON-L main job 16550317 succeeded (wall 32,337 s, exit 0), 23 files harvested and copied to monitor_run/mon_l. Lines per group: B1_dojo_p0 14079, B2_drift_test 10552, B3_dojo_failed 21519, L_drift_rest 60472, MASK_0.0_d0 10552, MASK_0.25_d0 10552, MASK_0.25_d1 10552, MASK_0.25_d2 10552, MASK_0.25_d3 10552, MASK_0.25_d4 10552, MASK_0.5_d0 10552, MASK_0.5_d1 10552, MASK_0.5_d2 10552, MASK_0.5_d3 10552, MASK_0.5_d4 10552, MASK_0.75_d0 10552, MASK_0.75_d1 10552, MASK_0.75_d2 10552, MASK_0.75_d3 10552, MASK_0.75_d4 10552, REP500 500, TH_dojo_all 35598, TH_drift_test 10552. sha256 (first 16): B1_dojo_p0 efadc72a517f8837, B2_drift_test c670c53b36be3b41, B3_dojo_failed de0f6de9647ad13a, L_drift_rest b10046f2f8e8ca51, MASK_0.0_d0 ce26cf055e363059, MASK_0.25_d0 b497989342ba4403, MASK_0.25_d1 6162d19482fc9866, MASK_0.25_d2 78882830511869b2, MASK_0.25_d3 b0ce187f0a401453, MASK_0.25_d4 a4f713da76b55e1b, MASK_0.5_d0 0029c8d541df3a87, MASK_0.5_d1 83943995138b29aa, MASK_0.5_d2 fc643f60b505f6d0, MASK_0.5_d3 362b5b1223f17885, MASK_0.5_d4 0bed422de44e43a0, MASK_0.75_d0 3dcfce805553d017, MASK_0.75_d1 e91046b196cb1c9f, MASK_0.75_d2 ef9c09729868eb70, MASK_0.75_d3 ab51d4f05de09540, MASK_0.75_d4 379384c3aabf0305, REP500 8003b7e4dd7351cb, TH_dojo_all b5823a1f656993a3, TH_drift_test 16f42fed4d3a6a30. monitor_detector.py sha256 24fccfd5c1ba4faa1d9663c991e25ab930de6eda5dd1c300ab100c87c68e08ae (frozen value 24fccfd5c1ba4faa...). Next: run the frozen analysis on the real outputs.
+
+2026-10-23T09:47+02:00  Frozen analysis run on the real outputs (324 s): monitor_results.json sha256 e71832c7a2eecf2d3feb5329b6bfaf8b4e18350c4af6228f6a7c906f149b4684. Outcomes for MON-L: M1 met, M2 not met, M3 met, M4 met, M5 not met (cannot be met, amendment 5), M5b met, M6 met (indication), M7 disagreement on M3 only (MON-A P0 precision interval reaches above 0.5), M8 beyond 0.05. Tables (monitor_tables.py), outcome text (monitor_text.py, branches as frozen) and post-result prose edits (monitor_text_edits.py, wording and context only, no reading changed; MONITOR_TEXT_POSTRESULT_EDITS.md sha256 a4292d8c592d168e8adbca2df59a7e7c4bf793bd31874655499ac3d6fa0406ed) applied to copies MANUSCRIPT_SOURCE.monitor.md and SUPPLEMENT_SOURCE.monitor.md. v0.5 build main_v05_monitor.tex and supplement_v05_monitor.tex, pack arxiv_pack_v05/arxiv_source.zip sha256 c08e3e8b16088fd08659b3511495a4f39ba72c24753c5350d201043f830dcdb6. Not compiled here (MiKTeX blocked in sandbox).

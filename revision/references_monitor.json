@@ -1,0 +1,11 @@
+{
+ "llama3": {
+  "ieee": "A. Grattafiori et al., \"The Llama 3 herd of models,\" arXiv:2407.21783, Jul. 2024."
+ },
+ "gptq": {
+  "ieee": "E. Frantar, S. Ashkboos, T. Hoefler, and D. Alistarh, \"GPTQ: Accurate post-training quantization for generative pre-trained transformers,\" in *Proc. Int. Conf. Learn. Represent. (ICLR)*, 2023."
+ },
+ "vllm": {
+  "ieee": "W. Kwon et al., \"Efficient memory management for large language model serving with PagedAttention,\" in *Proc. 29th Symp. Operating Syst. Principles (SOSP)*, 2023, pp. 611–626."
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "featurise.py": "419bf0706d2e83b5bf8c0cccf5eb0500fffcd9002aa78280222b1ff3b5b11cc1",
+ "evalkit.py": "92afd4cc0c3faeaae5510ba627e6bfbbb4aee6ccf200feda5c5ac82cb0f81bac",
+ "gru_detector.py": "c5c7f7960f25e3dec278291db17d2be189f5d41e3be8c93163c1ce26a202f427",
+ "gru_ladder.py": "64172105d8af9a97c8970f581f4ee1a202a2539adc5f33a13bbabeceaee79582",
+ "world_disjoint_r1.py": "0abaa9cc06ef6f9aa0a586c52e7055a6656db9a503d38cd650293af7a72c33d4",
+ "r4_control.py": "290c8b55e155dd784feb2718ab6f376fec4905a85007143213f6081c55cd99d7",
+ "agentdojo_traces.jsonl": "2c81a895c1f8be7ffdd88e790e3f75b83442c75e9c58cdf388d17df3df92296d",
+ "agentdojo_failed.jsonl": "12292b33dcf83ffb8ae1d5156d2a44a54ee6b10fb16943160af0fec6134901f7",
+ "SENCODER_PREREGISTRATION.md": "d8011a8f31f9220f3b46771657cb215292eebaf199ad062d88ff5defefc2f8fd",
+ "GRU_PREREGISTRATION.md": "3a3e4db54cb29ec46064694d86979b8490e51a625609c5200683a293c469c614",
+ "revision/sencoder_embed.py": "3bc9998ebc8513e70d302c175f33814346450d876ca8eeb397eea579f5ffc51a",
+ "revision/sencoder_embed_gpu.py": "73f42e80de57663c5668143b02a027d2971c2ffd35440ec09f2078aa85fe94ae",
+ "revision/sencoder_text.py": "5d61ef245fd9af0d0cadce03fd1b58804e306b2b353bd8a79cf7177315855961",
+ "revision/sencoder_detector.py": "9749f9d2744fcb9ebe95a463e4a572d6da082c4acf8155334d6a31839bc61905",
+ "revision/build_sencoder_cache.py": "fe3f9e8ea723635ae66a18fa32e0b2ba4fd3cf8b0847af06e6dbc284b7c20d06",
+ "revision/build_gru_cache.py": "daad6316cb3f4b189bd5c0012f5e332fef5c70c515a465d28de19d591d12f053",
+ "revision/gru_variants.py": "8623d0edc090220e16f55b86ca402fadb3c1098cde24b1dda0e4522cb698f397",
+ "revision/sencoder_run/graded_masks.json": "50f43dc58308faf9e86998705c32558faddb5353627944e942c83d5583daadad",
+ "revision/cache/gru/R1.pkl": "b8a38be454625e9dc57eb328bd832e2e6d2b164cc8ea533320096e540eed1fa0"
+}

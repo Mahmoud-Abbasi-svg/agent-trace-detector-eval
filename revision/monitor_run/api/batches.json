@@ -1,0 +1,208 @@
+{
+ "batches": [
+  {
+   "group": "B1_dojo_p0",
+   "id": "msgbatch_018K28pr5FUXY8pWF7x7o64w",
+   "n": 5000,
+   "submitted": "2026-10-21T13:37:48+0200",
+   "status": "ended",
+   "counts": {
+    "processing": 0,
+    "succeeded": 5000,
+    "errored": 0,
+    "canceled": 0,
+    "expired": 0
+   },
+   "results_url": "https://api.anthropic.com/v1/messages/batches/msgbatch_018K28pr5FUXY8pWF7x7o64w/results",
+   "collected": true,
+   "collected_n": 5000
+  },
+  {
+   "group": "B1_dojo_p0",
+   "id": "msgbatch_01Wfgi2epfFN3tAhqjQH7p9L",
+   "n": 5000,
+   "submitted": "2026-10-21T13:37:55+0200",
+   "status": "ended",
+   "counts": {
+    "processing": 0,
+    "succeeded": 5000,
+    "errored": 0,
+    "canceled": 0,
+    "expired": 0
+   },
+   "results_url": "https://api.anthropic.com/v1/messages/batches/msgbatch_01Wfgi2epfFN3tAhqjQH7p9L/results",
+   "collected": true,
+   "collected_n": 5000
+  },
+  {
+   "group": "B1_dojo_p0",
+   "id": "msgbatch_018Jud2Wr5eSVnYSFyKT3iwH",
+   "n": 4079,
+   "submitted": "2026-10-21T13:37:59+0200",
+   "status": "ended",
+   "counts": {
+    "processing": 0,
+    "succeeded": 4079,
+    "errored": 0,
+    "canceled": 0,
+    "expired": 0
+   },
+   "results_url": "https://api.anthropic.com/v1/messages/batches/msgbatch_018Jud2Wr5eSVnYSFyKT3iwH/results",
+   "collected": true,
+   "collected_n": 4079
+  },
+  {
+   "group": "B2_drift_test",
+   "id": "msgbatch_0127Tqv2QGzrV2qXCaHt2h9j",
+   "n": 5000,
+   "submitted": "2026-10-21T13:38:03+0200",
+   "status": "ended",
+   "counts": {
+    "processing": 0,
+    "succeeded": 5000,
+    "errored": 0,
+    "canceled": 0,
+    "expired": 0
+   },
+   "results_url": "https://api.anthropic.com/v1/messages/batches/msgbatch_0127Tqv2QGzrV2qXCaHt2h9j/results",
+   "collected": true,
+   "collected_n": 5000
+  },
+  {
+   "group": "B2_drift_test",
+   "id": "msgbatch_01Ms2N8Bt3hKi3LJjrSuWB9J",
+   "n": 5000,
+   "submitted": "2026-10-21T13:38:07+0200",
+   "status": "ended",
+   "counts": {
+    "processing": 0,
+    "succeeded": 5000,
+    "errored": 0,
+    "canceled": 0,
+    "expired": 0
+   },
+   "results_url": "https://api.anthropic.com/v1/messages/batches/msgbatch_01Ms2N8Bt3hKi3LJjrSuWB9J/results",
+   "collected": true,
+   "collected_n": 5000
+  },
+  {
+   "group": "B2_drift_test",
+   "id": "msgbatch_01Hoocz4dy6gSYRCfudij2Ef",
+   "n": 552,
+   "submitted": "2026-10-21T13:38:08+0200",
+   "status": "ended",
+   "counts": {
+    "processing": 0,
+    "succeeded": 552,
+    "errored": 0,
+    "canceled": 0,
+    "expired": 0
+   },
+   "results_url": "https://api.anthropic.com/v1/messages/batches/msgbatch_01Hoocz4dy6gSYRCfudij2Ef/results",
+   "collected": true,
+   "collected_n": 552
+  },
+  {
+   "group": "B3_dojo_failed",
+   "id": "msgbatch_0171cPSQSnmKPZwT5MQZ6J4F",
+   "n": 5000,
+   "submitted": "2026-10-21T14:23:06+0200",
+   "status": "ended",
+   "counts": {
+    "processing": 0,
+    "succeeded": 5000,
+    "errored": 0,
+    "canceled": 0,
+    "expired": 0
+   },
+   "results_url": "https://api.anthropic.com/v1/messages/batches/msgbatch_0171cPSQSnmKPZwT5MQZ6J4F/results",
+   "collected": true,
+   "collected_n": 5000
+  },
+  {
+   "group": "B3_dojo_failed",
+   "id": "msgbatch_01SLvgU3xkjkDeEgKCsEtH9u",
+   "n": 5000,
+   "submitted": "2026-10-21T14:23:10+0200",
+   "status": "ended",
+   "counts": {
+    "processing": 0,
+    "succeeded": 5000,
+    "errored": 0,
+    "canceled": 0,
+    "expired": 0
+   },
+   "results_url": "https://api.anthropic.com/v1/messages/batches/msgbatch_01SLvgU3xkjkDeEgKCsEtH9u/results",
+   "collected": true,
+   "collected_n": 5000
+  },
+  {
+   "group": "B3_dojo_failed",
+   "id": "msgbatch_015zDdVyEFgworDMSTr79JXJ",
+   "n": 5000,
+   "submitted": "2026-10-21T14:23:14+0200",
+   "status": "ended",
+   "counts": {
+    "processing": 0,
+    "succeeded": 5000,
+    "errored": 0,
+    "canceled": 0,
+    "expired": 0
+   },
+   "results_url": "https://api.anthropic.com/v1/messages/batches/msgbatch_015zDdVyEFgworDMSTr79JXJ/results",
+   "collected": true,
+   "collected_n": 5000
+  },
+  {
+   "group": "B3_dojo_failed",
+   "id": "msgbatch_017oBmM2n86wHiRxiDMmJfWK",
+   "n": 5000,
+   "submitted": "2026-10-21T14:23:17+0200",
+   "status": "ended",
+   "counts": {
+    "processing": 0,
+    "succeeded": 5000,
+    "errored": 0,
+    "canceled": 0,
+    "expired": 0
+   },
+   "results_url": "https://api.anthropic.com/v1/messages/batches/msgbatch_017oBmM2n86wHiRxiDMmJfWK/results",
+   "collected": true,
+   "collected_n": 5000
+  },
+  {
+   "group": "B3_dojo_failed",
+   "id": "msgbatch_01UM3SRtdvCGeQHhDDKcPyhQ",
+   "n": 1519,
+   "submitted": "2026-10-21T14:23:20+0200",
+   "status": "ended",
+   "counts": {
+    "processing": 0,
+    "succeeded": 1519,
+    "errored": 0,
+    "canceled": 0,
+    "expired": 0
+   },
+   "results_url": "https://api.anthropic.com/v1/messages/batches/msgbatch_01UM3SRtdvCGeQHhDDKcPyhQ/results",
+   "collected": true,
+   "collected_n": 1519
+  },
+  {
+   "group": "REP500",
+   "id": "msgbatch_01DKthHc7BW52w9egYJrLTyc",
+   "n": 500,
+   "submitted": "2026-10-23T01:07:56+0200",
+   "status": "ended",
+   "counts": {
+    "processing": 0,
+    "succeeded": 500,
+    "errored": 0,
+    "canceled": 0,
+    "expired": 0
+   },
+   "results_url": "https://api.anthropic.com/v1/messages/batches/msgbatch_01DKthHc7BW52w9egYJrLTyc/results",
+   "collected": true,
+   "collected_n": 500
+  }
+ ]
+}

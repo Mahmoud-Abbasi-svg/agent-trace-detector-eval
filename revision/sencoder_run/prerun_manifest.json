@@ -1,0 +1,88 @@
+{
+ "written": "2026-10-08T15:30:47+02:00",
+ "plan": {
+  "file": "SENCODER_PREREGISTRATION.md",
+  "sha256": "0c6b58124285a25ac2cdb49d8be43514376834d8f55e604b2c225ad38c15935f",
+  "manifest_entry": "amendment 1, 0c6b5812...935f",
+  "matches_manifest": true
+ },
+ "sencoder_cache_files_at_start": [
+  "agentdrift_train.npz"
+ ],
+ "inputs": {
+  "SENCODER_PREREGISTRATION.md": {
+   "sha256": "0c6b58124285a25ac2cdb49d8be43514376834d8f55e604b2c225ad38c15935f",
+   "bytes": 15933
+  },
+  "GRU_PREREGISTRATION.md": {
+   "sha256": "3a3e4db54cb29ec46064694d86979b8490e51a625609c5200683a293c469c614",
+   "bytes": 13307
+  },
+  "revision/PLAN_MANIFEST.txt": {
+   "sha256": "1c18667722857c1c25078b4967d28bd7629bb3e286a52ddb95c15b1af33596de",
+   "bytes": 982
+  },
+  "featurise.py": {
+   "sha256": "419bf0706d2e83b5bf8c0cccf5eb0500fffcd9002aa78280222b1ff3b5b11cc1",
+   "bytes": 3213
+  },
+  "evalkit.py": {
+   "sha256": "92afd4cc0c3faeaae5510ba627e6bfbbb4aee6ccf200feda5c5ac82cb0f81bac",
+   "bytes": 4321
+  },
+  "gru_detector.py": {
+   "sha256": "c5c7f7960f25e3dec278291db17d2be189f5d41e3be8c93163c1ce26a202f427",
+   "bytes": 4637
+  },
+  "gru_ladder.py": {
+   "sha256": "64172105d8af9a97c8970f581f4ee1a202a2539adc5f33a13bbabeceaee79582",
+   "bytes": 12176
+  },
+  "world_disjoint_r1.py": {
+   "sha256": "0abaa9cc06ef6f9aa0a586c52e7055a6656db9a503d38cd650293af7a72c33d4",
+   "bytes": 6374
+  },
+  "r4_control.py": {
+   "sha256": "290c8b55e155dd784feb2718ab6f376fec4905a85007143213f6081c55cd99d7",
+   "bytes": 10749
+  },
+  "revision/sencoder_embed.py": {
+   "sha256": "3bc9998ebc8513e70d302c175f33814346450d876ca8eeb397eea579f5ffc51a",
+   "bytes": 5490
+  },
+  "revision/build_gru_cache.py": {
+   "sha256": "daad6316cb3f4b189bd5c0012f5e332fef5c70c515a465d28de19d591d12f053",
+   "bytes": 26784
+  },
+  "revision/gru_variants.py": {
+   "sha256": "8623d0edc090220e16f55b86ca402fadb3c1098cde24b1dda0e4522cb698f397",
+   "bytes": 7147
+  },
+  "revision/domain_shift.py": {
+   "sha256": "d75878c8aeeb2297d2b1a905cca4ebe9cd3f3f5a7e62372fe8975099ce62c4ca",
+   "bytes": 161016
+  },
+  "revision/oov_mechanism.py": {
+   "sha256": "02460c7104c222a96bee68b5617c1c0b1bdfd0b36513ffea3fc9545db1559484",
+   "bytes": 111141
+  },
+  "agentdojo_traces.jsonl": {
+   "sha256": "2c81a895c1f8be7ffdd88e790e3f75b83442c75e9c58cdf388d17df3df92296d",
+   "bytes": 11015494
+  },
+  "agentdojo_failed.jsonl": {
+   "sha256": "12292b33dcf83ffb8ae1d5156d2a44a54ee6b10fb16943160af0fec6134901f7",
+   "bytes": 20827441
+  },
+  "revision/oov_mechanism_work/graded_scores.pkl": {
+   "sha256": "4f6f163c9b7ee6924e0f529e87024b420e15d61c05f200384328a86f0540692d",
+   "bytes": 2270535
+  }
+ },
+ "agentdrift_local_copy": {
+  "train.jsonl": "7ba9c1b2b5364d46dd7b6496370ef8ce338112b3de61f025cacb8988031d0535",
+  "val.jsonl": "947e8d28857b3925a05522eef87032f529c1891219ecc8bcf4a1bb37084cc94a",
+  "test.jsonl": "29171469b6f45c54aa096e0a0961a1aac70268289f2016de4614fe885ebfa5d0"
+ },
+ "note_on_cache_listing": "sencoder_cache_files_at_start is this file's own listing at its 'written' time (2026-10-08T15:30:47+02:00). agentdrift_train.npz (mtime 2026-10-08 15:24:31) is the user's local CPU run of sencoder_embed.py, started after PLAN_MANIFEST.txt recorded amendment 1 at 14:48:01 with 0 files in revision/cache/sencoder. It is not output of this run, and it uses the v1 step-text format."
+}

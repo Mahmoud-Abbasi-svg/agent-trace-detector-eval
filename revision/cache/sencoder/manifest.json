@@ -1,0 +1,49 @@
+{
+  "model": "sentence-transformers/all-mpnet-base-v2",
+  "revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+  "pooling": "mean",
+  "normalised": true,
+  "max_seq_length": 384,
+  "dim": 768,
+  "thought_excluded": true,
+  "torch": "2.11.0+cpu",
+  "built": "2026-10-08T14:51:29+0200",
+  "sources": {
+    "agentdrift_train": {
+      "path": "$AGENTDRIFT\\data\\train.jsonl",
+      "sha256": "7ba9c1b2b5364d46dd7b6496370ef8ce338112b3de61f025cacb8988031d0535",
+      "n_traces": 8775,
+      "n_steps": 49750,
+      "n_steps_truncated": 3,
+      "pct_truncated": 0.01,
+      "seconds": 1981.8
+    },
+    "agentdrift_val": {
+      "path": "$AGENTDRIFT\\data\\val.jsonl",
+      "sha256": "947e8d28857b3925a05522eef87032f529c1891219ecc8bcf4a1bb37084cc94a",
+      "n_traces": 1880,
+      "n_steps": 10722,
+      "n_steps_truncated": 0,
+      "pct_truncated": 0.0,
+      "seconds": 414.0
+    },
+    "agentdrift_test": {
+      "path": "$AGENTDRIFT\\data\\test.jsonl",
+      "sha256": "29171469b6f45c54aa096e0a0961a1aac70268289f2016de4614fe885ebfa5d0",
+      "n_traces": 1881,
+      "n_steps": 10552,
+      "n_steps_truncated": 0,
+      "pct_truncated": 0.0,
+      "seconds": 441.5
+    },
+    "agentdojo": {
+      "path": "<repo>\\agentdojo_traces.jsonl",
+      "sha256": "2c81a895c1f8be7ffdd88e790e3f75b83442c75e9c58cdf388d17df3df92296d",
+      "n_traces": 2686,
+      "n_steps": 14079,
+      "n_steps_truncated": 912,
+      "pct_truncated": 6.48,
+      "seconds": 1228.6
+    }
+  }
+}

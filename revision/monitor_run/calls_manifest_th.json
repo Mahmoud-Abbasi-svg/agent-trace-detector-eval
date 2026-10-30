@@ -1,0 +1,19 @@
+{
+ "plan": "MONITOR_PREREGISTRATION.md (amendment 1), arm MON-L-th",
+ "scanner_blob": "67d819d37845bbcc354e49db38b23b63c0b9880c",
+ "system_prompt_sha256": "1046f9b104de2e68105799ca4de538a57bb864a9f9ec00bb3ba4f22d66f2f512",
+ "groups": {
+  "TH_drift_test": {
+   "traces": 1881,
+   "calls": 10552,
+   "steps_with_thought_text": 10552,
+   "sha256": "3e843d63f608a4ca39519fa1d43fc1e25dfd0f2e215998673e697fb77906c0b1"
+  },
+  "TH_dojo_all": {
+   "traces": 7673,
+   "calls": 35598,
+   "steps_with_thought_text": 4739,
+   "sha256": "ea47d4e4668ec3b2a59e6d547ac118905e7521f7c604388fc6607e729d79f3d4"
+  }
+ }
+}

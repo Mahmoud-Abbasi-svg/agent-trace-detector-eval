@@ -1,0 +1,134 @@
+{
+ "v04_prevalence": {
+  "env": "table*",
+  "colspec": "@{}l*{10}{c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 11
+ },
+ "v04_r3": {
+  "env": "table*",
+  "colspec": "@{}l*{11}{c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 12
+ },
+ "v04_thresholds": {
+  "env": "table*",
+  "colspec": "@{}ll*{5}{c}>{\\raggedright\\arraybackslash}p{2.6cm}@{}",
+  "size": "\\scriptsize",
+  "ncols": 8
+ },
+ "v04_oov": {
+  "env": "table*",
+  "colspec": "@{}l*{10}{@{\\hspace{3pt}}c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 11
+ },
+ "v04_r4": {
+  "env": "table*",
+  "colspec": "@{}l*{6}{c}>{\\raggedright\\arraybackslash}p{3.3cm}@{}",
+  "size": "\\scriptsize",
+  "ncols": 8
+ },
+ "s_breakdown": {
+  "env": "table*",
+  "colspec": "@{}l*{10}{@{\\hspace{2.2pt}}c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 11
+ },
+ "s_splits": {
+  "env": "table*",
+  "colspec": "@{}l*{5}{c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 6
+ },
+ "s_shift": {
+  "env": "table*",
+  "colspec": "@{}l*{7}{c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 8
+ },
+ "s_content": {
+  "env": "table*",
+  "colspec": "@{}l*{8}{@{\\hspace{3.5pt}}c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 9
+ },
+ "s_obslen": {
+  "env": "table*",
+  "colspec": "@{}l*{5}{c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 6
+ },
+ "s_keyword": {
+  "env": "table*",
+  "colspec": "@{}l*{4}{c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 5
+ },
+ "s_r4_controls": {
+  "env": "table*",
+  "colspec": "@{}l*{10}{@{\\hspace{3.5pt}}c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 11
+ },
+ "s_intervals": {
+  "env": "table*",
+  "colspec": "@{}l*{9}{@{\\hspace{3.5pt}}c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 10
+ },
+ "s_oppoints": {
+  "env": "table*",
+  "colspec": "@{}l*{11}{@{\\hspace{2.2pt}}c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 12
+ },
+ "s_labelfree": {
+  "env": "table*",
+  "colspec": "@{}l*{7}{c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 8
+ },
+ "s_probes": {
+  "env": "table*",
+  "colspec": "@{}l*{6}{c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 7
+ },
+ "s_coverage": {
+  "env": "table*",
+  "colspec": "@{}l*{5}{c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 6
+ },
+ "s_loso": {
+  "env": "table*",
+  "colspec": "@{}l*{9}{@{\\hspace{3.5pt}}c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 10
+ },
+ "s_gru": {
+  "env": "table*",
+  "colspec": "@{}l*{9}{c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 10
+ },
+ "s_m7": {
+  "env": "table*",
+  "colspec": "@{}l*{4}{c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 5
+ },
+ "s_thresholds_all": {
+  "env": "table*",
+  "colspec": "@{}l*{6}{c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 7
+ },
+ "s_sencoder": {
+  "env": "table*",
+  "colspec": "@{}l*{7}{@{\\hspace{3pt}}c}@{}",
+  "size": "\\scriptsize",
+  "ncols": 8
+ }
+}
